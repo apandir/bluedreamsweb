@@ -22,9 +22,10 @@ const IndexSection = () => {
 
         <div className="space-y-0">
           {sections.map((s) => (
-            <div
+            <a
               key={s.label}
-              className="flex items-center justify-between py-4 border-b border-sand"
+              href={s.href}
+              className="flex items-center justify-between py-4 border-b border-sand hover:bg-sand/30 px-4 -mx-4 transition-colors cursor-pointer"
             >
               <span className="font-body text-xs font-semibold tracking-[0.2em] text-gold">
                 {s.label}
@@ -32,7 +33,7 @@ const IndexSection = () => {
               <span className="font-display text-lg md:text-xl font-light text-foreground">
                 {s.title}
               </span>
-            </div>
+            </a>
           ))}
         </div>
       </div>
