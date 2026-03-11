@@ -22,7 +22,7 @@ const HeroSection = () => {
         </h1>
         <div className="factsheet-divider mb-8" />
         <p className="font-body text-sm md:text-base font-light tracking-[0.15em] uppercase text-primary-foreground/80">
-          Factsheet — Season 2025
+          Factsheet — Season 2026
         </p>
         <p className="font-body text-xs font-light tracking-[0.2em] uppercase text-primary-foreground/60 mt-3">
           Bodrum / Torba — Türkiye
