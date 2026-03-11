@@ -63,7 +63,7 @@ const StickyNav = () => {
             }`}
           />
           <span
-            className={`block w-6 h-px bg-primary-foreground transition-opacity duration-300 ${
+            className={`block w-6 h-px bg-foreground transition-opacity duration-300 ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
