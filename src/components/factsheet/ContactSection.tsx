@@ -64,9 +64,7 @@ const ContactSection = () => {
       {/* Footer */}
       <div className="mt-20 pt-8 border-t border-sand">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-display text-2xl font-light text-ocean-deep">
-            Blue Dreams Resort
-          </p>
+          <img src={logo} alt="Blue Dreams Resort" className="h-10" />
           <p className="font-body text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
             Every Dream Starts With Blue — Bodrum / Torba / Türkiye
           </p>
