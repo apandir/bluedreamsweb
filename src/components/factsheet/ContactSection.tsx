@@ -13,10 +13,15 @@ const ContactSection = () => {
         <div className="space-y-8 mb-16">
           <div>
             <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mb-2">Address</p>
-            <p className="font-display text-lg text-foreground">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Torba+Mahallesi+Herodot+Bulvarı+No:11+Bodrum+Muğla+Türkiye"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-display text-lg text-foreground hover:text-ocean-medium transition-colors underline underline-offset-4"
+            >
               Torba Mahallesi, Herodot Bulvarı No:11<br />
               Bodrum / Muğla / Türkiye
-            </p>
+            </a>
           </div>
           <div>
             <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mb-2">Telephone</p>
