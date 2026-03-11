@@ -2,11 +2,10 @@ import beachImage from "@/assets/beach-resort.jpg";
 
 const BeachPoolsSection = () => {
   const pools = [
-    "Main Swimming Pool",
+    "Infinity Pool",
     "Activity Pool",
     "Children's Pool",
     "Waterslide Pool",
-    "Quiet Pool",
     "Indoor Pool",
   ];
 
