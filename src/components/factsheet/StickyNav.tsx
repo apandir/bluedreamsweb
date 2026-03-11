@@ -44,7 +44,7 @@ const StickyNav = () => {
             <a
               key={link.href}
               href={link.href}
-              className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-primary-foreground/80 hover:text-primary-foreground px-3 py-2 transition-colors"
+              className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-foreground/80 hover:text-foreground px-3 py-2 transition-colors"
             >
               {link.label}
             </a>
