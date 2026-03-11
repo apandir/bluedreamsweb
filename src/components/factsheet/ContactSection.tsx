@@ -64,7 +64,7 @@ const ContactSection = () => {
       </div>
 
       {/* Footer */}
-      <div className="mt-20 pt-8 border-t border-sand">
+      <div className="mt-20 pt-8 border-t border-border bg-white">
         <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <img src={logo} alt="Blue Dreams Resort" className="h-10" />
           <p className="font-body text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
