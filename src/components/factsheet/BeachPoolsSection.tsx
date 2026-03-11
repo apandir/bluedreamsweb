@@ -6,7 +6,7 @@ const BeachPoolsSection = () => {
     "Activity Pool",
     "Children's Pool",
     "Waterslide Pool",
-    "Indoor Pool",
+    "Indoor Pool*",
   ];
 
   return (
@@ -58,7 +58,10 @@ const BeachPoolsSection = () => {
                   </div>
                 ))}
               </div>
-            </div>
+              </div>
+              <p className="font-body text-[10px] text-primary-foreground/50 mt-4 tracking-wider">
+                * Open only at certain conditions
+              </p>
           </div>
         </div>
       </div>
