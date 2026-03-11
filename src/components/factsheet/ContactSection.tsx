@@ -1,3 +1,5 @@
+import logo from "@/assets/blue-dreams-logo.png";
+
 const ContactSection = () => {
   return (
     <section id="contact" className="section-cream py-20 md:py-28">
