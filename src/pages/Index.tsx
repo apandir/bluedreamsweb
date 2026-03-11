@@ -14,6 +14,7 @@ import ContactSection from "@/components/factsheet/ContactSection";
 const Index = () => {
   return (
     <main>
+      <StickyNav />
       <HeroSection />
       <IndexSection />
       <OverviewSection />
