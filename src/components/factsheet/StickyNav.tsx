@@ -34,7 +34,7 @@ const StickyNav = () => {
           <img
             src={logo}
             alt="Blue Dreams Resort"
-            className="h-8 md:h-10 invert brightness-200"
+            className="h-8 md:h-10"
           />
         </a>
 
