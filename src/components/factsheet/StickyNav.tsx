@@ -81,7 +81,7 @@ const StickyNav = () => {
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-ocean-deep/95 backdrop-blur-md px-6 py-4 flex flex-col gap-1">
+        <div className="bg-white px-6 py-4 flex flex-col gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
