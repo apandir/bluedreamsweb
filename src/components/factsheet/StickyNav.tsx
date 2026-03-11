@@ -58,7 +58,7 @@ const StickyNav = () => {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-6 h-px bg-primary-foreground transition-transform duration-300 ${
+            className={`block w-6 h-px bg-foreground transition-transform duration-300 ${
               menuOpen ? "rotate-45 translate-y-[3.5px]" : ""
             }`}
           />
