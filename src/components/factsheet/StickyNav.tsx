@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "@/assets/blue-dreams-logo-white.png";
+import logo from "@/assets/blue-dreams-logo.png";
 
 const navLinks = [
   { label: "Overview", href: "#overview" },
@@ -36,7 +36,7 @@ const StickyNav = () => {
           <img
             src={logo}
             alt="Blue Dreams Resort"
-            className="h-8 md:h-10 brightness-0 invert"
+            className="h-8 md:h-10 invert brightness-200"
           />
         </a>
 
