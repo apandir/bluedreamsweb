@@ -1,5 +1,5 @@
 import heroImage from "@/assets/hero-resort.jpg";
-import logo from "@/assets/blue-dreams-logo.png";
+import logo from "@/assets/blue-dreams-logo-white.png";
 
 const HeroSection = () => {
   return (
