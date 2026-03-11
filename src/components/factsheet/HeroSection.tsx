@@ -11,14 +11,14 @@ const HeroSection = () => {
       <div className="factsheet-hero-overlay" />
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
         <p className="factsheet-label mb-6 text-gold-light">★★★★★</p>
-        <h1 className="factsheet-heading text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-6">
+        <h1 className="factsheet-heading text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-6 font-semibold drop-shadow-lg">
           Every Dream Starts<br />With Blue
         </h1>
         <div className="factsheet-divider mb-8" />
-        <p className="font-body text-sm md:text-base font-light tracking-[0.15em] uppercase text-primary-foreground/80">
+        <p className="font-body text-sm md:text-base font-semibold tracking-[0.15em] uppercase text-primary-foreground drop-shadow-md">
           Factsheet — Season 2026
         </p>
-        <p className="font-body text-xs font-light tracking-[0.2em] uppercase text-primary-foreground/60 mt-3">
+        <p className="font-body text-xs font-medium tracking-[0.2em] uppercase text-primary-foreground/90 mt-3 drop-shadow-md">
           Bodrum / Torba — Türkiye
         </p>
       </div>
