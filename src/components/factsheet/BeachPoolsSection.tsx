@@ -6,7 +6,7 @@ const BeachPoolsSection = () => {
     "Activity Pool",
     "Children's Pool",
     "Waterslide Pool",
-    "Indoor Pool",
+    "Indoor Pool*",
   ];
 
   return (
