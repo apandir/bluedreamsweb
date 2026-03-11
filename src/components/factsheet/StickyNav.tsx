@@ -87,7 +87,7 @@ const StickyNav = () => {
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-body text-xs tracking-[0.15em] uppercase text-primary-foreground/80 hover:text-primary-foreground py-2 transition-colors"
+              className="font-body text-xs tracking-[0.15em] uppercase text-foreground/80 hover:text-foreground py-2 transition-colors"
             >
               {link.label}
             </a>
