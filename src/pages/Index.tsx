@@ -1,3 +1,4 @@
+import StickyNav from "@/components/factsheet/StickyNav";
 import HeroSection from "@/components/factsheet/HeroSection";
 import IndexSection from "@/components/factsheet/IndexSection";
 import OverviewSection from "@/components/factsheet/OverviewSection";
@@ -13,6 +14,7 @@ import ContactSection from "@/components/factsheet/ContactSection";
 const Index = () => {
   return (
     <main>
+      <StickyNav />
       <HeroSection />
       <IndexSection />
       <OverviewSection />

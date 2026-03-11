@@ -1,5 +1,4 @@
 import heroImage from "@/assets/hero-resort.jpg";
-import logo from "@/assets/blue-dreams-logo-white.png";
 
 const HeroSection = () => {
   return (
@@ -11,11 +10,6 @@ const HeroSection = () => {
       />
       <div className="factsheet-hero-overlay" />
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
-        <img
-          src={logo}
-          alt="Blue Dreams Resort"
-          className="w-48 md:w-64 lg:w-72 mb-8 brightness-0 invert"
-        />
         <p className="factsheet-label mb-6 text-gold-light">★★★★★</p>
         <h1 className="factsheet-heading text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-6">
           Every Dream Starts<br />With Blue
