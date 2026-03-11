@@ -1,9 +1,9 @@
 const ActivitiesSection = () => {
   const activities = [
-    { category: "Water Sports", items: ["Windsurfing", "Canoeing", "Water Polo", "Pedal Boats", "Jet Ski*"] },
+    { category: "Water Sports", items: ["Windsurfing*", "Canoeing", "Water Polo", "Pedal Boats*", "Jet Ski*"] },
     { category: "Sports", items: ["Tennis Courts", "Beach Volleyball", "Basketball", "Fitness Centre", "Table Tennis"] },
     { category: "Entertainment", items: ["Live Music", "DJ Performances", "Theme Nights", "Shows & Animations", "Kids Club"] },
-    { category: "Excursions", items: ["Bodrum City Tour", "Boat Trips", "Island Hopping", "Diving Tours*", "Shopping Tours*"] },
+    { category: "Excursions", items: ["Bodrum City Tour*", "Boat Trips*", "Island Hopping*", "Diving Tours*", "Shopping Tours*"] },
   ];
 
   return (
