@@ -25,10 +25,8 @@ const StickyNav = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-ocean-deep/95 backdrop-blur-md shadow-lg py-2"
-          : "bg-transparent py-4"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white shadow-md ${
+        scrolled ? "py-2" : "py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -36,7 +34,7 @@ const StickyNav = () => {
           <img
             src={logo}
             alt="Blue Dreams Resort"
-            className="h-8 md:h-10 invert brightness-200"
+            className="h-8 md:h-10"
           />
         </a>
 
@@ -46,7 +44,7 @@ const StickyNav = () => {
             <a
               key={link.href}
               href={link.href}
-              className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-primary-foreground/80 hover:text-primary-foreground px-3 py-2 transition-colors"
+              className="font-body text-[10px] font-medium tracking-[0.15em] uppercase text-foreground/80 hover:text-foreground px-3 py-2 transition-colors"
             >
               {link.label}
             </a>
@@ -60,17 +58,17 @@ const StickyNav = () => {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-6 h-px bg-primary-foreground transition-transform duration-300 ${
+            className={`block w-6 h-px bg-foreground transition-transform duration-300 ${
               menuOpen ? "rotate-45 translate-y-[3.5px]" : ""
             }`}
           />
           <span
-            className={`block w-6 h-px bg-primary-foreground transition-opacity duration-300 ${
+            className={`block w-6 h-px bg-foreground transition-opacity duration-300 ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-6 h-px bg-primary-foreground transition-transform duration-300 ${
+            className={`block w-6 h-px bg-foreground transition-transform duration-300 ${
               menuOpen ? "-rotate-45 -translate-y-[3.5px]" : ""
             }`}
           />
@@ -83,13 +81,13 @@ const StickyNav = () => {
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-ocean-deep/95 backdrop-blur-md px-6 py-4 flex flex-col gap-1">
+        <div className="bg-white px-6 py-4 flex flex-col gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-body text-xs tracking-[0.15em] uppercase text-primary-foreground/80 hover:text-primary-foreground py-2 transition-colors"
+              className="font-body text-xs tracking-[0.15em] uppercase text-foreground/80 hover:text-foreground py-2 transition-colors"
             >
               {link.label}
             </a>
