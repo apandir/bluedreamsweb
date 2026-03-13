@@ -1,4 +1,5 @@
 import diningMain from "@/assets/dining-main.jpg";
+import diningSnack from "@/assets/dining-snack.jpg";
 import diningLaLocanda from "@/assets/dining-lalocanda.jpg";
 import diningHalikarnas from "@/assets/dining-halikarnas.jpg";
 import diningSunsetBar from "@/assets/dining-sunsetbar.jpg";
@@ -12,7 +13,7 @@ import { Clock, MapPin } from "lucide-react";
 const DiningSection = () => {
   const restaurants = [
     { name: "Main Restaurant", type: "All Day Dining", desc: "International buffet with live cooking stations and theme nights", hours: "07:00 – 10:00 · 12:30 – 14:00 · 19:00 – 21:30", location: "Main Building, Ground Floor", image: diningMain },
-    { name: "Snack Restaurant", type: "Casual Dining", desc: "Light bites, burgers, sandwiches and refreshments served beachside throughout the day", hours: "10:00 – 17:00", location: "Beachfront", image: diningMain },
+    { name: "Snack Restaurant", type: "Casual Dining", desc: "Light bites, burgers, sandwiches and refreshments served beachside throughout the day", hours: "10:00 – 17:00", location: "Beachfront", image: diningSnack },
     { name: "La Locanda", type: "À la Carte Restaurant", desc: "Wood-fired pizza and handmade pasta in a refined Mediterranean setting", hours: "19:00 – 22:00", location: "Garden Terrace", image: diningLaLocanda },
     { name: "Halikarnas", type: "À la Carte Restaurant", desc: "Fresh Aegean seafood with the finest catches of the day in an elegant waterfront setting", hours: "19:00 – 22:00", location: "Beachfront", image: diningHalikarnas },
     { name: "Le Kebab", type: "À la Carte Restaurant", desc: "Authentic Turkish cuisine featuring premium kebabs and traditional Anatolian flavours", hours: "19:00 – 22:00", location: "Beachfront", image: diningLeKebab },
