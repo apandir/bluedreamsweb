@@ -46,48 +46,48 @@ const RoomsSection = () => {
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
             <p className="section-number text-gold-light">03</p>
-            <h2 className="factsheet-heading text-4xl md:text-6xl text-primary-foreground">
+            <h2 className="factsheet-heading text-5xl md:text-7xl text-primary-foreground">
               Rooms & Suites
             </h2>
           </div>
         </div>
       </div>
 
-      <div className="section-cream py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="factsheet-label mb-4">Accommodation</p>
-            <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-6">
+      <div className="section-cream py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <p className="factsheet-label mb-5">Accommodation</p>
+            <h3 className="factsheet-heading text-4xl md:text-5xl text-ocean-deep mb-8">
               Your Sanctuary by the Sea
             </h3>
             <div className="factsheet-divider mb-8" />
-            <p className="font-body text-sm leading-relaxed text-muted-foreground max-w-2xl mx-auto">
+            <p className="font-body text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto">
               Our hotel rooms are built into the hillside bungalows and the main building,
               intertwined with the sea. Each room offers a unique perspective of the Aegean coastline.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-10">
             {rooms.map((room) => (
               <div key={room.name} className="factsheet-card group overflow-hidden">
                 <div className="overflow-hidden">
                   <img
                     src={room.image}
                     alt={room.name}
-                    className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-8">
-                  <div className="flex items-center justify-between mb-3">
-                    <h4 className="font-display text-2xl font-bold text-ocean-deep">
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="font-display text-2xl text-ocean-deep">
                       {room.name}
                     </h4>
-                    <span className="font-body text-[10px] tracking-[0.15em] uppercase text-gold font-bold bg-cream px-3 py-1.5">
+                    <span className="font-body text-xs tracking-[0.12em] uppercase text-gold font-semibold bg-cream px-4 py-2 rounded-full">
                       {room.size}
                     </span>
                   </div>
-                  <div className="w-12 h-[2px] mb-4" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
-                  <p className="font-body text-sm leading-relaxed text-muted-foreground">
+                  <div className="w-12 h-[1.5px] mb-5" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
+                  <p className="font-body text-base leading-relaxed text-muted-foreground">
                     {room.description}
                   </p>
                 </div>

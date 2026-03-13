@@ -110,24 +110,24 @@ const DiningSection = () => {
           <img
             src={venue.image}
             alt={venue.name}
-            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
       )}
-      <div className="p-6">
-        <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold font-bold mb-3">
+      <div className="p-7">
+        <p className="factsheet-label text-xs mb-3">
           {venue.type}
         </p>
-        <h4 className="font-display text-xl font-bold text-ocean-deep mb-2">{venue.name}</h4>
-        <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4">{venue.desc}</p>
-        <div className="space-y-2 pt-3 border-t" style={{ borderColor: 'hsl(var(--sand))' }}>
-          <div className="flex items-center gap-2">
-            <Clock className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-            <span className="font-body text-[11px] text-muted-foreground">{venue.hours}</span>
+        <h4 className="font-display text-2xl text-ocean-deep mb-3">{venue.name}</h4>
+        <p className="font-body text-sm text-muted-foreground leading-relaxed mb-5">{venue.desc}</p>
+        <div className="space-y-2.5 pt-4 border-t" style={{ borderColor: 'hsl(var(--sand))' }}>
+          <div className="flex items-center gap-3">
+            <Clock className="w-4 h-4 text-gold flex-shrink-0" />
+            <span className="font-body text-sm text-muted-foreground">{venue.hours}</span>
           </div>
-          <div className="flex items-center gap-2">
-            <MapPin className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-            <span className="font-body text-[11px] text-muted-foreground">{venue.location}</span>
+          <div className="flex items-center gap-3">
+            <MapPin className="w-4 h-4 text-gold flex-shrink-0" />
+            <span className="font-body text-sm text-muted-foreground">{venue.location}</span>
           </div>
         </div>
       </div>
@@ -142,48 +142,48 @@ const DiningSection = () => {
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
             <p className="section-number text-gold-light">05</p>
-            <h2 className="factsheet-heading text-4xl md:text-6xl text-primary-foreground">
+            <h2 className="factsheet-heading text-5xl md:text-7xl text-primary-foreground">
               Food & Beverage
             </h2>
           </div>
         </div>
       </div>
 
-      <div className="section-cream py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="factsheet-label mb-4">Restaurants</p>
-            <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-6">
+      <div className="section-cream py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <p className="factsheet-label mb-5">Restaurants</p>
+            <h3 className="factsheet-heading text-4xl md:text-5xl text-ocean-deep mb-8">
               A Feast for Every Sense
             </h3>
             <div className="factsheet-divider mb-8" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          <div className="grid md:grid-cols-3 gap-8 mb-24">
             {restaurants.map((v) => (
               <VenueCard key={v.name} venue={v} />
             ))}
           </div>
 
-          <div className="text-center mb-16">
-            <p className="factsheet-label mb-4">Bars & Lounges</p>
-            <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-6">
+          <div className="text-center mb-20">
+            <p className="factsheet-label mb-5">Bars & Lounges</p>
+            <h3 className="factsheet-heading text-4xl md:text-5xl text-ocean-deep mb-8">
               Sip & Unwind
             </h3>
             <div className="factsheet-divider mb-8" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-10">
             {bars.map((bar) => (
               <VenueCard key={bar.name} venue={bar} />
             ))}
           </div>
 
-          <div className="space-y-2 mt-6">
-            <p className="font-body text-[10px] text-muted-foreground tracking-wider">
+          <div className="space-y-2 mt-8">
+            <p className="font-body text-xs text-muted-foreground tracking-wider">
               * Not included in the Ultra All Inclusive concept
             </p>
-            <p className="font-body text-[10px] text-muted-foreground tracking-wider">
+            <p className="font-body text-xs text-muted-foreground tracking-wider">
               ** Selection of imported and local alcoholic and non-alcoholic hot and cold beverages served. Premium beverages at extra cost.
             </p>
           </div>

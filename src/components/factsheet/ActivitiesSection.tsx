@@ -7,31 +7,31 @@ const ActivitiesSection = () => {
   ];
 
   return (
-    <section id="activities" className="section-cream py-20 md:py-28">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section id="activities" className="section-cream py-24 md:py-32">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-20">
           <p className="section-number text-gold">07</p>
-          <h2 className="factsheet-heading text-4xl md:text-5xl text-ocean-deep mb-6">
+          <h2 className="factsheet-heading text-5xl md:text-6xl text-ocean-deep mb-8">
             Activities & Sports
           </h2>
           <div className="factsheet-divider mb-8" />
-          <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto">
             From adrenaline-pumping water sports to relaxing evening entertainment,
             Blue Dreams Resort offers a complete range of activities for every guest.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {activities.map((act) => (
-            <div key={act.category} className="factsheet-card p-6">
-              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold font-bold mb-5">
+            <div key={act.category} className="factsheet-card p-8">
+              <p className="factsheet-label mb-6">
                 {act.category}
               </p>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {act.items.map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 bg-gold" />
-                    <span className="font-body text-sm text-foreground">{item}</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                    <span className="font-body text-base text-foreground">{item}</span>
                   </div>
                 ))}
               </div>
@@ -39,7 +39,7 @@ const ActivitiesSection = () => {
           ))}
         </div>
 
-        <p className="font-body text-[10px] text-muted-foreground text-center mt-8 tracking-wider">
+        <p className="font-body text-xs text-muted-foreground text-center mt-10 tracking-wider">
           * Available at extra charge
         </p>
       </div>
