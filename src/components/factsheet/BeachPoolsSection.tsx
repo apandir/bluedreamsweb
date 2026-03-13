@@ -28,14 +28,14 @@ const BeachPoolsSection = () => {
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <p className="factsheet-label mb-4">700m Sandy Beach</p>
+              <p className="factsheet-label mb-4">300m Sandy Beach</p>
               <h3 className="factsheet-heading text-3xl md:text-4xl mb-6">
                 Where Azure Meets Sand
               </h3>
               <div className="factsheet-divider !mx-0 mb-8" />
               <p className="font-body text-sm leading-relaxed opacity-80 mb-6">
-                Our 700-meter long sandy beach stretches along the pristine Torba Bay, complemented
-                by private piers and exclusive relaxing cabanas. Sun loungers and parasols are
+                Our 300-meter long sandy beach stretches along the pristine Torba Bay, complemented
+                by multiple piers and exclusive relaxing cabanas. Sun loungers and parasols are
                 complimentary for all guests.
               </p>
               <p className="font-body text-sm leading-relaxed opacity-80">
