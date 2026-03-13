@@ -2,6 +2,7 @@ import roomClub from "@/assets/room-club.jpg";
 import roomClubSeaview from "@/assets/room-club-seaview.jpg";
 import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
+import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
 import roomHero from "@/assets/room-deluxe.jpg";
 
 const RoomsSection = () => {
