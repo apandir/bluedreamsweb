@@ -10,6 +10,7 @@ const langOptions: { code: Language; label: string; flag: string }[] = [
   { code: "ru", label: "RU", flag: "🇷🇺" },
   { code: "de", label: "DE", flag: "🇩🇪" },
   { code: "ar", label: "AR", flag: "🇸🇦" },
+  { code: "sv", label: "SV", flag: "🇸🇪" },
 ];
 
 const StickyNav = () => {
