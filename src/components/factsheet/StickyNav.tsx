@@ -57,7 +57,7 @@ const StickyNav = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#" className="flex-shrink-0">
-          <img src={logo} alt="Blue Dreams Resort" className="h-7 md:h-8 brightness-0 invert" />
+          <img src={logo} alt="Blue Dreams Resort" className="h-7 md:h-8" />
         </a>
 
         <div className="hidden lg:flex items-center gap-0.5">
