@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "@/assets/blue-dreams-logo.png";
+import logo from "@/assets/blue-dreams-logo-light.png";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Language } from "@/i18n/types";
 import { ChevronDown } from "lucide-react";
