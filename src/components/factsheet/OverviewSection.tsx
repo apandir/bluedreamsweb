@@ -51,7 +51,21 @@ const OverviewSection = () => {
                 Whether you're seeking relaxation or adventure, from tennis courts and water
                 sports to our world-class Spa services, every moment is crafted for your pleasure.
               </p>
-            </div>
+              </div>
+
+              {/* Distances */}
+              <div className="mt-6">
+                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold font-bold mb-4">Distances from Resort</p>
+                <div className="grid grid-cols-3 gap-3">
+                  {distances.map((d) => (
+                    <div key={d.place} className="stat-block !p-4 text-center">
+                      <p className="font-display text-2xl font-bold text-ocean-deep">{d.km}</p>
+                      <p className="font-body text-[9px] tracking-[0.1em] uppercase text-gold font-bold mt-0.5">km</p>
+                      <p className="font-body text-[10px] text-muted-foreground mt-1 font-medium">{d.place}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             <div className="space-y-6">
               <img src={beachImage} alt="Beach" className="w-full h-72 object-cover" />
               <div className="grid grid-cols-2 gap-4">
