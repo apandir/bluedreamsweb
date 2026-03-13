@@ -7,15 +7,16 @@ const IndexSection = () => {
     { label: "05", title: "Food & Beverage", href: "#dining" },
     { label: "06", title: "Spa & Wellness", href: "#spa" },
     { label: "07", title: "Activities & Sports", href: "#activities" },
-    { label: "08", title: "General Information", href: "#general" },
-    { label: "09", title: "Contact", href: "#contact" },
+    { label: "08", title: "Meetings & Events", href: "#meetings" },
+    { label: "09", title: "General Information", href: "#general" },
+    { label: "10", title: "Contact", href: "#contact" },
   ];
 
   return (
-    <section className="section-cream py-24 md:py-32">
+    <section className="section-dark py-24 md:py-32">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <p className="factsheet-label mb-4">Contents</p>
-        <h2 className="factsheet-heading text-4xl md:text-5xl text-ocean-deep mb-8">
+        <h2 className="factsheet-heading text-4xl md:text-5xl text-primary-foreground mb-8">
           Index
         </h2>
         <div className="factsheet-divider mb-16" />
@@ -25,12 +26,12 @@ const IndexSection = () => {
             <a
               key={s.label}
               href={s.href}
-              className="flex items-center justify-between py-4 border-b border-sand hover:bg-sand/30 px-4 -mx-4 transition-colors cursor-pointer"
+              className="group flex items-center justify-between py-5 border-b border-primary-foreground/10 hover:border-gold px-4 -mx-4 transition-all duration-300 cursor-pointer"
             >
-              <span className="font-body text-xs font-semibold tracking-[0.2em] text-gold">
+              <span className="font-body text-[11px] font-bold tracking-[0.3em] text-gold group-hover:text-gold-light transition-colors">
                 {s.label}
               </span>
-              <span className="font-display text-lg md:text-xl font-light text-foreground">
+              <span className="font-display text-xl md:text-2xl font-bold text-primary-foreground/80 group-hover:text-primary-foreground transition-colors">
                 {s.title}
               </span>
             </a>

@@ -39,7 +39,7 @@ const RoomsSection = () => {
         <div className="factsheet-hero-overlay" />
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
-            <p className="factsheet-label mb-4 text-gold-light">03</p>
+            <p className="section-number text-gold-light">03</p>
             <h2 className="factsheet-heading text-4xl md:text-6xl text-primary-foreground">
               Rooms & Suites
             </h2>
@@ -63,22 +63,24 @@ const RoomsSection = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {rooms.map((room) => (
-              <div key={room.name} className="factsheet-card overflow-hidden">
-                <img
-                  src={room.image}
-                  alt={room.name}
-                  className="w-full h-52 object-cover"
-                />
+              <div key={room.name} className="factsheet-card group overflow-hidden">
+                <div className="overflow-hidden">
+                  <img
+                    src={room.image}
+                    alt={room.name}
+                    className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
                 <div className="p-8">
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="font-display text-2xl font-light text-ocean-deep">
+                    <h4 className="font-display text-2xl font-bold text-ocean-deep">
                       {room.name}
                     </h4>
-                    <span className="font-body text-xs tracking-[0.15em] uppercase text-gold font-semibold">
+                    <span className="font-body text-[10px] tracking-[0.15em] uppercase text-gold font-bold bg-cream px-3 py-1.5">
                       {room.size}
                     </span>
                   </div>
-                  <div className="w-12 h-px bg-gold mb-4" />
+                  <div className="w-12 h-[2px] mb-4" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
                   <p className="font-body text-sm leading-relaxed text-muted-foreground">
                     {room.description}
                   </p>

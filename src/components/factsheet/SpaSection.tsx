@@ -8,7 +8,7 @@ const SpaSection = () => {
         <div className="factsheet-hero-overlay" />
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
-            <p className="factsheet-label mb-4 text-gold-light">06</p>
+            <p className="section-number text-gold-light">06</p>
             <h2 className="factsheet-heading text-4xl md:text-6xl text-primary-foreground">
               Spa & Wellness
             </h2>
@@ -25,12 +25,12 @@ const SpaSection = () => {
                 Restore Your Inner Balance
               </h3>
               <div className="factsheet-divider !mx-0 mb-8" />
-              <p className="font-body text-sm leading-relaxed opacity-80 mb-6">
+              <p className="font-body text-sm leading-relaxed opacity-70 mb-6">
                 Our full-service spa offers a sanctuary of tranquility where ancient wellness traditions
                 meet modern techniques. From traditional Turkish hammam experiences to contemporary
                 therapeutic treatments, every service is designed to restore and rejuvenate.
               </p>
-              <p className="font-body text-sm leading-relaxed opacity-80">
+              <p className="font-body text-sm leading-relaxed opacity-70">
                 The spa features indoor and outdoor treatment rooms, a fully equipped fitness
                 centre, sauna, steam room, and relaxation areas with panoramic sea views.
               </p>
@@ -43,9 +43,9 @@ const SpaSection = () => {
                 { title: "Fitness Centre", desc: "State-of-the-art equipment with personal training available" },
                 { title: "Sauna & Steam Room", desc: "Dry and wet heat experiences for total detoxification" },
               ].map((item) => (
-                <div key={item.title} className="border-l-2 border-gold pl-6">
-                  <p className="font-display text-lg text-primary-foreground">{item.title}</p>
-                  <p className="font-body text-xs opacity-60 mt-1">{item.desc}</p>
+                <div key={item.title} className="accent-line-left">
+                  <p className="font-display text-lg font-bold text-primary-foreground">{item.title}</p>
+                  <p className="font-body text-xs opacity-50 mt-1">{item.desc}</p>
                 </div>
               ))}
             </div>

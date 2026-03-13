@@ -4,7 +4,7 @@ import {
   Volume2, MonitorPlay, Wifi, Mic, Headset, Coffee,
   Waves, TreePine, Sparkles, Music, Camera, Gem,
   UtensilsCrossed, Flower2, PartyPopper,
-  Presentation, GraduationCap, Armchair, Theater,
+  Presentation, GraduationCap, Theater,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -83,17 +83,14 @@ const MeetingsSection = () => {
   };
 
   const Tag = ({ label }: { label: string }) => (
-    <span
-      className="inline-flex items-center font-body text-[10px] tracking-[0.1em] uppercase text-ocean-medium px-3 py-1.5 border rounded-full"
-      style={{ borderColor: 'hsl(var(--sand))' }}
-    >
+    <span className="tag-pill">
       {label}
     </span>
   );
 
   const IconTag = ({ icon: Icon, label }: { icon: LucideIcon; label: string }) => (
     <span
-      className="inline-flex items-center gap-2 font-display text-sm font-light text-ocean-medium px-5 py-3 border"
+      className="inline-flex items-center gap-2.5 font-body text-sm font-medium text-ocean-medium px-5 py-3 border-[1.5px] transition-all duration-200 hover:border-gold hover:text-gold"
       style={{ borderColor: 'hsl(var(--sand))' }}
     >
       <Icon className="w-4 h-4 text-gold flex-shrink-0" />
@@ -109,7 +106,7 @@ const MeetingsSection = () => {
         <div className="factsheet-hero-overlay" />
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
-            <p className="factsheet-label mb-4 text-gold-light">08</p>
+            <p className="section-number text-gold-light">08</p>
             <h2 className="factsheet-heading text-4xl md:text-6xl text-primary-foreground">
               Meetings & Events
             </h2>
@@ -137,14 +134,14 @@ const MeetingsSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {mainHall.stats.map((stat) => (
-              <div key={stat.label} className="factsheet-card p-6 text-center">
+              <div key={stat.label} className="stat-block">
                 <stat.icon className="w-5 h-5 text-gold mx-auto mb-3" />
-                <p className="font-display text-3xl md:text-4xl font-light text-ocean-deep">
+                <p className="font-display text-3xl md:text-4xl font-bold text-ocean-deep">
                   {stat.value}
                 </p>
-                <p className="font-body text-[10px] tracking-[0.15em] uppercase text-gold mt-1">
+                <p className="font-body text-[10px] tracking-[0.15em] uppercase text-gold mt-1 font-bold">
                   {stat.unit}
                 </p>
                 <p className="font-body text-xs text-muted-foreground mt-2">{stat.label}</p>
@@ -156,7 +153,7 @@ const MeetingsSection = () => {
           <div className="factsheet-card overflow-hidden mb-20">
             <div className="p-6 border-b flex items-center gap-3" style={{ borderColor: 'hsl(var(--sand))' }}>
               <Presentation className="w-4 h-4 text-gold" />
-              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold">
+              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold font-bold">
                 Hall Configurations
               </p>
             </div>
@@ -164,27 +161,27 @@ const MeetingsSection = () => {
               <table className="w-full">
                 <thead>
                   <tr className="border-b" style={{ borderColor: 'hsl(var(--sand))' }}>
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-left p-4">Section</th>
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">
+                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-bold text-left p-4">Section</th>
+                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-bold text-center p-4">
                       <span className="inline-flex items-center gap-1.5"><Maximize className="w-3 h-3" /> Area</span>
                     </th>
                     {(["Theater", "Classroom", "Banquet"] as const).map((col) => {
                       const Icon = configIcons[col];
                       return (
-                        <th key={col} className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">
+                        <th key={col} className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-bold text-center p-4">
                           <span className="inline-flex items-center gap-1.5"><Icon className="w-3 h-3" /> {col}</span>
                         </th>
                       );
                     })}
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">
+                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-bold text-center p-4">
                       <span className="inline-flex items-center gap-1.5"><ArrowUpFromDot className="w-3 h-3" /> Height</span>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {mainHall.configurations.map((config) => (
-                    <tr key={config.section} className="border-b last:border-b-0" style={{ borderColor: 'hsl(var(--sand))' }}>
-                      <td className="font-display text-sm font-light text-ocean-deep p-4">{config.section}</td>
+                    <tr key={config.section} className="border-b last:border-b-0 hover:bg-cream/50 transition-colors" style={{ borderColor: 'hsl(var(--sand))' }}>
+                      <td className="font-display text-sm font-bold text-ocean-deep p-4">{config.section}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-4">{config.area}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-4">{config.theater}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-4">{config.classroom}</td>
@@ -212,7 +209,7 @@ const MeetingsSection = () => {
           <div className="grid md:grid-cols-3 gap-6 mb-20">
             {meetingRooms.map((room) => (
               <div key={room.name} className="factsheet-card p-6">
-                <h4 className="font-display text-xl font-light text-ocean-deep mb-4">{room.name}</h4>
+                <h4 className="font-display text-xl font-bold text-ocean-deep mb-4">{room.name}</h4>
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-3">
                     <Maximize className="w-4 h-4 text-gold flex-shrink-0" />
@@ -264,11 +261,11 @@ const MeetingsSection = () => {
               <div key={venue.name} className="factsheet-card p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <venue.icon className="w-4 h-4 text-gold" />
-                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold">
+                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold font-bold">
                     Outdoor Venue
                   </p>
                 </div>
-                <h4 className="font-display text-xl font-light text-ocean-deep mb-2">{venue.name}</h4>
+                <h4 className="font-display text-xl font-bold text-ocean-deep mb-2">{venue.name}</h4>
                 <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4">{venue.desc}</p>
                 <div className="flex items-center gap-2 mb-4">
                   <Users className="w-3.5 h-3.5 text-gold flex-shrink-0" />
