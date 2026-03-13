@@ -54,15 +54,15 @@ const DiningSection = () => {
 
   const bars = [
     {
-      name: "Sunset Bar",
+      name: "Sunset Bar**",
       type: "Cocktail Bar",
       desc: "Cocktails and live music with panoramic sunset views over the bay",
       hours: "17:00 – 01:00",
-      location: "Hilltop Terrace",
+      location: "Activity Pool",
       image: diningSunsetBar,
     },
     {
-      name: "Lobby Bar",
+      name: "Lobby Bar**",
       type: "Lounge Bar",
       desc: "Premium spirits and signature cocktails in an elegant lobby setting",
       hours: "10:00 – 00:00",
@@ -70,23 +70,31 @@ const DiningSection = () => {
       image: barLobby,
     },
     {
-      name: "Pool Bar",
+      name: "Circle Bar**",
       type: "Pool Bar",
       desc: "Refreshing drinks and light snacks served poolside all day",
       hours: "10:00 – 18:00",
-      location: "Main Pool Area",
+      location: "Infinity Pool",
       image: barPool,
     },
     {
-      name: "Beach Bar",
+      name: "Pier Bar**",
       type: "Beach Bar",
-      desc: "Chilled beverages and tropical cocktails on the sandy beachfront",
+      desc: "Chilled beverages and tropical cocktails served on the pier",
       hours: "10:00 – 18:00",
-      location: "Beach",
+      location: "Pier",
       image: barBeach,
     },
     {
-      name: "Vitamin Bar",
+      name: "Tea Garden**",
+      type: "Tea & Coffee Lounge",
+      desc: "A relaxing terrace serving a selection of teas, coffees, pastries and light refreshments",
+      hours: "10:00 – 22:00",
+      location: "The Terrace",
+      image: barLobby,
+    },
+    {
+      name: "Vitamin Bar*",
       type: "Healthy Bar",
       desc: "Fresh juices, smoothies and healthy snacks by the pool",
       hours: "09:00 – 17:00",
@@ -165,10 +173,19 @@ const DiningSection = () => {
             <div className="factsheet-divider mb-8" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
             {bars.map((bar) => (
               <VenueCard key={bar.name} venue={bar} />
             ))}
+          </div>
+
+          <div className="space-y-2 mt-6">
+            <p className="font-body text-[10px] text-muted-foreground tracking-wider">
+              * Not included in the Ultra All Inclusive concept
+            </p>
+            <p className="font-body text-[10px] text-muted-foreground tracking-wider">
+              ** Selection of imported and local alcoholic and non-alcoholic hot and cold beverages served. Premium beverages at extra cost.
+            </p>
           </div>
         </div>
       </div>
