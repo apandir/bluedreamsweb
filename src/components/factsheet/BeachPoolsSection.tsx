@@ -7,6 +7,7 @@ import poolKids from "@/assets/pool-kids.jpg";
 import beachCabanaArea from "@/assets/beach-cabana-area.jpg";
 import beachCabana from "@/assets/beach-cabana.jpg";
 import beachWatersports from "@/assets/beach-watersports.jpg";
+import beachOverview from "@/assets/beach-overview.jpg";
 
 const BeachPoolsSection = () => {
   const poolGallery = [
@@ -18,6 +19,7 @@ const BeachPoolsSection = () => {
     { name: "Cabana Area", image: beachCabanaArea },
     { name: "Beach Cabanas", image: beachCabana },
     { name: "Water Sports", image: beachWatersports },
+    { name: "Beach & Resort Overview", image: beachOverview },
   ];
 
   return (
