@@ -51,7 +51,7 @@ const DiningSection = () => {
       desc: "Premium spirits and signature cocktails in an elegant lobby setting",
       hours: "10:00 – 00:00",
       location: "Main Lobby",
-      image: null,
+      image: barLobby,
     },
     {
       name: "Pool Bar",
