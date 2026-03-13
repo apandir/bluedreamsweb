@@ -23,25 +23,25 @@ const ContactSection = () => {
           <a href="https://www.google.com/maps/search/?api=1&query=Torba+Mahallesi+Herodot+Bulvarı+No:11+Bodrum+Muğla+Türkiye" target="_blank" rel="noopener noreferrer" className="factsheet-card p-5 group hover:border-gold transition-colors">
             <MapPin className="w-4 h-4 text-gold mb-3" />
             <p className="factsheet-label mb-1.5">Address</p>
-            <p className="font-body text-xs text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors">Torba Mah. Herodot Bulvarı No:11, Bodrum / Muğla</p>
+            <p className="font-display text-sm text-foreground leading-relaxed group-hover:text-ocean-deep transition-colors">Torba Mah. Herodot Bulvarı No:11, Bodrum / Muğla</p>
           </a>
 
           <a href="tel:+902523371111" className="factsheet-card p-5 group hover:border-gold transition-colors">
             <Phone className="w-4 h-4 text-gold mb-3" />
             <p className="factsheet-label mb-1.5">Telephone</p>
-            <p className="font-body text-xs text-muted-foreground group-hover:text-foreground transition-colors">+90 252 337 11 11</p>
+            <p className="font-display text-sm text-foreground group-hover:text-ocean-deep transition-colors">+90 252 337 11 11</p>
           </a>
 
           <a href="mailto:sales@bluedreamsresort.com" className="factsheet-card p-5 group hover:border-gold transition-colors">
             <Mail className="w-4 h-4 text-gold mb-3" />
             <p className="factsheet-label mb-1.5">Email</p>
-            <p className="font-body text-xs text-muted-foreground group-hover:text-foreground transition-colors">sales@bluedreamsresort.com</p>
+            <p className="font-display text-sm text-foreground group-hover:text-ocean-deep transition-colors">sales@bluedreamsresort.com</p>
           </a>
 
           <a href="https://www.bluedreamsresort.com" target="_blank" rel="noopener noreferrer" className="factsheet-card p-5 group hover:border-gold transition-colors">
             <Globe className="w-4 h-4 text-gold mb-3" />
             <p className="factsheet-label mb-1.5">Website</p>
-            <p className="font-body text-xs text-muted-foreground group-hover:text-foreground transition-colors">bluedreamsresort.com</p>
+            <p className="font-display text-sm text-foreground group-hover:text-ocean-deep transition-colors">bluedreamsresort.com</p>
           </a>
         </div>
 
