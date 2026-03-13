@@ -27,7 +27,7 @@ const DiningSection = () => {
     { name: "Lobby Bar**", type: "Lounge Bar", desc: "Premium spirits and signature cocktails in an elegant lobby setting", hours: "10:00 – 00:00", location: "Main Lobby", image: barLobby },
     { name: "Circle Bar**", type: "Pool Bar", desc: "Refreshing drinks and light snacks served poolside all day", hours: "10:00 – 18:00", location: "Infinity Pool", image: barPool },
     { name: "Pier Bar**", type: "Beach Bar", desc: "Chilled beverages and tropical cocktails served on the pier", hours: "10:00 – 18:00", location: "Pier", image: barBeach },
-    { name: "Tea Garden**", type: "Tea & Coffee Lounge", desc: "A relaxing terrace serving a selection of teas, coffees, pastries and light refreshments", hours: "10:00 – 22:00", location: "The Terrace", image: barLobby },
+    { name: "Tea Garden**", type: "Tea & Coffee Lounge", desc: "A relaxing terrace serving a selection of teas, coffees, pastries and light refreshments", hours: "10:00 – 22:00", location: "The Terrace", image: barTeaGarden },
     { name: "Vitamin Bar*", type: "Healthy Bar", desc: "Fresh juices, smoothies and healthy snacks by the pool", hours: "09:00 – 17:00", location: "Spa & Pool Area", image: barVitamin },
   ];
 
