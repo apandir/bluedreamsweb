@@ -1,6 +1,12 @@
 import bodrumImage from "@/assets/bodrum-location.jpg";
 
 const LocationSection = () => {
+  const distances = [
+    { place: "Torba Village", distance: "2 km" },
+    { place: "Bodrum City Centre", distance: "10 km" },
+    { place: "Milas-Bodrum Airport (BJV)", distance: "25 km" },
+  ];
+
   return (
     <section id="location">
       <div className="factsheet-section h-[60vh] min-h-[400px]">
@@ -45,18 +51,24 @@ const LocationSection = () => {
                 </p>
               </div>
               <div className="border-l-2 border-gold pl-6">
-                <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mb-2">Getting Here</p>
-                <p className="font-body text-sm opacity-80">
-                  25 km from Milas-Bodrum International Airport (BJV). Complimentary airport
-                  transfers available upon request. 10 km to Bodrum city centre.
-                </p>
-              </div>
-              <div className="border-l-2 border-gold pl-6">
                 <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mb-2">Address</p>
                 <p className="font-body text-sm opacity-80">
                   Torba Mahallesi, Herodot Bulvarı No:11<br />
                   Bodrum / Muğla / Türkiye
                 </p>
+              </div>
+              <div className="border-l-2 border-gold pl-6">
+                <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mb-4">Distances</p>
+                <div className="space-y-3">
+                  {distances.map((d) => (
+                    <div key={d.place} className="flex items-center justify-between">
+                      <span className="font-body text-sm opacity-70">{d.place}</span>
+                      <span className="font-display text-lg font-light text-gold-light ml-4 whitespace-nowrap">
+                        {d.distance}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
