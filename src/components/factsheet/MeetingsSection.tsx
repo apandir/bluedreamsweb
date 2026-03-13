@@ -1,4 +1,14 @@
 import meetingHall from "@/assets/meeting-hall.jpg";
+import eventCeremony from "@/assets/event-ceremony.png";
+import eventResortNight from "@/assets/event-resort-night.png";
+import eventParty from "@/assets/event-party.png";
+import eventGardenTable from "@/assets/event-garden-table.png";
+import eventTerraceCeremony from "@/assets/event-terrace-ceremony.png";
+import eventAerialTable from "@/assets/event-aerial-table.png";
+import eventLiveMusic from "@/assets/event-live-music.png";
+import eventTableDetail from "@/assets/event-table-detail.png";
+import eventSunsetDinner from "@/assets/event-sunset-dinner.png";
+import eventDesserts from "@/assets/event-desserts.png";
 import {
   Users, Maximize, ArrowUpFromDot, Heart,
   Volume2, MonitorPlay, Wifi, Mic, Headset, Coffee,
@@ -217,8 +227,34 @@ const MeetingsSection = () => {
             <p className="factsheet-label mb-4">Wedding Services</p>
             <div className="factsheet-divider mb-6" />
           </div>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3 mb-16">
             {weddingServices.map((item) => <IconTag key={item.label} icon={item.icon} label={item.label} />)}
+          </div>
+
+          {/* Events Gallery */}
+          <div className="text-center mb-10">
+            <p className="factsheet-label mb-4">Gallery</p>
+            <div className="factsheet-divider mb-6" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            {[
+              { src: eventCeremony, alt: "Beach Ceremony" },
+              { src: eventResortNight, alt: "Resort at Night" },
+              { src: eventParty, alt: "Party Fun" },
+              { src: eventGardenTable, alt: "Garden Table Setting" },
+              { src: eventTerraceCeremony, alt: "Terrace Ceremony" },
+              { src: eventAerialTable, alt: "Aerial Table View" },
+              { src: eventLiveMusic, alt: "Live Music" },
+              { src: eventTableDetail, alt: "Table Details" },
+              { src: eventSunsetDinner, alt: "Sunset Dinner" },
+              { src: eventDesserts, alt: "Dessert Buffet" },
+            ].map((item) => (
+              <div key={item.alt} className="group relative overflow-hidden rounded-lg aspect-[4/3]">
+                <img src={item.src} alt={item.alt} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-3 left-3 right-3 font-body text-xs text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.alt}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
