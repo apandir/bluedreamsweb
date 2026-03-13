@@ -9,6 +9,12 @@ import eventLiveMusic from "@/assets/event-live-music.png";
 import eventTableDetail from "@/assets/event-table-detail.png";
 import eventSunsetDinner from "@/assets/event-sunset-dinner.png";
 import eventDesserts from "@/assets/event-desserts.png";
+import eventChampagne from "@/assets/event-champagne.png";
+import eventToast from "@/assets/event-toast.png";
+import eventDinnerParty from "@/assets/event-dinner-party.png";
+import eventTableSetup from "@/assets/event-table-setup.png";
+import eventAerialDinner from "@/assets/event-aerial-dinner.png";
+import eventGardenSetup from "@/assets/event-garden-setup.png";
 import {
   Users, Maximize, ArrowUpFromDot, Heart,
   Volume2, MonitorPlay, Wifi, Mic, Headset, Coffee,
