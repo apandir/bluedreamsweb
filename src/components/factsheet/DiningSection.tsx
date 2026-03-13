@@ -39,7 +39,9 @@ const DiningSection = () => {
       )}
       <div className="p-5">
         <p className="factsheet-label text-[10px] mb-2">{venue.type}</p>
-        <h4 className="font-display text-lg text-ocean-deep mb-2">{venue.name}</h4>
+        <h4 className="font-display text-lg text-ocean-deep mb-2">
+          {venue.name}{venue.type === "À la Carte Restaurant" && <span className="text-gold">*</span>}
+        </h4>
         <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4">{venue.desc}</p>
         <div className="space-y-1.5 pt-3 border-t" style={{ borderColor: 'hsl(var(--sand))' }}>
           <div className="flex items-center gap-2">
@@ -97,7 +99,7 @@ const DiningSection = () => {
           </div>
 
           <div className="space-y-1 mt-6">
-            <p className="font-body text-[10px] text-muted-foreground tracking-wider">* Not included in the Ultra All Inclusive concept</p>
+            <p className="font-body text-[10px] text-muted-foreground tracking-wider">* Requires reservation</p>
             <p className="font-body text-[10px] text-muted-foreground tracking-wider">** Selection of imported and local alcoholic and non-alcoholic hot and cold beverages served. Premium beverages at extra cost.</p>
           </div>
         </div>
