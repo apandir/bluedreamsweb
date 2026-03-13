@@ -44,14 +44,14 @@ const BeachPoolsSection = () => {
             </h3>
             <div className="factsheet-divider mb-5" />
             <p className="font-body text-sm leading-relaxed opacity-70 max-w-2xl mx-auto">
-              Our 300-meter long sandy and pebbles beach stretches along the pristine Torba Bay, complemented
-              by multiple piers and exclusive relaxing cabanas. Sun loungers and parasols are
-              complimentary for all guests.
+              With 5 amazing pools and a 300-metre sandy and pebbles beach stretching along the pristine Torba Bay,
+              our resort offers the ultimate waterside experience. Complemented by multiple piers, exclusive
+              relaxing cabanas, and complimentary sun loungers and parasols for all guests.
             </p>
           </div>
 
           {/* Pool Gallery */}
-          <p className="factsheet-label mb-6 text-center">Swimming Pools</p>
+          <p className="factsheet-label mb-6 text-center">Pools & Beaches</p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {poolGallery.map((pool) => (
               <div key={pool.name} className="group relative overflow-hidden rounded-lg aspect-[4/3]">
