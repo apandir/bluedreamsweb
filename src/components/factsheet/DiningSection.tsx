@@ -2,6 +2,10 @@ import diningMain from "@/assets/dining-main.jpg";
 import diningLaLocanda from "@/assets/dining-lalocanda.jpg";
 import diningHalikarnas from "@/assets/dining-halikarnas.jpg";
 import diningSunsetBar from "@/assets/dining-sunsetbar.jpg";
+import barLobby from "@/assets/bar-lobby.jpg";
+import barPool from "@/assets/bar-pool.jpg";
+import barBeach from "@/assets/bar-beach.jpg";
+import barVitamin from "@/assets/bar-vitamin.jpg";
 import { Clock, MapPin } from "lucide-react";
 
 const DiningSection = () => {
@@ -47,7 +51,7 @@ const DiningSection = () => {
       desc: "Premium spirits and signature cocktails in an elegant lobby setting",
       hours: "10:00 – 00:00",
       location: "Main Lobby",
-      image: null,
+      image: barLobby,
     },
     {
       name: "Pool Bar",
@@ -55,7 +59,7 @@ const DiningSection = () => {
       desc: "Refreshing drinks and light snacks served poolside all day",
       hours: "10:00 – 18:00",
       location: "Main Pool Area",
-      image: null,
+      image: barPool,
     },
     {
       name: "Beach Bar",
@@ -63,7 +67,7 @@ const DiningSection = () => {
       desc: "Chilled beverages and tropical cocktails on the sandy beachfront",
       hours: "10:00 – 18:00",
       location: "Beach",
-      image: null,
+      image: barBeach,
     },
     {
       name: "Vitamin Bar",
@@ -71,7 +75,7 @@ const DiningSection = () => {
       desc: "Fresh juices, smoothies and healthy snacks by the pool",
       hours: "09:00 – 17:00",
       location: "Spa & Pool Area",
-      image: null,
+      image: barVitamin,
     },
   ];
 
