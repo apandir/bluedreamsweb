@@ -75,7 +75,7 @@ const DiningSection = () => {
       desc: "Fresh juices, smoothies and healthy snacks by the pool",
       hours: "09:00 – 17:00",
       location: "Spa & Pool Area",
-      image: null,
+      image: barVitamin,
     },
   ];
 
