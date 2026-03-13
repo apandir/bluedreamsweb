@@ -3,3 +3,4 @@ export { tr } from "./tr";
 export { ru } from "./ru";
 export { de } from "./de";
 export { ar } from "./ar";
+export { sv } from "./sv";

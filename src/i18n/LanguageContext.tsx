@@ -5,8 +5,9 @@ import { tr } from "./translations/tr";
 import { ru } from "./translations/ru";
 import { de } from "./translations/de";
 import { ar } from "./translations/ar";
+import { sv } from "./translations/sv";
 
-const translationsMap: Record<Language, Translations> = { en, tr, ru, de, ar };
+const translationsMap: Record<Language, Translations> = { en, tr, ru, de, ar, sv };
 
 interface LanguageContextType {
   language: Language;
