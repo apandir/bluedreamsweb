@@ -26,6 +26,36 @@ const MeetingsSection = () => {
     { name: "Board Room", area: "40 m²", theater: 16, height: "2.80 mt" },
   ];
 
+  const weddingVenues = [
+    {
+      name: "Beachfront Ceremony",
+      capacity: "Up to 300 guests",
+      desc: "Exchange vows on pristine white sand with the Aegean Sea as your backdrop. Available at sunset for magical golden-hour ceremonies.",
+      features: ["Floral Arch Setup", "White Sand Aisle", "Sunset Timing"],
+    },
+    {
+      name: "Garden Terrace",
+      capacity: "Up to 500 guests",
+      desc: "A lush Mediterranean garden surrounded by olive trees and bougainvillea, perfect for elegant outdoor receptions and cocktail hours.",
+      features: ["Landscaped Gardens", "String Lighting", "Dance Floor"],
+    },
+    {
+      name: "Poolside Gala",
+      capacity: "Up to 400 guests",
+      desc: "A glamorous poolside setting with ambient lighting and panoramic sea views for unforgettable evening celebrations.",
+      features: ["Pool Illumination", "Live Music Stage", "Cocktail Stations"],
+    },
+  ];
+
+  const weddingServices = [
+    "Dedicated Wedding Coordinator",
+    "Custom Menu Planning",
+    "Floral & Décor Design",
+    "DJ & Live Entertainment",
+    "Photography Arrangements",
+    "Bridal Suite & Spa Package",
+  ];
+
   const amenities = [
     "Professional Sound System",
     "HD Projector & Screen",
