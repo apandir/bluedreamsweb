@@ -19,8 +19,16 @@ const DiningSection = () => {
       image: diningMain,
     },
     {
+      name: "Snack Restaurant",
+      type: "Casual Dining",
+      desc: "Light bites, burgers, sandwiches and refreshments served beachside throughout the day",
+      hours: "10:00 – 17:00",
+      location: "Beachfront",
+      image: diningMain,
+    },
+    {
       name: "La Locanda",
-      type: "Italian Fine Dining",
+      type: "À la Carte Restaurant",
       desc: "Wood-fired pizza and handmade pasta in a refined Mediterranean setting",
       hours: "19:00 – 22:00",
       location: "Garden Terrace",
@@ -41,14 +49,6 @@ const DiningSection = () => {
       hours: "19:00 – 22:00",
       location: "Beachfront",
       image: diningHalikarnas,
-    },
-    {
-      name: "Snack Restaurant",
-      type: "Casual Dining",
-      desc: "Light bites, burgers, sandwiches and refreshments served beachside throughout the day",
-      hours: "10:00 – 17:00",
-      location: "Beachfront",
-      image: diningMain,
     },
   ];
 
