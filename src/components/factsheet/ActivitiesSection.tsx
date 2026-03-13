@@ -1,3 +1,5 @@
+import activitiesHero from "@/assets/activities-hero.jpg";
+
 const ActivitiesSection = () => {
   const activities = [
     { category: "Water Sports", items: ["Windsurfing*", "Canoeing*", "Water Polo", "Pedal Boats*", "Jet Ski*"] },
@@ -7,7 +9,21 @@ const ActivitiesSection = () => {
   ];
 
   return (
-    <section id="activities" className="section-cream py-14 md:py-20">
+    <section id="activities">
+      <div className="factsheet-section h-[35vh] min-h-[280px]">
+        <img src={activitiesHero} alt="Activities & Sports" className="absolute inset-0 image-cover" />
+        <div className="factsheet-hero-overlay" />
+        <div className="relative z-10 flex items-end h-full pb-10 px-6">
+          <div className="max-w-4xl mx-auto text-center w-full">
+            <p className="section-number text-gold-light">07</p>
+            <h2 className="factsheet-heading text-4xl md:text-5xl text-primary-foreground">
+              Activities & Sports
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div className="section-cream py-14 md:py-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <p className="section-number text-gold">07</p>
