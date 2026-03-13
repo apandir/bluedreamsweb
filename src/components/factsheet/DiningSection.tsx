@@ -39,7 +39,9 @@ const DiningSection = () => {
       )}
       <div className="p-5">
         <p className="factsheet-label text-[10px] mb-2">{venue.type}</p>
-        <h4 className="font-display text-lg text-ocean-deep mb-2">{venue.name}</h4>
+        <h4 className="font-display text-lg text-ocean-deep mb-2">
+          {venue.name}{venue.type === "À la Carte Restaurant" && <span className="text-gold">*</span>}
+        </h4>
         <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4">{venue.desc}</p>
         <div className="space-y-1.5 pt-3 border-t" style={{ borderColor: 'hsl(var(--sand))' }}>
           <div className="flex items-center gap-2">
