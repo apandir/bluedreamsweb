@@ -29,7 +29,7 @@ const ContactSection = () => {
           <a href="tel:+902523371111" className="factsheet-card p-5 group hover:border-gold transition-colors">
             <Phone className="w-4 h-4 text-gold mb-3" />
             <p className="factsheet-label mb-1.5">Telephone</p>
-            <p className="font-body text-xs text-muted-foreground group-hover:text-foreground transition-colors">+90 252 337 11 11</p>
+            <p className="font-display text-sm text-foreground group-hover:text-ocean-deep transition-colors">+90 252 337 11 11</p>
           </a>
 
           <a href="mailto:sales@bluedreamsresort.com" className="factsheet-card p-5 group hover:border-gold transition-colors">
