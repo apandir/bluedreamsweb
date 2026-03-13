@@ -9,6 +9,14 @@ const OverviewSection = () => {
     { value: "25", label: "km to Airport" },
   ];
 
+  const distances = [
+    { place: "Bodrum City Center", km: "10" },
+    { place: "Bodrum Airport", km: "25" },
+    { place: "Yalıkavak", km: "25" },
+    { place: "Turgutreis", km: "25" },
+    { place: "Gümüşlük", km: "28" },
+  ];
+
   return (
     <section id="overview">
       <div className="factsheet-section h-[60vh] min-h-[400px]">
