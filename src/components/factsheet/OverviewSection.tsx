@@ -34,8 +34,8 @@ const OverviewSection = () => {
                 unique Bodrum architecture, a 300-meter long sandy beach, piers, and private relaxing cabanas.
               </p>
               <p className="font-body text-sm leading-relaxed text-muted-foreground">
-                The resort caters to all your needs with five swimming pools and one pool equipped with
-                slides. Whether you're seeking relaxation or adventure, from tennis courts and water
+                The resort caters to all your needs with five swimming pools.
+                Whether you're seeking relaxation or adventure, from tennis courts and water
                 sports to our world-class Spa services, every moment is crafted for your pleasure.
               </p>
             </div>
