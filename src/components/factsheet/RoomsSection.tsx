@@ -1,29 +1,41 @@
-import roomImage from "@/assets/room-deluxe.jpg";
+import roomClub from "@/assets/room-club.jpg";
+import roomClubSeaview from "@/assets/room-club-seaview.jpg";
+import roomFamily from "@/assets/room-family.jpg";
+import roomDeluxe from "@/assets/room-deluxe-new.jpg";
+import roomHero from "@/assets/room-deluxe.jpg";
 
 const RoomsSection = () => {
   const rooms = [
     {
       name: "Club Room",
+      size: "24m²",
       description: "Comfortable rooms with garden or partial sea views, built into the hillside bungalows intertwined with the sea.",
+      image: roomClub,
     },
     {
       name: "Club Sea View Room",
+      size: "24m²",
       description: "Elevated club rooms offering panoramic views of the turquoise Aegean, with private balconies.",
+      image: roomClubSeaview,
     },
     {
       name: "Club Family Room",
-      description: "Spacious family-friendly rooms with connecting options, designed for guests traveling with children.",
+      size: "35–40m²",
+      description: "Spacious family-friendly rooms with two separate bedrooms, designed for guests traveling with children.",
+      image: roomFamily,
     },
     {
       name: "Deluxe Sea View Room",
+      size: "40m²",
       description: "Premium rooms in the main building with unobstructed sea views, elegant furnishings, and exclusive amenities.",
+      image: roomDeluxe,
     },
   ];
 
   return (
     <section id="rooms">
       <div className="factsheet-section h-[60vh] min-h-[400px]">
-        <img src={roomImage} alt="Deluxe room" className="absolute inset-0 image-cover" />
+        <img src={roomHero} alt="Deluxe room" className="absolute inset-0 image-cover" />
         <div className="factsheet-hero-overlay" />
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
@@ -51,14 +63,26 @@ const RoomsSection = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {rooms.map((room) => (
-              <div key={room.name} className="factsheet-card p-8">
-                <div className="w-12 h-px bg-gold mb-6" />
-                <h4 className="font-display text-2xl font-light text-ocean-deep mb-3">
-                  {room.name}
-                </h4>
-                <p className="font-body text-sm leading-relaxed text-muted-foreground">
-                  {room.description}
-                </p>
+              <div key={room.name} className="factsheet-card overflow-hidden">
+                <img
+                  src={room.image}
+                  alt={room.name}
+                  className="w-full h-52 object-cover"
+                />
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="font-display text-2xl font-light text-ocean-deep">
+                      {room.name}
+                    </h4>
+                    <span className="font-body text-xs tracking-[0.15em] uppercase text-gold font-semibold">
+                      {room.size}
+                    </span>
+                  </div>
+                  <div className="w-12 h-px bg-gold mb-4" />
+                  <p className="font-body text-sm leading-relaxed text-muted-foreground">
+                    {room.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

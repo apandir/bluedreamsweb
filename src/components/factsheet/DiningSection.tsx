@@ -1,22 +1,44 @@
-import diningImage from "@/assets/dining-resort.jpg";
+import diningMain from "@/assets/dining-main.jpg";
+import diningLaLocanda from "@/assets/dining-lalocanda.jpg";
+import diningHalikarnas from "@/assets/dining-halikarnas.jpg";
+import diningSunsetBar from "@/assets/dining-sunsetbar.jpg";
 
 const DiningSection = () => {
   const venues = [
-    { name: "Main Restaurant", type: "All Day Dining", desc: "International buffet with live cooking stations" },
-    { name: "À la Carte Restaurant", type: "Fine Dining", desc: "Curated Mediterranean and Turkish cuisine" },
-    { name: "Beach Restaurant", type: "Seafood", desc: "Fresh catches and Aegean specialties by the sea" },
-    { name: "Snack Bar", type: "Casual", desc: "Light bites, grilled items, and refreshments poolside" },
-    { name: "Patisserie", type: "Desserts", desc: "Freshly baked pastries, cakes, and Turkish delights" },
+    {
+      name: "Main Restaurant",
+      type: "All Day Dining",
+      desc: "International buffet with live cooking stations and theme nights",
+      image: diningMain,
+    },
+    {
+      name: "La Locanda",
+      type: "Italian Fine Dining",
+      desc: "Wood-fired pizza and handmade pasta in a refined Mediterranean setting",
+      image: diningLaLocanda,
+    },
+    {
+      name: "Halikarnas",
+      type: "Turkish & Seafood",
+      desc: "Fresh Aegean flavours with traditional Turkish à la carte cuisine",
+      image: diningHalikarnas,
+    },
+    {
+      name: "Sunset Bar",
+      type: "Bar & Lounge",
+      desc: "Cocktails and live music with panoramic sunset views over the bay",
+      image: diningSunsetBar,
+    },
   ];
 
   const bars = [
-    "Lobby Bar", "Pool Bar", "Beach Bar", "Vitamin Bar", "Night Club Bar"
+    "Lobby Bar", "Pool Bar", "Beach Bar", "Vitamin Bar", "Sunset Bar"
   ];
 
   return (
     <section id="dining">
       <div className="factsheet-section h-[60vh] min-h-[400px]">
-        <img src={diningImage} alt="Fine dining" className="absolute inset-0 image-cover" />
+        <img src={diningMain} alt="Fine dining" className="absolute inset-0 image-cover" />
         <div className="factsheet-hero-overlay" />
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
@@ -38,14 +60,21 @@ const DiningSection = () => {
             <div className="factsheet-divider mb-8" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             {venues.map((v) => (
-              <div key={v.name} className="factsheet-card p-6">
-                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold mb-3">
-                  {v.type}
-                </p>
-                <h4 className="font-display text-xl font-light text-ocean-deep mb-2">{v.name}</h4>
-                <p className="font-body text-xs text-muted-foreground leading-relaxed">{v.desc}</p>
+              <div key={v.name} className="factsheet-card overflow-hidden">
+                <img
+                  src={v.image}
+                  alt={v.name}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold mb-3">
+                    {v.type}
+                  </p>
+                  <h4 className="font-display text-xl font-light text-ocean-deep mb-2">{v.name}</h4>
+                  <p className="font-body text-xs text-muted-foreground leading-relaxed">{v.desc}</p>
+                </div>
               </div>
             ))}
           </div>
