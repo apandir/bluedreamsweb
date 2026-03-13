@@ -25,9 +25,15 @@ const RoomsSection = () => {
       image: roomFamily,
     },
     {
-      name: "Deluxe Sea View Room",
+      name: "Deluxe Room Sea & Infinity Pool View",
       size: "40m²",
-      description: "Premium rooms in the main building with unobstructed sea views, elegant furnishings, and exclusive amenities.",
+      description: "Premium rooms in the main building with unobstructed sea and infinity pool views, elegant furnishings, and exclusive amenities.",
+      image: roomDeluxe,
+    },
+    {
+      name: "Deluxe Family Room Sea & Infinity Pool View",
+      size: "50–55m²",
+      description: "Spacious deluxe family accommodation with stunning sea and infinity pool views, separate living area, and premium amenities for the whole family.",
       image: roomDeluxe,
     },
   ];
