@@ -30,12 +30,12 @@ const OverviewSection = () => {
               <div className="factsheet-divider !mx-0 mb-8" />
               <p className="font-body text-sm leading-relaxed text-muted-foreground mb-6">
                 Located in the beautiful bay of Torba Zeytinlikahve in Bodrum, Blue Dreams Resort
-                offers everything you need for an unforgettable holiday. Our 55,000 m² area features
-                unique Bodrum architecture, a 700-meter long sandy beach, piers, and private relaxing cabanas.
+                offers everything you need for an unforgettable holiday. Our 52,000 m² area features
+                unique Bodrum architecture, a 300-meter long sandy beach, piers, and private relaxing cabanas.
               </p>
               <p className="font-body text-sm leading-relaxed text-muted-foreground">
-                The resort caters to all your needs with five swimming pools and one pool equipped with
-                slides. Whether you're seeking relaxation or adventure, from tennis courts and water
+                The resort caters to all your needs with five swimming pools.
+                Whether you're seeking relaxation or adventure, from tennis courts and water
                 sports to our world-class Spa services, every moment is crafted for your pleasure.
               </p>
             </div>
@@ -43,15 +43,15 @@ const OverviewSection = () => {
               <img src={beachImage} alt="Beach" className="w-full h-72 object-cover" />
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center py-6 bg-card">
-                  <p className="font-display text-3xl font-light text-ocean-medium">55,000</p>
+                  <p className="font-display text-3xl font-light text-ocean-medium">52,000</p>
                   <p className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground mt-1">m² Total Area</p>
                 </div>
                 <div className="text-center py-6 bg-card">
-                  <p className="font-display text-3xl font-light text-ocean-medium">700</p>
+                  <p className="font-display text-3xl font-light text-ocean-medium">300</p>
                   <p className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground mt-1">m Sandy Beach</p>
                 </div>
                 <div className="text-center py-6 bg-card">
-                  <p className="font-display text-3xl font-light text-ocean-medium">5+1</p>
+                  <p className="font-display text-3xl font-light text-ocean-medium">5</p>
                   <p className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground mt-1">Swimming Pools</p>
                 </div>
                 <div className="text-center py-6 bg-card">
