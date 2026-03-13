@@ -1,8 +1,8 @@
 const GeneralInfoSection = () => {
   const info = [
     { label: "Category", value: "5-Star Resort" },
-    { label: "Total Area", value: "55,000 m²" },
-    { label: "Beach", value: "700 m (Sandy & Pebbles)" },
+    { label: "Total Area", value: "52,000 m²" },
+    { label: "Beach", value: "300 m (Sandy & Pebbles)" },
     { label: "Season", value: "April — October" },
     { label: "Concept", value: "All Inclusive" },
     { label: "Airport Distance", value: "25 km (Milas-Bodrum)" },
@@ -10,7 +10,7 @@ const GeneralInfoSection = () => {
     { label: "WiFi", value: "Complimentary High-Speed" },
     { label: "Parking", value: "Free On-Site Parking" },
     { label: "Languages", value: "Turkish, English, German, Russian" },
-    { label: "Credit Cards", value: "Visa, MasterCard, Amex" },
+    { label: "Credit Cards", value: "Visa, MasterCard, Amex, Troy" },
     { label: "Check-In / Out", value: "14:00 / 12:00" },
   ];
 
