@@ -2,15 +2,21 @@ import poolImage from "@/assets/pool-resort.jpg";
 import beachImage from "@/assets/beach-resort.jpg";
 
 const OverviewSection = () => {
+  const stats = [
+    { value: "52,000", label: "m² Total Area" },
+    { value: "300", label: "m Sandy Beach" },
+    { value: "5", label: "Swimming Pools" },
+    { value: "25", label: "km to Airport" },
+  ];
+
   return (
     <section id="overview">
-      {/* Full-bleed image with text overlay */}
       <div className="factsheet-section h-[60vh] min-h-[400px]">
         <img src={poolImage} alt="Resort pool" className="absolute inset-0 image-cover" />
         <div className="factsheet-hero-overlay" />
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
-            <p className="factsheet-label mb-4 text-gold-light">01</p>
+            <p className="section-number text-gold-light">01</p>
             <h2 className="factsheet-heading text-4xl md:text-6xl text-primary-foreground">
               Hotel Overview
             </h2>
@@ -18,7 +24,6 @@ const OverviewSection = () => {
         </div>
       </div>
 
-      {/* Content */}
       <div className="section-cream py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -41,23 +46,13 @@ const OverviewSection = () => {
             </div>
             <div className="space-y-6">
               <img src={beachImage} alt="Beach" className="w-full h-72 object-cover" />
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center py-6 bg-card">
-                  <p className="font-display text-3xl font-light text-ocean-medium">52,000</p>
-                  <p className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground mt-1">m² Total Area</p>
-                </div>
-                <div className="text-center py-6 bg-card">
-                  <p className="font-display text-3xl font-light text-ocean-medium">300</p>
-                  <p className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground mt-1">m Sandy Beach</p>
-                </div>
-                <div className="text-center py-6 bg-card">
-                  <p className="font-display text-3xl font-light text-ocean-medium">5</p>
-                  <p className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground mt-1">Swimming Pools</p>
-                </div>
-                <div className="text-center py-6 bg-card">
-                  <p className="font-display text-3xl font-light text-ocean-medium">25</p>
-                  <p className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground mt-1">km to Airport</p>
-                </div>
+              <div className="grid grid-cols-2 gap-4">
+                {stats.map((s) => (
+                  <div key={s.label} className="stat-block">
+                    <p className="font-display text-3xl md:text-4xl font-bold text-ocean-deep">{s.value}</p>
+                    <p className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground mt-2 font-semibold">{s.label}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

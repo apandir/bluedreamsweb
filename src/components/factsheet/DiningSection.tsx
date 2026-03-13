@@ -79,20 +79,22 @@ const DiningSection = () => {
     },
   ];
 
-  const VenueCard = ({ venue, hasImage = true }: { venue: typeof restaurants[0]; hasImage?: boolean }) => (
-    <div className="factsheet-card overflow-hidden">
-      {hasImage && venue.image && (
-        <img
-          src={venue.image}
-          alt={venue.name}
-          className="w-full h-48 object-cover"
-        />
+  const VenueCard = ({ venue }: { venue: typeof restaurants[0] }) => (
+    <div className="factsheet-card group overflow-hidden">
+      {venue.image && (
+        <div className="overflow-hidden">
+          <img
+            src={venue.image}
+            alt={venue.name}
+            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
       )}
       <div className="p-6">
-        <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold mb-3">
+        <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold font-bold mb-3">
           {venue.type}
         </p>
-        <h4 className="font-display text-xl font-light text-ocean-deep mb-2">{venue.name}</h4>
+        <h4 className="font-display text-xl font-bold text-ocean-deep mb-2">{venue.name}</h4>
         <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4">{venue.desc}</p>
         <div className="space-y-2 pt-3 border-t" style={{ borderColor: 'hsl(var(--sand))' }}>
           <div className="flex items-center gap-2">
@@ -115,7 +117,7 @@ const DiningSection = () => {
         <div className="factsheet-hero-overlay" />
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
-            <p className="factsheet-label mb-4 text-gold-light">05</p>
+            <p className="section-number text-gold-light">05</p>
             <h2 className="factsheet-heading text-4xl md:text-6xl text-primary-foreground">
               Food & Beverage
             </h2>
@@ -125,7 +127,6 @@ const DiningSection = () => {
 
       <div className="section-cream py-20 md:py-28">
         <div className="max-w-5xl mx-auto px-6">
-          {/* Restaurants */}
           <div className="text-center mb-16">
             <p className="factsheet-label mb-4">Restaurants</p>
             <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-6">
@@ -140,7 +141,6 @@ const DiningSection = () => {
             ))}
           </div>
 
-          {/* Bars & Lounges */}
           <div className="text-center mb-16">
             <p className="factsheet-label mb-4">Bars & Lounges</p>
             <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-6">
@@ -151,7 +151,7 @@ const DiningSection = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {bars.map((bar) => (
-              <VenueCard key={bar.name} venue={bar} hasImage={!!bar.image} />
+              <VenueCard key={bar.name} venue={bar} />
             ))}
           </div>
         </div>

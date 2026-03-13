@@ -14,7 +14,7 @@ const LocationSection = () => {
         <div className="factsheet-hero-overlay" />
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
-            <p className="factsheet-label mb-4 text-gold-light">02</p>
+            <p className="section-number text-gold-light">02</p>
             <h2 className="factsheet-heading text-4xl md:text-6xl text-primary-foreground">
               Bodrum / Torba
             </h2>
@@ -31,39 +31,39 @@ const LocationSection = () => {
                 The Pearl of the Aegean
               </h3>
               <div className="factsheet-divider !mx-0 mb-8" />
-              <p className="font-body text-sm leading-relaxed opacity-80 mb-6">
+              <p className="font-body text-sm leading-relaxed opacity-70 mb-6">
                 Bodrum, known in antiquity as Halicarnassus, is home to one of the Seven Wonders of
                 the Ancient World — the Mausoleum. Today it stands as Türkiye's most prestigious
                 coastal destination, where ancient history meets Mediterranean glamour.
               </p>
-              <p className="font-body text-sm leading-relaxed opacity-80">
+              <p className="font-body text-sm leading-relaxed opacity-70">
                 Torba Bay, just 10 km from the vibrant Bodrum city centre, offers a tranquil retreat
                 nestled along the Aegean coast. The crystal-clear turquoise waters, olive groves,
                 and gentle sea breezes create an atmosphere of serene luxury.
               </p>
             </div>
             <div className="space-y-8">
-              <div className="border-l-2 border-gold pl-6">
-                <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mb-2">Climate</p>
-                <p className="font-body text-sm opacity-80">
+              <div className="accent-line-left">
+                <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold font-bold mb-2">Climate</p>
+                <p className="font-body text-sm opacity-70">
                   Mediterranean climate with 300+ days of sunshine. Average summer temperature 28°C
                   with refreshing Aegean sea breezes. Sea temperature averages a delightful 24°C.
                 </p>
               </div>
-              <div className="border-l-2 border-gold pl-6">
-                <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mb-2">Address</p>
-                <p className="font-body text-sm opacity-80">
+              <div className="accent-line-left">
+                <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold font-bold mb-2">Address</p>
+                <p className="font-body text-sm opacity-70">
                   Torba Mahallesi, Herodot Bulvarı No:11<br />
                   Bodrum / Muğla / Türkiye
                 </p>
               </div>
-              <div className="border-l-2 border-gold pl-6">
-                <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mb-4">Distances</p>
+              <div className="accent-line-left">
+                <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold font-bold mb-4">Distances</p>
                 <div className="space-y-3">
                   {distances.map((d) => (
                     <div key={d.place} className="flex items-center justify-between">
-                      <span className="font-body text-sm opacity-70">{d.place}</span>
-                      <span className="font-display text-lg font-light text-gold-light ml-4 whitespace-nowrap">
+                      <span className="font-body text-sm opacity-60">{d.place}</span>
+                      <span className="font-display text-lg font-bold text-gold ml-4 whitespace-nowrap">
                         {d.distance}
                       </span>
                     </div>

@@ -10,7 +10,7 @@ const ActivitiesSection = () => {
     <section id="activities" className="section-cream py-20 md:py-28">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="factsheet-label mb-4">07</p>
+          <p className="section-number text-gold">07</p>
           <h2 className="factsheet-heading text-4xl md:text-5xl text-ocean-deep mb-6">
             Activities & Sports
           </h2>
@@ -21,16 +21,16 @@ const ActivitiesSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {activities.map((act) => (
             <div key={act.category} className="factsheet-card p-6">
-              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold mb-4">
+              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold font-bold mb-5">
                 {act.category}
               </p>
               <div className="space-y-3">
                 {act.items.map((item) => (
-                  <div key={item} className="flex items-center gap-2">
-                    <div className="w-1 h-1 rounded-full bg-ocean-medium" />
+                  <div key={item} className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 bg-gold" />
                     <span className="font-body text-sm text-foreground">{item}</span>
                   </div>
                 ))}
