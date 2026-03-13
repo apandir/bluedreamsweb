@@ -4,7 +4,7 @@ import beachImage from "@/assets/beach-resort.jpg";
 const OverviewSection = () => {
   const stats = [
     { value: "52,000", label: "m² Total Area" },
-    { value: "300", label: "m Sandy Beach" },
+    { value: "300", label: "m Sandy & Pebbles Beach" },
     { value: "5", label: "Swimming Pools" },
     { value: "25", label: "km to Airport" },
   ];
