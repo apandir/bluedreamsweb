@@ -1,5 +1,5 @@
 import meetingHall from "@/assets/meeting-hall.jpg";
-import { Users, Maximize, ArrowUpFromDot } from "lucide-react";
+import { Users, Maximize, ArrowUpFromDot, Heart, Sparkles } from "lucide-react";
 
 const MeetingsSection = () => {
   const mainHall = {
@@ -24,6 +24,36 @@ const MeetingsSection = () => {
     { name: "İzmir Hall", area: "90 m²", theater: 80, height: "2.90 mt" },
     { name: "Antalya Hall", area: "75 m²", theater: 60, height: "2.80 mt" },
     { name: "Board Room", area: "40 m²", theater: 16, height: "2.80 mt" },
+  ];
+
+  const weddingVenues = [
+    {
+      name: "Beachfront Ceremony",
+      capacity: "Up to 300 guests",
+      desc: "Exchange vows on pristine white sand with the Aegean Sea as your backdrop. Available at sunset for magical golden-hour ceremonies.",
+      features: ["Floral Arch Setup", "White Sand Aisle", "Sunset Timing"],
+    },
+    {
+      name: "Garden Terrace",
+      capacity: "Up to 500 guests",
+      desc: "A lush Mediterranean garden surrounded by olive trees and bougainvillea, perfect for elegant outdoor receptions and cocktail hours.",
+      features: ["Landscaped Gardens", "String Lighting", "Dance Floor"],
+    },
+    {
+      name: "Poolside Gala",
+      capacity: "Up to 400 guests",
+      desc: "A glamorous poolside setting with ambient lighting and panoramic sea views for unforgettable evening celebrations.",
+      features: ["Pool Illumination", "Live Music Stage", "Cocktail Stations"],
+    },
+  ];
+
+  const weddingServices = [
+    "Dedicated Wedding Coordinator",
+    "Custom Menu Planning",
+    "Floral & Décor Design",
+    "DJ & Live Entertainment",
+    "Photography Arrangements",
+    "Bridal Suite & Spa Package",
   ];
 
   const amenities = [
@@ -156,6 +186,65 @@ const MeetingsSection = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {amenities.map((item) => (
+              <span
+                key={item}
+                className="font-display text-sm font-light text-ocean-medium px-5 py-3 border"
+                style={{ borderColor: 'hsl(var(--sand))' }}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+
+          {/* Weddings & Events */}
+          <div className="text-center mb-16 mt-28">
+            <p className="factsheet-label mb-4">Celebrations</p>
+            <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-6">
+              Weddings & Events
+            </h3>
+            <div className="factsheet-divider mb-8" />
+            <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Create unforgettable moments at breathtaking outdoor venues along the Aegean coast.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
+            {weddingVenues.map((venue) => (
+              <div key={venue.name} className="factsheet-card p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Heart className="w-4 h-4 text-gold" />
+                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold">
+                    Outdoor Venue
+                  </p>
+                </div>
+                <h4 className="font-display text-xl font-light text-ocean-deep mb-2">{venue.name}</h4>
+                <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4">{venue.desc}</p>
+                <div className="flex items-center gap-2 mb-4">
+                  <Users className="w-3.5 h-3.5 text-gold flex-shrink-0" />
+                  <span className="font-body text-[11px] text-muted-foreground">{venue.capacity}</span>
+                </div>
+                <div className="pt-3 border-t flex flex-wrap gap-2" style={{ borderColor: 'hsl(var(--sand))' }}>
+                  {venue.features.map((f) => (
+                    <span
+                      key={f}
+                      className="font-body text-[10px] tracking-[0.1em] uppercase text-ocean-medium px-3 py-1.5 border"
+                      style={{ borderColor: 'hsl(var(--sand))' }}
+                    >
+                      {f}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Wedding Services */}
+          <div className="text-center mb-12">
+            <p className="factsheet-label mb-4">Wedding Services</p>
+            <div className="factsheet-divider mb-8" />
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {weddingServices.map((item) => (
               <span
                 key={item}
                 className="font-display text-sm font-light text-ocean-medium px-5 py-3 border"
