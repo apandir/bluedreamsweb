@@ -1,7 +1,18 @@
 import beachImage from "@/assets/beach-resort.jpg";
+import poolActivity from "@/assets/pool-activity.jpg";
+import poolAquapark from "@/assets/pool-aquapark.jpg";
+import poolIndoor from "@/assets/pool-indoor.jpg";
+import poolInfinity from "@/assets/pool-infinity.jpg";
+import poolKids from "@/assets/pool-kids.jpg";
 
 const BeachPoolsSection = () => {
-  const pools = ["Infinity Pool", "Activity Pool", "Children's Pool", "Waterslide Pool", "Indoor Pool*"];
+  const poolGallery = [
+    { name: "Infinity Pool", image: poolInfinity },
+    { name: "Activity Pool", image: poolActivity },
+    { name: "Aqua Park & Waterslides", image: poolAquapark },
+    { name: "Indoor Pool*", image: poolIndoor },
+    { name: "Kids Beach Area", image: poolKids },
+  ];
 
   return (
     <section id="beach">
@@ -20,37 +31,37 @@ const BeachPoolsSection = () => {
 
       <div className="section-dark py-14 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <p className="factsheet-label mb-4">300m Sandy & Pebbles Beach</p>
-              <h3 className="factsheet-heading text-3xl md:text-4xl mb-5">
-                Where Azure Meets Sand
-              </h3>
-              <div className="factsheet-divider !mx-0 mb-5" />
-              <p className="font-body text-sm leading-relaxed opacity-70 mb-4">
-                Our 300-meter long sandy and pebbles beach stretches along the pristine Torba Bay, complemented
-                by multiple piers and exclusive relaxing cabanas. Sun loungers and parasols are
-                complimentary for all guests.
-              </p>
-              <p className="font-body text-sm leading-relaxed opacity-70">
-                The gentle Aegean waters provide the perfect setting for water sports, swimming,
-                and seaside relaxation. Experience the breathtaking sunsets that paint the bay
-                in golden hues every evening.
-              </p>
-            </div>
-            <div>
-              <p className="factsheet-label mb-6">Swimming Pools</p>
-              <div className="space-y-0">
-                {pools.map((pool, i) => (
-                  <div key={pool} className="group flex items-center py-3.5 border-b border-primary-foreground/8 hover:border-gold/30 transition-colors">
-                    <span className="font-body text-xs text-gold font-semibold w-8">{String(i + 1).padStart(2, "0")}</span>
-                    <span className="font-display text-lg group-hover:text-gold transition-colors">{pool}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="font-body text-[10px] text-primary-foreground/40 mt-4 tracking-wider">* Open only at certain conditions</p>
-            </div>
+          <div className="text-center mb-12">
+            <p className="factsheet-label mb-4">300m Sandy & Pebbles Beach</p>
+            <h3 className="factsheet-heading text-3xl md:text-4xl mb-5">
+              Where Azure Meets Sand
+            </h3>
+            <div className="factsheet-divider mb-5" />
+            <p className="font-body text-sm leading-relaxed opacity-70 max-w-2xl mx-auto">
+              Our 300-meter long sandy and pebbles beach stretches along the pristine Torba Bay, complemented
+              by multiple piers and exclusive relaxing cabanas. Sun loungers and parasols are
+              complimentary for all guests.
+            </p>
           </div>
+
+          {/* Pool Gallery */}
+          <p className="factsheet-label mb-6 text-center">Swimming Pools</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {poolGallery.map((pool) => (
+              <div key={pool.name} className="group relative overflow-hidden rounded-lg aspect-[4/3]">
+                <img
+                  src={pool.image}
+                  alt={pool.name}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h4 className="font-display text-base md:text-lg text-primary-foreground">{pool.name}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="font-body text-[10px] text-primary-foreground/40 mt-4 tracking-wider text-center">* Open only at certain conditions</p>
         </div>
       </div>
     </section>
