@@ -7,31 +7,29 @@ const ActivitiesSection = () => {
   ];
 
   return (
-    <section id="activities" className="section-cream py-24 md:py-32">
+    <section id="activities" className="section-cream py-14 md:py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <p className="section-number text-gold">07</p>
-          <h2 className="factsheet-heading text-5xl md:text-6xl text-ocean-deep mb-8">
+          <h2 className="factsheet-heading text-4xl md:text-5xl text-ocean-deep mb-5">
             Activities & Sports
           </h2>
-          <div className="factsheet-divider mb-8" />
-          <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto">
+          <div className="factsheet-divider mb-5" />
+          <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto">
             From adrenaline-pumping water sports to relaxing evening entertainment,
             Blue Dreams Resort offers a complete range of activities for every guest.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {activities.map((act) => (
-            <div key={act.category} className="factsheet-card p-8">
-              <p className="factsheet-label mb-6">
-                {act.category}
-              </p>
-              <div className="space-y-4">
+            <div key={act.category} className="factsheet-card p-6">
+              <p className="factsheet-label mb-4">{act.category}</p>
+              <div className="space-y-3">
                 {act.items.map((item) => (
-                  <div key={item} className="flex items-center gap-3">
+                  <div key={item} className="flex items-center gap-2.5">
                     <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-                    <span className="font-body text-base text-foreground">{item}</span>
+                    <span className="font-body text-sm text-foreground">{item}</span>
                   </div>
                 ))}
               </div>
@@ -39,9 +37,7 @@ const ActivitiesSection = () => {
           ))}
         </div>
 
-        <p className="font-body text-xs text-muted-foreground text-center mt-10 tracking-wider">
-          * Available at extra charge
-        </p>
+        <p className="font-body text-[10px] text-muted-foreground text-center mt-6 tracking-wider">* Available at extra charge</p>
       </div>
     </section>
   );
