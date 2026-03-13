@@ -26,41 +26,41 @@ const GeneralInfoSection = () => {
   ];
 
   return (
-    <section id="general" className="section-dark py-20 md:py-28">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section id="general" className="section-dark py-24 md:py-32">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-20">
           <p className="section-number text-gold-light">09</p>
-          <h2 className="factsheet-heading text-4xl md:text-5xl text-primary-foreground mb-6">
+          <h2 className="factsheet-heading text-5xl md:text-6xl text-primary-foreground mb-8">
             General Information
           </h2>
           <div className="factsheet-divider mb-8" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-20">
           <div>
-            <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold font-bold mb-8">
+            <p className="factsheet-label mb-8">
               Hotel Details
             </p>
             <div className="space-y-0">
               {info.map((item) => (
-                <div key={item.label} className="flex justify-between py-3.5 border-b border-primary-foreground/10 hover:border-gold/30 transition-colors">
-                  <span className="font-body text-xs tracking-wider uppercase opacity-40 font-semibold">
+                <div key={item.label} className="flex justify-between py-4 border-b border-primary-foreground/8 hover:border-gold/30 transition-colors">
+                  <span className="font-body text-sm tracking-wider uppercase opacity-40 font-medium">
                     {item.label}
                   </span>
-                  <span className="font-body text-sm font-medium">{item.value}</span>
+                  <span className="font-body text-base font-medium">{item.value}</span>
                 </div>
               ))}
             </div>
           </div>
           <div>
-            <p className="font-body text-[11px] tracking-[0.2em] uppercase text-gold font-bold mb-8">
+            <p className="factsheet-label mb-8">
               Complimentary Services
             </p>
-            <div className="space-y-4">
+            <div className="space-y-5">
               {complimentary.map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-gold mt-1.5 flex-shrink-0" />
-                  <span className="font-body text-sm opacity-70">{item}</span>
+                <div key={item} className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0" />
+                  <span className="font-body text-base opacity-70">{item}</span>
                 </div>
               ))}
             </div>

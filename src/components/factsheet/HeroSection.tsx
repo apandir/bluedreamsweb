@@ -9,18 +9,18 @@ const HeroSection = () => {
         className="absolute inset-0 image-cover scale-105"
       />
       <div className="absolute inset-0" style={{
-        background: 'linear-gradient(170deg, hsl(207 90% 14% / 0.2) 0%, hsl(207 90% 14% / 0.7) 60%, hsl(207 90% 14% / 0.9) 100%)'
+        background: 'linear-gradient(170deg, hsl(210 55% 12% / 0.15) 0%, hsl(210 55% 12% / 0.65) 60%, hsl(210 55% 12% / 0.88) 100%)'
       }} />
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col items-center">
-        <p className="section-number text-gold-light">★★★★★</p>
-        <h1 className="factsheet-heading text-5xl md:text-7xl lg:text-[6.5rem] text-primary-foreground mb-8">
+        <p className="font-body text-sm tracking-[0.4em] uppercase text-gold-light mb-6">★★★★★</p>
+        <h1 className="factsheet-heading text-6xl md:text-8xl lg:text-[7.5rem] text-primary-foreground mb-10">
           Every Dream Starts<br />With Blue
         </h1>
-        <div className="factsheet-divider mb-8" />
-        <p className="font-body text-sm md:text-base font-bold tracking-[0.25em] uppercase text-primary-foreground/90">
+        <div className="factsheet-divider mb-10" />
+        <p className="font-body text-sm md:text-base font-medium tracking-[0.25em] uppercase text-primary-foreground/80">
           Factsheet — Season 2026
         </p>
-        <p className="font-body text-xs font-medium tracking-[0.25em] uppercase text-primary-foreground/60 mt-3">
+        <p className="font-body text-sm font-normal tracking-[0.2em] uppercase text-primary-foreground/50 mt-3">
           Bodrum / Torba — Türkiye
         </p>
       </div>

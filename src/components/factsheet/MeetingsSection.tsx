@@ -90,7 +90,7 @@ const MeetingsSection = () => {
 
   const IconTag = ({ icon: Icon, label }: { icon: LucideIcon; label: string }) => (
     <span
-      className="inline-flex items-center gap-2.5 font-body text-sm font-medium text-ocean-medium px-5 py-3 border-[1.5px] transition-all duration-200 hover:border-gold hover:text-gold"
+      className="inline-flex items-center gap-3 font-body text-sm font-medium text-ocean-medium px-5 py-3 border-[1.5px] rounded-full transition-all duration-200 hover:border-gold hover:text-gold"
       style={{ borderColor: 'hsl(var(--sand))' }}
     >
       <Icon className="w-4 h-4 text-gold flex-shrink-0" />
@@ -107,7 +107,7 @@ const MeetingsSection = () => {
         <div className="relative z-10 flex items-end h-full pb-16 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
             <p className="section-number text-gold-light">08</p>
-            <h2 className="factsheet-heading text-4xl md:text-6xl text-primary-foreground">
+            <h2 className="factsheet-heading text-5xl md:text-7xl text-primary-foreground">
               Meetings & Events
             </h2>
           </div>
@@ -115,18 +115,18 @@ const MeetingsSection = () => {
       </div>
 
       {/* Main Hall */}
-      <div className="section-cream py-20 md:py-28">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="factsheet-label mb-4">Main Hall</p>
-            <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-6">
+      <div className="section-cream py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-20">
+            <p className="factsheet-label mb-5">Main Hall</p>
+            <h3 className="factsheet-heading text-4xl md:text-5xl text-ocean-deep mb-8">
               {mainHall.name}
             </h3>
             <div className="factsheet-divider mb-8" />
-            <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
+            <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
               {mainHall.desc}
             </p>
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-wrap justify-center gap-3">
               {mainHall.tags.map((tag) => (
                 <Tag key={tag} label={tag} />
               ))}
@@ -134,26 +134,26 @@ const MeetingsSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
             {mainHall.stats.map((stat) => (
               <div key={stat.label} className="stat-block">
-                <stat.icon className="w-5 h-5 text-gold mx-auto mb-3" />
-                <p className="font-display text-3xl md:text-4xl font-bold text-ocean-deep">
+                <stat.icon className="w-5 h-5 text-gold mx-auto mb-4" />
+                <p className="font-display text-4xl md:text-5xl text-ocean-deep">
                   {stat.value}
                 </p>
-                <p className="font-body text-[10px] tracking-[0.15em] uppercase text-gold mt-1 font-bold">
+                <p className="font-body text-xs tracking-[0.12em] uppercase text-gold mt-2 font-semibold">
                   {stat.unit}
                 </p>
-                <p className="font-body text-xs text-muted-foreground mt-2">{stat.label}</p>
+                <p className="font-body text-sm text-muted-foreground mt-2">{stat.label}</p>
               </div>
             ))}
           </div>
 
           {/* Configuration Table */}
-          <div className="factsheet-card overflow-hidden mb-20">
+          <div className="factsheet-card overflow-hidden mb-24">
             <div className="p-6 border-b flex items-center gap-3" style={{ borderColor: 'hsl(var(--sand))' }}>
               <Presentation className="w-4 h-4 text-gold" />
-              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold font-bold">
+              <p className="factsheet-label">
                 Hall Configurations
               </p>
             </div>
@@ -161,32 +161,32 @@ const MeetingsSection = () => {
               <table className="w-full">
                 <thead>
                   <tr className="border-b" style={{ borderColor: 'hsl(var(--sand))' }}>
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-bold text-left p-4">Section</th>
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-bold text-center p-4">
-                      <span className="inline-flex items-center gap-1.5"><Maximize className="w-3 h-3" /> Area</span>
+                    <th className="font-body text-xs tracking-[0.1em] uppercase text-muted-foreground font-semibold text-left p-5">Section</th>
+                    <th className="font-body text-xs tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-5">
+                      <span className="inline-flex items-center gap-1.5"><Maximize className="w-3.5 h-3.5" /> Area</span>
                     </th>
                     {(["Theater", "Classroom", "Banquet"] as const).map((col) => {
                       const Icon = configIcons[col];
                       return (
-                        <th key={col} className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-bold text-center p-4">
-                          <span className="inline-flex items-center gap-1.5"><Icon className="w-3 h-3" /> {col}</span>
+                        <th key={col} className="font-body text-xs tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-5">
+                          <span className="inline-flex items-center gap-1.5"><Icon className="w-3.5 h-3.5" /> {col}</span>
                         </th>
                       );
                     })}
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-bold text-center p-4">
-                      <span className="inline-flex items-center gap-1.5"><ArrowUpFromDot className="w-3 h-3" /> Height</span>
+                    <th className="font-body text-xs tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-5">
+                      <span className="inline-flex items-center gap-1.5"><ArrowUpFromDot className="w-3.5 h-3.5" /> Height</span>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {mainHall.configurations.map((config) => (
                     <tr key={config.section} className="border-b last:border-b-0 hover:bg-cream/50 transition-colors" style={{ borderColor: 'hsl(var(--sand))' }}>
-                      <td className="font-display text-sm font-bold text-ocean-deep p-4">{config.section}</td>
-                      <td className="font-body text-sm text-muted-foreground text-center p-4">{config.area}</td>
-                      <td className="font-body text-sm text-muted-foreground text-center p-4">{config.theater}</td>
-                      <td className="font-body text-sm text-muted-foreground text-center p-4">{config.classroom}</td>
-                      <td className="font-body text-sm text-muted-foreground text-center p-4">{config.banquet}</td>
-                      <td className="font-body text-sm text-muted-foreground text-center p-4">{config.height}</td>
+                      <td className="font-display text-base text-ocean-deep p-5">{config.section}</td>
+                      <td className="font-body text-base text-muted-foreground text-center p-5">{config.area}</td>
+                      <td className="font-body text-base text-muted-foreground text-center p-5">{config.theater}</td>
+                      <td className="font-body text-base text-muted-foreground text-center p-5">{config.classroom}</td>
+                      <td className="font-body text-base text-muted-foreground text-center p-5">{config.banquet}</td>
+                      <td className="font-body text-base text-muted-foreground text-center p-5">{config.height}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -195,36 +195,36 @@ const MeetingsSection = () => {
           </div>
 
           {/* Meeting Rooms */}
-          <div className="text-center mb-12">
-            <p className="factsheet-label mb-4">MICE</p>
-            <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-6">
+          <div className="text-center mb-16">
+            <p className="factsheet-label mb-5">MICE</p>
+            <h3 className="factsheet-heading text-4xl md:text-5xl text-ocean-deep mb-8">
               Meeting Rooms
             </h3>
             <div className="factsheet-divider mb-8" />
-            <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Modern and professional spaces for meetings of every scale.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-20">
+          <div className="grid md:grid-cols-3 gap-8 mb-24">
             {meetingRooms.map((room) => (
-              <div key={room.name} className="factsheet-card p-6">
-                <h4 className="font-display text-xl font-bold text-ocean-deep mb-4">{room.name}</h4>
-                <div className="space-y-3 mb-4">
+              <div key={room.name} className="factsheet-card p-8">
+                <h4 className="font-display text-2xl text-ocean-deep mb-5">{room.name}</h4>
+                <div className="space-y-3 mb-5">
                   <div className="flex items-center gap-3">
                     <Maximize className="w-4 h-4 text-gold flex-shrink-0" />
-                    <span className="font-body text-xs text-muted-foreground">{room.area}</span>
+                    <span className="font-body text-sm text-muted-foreground">{room.area}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Users className="w-4 h-4 text-gold flex-shrink-0" />
-                    <span className="font-body text-xs text-muted-foreground">Theater: {room.theater}</span>
+                    <span className="font-body text-sm text-muted-foreground">Theater: {room.theater}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <ArrowUpFromDot className="w-4 h-4 text-gold flex-shrink-0" />
-                    <span className="font-body text-xs text-muted-foreground">Height: {room.height}</span>
+                    <span className="font-body text-sm text-muted-foreground">Height: {room.height}</span>
                   </div>
                 </div>
-                <div className="pt-3 border-t flex flex-wrap gap-2" style={{ borderColor: 'hsl(var(--sand))' }}>
+                <div className="pt-4 border-t flex flex-wrap gap-2" style={{ borderColor: 'hsl(var(--sand))' }}>
                   {room.tags.map((tag) => (
                     <Tag key={tag} label={tag} />
                   ))}
@@ -235,8 +235,8 @@ const MeetingsSection = () => {
 
           {/* Amenities */}
           <div className="text-center mb-12">
-            <p className="factsheet-label mb-4">In All Halls</p>
-            <div className="factsheet-divider mb-8" />
+            <p className="factsheet-label mb-5">In All Halls</p>
+            <div className="factsheet-divider mb-10" />
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {amenities.map((item) => (
@@ -245,33 +245,33 @@ const MeetingsSection = () => {
           </div>
 
           {/* Weddings & Events */}
-          <div className="text-center mb-16 mt-28">
-            <p className="factsheet-label mb-4">Celebrations</p>
-            <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-6">
+          <div className="text-center mb-20 mt-32">
+            <p className="factsheet-label mb-5">Celebrations</p>
+            <h3 className="factsheet-heading text-4xl md:text-5xl text-ocean-deep mb-8">
               Weddings & Events
             </h3>
             <div className="factsheet-divider mb-8" />
-            <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="font-body text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Create unforgettable moments at breathtaking outdoor venues along the Aegean coast.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          <div className="grid md:grid-cols-3 gap-8 mb-24">
             {weddingVenues.map((venue) => (
-              <div key={venue.name} className="factsheet-card p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <venue.icon className="w-4 h-4 text-gold" />
-                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold font-bold">
+              <div key={venue.name} className="factsheet-card p-8">
+                <div className="flex items-center gap-2 mb-5">
+                  <venue.icon className="w-5 h-5 text-gold" />
+                  <p className="factsheet-label">
                     Outdoor Venue
                   </p>
                 </div>
-                <h4 className="font-display text-xl font-bold text-ocean-deep mb-2">{venue.name}</h4>
-                <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4">{venue.desc}</p>
-                <div className="flex items-center gap-2 mb-4">
-                  <Users className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-                  <span className="font-body text-[11px] text-muted-foreground">{venue.capacity}</span>
+                <h4 className="font-display text-2xl text-ocean-deep mb-3">{venue.name}</h4>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed mb-5">{venue.desc}</p>
+                <div className="flex items-center gap-2 mb-5">
+                  <Users className="w-4 h-4 text-gold flex-shrink-0" />
+                  <span className="font-body text-sm text-muted-foreground">{venue.capacity}</span>
                 </div>
-                <div className="pt-3 border-t flex flex-wrap gap-2" style={{ borderColor: 'hsl(var(--sand))' }}>
+                <div className="pt-4 border-t flex flex-wrap gap-2" style={{ borderColor: 'hsl(var(--sand))' }}>
                   {venue.features.map((f) => (
                     <Tag key={f} label={f} />
                   ))}
@@ -282,8 +282,8 @@ const MeetingsSection = () => {
 
           {/* Wedding Services */}
           <div className="text-center mb-12">
-            <p className="factsheet-label mb-4">Wedding Services</p>
-            <div className="factsheet-divider mb-8" />
+            <p className="factsheet-label mb-5">Wedding Services</p>
+            <div className="factsheet-divider mb-10" />
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {weddingServices.map((item) => (

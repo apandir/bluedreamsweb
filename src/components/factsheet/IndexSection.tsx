@@ -13,10 +13,10 @@ const IndexSection = () => {
   ];
 
   return (
-    <section className="section-dark py-24 md:py-32">
+    <section className="section-dark py-28 md:py-36">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <p className="factsheet-label mb-4">Contents</p>
-        <h2 className="factsheet-heading text-4xl md:text-5xl text-primary-foreground mb-8">
+        <h2 className="factsheet-heading text-5xl md:text-6xl text-primary-foreground mb-8">
           Index
         </h2>
         <div className="factsheet-divider mb-16" />
@@ -26,12 +26,12 @@ const IndexSection = () => {
             <a
               key={s.label}
               href={s.href}
-              className="group flex items-center justify-between py-5 border-b border-primary-foreground/10 hover:border-gold px-4 -mx-4 transition-all duration-300 cursor-pointer"
+              className="group flex items-center justify-between py-6 border-b border-primary-foreground/8 hover:border-gold/40 px-4 -mx-4 transition-all duration-300 cursor-pointer"
             >
-              <span className="font-body text-[11px] font-bold tracking-[0.3em] text-gold group-hover:text-gold-light transition-colors">
+              <span className="font-body text-xs font-semibold tracking-[0.3em] text-gold/70 group-hover:text-gold transition-colors">
                 {s.label}
               </span>
-              <span className="font-display text-xl md:text-2xl font-bold text-primary-foreground/80 group-hover:text-primary-foreground transition-colors">
+              <span className="font-display text-2xl md:text-3xl text-primary-foreground/70 group-hover:text-primary-foreground transition-colors">
                 {s.title}
               </span>
             </a>
