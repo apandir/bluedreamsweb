@@ -35,7 +35,7 @@ const ContactSection = () => {
           <a href="mailto:sales@bluedreamsresort.com" className="factsheet-card p-5 group hover:border-gold transition-colors">
             <Mail className="w-4 h-4 text-gold mb-3" />
             <p className="factsheet-label mb-1.5">Email</p>
-            <p className="font-body text-xs text-muted-foreground group-hover:text-foreground transition-colors">sales@bluedreamsresort.com</p>
+            <p className="font-display text-sm text-foreground group-hover:text-ocean-deep transition-colors">sales@bluedreamsresort.com</p>
           </a>
 
           <a href="https://www.bluedreamsresort.com" target="_blank" rel="noopener noreferrer" className="factsheet-card p-5 group hover:border-gold transition-colors">
