@@ -1,4 +1,14 @@
 import meetingHall from "@/assets/meeting-hall.jpg";
+import eventCeremony from "@/assets/event-ceremony.png";
+import eventResortNight from "@/assets/event-resort-night.png";
+import eventParty from "@/assets/event-party.png";
+import eventGardenTable from "@/assets/event-garden-table.png";
+import eventTerraceCeremony from "@/assets/event-terrace-ceremony.png";
+import eventAerialTable from "@/assets/event-aerial-table.png";
+import eventLiveMusic from "@/assets/event-live-music.png";
+import eventTableDetail from "@/assets/event-table-detail.png";
+import eventSunsetDinner from "@/assets/event-sunset-dinner.png";
+import eventDesserts from "@/assets/event-desserts.png";
 import {
   Users, Maximize, ArrowUpFromDot, Heart,
   Volume2, MonitorPlay, Wifi, Mic, Headset, Coffee,
