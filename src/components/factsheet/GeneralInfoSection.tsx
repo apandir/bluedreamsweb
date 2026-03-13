@@ -10,7 +10,7 @@ const GeneralInfoSection = () => {
     { label: "WiFi", value: "Complimentary High-Speed" },
     { label: "Parking", value: "Free On-Site Parking" },
     { label: "Languages", value: "Turkish, English, German, Russian" },
-    { label: "Credit Cards", value: "Visa, MasterCard, Amex" },
+    { label: "Credit Cards", value: "Visa, MasterCard, Amex, Troy" },
     { label: "Check-In / Out", value: "14:00 / 12:00" },
   ];
 
