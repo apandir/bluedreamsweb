@@ -8,19 +8,12 @@ import beachCabanaArea from "@/assets/beach-cabana-area.jpg";
 import beachCabana from "@/assets/beach-cabana.jpg";
 import beachWatersports from "@/assets/beach-watersports.jpg";
 import beachOverview from "@/assets/beach-overview.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
+
+const poolImages = [poolInfinity, poolActivity, poolAquapark, poolIndoor, poolKids, beachCabanaArea, beachCabana, beachWatersports, beachOverview];
 
 const BeachPoolsSection = () => {
-  const poolGallery = [
-    { name: "Infinity Pool", image: poolInfinity },
-    { name: "Activity Pool", image: poolActivity },
-    { name: "Aqua Park & Waterslides", image: poolAquapark },
-    { name: "Indoor Pool*", image: poolIndoor },
-    { name: "Children's Pool", image: poolKids },
-    { name: "Cabana Area", image: beachCabanaArea },
-    { name: "Beach Cabanas", image: beachCabana },
-    { name: "Water Sports", image: beachWatersports },
-    { name: "Beach & Resort Overview", image: beachOverview },
-  ];
+  const { t } = useLanguage();
 
   return (
     <section id="beach">
@@ -30,9 +23,7 @@ const BeachPoolsSection = () => {
         <div className="relative z-10 flex items-end h-full pb-10 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
             <p className="section-number text-gold-light">04</p>
-            <h2 className="factsheet-heading text-4xl md:text-5xl text-primary-foreground">
-              Beach & Pools
-            </h2>
+            <h2 className="factsheet-heading text-4xl md:text-5xl text-primary-foreground">{t.beach.sectionTitle}</h2>
           </div>
         </div>
       </div>
@@ -40,48 +31,30 @@ const BeachPoolsSection = () => {
       <div className="section-dark py-14 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="factsheet-label mb-4">300m Sandy & Pebbles Beach</p>
-            <h3 className="factsheet-heading text-3xl md:text-4xl mb-5">
-              Where Azure Meets Sand
-            </h3>
+            <p className="factsheet-label mb-4">{t.beach.beachLabel}</p>
+            <h3 className="factsheet-heading text-3xl md:text-4xl mb-5">{t.beach.heading}</h3>
             <div className="factsheet-divider mb-5" />
-            <p className="font-body text-sm leading-relaxed opacity-70 max-w-2xl mx-auto">
-              With 5 amazing pools and a 300-metre sandy and pebbles beach stretching along the pristine Torba Bay,
-              our resort offers the ultimate waterside experience. Complemented by multiple piers, exclusive
-              relaxing cabanas, and complimentary sun loungers and parasols for all guests.
-            </p>
+            <p className="font-body text-sm leading-relaxed opacity-70 max-w-2xl mx-auto">{t.beach.desc}</p>
           </div>
 
-          {/* Pool Gallery */}
-          <p className="factsheet-label mb-6 text-center">Pools & Beaches</p>
+          <p className="factsheet-label mb-6 text-center">{t.beach.poolsBeaches}</p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {poolGallery.map((pool) => (
-              <div key={pool.name} className="group relative overflow-hidden rounded-lg aspect-[4/3]">
-                <img
-                  src={pool.image}
-                  alt={pool.name}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+            {t.beach.poolNames.map((name, i) => (
+              <div key={name} className="group relative overflow-hidden rounded-lg aspect-[4/3]">
+                <img src={poolImages[i]} alt={name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h4 className="font-display text-base md:text-lg text-primary-foreground">{pool.name}</h4>
+                  <h4 className="font-display text-base md:text-lg text-primary-foreground">{name}</h4>
                 </div>
               </div>
             ))}
           </div>
-          <p className="font-body text-[10px] text-primary-foreground/40 mt-4 tracking-wider text-center">* Open only at certain conditions</p>
+          <p className="font-body text-[10px] text-primary-foreground/40 mt-4 tracking-wider text-center">{t.beach.footnote}</p>
 
-          {/* Pool List */}
           <div className="mt-12">
-            <p className="factsheet-label mb-6 text-center">Our Swimming Pools</p>
+            <p className="factsheet-label mb-6 text-center">{t.beach.ourPools}</p>
             <div className="max-w-2xl mx-auto space-y-0">
-              {[
-                { name: "Infinity Pool", detail: "Overlooking the Aegean Sea" },
-                { name: "Activity Pool", detail: "With palm-lined sundeck" },
-                { name: "Aqua Park Pool", detail: "With waterslides for all ages" },
-                { name: "Children's Pool", detail: "Safe & fun for little ones" },
-                { name: "Indoor Pool", detail: "Open at certain conditions" },
-              ].map((pool, i) => (
+              {t.beach.poolList.map((pool, i) => (
                 <div key={pool.name} className="group flex items-center justify-between py-3.5 border-b border-primary-foreground/8 hover:border-gold/30 transition-colors">
                   <div className="flex items-center gap-3">
                     <span className="font-body text-xs text-gold font-semibold w-8">{String(i + 1).padStart(2, "0")}</span>

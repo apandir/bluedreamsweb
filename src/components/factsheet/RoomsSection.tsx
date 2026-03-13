@@ -4,15 +4,12 @@ import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
 import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
 import roomHero from "@/assets/room-deluxe.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
+
+const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
 
 const RoomsSection = () => {
-  const rooms = [
-    { name: "Club Room", size: "24m²", description: "Comfortable rooms with garden or partial sea views, built into the hillside bungalows intertwined with the sea.", image: roomClub },
-    { name: "Club Sea View Room", size: "24m²", description: "Elevated club rooms offering panoramic views of the turquoise Aegean, with private balconies.", image: roomClubSeaview },
-    { name: "Club Family Room", size: "35–40m²", description: "Spacious family-friendly rooms with two separate bedrooms, designed for guests traveling with children.", image: roomFamily },
-    { name: "Deluxe Room Sea & Infinity Pool View", size: "40m²", description: "Premium rooms in the main building with unobstructed sea and infinity pool views, elegant furnishings, and exclusive amenities.", image: roomDeluxe },
-    { name: "Deluxe Family Room Sea & Infinity Pool View", size: "50–55m²", description: "Spacious deluxe family accommodation with stunning sea and infinity pool views, separate living area, and premium amenities for the whole family.", image: roomDeluxeFamily },
-  ];
+  const { t } = useLanguage();
 
   return (
     <section id="rooms">
@@ -22,9 +19,7 @@ const RoomsSection = () => {
         <div className="relative z-10 flex items-end h-full pb-10 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
             <p className="section-number text-gold-light">03</p>
-            <h2 className="factsheet-heading text-4xl md:text-5xl text-primary-foreground">
-              Rooms & Suites
-            </h2>
+            <h2 className="factsheet-heading text-4xl md:text-5xl text-primary-foreground">{t.rooms.sectionTitle}</h2>
           </div>
         </div>
       </div>
@@ -32,22 +27,17 @@ const RoomsSection = () => {
       <div className="section-cream py-14 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="factsheet-label mb-4">Accommodation</p>
-            <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-5">
-              Your Sanctuary by the Sea
-            </h3>
+            <p className="factsheet-label mb-4">{t.rooms.accommodation}</p>
+            <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-5">{t.rooms.heading}</h3>
             <div className="factsheet-divider mb-5" />
-            <p className="font-body text-sm leading-relaxed text-muted-foreground max-w-2xl mx-auto">
-              Our hotel rooms are built into the hillside bungalows and the main building,
-              intertwined with the sea. Each room offers a unique perspective of the Aegean coastline.
-            </p>
+            <p className="font-body text-sm leading-relaxed text-muted-foreground max-w-2xl mx-auto">{t.rooms.desc}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {rooms.map((room) => (
+            {t.rooms.roomList.map((room, i) => (
               <div key={room.name} className="factsheet-card group overflow-hidden">
                 <div className="overflow-hidden">
-                  <img src={room.image} alt={room.name} className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={images[i]} alt={room.name} className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">

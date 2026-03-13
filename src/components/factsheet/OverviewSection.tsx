@@ -1,21 +1,9 @@
 import poolImage from "@/assets/pool-resort.jpg";
 import beachImage from "@/assets/beach-resort.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const OverviewSection = () => {
-  const stats = [
-    { value: "52,000", label: "m² Total Area" },
-    { value: "300", label: "m Sandy & Pebbles Beach" },
-    { value: "5", label: "Swimming Pools" },
-    { value: "25", label: "km to Airport" },
-  ];
-
-  const distances = [
-    { place: "Bodrum City Center", km: "10" },
-    { place: "Bodrum Airport", km: "25" },
-    { place: "Yalıkavak", km: "25" },
-    { place: "Turgutreis", km: "25" },
-    { place: "Gümüşlük", km: "28" },
-  ];
+  const { t } = useLanguage();
 
   return (
     <section id="overview">
@@ -25,9 +13,7 @@ const OverviewSection = () => {
         <div className="relative z-10 flex items-end h-full pb-10 px-6">
           <div className="max-w-4xl mx-auto text-center w-full">
             <p className="section-number text-gold-light">01</p>
-            <h2 className="factsheet-heading text-4xl md:text-5xl text-primary-foreground">
-              Hotel Overview
-            </h2>
+            <h2 className="factsheet-heading text-4xl md:text-5xl text-primary-foreground">{t.overview.sectionTitle}</h2>
           </div>
         </div>
       </div>
@@ -36,26 +22,15 @@ const OverviewSection = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <p className="factsheet-label mb-4">Blue Dreams Resort</p>
-              <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-5">
-                Where Nature Meets Elegance
-              </h3>
+              <p className="factsheet-label mb-4">{t.overview.resort}</p>
+              <h3 className="factsheet-heading text-3xl md:text-4xl text-ocean-deep mb-5">{t.overview.heading}</h3>
               <div className="factsheet-divider !mx-0 mb-5" />
-              <p className="font-body text-sm leading-relaxed text-muted-foreground mb-4">
-                Located in the beautiful bay of Torba Zeytinlikahve in Bodrum, Blue Dreams Resort
-                offers everything you need for an unforgettable holiday. Our 52,000 m² area features
-                unique Bodrum architecture, a 300-meter long sandy and pebbles beach, piers, and private relaxing cabanas.
-              </p>
-              <p className="font-body text-sm leading-relaxed text-muted-foreground">
-                The resort caters to all your needs with five swimming pools.
-                Whether you're seeking relaxation or adventure, from tennis courts and water
-                sports to our world-class Spa services, every moment is crafted for your pleasure.
-              </p>
-
+              <p className="font-body text-sm leading-relaxed text-muted-foreground mb-4">{t.overview.p1}</p>
+              <p className="font-body text-sm leading-relaxed text-muted-foreground">{t.overview.p2}</p>
               <div className="mt-8">
-                <p className="factsheet-label mb-4">Distances from Resort</p>
+                <p className="factsheet-label mb-4">{t.overview.distancesLabel}</p>
                 <div className="grid grid-cols-3 gap-3">
-                  {distances.map((d) => (
+                  {t.overview.distances.map((d) => (
                     <div key={d.place} className="stat-block !p-4 text-center">
                       <p className="font-display text-2xl text-ocean-deep">{d.km}</p>
                       <p className="font-body text-[10px] tracking-[0.1em] uppercase text-gold font-semibold mt-0.5">km</p>
@@ -68,7 +43,7 @@ const OverviewSection = () => {
             <div className="space-y-6">
               <img src={beachImage} alt="Beach" className="w-full h-60 object-cover rounded-lg" />
               <div className="grid grid-cols-2 gap-4">
-                {stats.map((s) => (
+                {t.overview.stats.map((s) => (
                   <div key={s.label} className="stat-block !p-5">
                     <p className="font-display text-3xl md:text-4xl text-ocean-deep">{s.value}</p>
                     <p className="font-body text-[10px] tracking-[0.12em] uppercase text-muted-foreground mt-2 font-medium">{s.label}</p>
