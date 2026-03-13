@@ -2,6 +2,10 @@ import diningMain from "@/assets/dining-main.jpg";
 import diningLaLocanda from "@/assets/dining-lalocanda.jpg";
 import diningHalikarnas from "@/assets/dining-halikarnas.jpg";
 import diningSunsetBar from "@/assets/dining-sunsetbar.jpg";
+import barLobby from "@/assets/bar-lobby.jpg";
+import barPool from "@/assets/bar-pool.jpg";
+import barBeach from "@/assets/bar-beach.jpg";
+import barVitamin from "@/assets/bar-vitamin.jpg";
 import { Clock, MapPin } from "lucide-react";
 
 const DiningSection = () => {
