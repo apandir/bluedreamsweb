@@ -8,6 +8,7 @@ import BeachPoolsSection from "@/components/factsheet/BeachPoolsSection";
 import DiningSection from "@/components/factsheet/DiningSection";
 import SpaSection from "@/components/factsheet/SpaSection";
 import ActivitiesSection from "@/components/factsheet/ActivitiesSection";
+import MeetingsSection from "@/components/factsheet/MeetingsSection";
 import GeneralInfoSection from "@/components/factsheet/GeneralInfoSection";
 import ContactSection from "@/components/factsheet/ContactSection";
 
@@ -24,6 +25,7 @@ const Index = () => {
       <DiningSection />
       <SpaSection />
       <ActivitiesSection />
+      <MeetingsSection />
       <GeneralInfoSection />
       <ContactSection />
     </main>
