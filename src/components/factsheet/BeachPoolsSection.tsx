@@ -4,6 +4,9 @@ import poolAquapark from "@/assets/pool-aquapark.jpg";
 import poolIndoor from "@/assets/pool-indoor.jpg";
 import poolInfinity from "@/assets/pool-infinity.jpg";
 import poolKids from "@/assets/pool-kids.jpg";
+import beachCabanaArea from "@/assets/beach-cabana-area.jpg";
+import beachCabana from "@/assets/beach-cabana.jpg";
+import beachWatersports from "@/assets/beach-watersports.jpg";
 
 const BeachPoolsSection = () => {
   const poolGallery = [
@@ -11,7 +14,10 @@ const BeachPoolsSection = () => {
     { name: "Activity Pool", image: poolActivity },
     { name: "Aqua Park & Waterslides", image: poolAquapark },
     { name: "Indoor Pool*", image: poolIndoor },
-    { name: "Kids Beach Area", image: poolKids },
+    { name: "Children's Pool", image: poolKids },
+    { name: "Cabana Area", image: beachCabanaArea },
+    { name: "Beach Cabanas", image: beachCabana },
+    { name: "Water Sports", image: beachWatersports },
   ];
 
   return (
@@ -38,14 +44,14 @@ const BeachPoolsSection = () => {
             </h3>
             <div className="factsheet-divider mb-5" />
             <p className="font-body text-sm leading-relaxed opacity-70 max-w-2xl mx-auto">
-              Our 300-meter long sandy and pebbles beach stretches along the pristine Torba Bay, complemented
-              by multiple piers and exclusive relaxing cabanas. Sun loungers and parasols are
-              complimentary for all guests.
+              With 5 amazing pools and a 300-metre sandy and pebbles beach stretching along the pristine Torba Bay,
+              our resort offers the ultimate waterside experience. Complemented by multiple piers, exclusive
+              relaxing cabanas, and complimentary sun loungers and parasols for all guests.
             </p>
           </div>
 
           {/* Pool Gallery */}
-          <p className="factsheet-label mb-6 text-center">Swimming Pools</p>
+          <p className="factsheet-label mb-6 text-center">Pools & Beaches</p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {poolGallery.map((pool) => (
               <div key={pool.name} className="group relative overflow-hidden rounded-lg aspect-[4/3]">
