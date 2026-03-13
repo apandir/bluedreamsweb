@@ -2,6 +2,7 @@ import diningMain from "@/assets/dining-main.jpg";
 import diningLaLocanda from "@/assets/dining-lalocanda.jpg";
 import diningHalikarnas from "@/assets/dining-halikarnas.jpg";
 import diningSunsetBar from "@/assets/dining-sunsetbar.jpg";
+import diningLeKebab from "@/assets/dining-lekebab.jpg";
 import barLobby from "@/assets/bar-lobby.jpg";
 import barPool from "@/assets/bar-pool.jpg";
 import barBeach from "@/assets/bar-beach.jpg";
@@ -14,7 +15,7 @@ const DiningSection = () => {
     { name: "Snack Restaurant", type: "Casual Dining", desc: "Light bites, burgers, sandwiches and refreshments served beachside throughout the day", hours: "10:00 – 17:00", location: "Beachfront", image: diningMain },
     { name: "La Locanda", type: "À la Carte Restaurant", desc: "Wood-fired pizza and handmade pasta in a refined Mediterranean setting", hours: "19:00 – 22:00", location: "Garden Terrace", image: diningLaLocanda },
     { name: "Halikarnas", type: "À la Carte Restaurant", desc: "Fresh Aegean seafood with the finest catches of the day in an elegant waterfront setting", hours: "19:00 – 22:00", location: "Beachfront", image: diningHalikarnas },
-    { name: "Le Kebab", type: "À la Carte Restaurant", desc: "Authentic Turkish cuisine featuring premium kebabs and traditional Anatolian flavours", hours: "19:00 – 22:00", location: "Beachfront", image: diningHalikarnas },
+    { name: "Le Kebab", type: "À la Carte Restaurant", desc: "Authentic Turkish cuisine featuring premium kebabs and traditional Anatolian flavours", hours: "19:00 – 22:00", location: "Beachfront", image: diningLeKebab },
   ];
 
   const bars = [
