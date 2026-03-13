@@ -9,6 +9,7 @@ import barLobby from "@/assets/bar-lobby.jpg";
 import barPool from "@/assets/bar-pool.jpg";
 import barBeach from "@/assets/bar-beach.jpg";
 import barVitamin from "@/assets/bar-vitamin.jpg";
+import barTeaGarden from "@/assets/bar-teagarden.png";
 import { Clock, MapPin } from "lucide-react";
 
 const DiningSection = () => {
