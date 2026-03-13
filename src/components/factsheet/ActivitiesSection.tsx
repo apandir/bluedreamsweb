@@ -1,4 +1,10 @@
 import activitiesHero from "@/assets/activities-hero.jpg";
+import actKids from "@/assets/activity-kids.png";
+import actFlyboard from "@/assets/activity-flyboard.png";
+import actBeach from "@/assets/activity-beach.png";
+import actSurf from "@/assets/activity-surf.png";
+import actAquapark from "@/assets/activity-aquapark.png";
+import actJetski from "@/assets/activity-jetski.png";
 
 const ActivitiesSection = () => {
   const activities = [
@@ -6,6 +12,15 @@ const ActivitiesSection = () => {
     { category: "Sports", items: ["Fitness Centre", "Table Tennis"] },
     { category: "Entertainment", items: ["Live Music", "DJ Performances", "Theme Nights", "Shows & Animations", "Kids Club"] },
     { category: "Excursions", items: ["Bodrum City Tour*", "Boat Trips*", "Island Hopping*", "Diving Tours*", "Shopping Tours*"] },
+  ];
+
+  const gallery = [
+    { name: "Kids Activities", image: actKids },
+    { name: "Flyboarding", image: actFlyboard },
+    { name: "Beach Fun", image: actBeach },
+    { name: "Surfing", image: actSurf },
+    { name: "Aqua Park & Sports", image: actAquapark },
+    { name: "Jet Ski", image: actJetski },
   ];
 
   return (
@@ -50,6 +65,26 @@ const ActivitiesSection = () => {
           </div>
 
           <p className="font-body text-[10px] text-muted-foreground text-center mt-6 tracking-wider">* Available at extra charge</p>
+
+          {/* Gallery */}
+          <div className="mt-14">
+            <p className="factsheet-label mb-6 text-center">Gallery</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {gallery.map((item) => (
+                <div key={item.name} className="group relative overflow-hidden rounded-lg aspect-[4/3]">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h4 className="font-display text-base md:text-lg text-primary-foreground">{item.name}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
