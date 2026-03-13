@@ -99,7 +99,7 @@ const DiningSection = () => {
           </div>
 
           <div className="space-y-1 mt-6">
-            <p className="font-body text-[10px] text-muted-foreground tracking-wider">* Not included in the Ultra All Inclusive concept</p>
+            <p className="font-body text-[10px] text-muted-foreground tracking-wider">* Requires reservation</p>
             <p className="font-body text-[10px] text-muted-foreground tracking-wider">** Selection of imported and local alcoholic and non-alcoholic hot and cold beverages served. Premium beverages at extra cost.</p>
           </div>
         </div>
