@@ -67,7 +67,7 @@ const DiningSection = () => {
       desc: "Chilled beverages and tropical cocktails on the sandy beachfront",
       hours: "10:00 – 18:00",
       location: "Beach",
-      image: null,
+      image: barBeach,
     },
     {
       name: "Vitamin Bar",
