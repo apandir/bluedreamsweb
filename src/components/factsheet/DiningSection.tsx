@@ -35,7 +35,7 @@ const DiningSection = () => {
     <div className="factsheet-card group overflow-hidden">
       {venue.image && (
         <div className="overflow-hidden">
-          <img src={venue.image} alt={venue.name} className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" />
+          <img src={venue.image} alt={venue.name} className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" />
         </div>
       )}
       <div className="p-5">
