@@ -260,6 +260,11 @@ const MeetingsSection = () => {
               { src: eventTableSetup, alt: "Garden Table Setup" },
               { src: eventAerialDinner, alt: "Aerial Dinner View" },
               { src: eventGardenSetup, alt: "Garden Setting" },
+            ].map((item) => (
+              <div key={item.alt} className="group relative overflow-hidden rounded-lg aspect-[4/3]">
+                <img src={item.src} alt={item.alt} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <p className="absolute bottom-3 left-3 right-3 font-body text-xs text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.alt}</p>
               </div>
             ))}
           </div>
