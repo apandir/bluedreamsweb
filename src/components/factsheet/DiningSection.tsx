@@ -28,11 +28,27 @@ const DiningSection = () => {
     },
     {
       name: "Halikarnas",
-      type: "Turkish & Seafood",
-      desc: "Fresh Aegean flavours with traditional Turkish à la carte cuisine",
+      type: "À la Carte Restaurant",
+      desc: "Fresh Aegean seafood with the finest catches of the day in an elegant waterfront setting",
       hours: "19:00 – 22:00",
       location: "Beachfront",
       image: diningHalikarnas,
+    },
+    {
+      name: "Le Kebab",
+      type: "À la Carte Restaurant",
+      desc: "Authentic Turkish cuisine featuring premium kebabs and traditional Anatolian flavours",
+      hours: "19:00 – 22:00",
+      location: "Beachfront",
+      image: diningHalikarnas,
+    },
+    {
+      name: "Snack Restaurant",
+      type: "Casual Dining",
+      desc: "Light bites, burgers, sandwiches and refreshments served beachside throughout the day",
+      hours: "10:00 – 17:00",
+      location: "Beachfront",
+      image: diningMain,
     },
   ];
 
