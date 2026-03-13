@@ -59,7 +59,7 @@ const DiningSection = () => {
       desc: "Refreshing drinks and light snacks served poolside all day",
       hours: "10:00 – 18:00",
       location: "Main Pool Area",
-      image: null,
+      image: barPool,
     },
     {
       name: "Beach Bar",
