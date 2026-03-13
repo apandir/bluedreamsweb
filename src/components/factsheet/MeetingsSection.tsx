@@ -9,6 +9,12 @@ import eventLiveMusic from "@/assets/event-live-music.png";
 import eventTableDetail from "@/assets/event-table-detail.png";
 import eventSunsetDinner from "@/assets/event-sunset-dinner.png";
 import eventDesserts from "@/assets/event-desserts.png";
+import eventChampagne from "@/assets/event-champagne.png";
+import eventToast from "@/assets/event-toast.png";
+import eventDinnerParty from "@/assets/event-dinner-party.png";
+import eventTableSetup from "@/assets/event-table-setup.png";
+import eventAerialDinner from "@/assets/event-aerial-dinner.png";
+import eventGardenSetup from "@/assets/event-garden-setup.png";
 import {
   Users, Maximize, ArrowUpFromDot, Heart,
   Volume2, MonitorPlay, Wifi, Mic, Headset, Coffee,
@@ -248,6 +254,12 @@ const MeetingsSection = () => {
               { src: eventTableDetail, alt: "Table Details" },
               { src: eventSunsetDinner, alt: "Sunset Dinner" },
               { src: eventDesserts, alt: "Dessert Buffet" },
+              { src: eventChampagne, alt: "Champagne Tower" },
+              { src: eventToast, alt: "Wedding Toast" },
+              { src: eventDinnerParty, alt: "Dinner Celebration" },
+              { src: eventTableSetup, alt: "Garden Table Setup" },
+              { src: eventAerialDinner, alt: "Aerial Dinner View" },
+              { src: eventGardenSetup, alt: "Garden Setting" },
             ].map((item) => (
               <div key={item.alt} className="group relative overflow-hidden rounded-lg aspect-[4/3]">
                 <img src={item.src} alt={item.alt} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
