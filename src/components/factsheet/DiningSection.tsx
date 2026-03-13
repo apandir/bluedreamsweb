@@ -1,4 +1,5 @@
 import diningMain from "@/assets/dining-main.jpg";
+import diningSnack from "@/assets/dining-snack.jpg";
 import diningLaLocanda from "@/assets/dining-lalocanda.jpg";
 import diningHalikarnas from "@/assets/dining-halikarnas.jpg";
 import diningSunsetBar from "@/assets/dining-sunsetbar.jpg";
