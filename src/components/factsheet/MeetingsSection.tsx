@@ -1,29 +1,37 @@
 import meetingHall from "@/assets/meeting-hall.jpg";
-import { Users, Maximize, ArrowUpFromDot, Heart, Sparkles } from "lucide-react";
+import {
+  Users, Maximize, ArrowUpFromDot, Heart,
+  Volume2, MonitorPlay, Wifi, Mic, Headset, Coffee,
+  Waves, TreePine, Sparkles, Music, Camera, Gem,
+  UtensilsCrossed, Flower2, PartyPopper,
+  Presentation, GraduationCap, Armchair, Theater,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 const MeetingsSection = () => {
   const mainHall = {
     name: "İstanbul Salonu",
     desc: "The 770 m² Istanbul Hall is one of the largest hotel conference halls in the Aegean. It can be divided into two soundproof sections.",
     stats: [
-      { value: "770", unit: "m²", label: "Total Area" },
-      { value: "700", unit: "people", label: "Theater Capacity" },
-      { value: "4.0", unit: "mt", label: "Ceiling Height" },
-      { value: "2", unit: "sections", label: "Divisible" },
+      { value: "770", unit: "m²", label: "Total Area", icon: Maximize },
+      { value: "700", unit: "people", label: "Theater Capacity", icon: Users },
+      { value: "4.0", unit: "mt", label: "Ceiling Height", icon: ArrowUpFromDot },
+      { value: "2", unit: "sections", label: "Divisible", icon: Presentation },
     ],
     configurations: [
       { section: "Istanbul (Full)", area: "770", theater: "700", classroom: "450", banquet: "650", height: "3.50 – 4.00 mt" },
       { section: "Europe (Stage Side)", area: "400", theater: "450", classroom: "250", banquet: "450", height: "3.50 – 4.00 mt" },
       { section: "Asia (Pool Side)", area: "370", theater: "350", classroom: "200", banquet: "200", height: "3.50 – 4.00 mt" },
     ],
+    tags: ["Conferences", "Gala Dinners", "Product Launches", "Awards Ceremonies"],
   };
 
   const meetingRooms = [
-    { name: "Bodrum Hall", area: "50 m²", theater: 40, height: "2.80 mt" },
-    { name: "Ankara Hall", area: "120 m²", theater: 100, height: "3.00 mt" },
-    { name: "İzmir Hall", area: "90 m²", theater: 80, height: "2.90 mt" },
-    { name: "Antalya Hall", area: "75 m²", theater: 60, height: "2.80 mt" },
-    { name: "Board Room", area: "40 m²", theater: 16, height: "2.80 mt" },
+    { name: "Bodrum Hall", area: "50 m²", theater: 40, height: "2.80 mt", tags: ["Workshop", "Interview"] },
+    { name: "Ankara Hall", area: "120 m²", theater: 100, height: "3.00 mt", tags: ["Seminar", "Training"] },
+    { name: "İzmir Hall", area: "90 m²", theater: 80, height: "2.90 mt", tags: ["Conference", "Panel"] },
+    { name: "Antalya Hall", area: "75 m²", theater: 60, height: "2.80 mt", tags: ["Meeting", "Presentation"] },
+    { name: "Board Room", area: "40 m²", theater: 16, height: "2.80 mt", tags: ["Executive", "VIP"] },
   ];
 
   const weddingVenues = [
@@ -31,39 +39,67 @@ const MeetingsSection = () => {
       name: "Beachfront Ceremony",
       capacity: "Up to 300 guests",
       desc: "Exchange vows on pristine white sand with the Aegean Sea as your backdrop. Available at sunset for magical golden-hour ceremonies.",
+      icon: Waves,
       features: ["Floral Arch Setup", "White Sand Aisle", "Sunset Timing"],
     },
     {
       name: "Garden Terrace",
       capacity: "Up to 500 guests",
       desc: "A lush Mediterranean garden surrounded by olive trees and bougainvillea, perfect for elegant outdoor receptions and cocktail hours.",
+      icon: TreePine,
       features: ["Landscaped Gardens", "String Lighting", "Dance Floor"],
     },
     {
       name: "Poolside Gala",
       capacity: "Up to 400 guests",
       desc: "A glamorous poolside setting with ambient lighting and panoramic sea views for unforgettable evening celebrations.",
+      icon: Sparkles,
       features: ["Pool Illumination", "Live Music Stage", "Cocktail Stations"],
     },
   ];
 
-  const weddingServices = [
-    "Dedicated Wedding Coordinator",
-    "Custom Menu Planning",
-    "Floral & Décor Design",
-    "DJ & Live Entertainment",
-    "Photography Arrangements",
-    "Bridal Suite & Spa Package",
+  const weddingServices: { label: string; icon: LucideIcon }[] = [
+    { label: "Wedding Coordinator", icon: Gem },
+    { label: "Custom Menu Planning", icon: UtensilsCrossed },
+    { label: "Floral & Décor Design", icon: Flower2 },
+    { label: "DJ & Live Entertainment", icon: Music },
+    { label: "Photography", icon: Camera },
+    { label: "Bridal Suite & Spa", icon: PartyPopper },
   ];
 
-  const amenities = [
-    "Professional Sound System",
-    "HD Projector & Screen",
-    "High-Speed Wi-Fi",
-    "Wireless Microphone",
-    "Technical Support Team",
-    "Coffee Break Service",
+  const amenities: { label: string; icon: LucideIcon }[] = [
+    { label: "Professional Sound System", icon: Volume2 },
+    { label: "HD Projector & Screen", icon: MonitorPlay },
+    { label: "High-Speed Wi-Fi", icon: Wifi },
+    { label: "Wireless Microphone", icon: Mic },
+    { label: "Technical Support Team", icon: Headset },
+    { label: "Coffee Break Service", icon: Coffee },
   ];
+
+  const configIcons: Record<string, LucideIcon> = {
+    Theater: Theater,
+    Classroom: GraduationCap,
+    Banquet: UtensilsCrossed,
+  };
+
+  const Tag = ({ label }: { label: string }) => (
+    <span
+      className="inline-flex items-center font-body text-[10px] tracking-[0.1em] uppercase text-ocean-medium px-3 py-1.5 border rounded-full"
+      style={{ borderColor: 'hsl(var(--sand))' }}
+    >
+      {label}
+    </span>
+  );
+
+  const IconTag = ({ icon: Icon, label }: { icon: LucideIcon; label: string }) => (
+    <span
+      className="inline-flex items-center gap-2 font-display text-sm font-light text-ocean-medium px-5 py-3 border"
+      style={{ borderColor: 'hsl(var(--sand))' }}
+    >
+      <Icon className="w-4 h-4 text-gold flex-shrink-0" />
+      {label}
+    </span>
+  );
 
   return (
     <section id="meetings">
@@ -90,15 +126,21 @@ const MeetingsSection = () => {
               {mainHall.name}
             </h3>
             <div className="factsheet-divider mb-8" />
-            <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
               {mainHall.desc}
             </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {mainHall.tags.map((tag) => (
+                <Tag key={tag} label={tag} />
+              ))}
+            </div>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {mainHall.stats.map((stat) => (
               <div key={stat.label} className="factsheet-card p-6 text-center">
+                <stat.icon className="w-5 h-5 text-gold mx-auto mb-3" />
                 <p className="font-display text-3xl md:text-4xl font-light text-ocean-deep">
                   {stat.value}
                 </p>
@@ -112,7 +154,8 @@ const MeetingsSection = () => {
 
           {/* Configuration Table */}
           <div className="factsheet-card overflow-hidden mb-20">
-            <div className="p-6 border-b" style={{ borderColor: 'hsl(var(--sand))' }}>
+            <div className="p-6 border-b flex items-center gap-3" style={{ borderColor: 'hsl(var(--sand))' }}>
+              <Presentation className="w-4 h-4 text-gold" />
               <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold">
                 Hall Configurations
               </p>
@@ -122,11 +165,20 @@ const MeetingsSection = () => {
                 <thead>
                   <tr className="border-b" style={{ borderColor: 'hsl(var(--sand))' }}>
                     <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-left p-4">Section</th>
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">Area (m²)</th>
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">Theater</th>
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">Classroom</th>
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">Banquet</th>
-                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">Height</th>
+                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">
+                      <span className="inline-flex items-center gap-1.5"><Maximize className="w-3 h-3" /> Area</span>
+                    </th>
+                    {(["Theater", "Classroom", "Banquet"] as const).map((col) => {
+                      const Icon = configIcons[col];
+                      return (
+                        <th key={col} className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">
+                          <span className="inline-flex items-center gap-1.5"><Icon className="w-3 h-3" /> {col}</span>
+                        </th>
+                      );
+                    })}
+                    <th className="font-body text-[10px] tracking-[0.15em] uppercase text-muted-foreground font-medium text-center p-4">
+                      <span className="inline-flex items-center gap-1.5"><ArrowUpFromDot className="w-3 h-3" /> Height</span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -161,7 +213,7 @@ const MeetingsSection = () => {
             {meetingRooms.map((room) => (
               <div key={room.name} className="factsheet-card p-6">
                 <h4 className="font-display text-xl font-light text-ocean-deep mb-4">{room.name}</h4>
-                <div className="space-y-3">
+                <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-3">
                     <Maximize className="w-4 h-4 text-gold flex-shrink-0" />
                     <span className="font-body text-xs text-muted-foreground">{room.area}</span>
@@ -175,6 +227,11 @@ const MeetingsSection = () => {
                     <span className="font-body text-xs text-muted-foreground">Height: {room.height}</span>
                   </div>
                 </div>
+                <div className="pt-3 border-t flex flex-wrap gap-2" style={{ borderColor: 'hsl(var(--sand))' }}>
+                  {room.tags.map((tag) => (
+                    <Tag key={tag} label={tag} />
+                  ))}
+                </div>
               </div>
             ))}
           </div>
@@ -186,13 +243,7 @@ const MeetingsSection = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {amenities.map((item) => (
-              <span
-                key={item}
-                className="font-display text-sm font-light text-ocean-medium px-5 py-3 border"
-                style={{ borderColor: 'hsl(var(--sand))' }}
-              >
-                {item}
-              </span>
+              <IconTag key={item.label} icon={item.icon} label={item.label} />
             ))}
           </div>
 
@@ -212,7 +263,7 @@ const MeetingsSection = () => {
             {weddingVenues.map((venue) => (
               <div key={venue.name} className="factsheet-card p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Heart className="w-4 h-4 text-gold" />
+                  <venue.icon className="w-4 h-4 text-gold" />
                   <p className="font-body text-[10px] tracking-[0.2em] uppercase text-gold">
                     Outdoor Venue
                   </p>
@@ -225,13 +276,7 @@ const MeetingsSection = () => {
                 </div>
                 <div className="pt-3 border-t flex flex-wrap gap-2" style={{ borderColor: 'hsl(var(--sand))' }}>
                   {venue.features.map((f) => (
-                    <span
-                      key={f}
-                      className="font-body text-[10px] tracking-[0.1em] uppercase text-ocean-medium px-3 py-1.5 border"
-                      style={{ borderColor: 'hsl(var(--sand))' }}
-                    >
-                      {f}
-                    </span>
+                    <Tag key={f} label={f} />
                   ))}
                 </div>
               </div>
@@ -245,13 +290,7 @@ const MeetingsSection = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {weddingServices.map((item) => (
-              <span
-                key={item}
-                className="font-display text-sm font-light text-ocean-medium px-5 py-3 border"
-                style={{ borderColor: 'hsl(var(--sand))' }}
-              >
-                {item}
-              </span>
+              <IconTag key={item.label} icon={item.icon} label={item.label} />
             ))}
           </div>
         </div>
