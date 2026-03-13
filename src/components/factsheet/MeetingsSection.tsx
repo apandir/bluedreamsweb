@@ -1,5 +1,5 @@
 import meetingHall from "@/assets/meeting-hall.jpg";
-import { Users, Maximize, ArrowUpFromDot } from "lucide-react";
+import { Users, Maximize, ArrowUpFromDot, Heart, Sparkles } from "lucide-react";
 
 const MeetingsSection = () => {
   const mainHall = {
