@@ -70,6 +70,28 @@ const BeachPoolsSection = () => {
             ))}
           </div>
           <p className="font-body text-[10px] text-primary-foreground/40 mt-4 tracking-wider text-center">* Open only at certain conditions</p>
+
+          {/* Pool List */}
+          <div className="mt-12">
+            <p className="factsheet-label mb-6 text-center">Our Swimming Pools</p>
+            <div className="max-w-2xl mx-auto space-y-0">
+              {[
+                { name: "Infinity Pool", detail: "Overlooking the Aegean Sea" },
+                { name: "Activity Pool", detail: "With palm-lined sundeck" },
+                { name: "Aqua Park Pool", detail: "With waterslides for all ages" },
+                { name: "Children's Pool", detail: "Safe & fun for little ones" },
+                { name: "Indoor Pool", detail: "Open at certain conditions" },
+              ].map((pool, i) => (
+                <div key={pool.name} className="group flex items-center justify-between py-3.5 border-b border-primary-foreground/8 hover:border-gold/30 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <span className="font-body text-xs text-gold font-semibold w-8">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-display text-lg group-hover:text-gold transition-colors">{pool.name}</span>
+                  </div>
+                  <span className="font-body text-xs opacity-50">{pool.detail}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
