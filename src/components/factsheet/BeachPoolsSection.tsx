@@ -4,6 +4,9 @@ import poolAquapark from "@/assets/pool-aquapark.jpg";
 import poolIndoor from "@/assets/pool-indoor.jpg";
 import poolInfinity from "@/assets/pool-infinity.jpg";
 import poolKids from "@/assets/pool-kids.jpg";
+import beachCabanaArea from "@/assets/beach-cabana-area.jpg";
+import beachCabana from "@/assets/beach-cabana.jpg";
+import beachWatersports from "@/assets/beach-watersports.jpg";
 
 const BeachPoolsSection = () => {
   const poolGallery = [
@@ -11,7 +14,10 @@ const BeachPoolsSection = () => {
     { name: "Activity Pool", image: poolActivity },
     { name: "Aqua Park & Waterslides", image: poolAquapark },
     { name: "Indoor Pool*", image: poolIndoor },
-    { name: "Kids Beach Area", image: poolKids },
+    { name: "Children's Pool", image: poolKids },
+    { name: "Cabana Area", image: beachCabanaArea },
+    { name: "Beach Cabanas", image: beachCabana },
+    { name: "Water Sports", image: beachWatersports },
   ];
 
   return (
