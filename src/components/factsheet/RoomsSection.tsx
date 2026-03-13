@@ -2,6 +2,7 @@ import roomClub from "@/assets/room-club.jpg";
 import roomClubSeaview from "@/assets/room-club-seaview.jpg";
 import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
+import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
 import roomHero from "@/assets/room-deluxe.jpg";
 
 const RoomsSection = () => {
@@ -10,7 +11,7 @@ const RoomsSection = () => {
     { name: "Club Sea View Room", size: "24m²", description: "Elevated club rooms offering panoramic views of the turquoise Aegean, with private balconies.", image: roomClubSeaview },
     { name: "Club Family Room", size: "35–40m²", description: "Spacious family-friendly rooms with two separate bedrooms, designed for guests traveling with children.", image: roomFamily },
     { name: "Deluxe Room Sea & Infinity Pool View", size: "40m²", description: "Premium rooms in the main building with unobstructed sea and infinity pool views, elegant furnishings, and exclusive amenities.", image: roomDeluxe },
-    { name: "Deluxe Family Room Sea & Infinity Pool View", size: "50–55m²", description: "Spacious deluxe family accommodation with stunning sea and infinity pool views, separate living area, and premium amenities for the whole family.", image: roomDeluxe },
+    { name: "Deluxe Family Room Sea & Infinity Pool View", size: "50–55m²", description: "Spacious deluxe family accommodation with stunning sea and infinity pool views, separate living area, and premium amenities for the whole family.", image: roomDeluxeFamily },
   ];
 
   return (
