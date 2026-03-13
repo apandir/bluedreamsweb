@@ -44,7 +44,7 @@ const OverviewSection = () => {
               <p className="font-body text-sm leading-relaxed text-muted-foreground mb-6">
                 Located in the beautiful bay of Torba Zeytinlikahve in Bodrum, Blue Dreams Resort
                 offers everything you need for an unforgettable holiday. Our 52,000 m² area features
-                unique Bodrum architecture, a 300-meter long sandy beach, piers, and private relaxing cabanas.
+                unique Bodrum architecture, a 300-meter long sandy and pebbles beach, piers, and private relaxing cabanas.
               </p>
               <p className="font-body text-sm leading-relaxed text-muted-foreground">
                 The resort caters to all your needs with five swimming pools.
