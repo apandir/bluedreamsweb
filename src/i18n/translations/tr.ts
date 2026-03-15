@@ -359,6 +359,7 @@ export const tr: Translations = {
       eventTeamBuilding: "Takım Aktiviteleri",
       eventTeamBuildingDesc: "Bodrum kıyılarında açık hava aktiviteleri ve takım programları.",
     },
+    contactPage: {
       title: "İletişim",
       subtitle: "Bizimle iletişime geçin",
       home: "Ana Sayfa",
