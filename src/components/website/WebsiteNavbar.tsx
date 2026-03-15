@@ -173,7 +173,9 @@ const WebsiteNavbar = () => {
           <X className="w-7 h-7" />
         </button>
 
-        <img src={logo} alt="Blue Dreams Resort" className="h-12 mb-6" />
+        <div className="bg-white rounded-md px-4 py-2 mb-6">
+          <img src={logo} alt="Blue Dreams Resort" className="h-12" />
+        </div>
 
         {navLinks.map((link) => (
           <Link
