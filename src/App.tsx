@@ -10,6 +10,10 @@ import RoomsPage from "./pages/RoomsPage";
 import DiningPage from "./pages/DiningPage";
 import SpaPage from "./pages/SpaPage";
 import ContactPage from "./pages/ContactPage";
+import MeetingsPage from "./pages/MeetingsPage";
+import MeetingsConferencesPage from "./pages/MeetingsConferencesPage";
+import MeetingsWeddingsPage from "./pages/MeetingsWeddingsPage";
+import MeetingsEventsPage from "./pages/MeetingsEventsPage";
 import FactsheetPage from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
