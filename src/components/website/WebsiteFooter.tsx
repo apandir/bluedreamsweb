@@ -13,6 +13,7 @@ const WebsiteFooter = () => {
     { label: n.rooms, href: "/rooms" },
     { label: n.restaurantBar, href: "/dining" },
     { label: n.spa, href: "/spa" },
+    { label: t.website.meetingsPage.title, href: "/meetings" },
     { label: n.contact, href: "/contact" },
     { label: n.factsheet, href: "/factsheet" },
   ];

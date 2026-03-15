@@ -10,6 +10,10 @@ import RoomsPage from "./pages/RoomsPage";
 import DiningPage from "./pages/DiningPage";
 import SpaPage from "./pages/SpaPage";
 import ContactPage from "./pages/ContactPage";
+import MeetingsPage from "./pages/MeetingsPage";
+import MeetingsConferencesPage from "./pages/MeetingsConferencesPage";
+import MeetingsWeddingsPage from "./pages/MeetingsWeddingsPage";
+import MeetingsEventsPage from "./pages/MeetingsEventsPage";
 import FactsheetPage from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -28,6 +32,10 @@ const App = () => (
               <Route path="/rooms" element={<RoomsPage />} />
               <Route path="/dining" element={<DiningPage />} />
               <Route path="/spa" element={<SpaPage />} />
+              <Route path="/meetings" element={<MeetingsPage />} />
+              <Route path="/meetings/conferences" element={<MeetingsConferencesPage />} />
+              <Route path="/meetings/weddings" element={<MeetingsWeddingsPage />} />
+              <Route path="/meetings/events" element={<MeetingsEventsPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Route>
             <Route path="/factsheet" element={<FactsheetPage />} />
