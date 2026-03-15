@@ -36,7 +36,6 @@ export const sv: Translations = {
     distancesLabel: "Avstånd från Resortet",
     distances: [
       { place: "Bodrum Centrum", km: "10" },
-      { place: "Bodrum Flygplats", km: "25" },
       { place: "Yalıkavak", km: "25" },
       { place: "Turgutreis", km: "25" },
       { place: "Gümüşlük", km: "28" },

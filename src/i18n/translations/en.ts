@@ -36,7 +36,6 @@ export const en: Translations = {
     distancesLabel: "Distances from Resort",
     distances: [
       { place: "Bodrum City Center", km: "10" },
-      { place: "Bodrum Airport", km: "25" },
       { place: "Yalıkavak", km: "25" },
       { place: "Turgutreis", km: "25" },
       { place: "Gümüşlük", km: "28" },

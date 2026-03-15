@@ -36,7 +36,6 @@ export const tr: Translations = {
     distancesLabel: "Otelden Mesafeler",
     distances: [
       { place: "Bodrum Şehir Merkezi", km: "10" },
-      { place: "Bodrum Havalimanı", km: "25" },
       { place: "Yalıkavak", km: "25" },
       { place: "Turgutreis", km: "25" },
       { place: "Gümüşlük", km: "28" },
