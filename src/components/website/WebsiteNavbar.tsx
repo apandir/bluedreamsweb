@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/blue-dreams-logo-white.png";
+import logo from "@/assets/blue-dreams-logo.png";
 import { Phone, Menu, X, Home, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Language } from "@/i18n/types";
@@ -77,11 +77,13 @@ const WebsiteNavbar = () => {
 
             {/* Center: Logo */}
             <Link to="/" className="absolute left-1/2 -translate-x-1/2">
-              <img
-                src={logo}
-                alt="Blue Dreams Resort"
-                className={`transition-all duration-500 ${scrolled ? "h-8" : "h-10 md:h-11"}`}
-              />
+              <div className={`bg-white rounded-md px-3 py-1.5 transition-all duration-500 ${scrolled ? "px-2 py-1" : ""}`}>
+                <img
+                  src={logo}
+                  alt="Blue Dreams Resort"
+                  className={`transition-all duration-500 ${scrolled ? "h-7" : "h-9 md:h-10"}`}
+                />
+              </div>
             </Link>
 
             {/* Right: Phone + Lang + Book Now */}
@@ -171,7 +173,9 @@ const WebsiteNavbar = () => {
           <X className="w-7 h-7" />
         </button>
 
-        <img src={logo} alt="Blue Dreams Resort" className="h-12 mb-6" />
+        <div className="bg-white rounded-md px-4 py-2 mb-6">
+          <img src={logo} alt="Blue Dreams Resort" className="h-12" />
+        </div>
 
         {navLinks.map((link) => (
           <Link

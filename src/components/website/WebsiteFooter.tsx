@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/blue-dreams-logo-white.png";
+import logo from "@/assets/blue-dreams-logo.png";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -47,7 +47,9 @@ const WebsiteFooter = () => {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
         {/* Centered Logo */}
         <div className="flex justify-center mb-12">
-          <img src={logo} alt="Blue Dreams Resort" className="h-10" />
+          <div className="bg-white rounded-md px-4 py-2">
+            <img src={logo} alt="Blue Dreams Resort" className="h-10" />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
