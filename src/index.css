@@ -15,16 +15,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 15%;
 
-    --primary: 210 60% 20%;
+    --primary: 200 10% 22%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 38 40% 92%;
-    --secondary-foreground: 30 30% 20%;
+    --secondary: 200 10% 93%;
+    --secondary-foreground: 200 10% 20%;
 
     --muted: 210 12% 93%;
     --muted-foreground: 215 10% 45%;
 
-    --accent: 38 70% 52%;
+    --accent: 190 55% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,19 +32,19 @@
 
     --border: 210 15% 90%;
     --input: 210 15% 90%;
-    --ring: 210 60% 30%;
+    --ring: 190 55% 55%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --ocean-deep: 210 55% 12%;
-    --ocean-medium: 210 50% 32%;
-    --ocean-light: 195 55% 48%;
-    --sand: 38 25% 85%;
-    --sand-dark: 30 20% 42%;
-    --cream: 40 30% 97%;
-    --gold: 38 75% 50%;
-    --gold-light: 38 55% 65%;
+    --ocean-deep: 200 10% 22%;
+    --ocean-medium: 195 40% 35%;
+    --ocean-light: 190 55% 55%;
+    --sand: 200 10% 90%;
+    --sand-dark: 200 8% 45%;
+    --cream: 200 15% 97%;
+    --gold: 190 55% 55%;
+    --gold-light: 190 40% 65%;
 
     --font-display: 'DM Serif Display', Georgia, serif;
     --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
