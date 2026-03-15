@@ -77,11 +77,13 @@ const WebsiteNavbar = () => {
 
             {/* Center: Logo */}
             <Link to="/" className="absolute left-1/2 -translate-x-1/2">
-              <img
-                src={logo}
-                alt="Blue Dreams Resort"
-                className={`transition-all duration-500 ${scrolled ? "h-8" : "h-10 md:h-11"}`}
-              />
+              <div className={`bg-white rounded-md px-3 py-1.5 transition-all duration-500 ${scrolled ? "px-2 py-1" : ""}`}>
+                <img
+                  src={logo}
+                  alt="Blue Dreams Resort"
+                  className={`transition-all duration-500 ${scrolled ? "h-7" : "h-9 md:h-10"}`}
+                />
+              </div>
             </Link>
 
             {/* Right: Phone + Lang + Book Now */}
