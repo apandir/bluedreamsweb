@@ -27,18 +27,6 @@ const OverviewSection = () => {
               <div className="factsheet-divider !mx-0 mb-5" />
               <p className="font-body text-sm leading-relaxed text-muted-foreground mb-4">{t.overview.p1}</p>
               <p className="font-body text-sm leading-relaxed text-muted-foreground">{t.overview.p2}</p>
-              <div className="mt-8">
-                <p className="factsheet-label mb-4">{t.overview.distancesLabel}</p>
-                <div className="grid grid-cols-3 gap-3">
-                  {t.overview.distances.map((d) => (
-                    <div key={d.place} className="stat-block !p-4 text-center">
-                      <p className="font-display text-2xl text-ocean-deep">{d.km}</p>
-                      <p className="font-body text-[10px] tracking-[0.1em] uppercase text-gold font-semibold mt-0.5">km</p>
-                      <p className="font-body text-[10px] text-muted-foreground mt-1">{d.place}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
             <div className="space-y-6">
               <img src={beachImage} alt="Beach" className="w-full h-60 object-cover rounded-lg" />
@@ -50,6 +38,18 @@ const OverviewSection = () => {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+          <div className="mt-10">
+            <p className="factsheet-label mb-4">{t.overview.distancesLabel}</p>
+            <div className="grid grid-cols-4 gap-3">
+              {t.overview.distances.map((d) => (
+                <div key={d.place} className="stat-block !p-4 text-center">
+                  <p className="font-display text-2xl text-ocean-deep">{d.km}</p>
+                  <p className="font-body text-[10px] tracking-[0.1em] uppercase text-gold font-semibold mt-0.5">km</p>
+                  <p className="font-body text-[10px] text-muted-foreground mt-1">{d.place}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

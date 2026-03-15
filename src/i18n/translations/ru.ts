@@ -36,7 +36,6 @@ export const ru: Translations = {
     distancesLabel: "Расстояния от курорта",
     distances: [
       { place: "Центр Бодрума", km: "10" },
-      { place: "Аэропорт Бодрума", km: "25" },
       { place: "Ялыкавак", km: "25" },
       { place: "Тургутрейс", km: "25" },
       { place: "Гюмюшлюк", km: "28" },

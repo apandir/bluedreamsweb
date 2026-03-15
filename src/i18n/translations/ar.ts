@@ -36,7 +36,6 @@ export const ar: Translations = {
     distancesLabel: "المسافات من المنتجع",
     distances: [
       { place: "وسط مدينة بودروم", km: "10" },
-      { place: "مطار بودروم", km: "25" },
       { place: "يالي كافاك", km: "25" },
       { place: "تورغوتريس", km: "25" },
       { place: "غوموشلوك", km: "28" },

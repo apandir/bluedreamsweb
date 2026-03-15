@@ -36,7 +36,6 @@ export const de: Translations = {
     distancesLabel: "Entfernungen vom Resort",
     distances: [
       { place: "Bodrum Stadtzentrum", km: "10" },
-      { place: "Flughafen Bodrum", km: "25" },
       { place: "Yalıkavak", km: "25" },
       { place: "Turgutreis", km: "25" },
       { place: "Gümüşlük", km: "28" },
