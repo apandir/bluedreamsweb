@@ -44,6 +44,46 @@ const WebsiteFooter = () => {
         </div>
       </div>
 
+      {/* Map Section */}
+      <div className="border-b border-primary-foreground/10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <a
+              href="https://www.google.com/maps/place/Blue+Dreams+Resort/@37.0847,27.4342,15z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block overflow-hidden rounded-lg group"
+            >
+              <img
+                src={mapScreenshot}
+                alt="Blue Dreams Resort Location on Map"
+                className="w-full h-[280px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </a>
+            <div className="flex flex-col gap-4">
+              <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent">
+                {w.ctaLabel || "FIND US"}
+              </p>
+              <h3 className="font-display text-2xl text-primary-foreground">
+                Torba, Bodrum
+              </h3>
+              <p className="font-body text-sm text-primary-foreground/50 leading-relaxed">
+                Torba Mahallesi, Herodot Bulvarı No:11, Bodrum / Muğla / Türkiye
+              </p>
+              <a
+                href="https://www.google.com/maps/dir//Blue+Dreams+Resort,+Torba+Mahallesi,+Herodot+Bulvarı+No:11,+Bodrum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-body text-[11px] font-semibold tracking-[0.15em] uppercase text-accent hover:text-accent/80 transition-colors mt-2 w-fit"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer */}
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
         {/* Centered Logo */}
