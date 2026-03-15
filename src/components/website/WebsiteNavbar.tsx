@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/blue-dreams-logo-white.png";
+import logo from "@/assets/blue-dreams-logo.png";
 import { Phone, Menu, X, Home, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Language } from "@/i18n/types";

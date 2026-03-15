@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/blue-dreams-logo-white.png";
+import logo from "@/assets/blue-dreams-logo.png";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
