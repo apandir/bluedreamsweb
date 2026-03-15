@@ -8,27 +8,7 @@ import gastro2Img from "@/assets/home-gastronomy-2.jpg";
 import spaImg from "@/assets/home-spa.jpg";
 import { Link } from "react-router-dom";
 import { ChevronDown, Star, MapPin } from "lucide-react";
-
-const experienceCards = [
-  {
-    title: "ROOMS",
-    subtitle: "Designer rooms in the heart of Bodrum",
-    image: roomsImg,
-    link: "/rooms",
-  },
-  {
-    title: "RESTAURANT & BAR",
-    subtitle: "A true gastronomic experience",
-    image: restaurantImg,
-    link: "/dining",
-  },
-  {
-    title: "ACTIVITIES",
-    subtitle: "Special moments and entertainment",
-    image: activitiesImg,
-    link: "/spa",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const reviews = [
   { name: "Ayşe Yılmaz", text: "We chose it for our honeymoon and enjoyed every moment.", source: "Google Review" },
@@ -49,35 +29,29 @@ const events = [
 ];
 
 const HomePage = () => {
+  const { t } = useLanguage();
+  const h = t.website.home;
+
+  const experienceCards = [
+    { title: h.roomsCard, subtitle: h.roomsCardSub, image: roomsImg, link: "/rooms" },
+    { title: h.restaurantCard, subtitle: h.restaurantCardSub, image: restaurantImg, link: "/dining" },
+    { title: h.activitiesCard, subtitle: h.activitiesCardSub, image: activitiesImg, link: "/spa" },
+  ];
+
   return (
     <main>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src={heroImg}
-          alt="Blue Dreams Resort aerial view"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src={heroImg} alt="Blue Dreams Resort aerial view" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-ocean-deep/40" />
         <div className="relative z-10 text-center px-6 max-w-3xl">
-          <p className="font-body text-xs font-semibold tracking-[0.4em] uppercase text-primary-foreground/70 mb-6">
-            Pearl of Bodrum
-          </p>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-2">
-            Aegean Blue
-          </h1>
-          <p className="font-display text-5xl md:text-7xl lg:text-8xl italic text-accent">
-            Dream
-          </p>
-          <p className="font-body text-base md:text-lg text-primary-foreground/70 mt-8 max-w-xl mx-auto leading-relaxed">
-            Where luxury and tranquility meet in the heart of nature. Welcome to your home, Blue Dreams.
-          </p>
+          <p className="font-body text-xs font-semibold tracking-[0.4em] uppercase text-primary-foreground/70 mb-6">{h.pearlOfBodrum}</p>
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-2">{h.aegeanBlue}</h1>
+          <p className="font-display text-5xl md:text-7xl lg:text-8xl italic text-accent">{h.dream}</p>
+          <p className="font-body text-base md:text-lg text-primary-foreground/70 mt-8 max-w-xl mx-auto leading-relaxed">{h.heroDesc}</p>
         </div>
-        <a
-          href="#experience"
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/50 hover:text-primary-foreground transition-colors"
-        >
-          <span className="font-body text-[10px] tracking-[0.3em] uppercase">Discover</span>
+        <a href="#experience" className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/50 hover:text-primary-foreground transition-colors">
+          <span className="font-body text-[10px] tracking-[0.3em] uppercase">{h.discover}</span>
           <ChevronDown className="w-5 h-5 animate-bounce" />
         </a>
       </section>
@@ -85,33 +59,16 @@ const HomePage = () => {
       {/* Experience Section */}
       <section id="experience" className="py-24 md:py-32 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent text-center mb-4">
-            Blue Dreams Experience
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center max-w-3xl mx-auto mb-16">
-            Your place on the Aegean coast, unique flavors prepared with the rhythm of seasons and where our story meets yours.
-          </h2>
-
+          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent text-center mb-4">{h.experienceLabel}</p>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center max-w-3xl mx-auto mb-16">{h.experienceHeading}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {experienceCards.map((card) => (
-              <Link
-                key={card.title}
-                to={card.link}
-                className="group relative aspect-[3/4] rounded-2xl overflow-hidden"
-              >
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+              <Link key={card.title} to={card.link} className="group relative aspect-[3/4] rounded-2xl overflow-hidden">
+                <img src={card.image} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="font-body text-xs font-bold tracking-[0.2em] uppercase text-primary-foreground mb-2">
-                    {card.title}
-                  </h3>
-                  <p className="font-body text-sm text-primary-foreground/70">
-                    {card.subtitle}
-                  </p>
+                  <h3 className="font-body text-xs font-bold tracking-[0.2em] uppercase text-primary-foreground mb-2">{card.title}</h3>
+                  <p className="font-body text-sm text-primary-foreground/70">{card.subtitle}</p>
                 </div>
               </Link>
             ))}
@@ -121,28 +78,16 @@ const HomePage = () => {
 
       {/* Nature & Comfort Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-        <img
-          src={natureImg}
-          alt="Room with sea view"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src={natureImg} alt="Room with sea view" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-ocean-deep/50" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 py-24">
-          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">
-            Nature & Comfort
-          </p>
+          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{h.natureLabel}</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-lg mb-6">
-            Become one with{" "}
-            <span className="italic text-accent">nature</span>
+            {h.natureHeading}{" "}<span className="italic text-accent">{h.dream.toLowerCase() === "dream" ? "nature" : h.dream}</span>
           </h2>
-          <p className="font-body text-lg text-primary-foreground/70 max-w-md mb-8">
-            On the pine-covered hills of Torba, overlooking turquoise waters.
-          </p>
-          <Link
-            to="/rooms"
-            className="inline-block font-body text-sm font-semibold tracking-wider uppercase border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground px-8 py-3 rounded-full transition-colors"
-          >
-            Explore Rooms
+          <p className="font-body text-lg text-primary-foreground/70 max-w-md mb-8">{h.natureSub}</p>
+          <Link to="/rooms" className="inline-block font-body text-sm font-semibold tracking-wider uppercase border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground px-8 py-3 rounded-full transition-colors">
+            {h.exploreRooms}
           </Link>
         </div>
       </section>
@@ -152,33 +97,17 @@ const HomePage = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="grid grid-cols-2 gap-4">
-              <img
-                src={gastro1Img}
-                alt="Italian à la carte"
-                className="rounded-2xl w-full aspect-[3/4] object-cover"
-              />
-              <img
-                src={gastro2Img}
-                alt="Open buffet"
-                className="rounded-2xl w-full aspect-[3/4] object-cover mt-12"
-              />
+              <img src={gastro1Img} alt="Italian à la carte" className="rounded-2xl w-full aspect-[3/4] object-cover" />
+              <img src={gastro2Img} alt="Open buffet" className="rounded-2xl w-full aspect-[3/4] object-cover mt-12" />
             </div>
             <div>
-              <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">
-                Gastronomy
-              </p>
+              <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{h.gastronomy}</p>
               <h2 className="font-display text-4xl md:text-5xl text-foreground mb-6">
-                Fresh. Local.{" "}
-                <span className="italic text-accent">Sustainable.</span>
+                {h.gastroHeading}{" "}<span className="italic text-accent">Sustainable.</span>
               </h2>
-              <p className="font-body text-lg text-muted-foreground mb-8">
-                Every dish tells a story. À la Carte restaurants await.
-              </p>
-              <Link
-                to="/dining"
-                className="inline-block font-body text-sm font-semibold tracking-wider uppercase border border-foreground/30 hover:border-foreground text-foreground px-8 py-3 rounded-full transition-colors"
-              >
-                Taste the Flavors
+              <p className="font-body text-lg text-muted-foreground mb-8">{h.gastroSub}</p>
+              <Link to="/dining" className="inline-block font-body text-sm font-semibold tracking-wider uppercase border border-foreground/30 hover:border-foreground text-foreground px-8 py-3 rounded-full transition-colors">
+                {h.tasteFlavors}
               </Link>
             </div>
           </div>
@@ -187,28 +116,16 @@ const HomePage = () => {
 
       {/* Spa Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <img
-          src={spaImg}
-          alt="Infinity pool"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src={spaImg} alt="Infinity pool" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-ocean-deep/40" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 py-24">
-          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">
-            Feel Good
-          </p>
+          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{h.feelGood}</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-lg mb-6">
-            Relax. Rejuvenate.{" "}
-            <span className="italic text-accent">Enjoy.</span>
+            {h.spaHeading}{" "}<span className="italic text-accent">Enjoy.</span>
           </h2>
-          <p className="font-body text-lg text-primary-foreground/70 max-w-md mb-8">
-            Feel time slow down at the infinity pool.
-          </p>
-          <Link
-            to="/spa"
-            className="inline-block font-body text-sm font-semibold tracking-wider uppercase border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground px-8 py-3 rounded-full transition-colors"
-          >
-            Spa & Wellness
+          <p className="font-body text-lg text-primary-foreground/70 max-w-md mb-8">{h.spaSub}</p>
+          <Link to="/spa" className="inline-block font-body text-sm font-semibold tracking-wider uppercase border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground px-8 py-3 rounded-full transition-colors">
+            {h.spaWellness}
           </Link>
         </div>
       </section>
@@ -216,76 +133,41 @@ const HomePage = () => {
       {/* AI Concierge / Discover Section */}
       <section className="py-24 md:py-32 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent text-center mb-4">
-            AI Concierge Selection
-          </p>
+          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent text-center mb-4">{h.conciergeLabel}</p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-16">
-            Discover &{" "}
-            <span className="italic text-accent">Experience</span>
+            {h.discoverExperience}{" "}<span className="italic text-accent">Experience</span>
           </h2>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Nearby Places */}
             <div>
-              <h3 className="font-body text-sm font-semibold tracking-[0.15em] uppercase text-foreground mb-8">
-                Things to Do Nearby
-              </h3>
+              <h3 className="font-body text-sm font-semibold tracking-[0.15em] uppercase text-foreground mb-8">{h.thingsToDo}</h3>
               <div className="flex flex-col gap-6">
                 {nearbyPlaces.map((place) => (
-                  <div
-                    key={place.name}
-                    className="flex gap-5 p-5 rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow"
-                  >
+                  <div key={place.name} className="flex gap-5 p-5 rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow">
                     <div className="flex-1">
-                      <span className="font-body text-[10px] font-semibold tracking-[0.2em] uppercase text-accent">
-                        {place.category}
-                      </span>
-                      <h4 className="font-display text-lg text-foreground mt-1 mb-1">
-                        {place.name}
-                      </h4>
-                      <p className="font-body text-sm text-muted-foreground">
-                        {place.desc}
-                      </p>
+                      <span className="font-body text-[10px] font-semibold tracking-[0.2em] uppercase text-accent">{place.category}</span>
+                      <h4 className="font-display text-lg text-foreground mt-1 mb-1">{place.name}</h4>
+                      <p className="font-body text-sm text-muted-foreground">{place.desc}</p>
                     </div>
                     <div className="flex items-start">
-                      <span className="font-body text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
-                        {place.distance}
-                      </span>
+                      <span className="font-body text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">{place.distance}</span>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-
-            {/* Events */}
             <div>
-              <h3 className="font-body text-sm font-semibold tracking-[0.15em] uppercase text-foreground mb-8">
-                Upcoming Events
-              </h3>
+              <h3 className="font-body text-sm font-semibold tracking-[0.15em] uppercase text-foreground mb-8">{h.upcomingEvents}</h3>
               <div className="flex flex-col gap-6">
                 {events.map((event) => (
-                  <div
-                    key={event.title}
-                    className="flex gap-5 p-5 rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow"
-                  >
+                  <div key={event.title} className="flex gap-5 p-5 rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow">
                     <div className="flex flex-col items-center justify-center bg-accent/10 rounded-lg px-4 py-3 min-w-[60px]">
-                      <span className="font-body text-xl font-bold text-accent leading-none">
-                        {event.date}
-                      </span>
-                      <span className="font-body text-[10px] font-semibold tracking-wider uppercase text-accent/70">
-                        {event.month}
-                      </span>
+                      <span className="font-body text-xl font-bold text-accent leading-none">{event.date}</span>
+                      <span className="font-body text-[10px] font-semibold tracking-wider uppercase text-accent/70">{event.month}</span>
                     </div>
                     <div>
-                      <h4 className="font-display text-lg text-foreground mb-1">
-                        {event.title}
-                      </h4>
-                      <p className="font-body text-xs text-muted-foreground mb-1">
-                        {event.time} · {event.place}
-                      </p>
-                      <p className="font-body text-sm text-muted-foreground">
-                        {event.desc}
-                      </p>
+                      <h4 className="font-display text-lg text-foreground mb-1">{event.title}</h4>
+                      <p className="font-body text-xs text-muted-foreground mb-1">{event.time} · {event.place}</p>
+                      <p className="font-body text-sm text-muted-foreground">{event.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -298,18 +180,11 @@ const HomePage = () => {
       {/* Reviews Section */}
       <section className="py-24 md:py-32 section-cream">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
-          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent text-center mb-4">
-            Guest Reviews
-          </p>
+          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent text-center mb-4">{h.guestReviews}</p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-4">
-            Kind Words{" "}
-            <span className="italic text-accent">From You</span>
+            {h.kindWords}{" "}<span className="italic text-accent">{h.fromYou}</span>
           </h2>
-          <p className="font-body text-base text-muted-foreground text-center mb-6">
-            Real experiences and honest words.
-          </p>
-
-          {/* Score */}
+          <p className="font-body text-base text-muted-foreground text-center mb-6">{h.reviewsSub}</p>
           <div className="flex items-center justify-center gap-3 mb-16">
             <span className="font-display text-5xl text-foreground">9.4</span>
             <div>
@@ -317,18 +192,13 @@ const HomePage = () => {
               <p className="font-body text-xs text-muted-foreground">/ 10</p>
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {reviews.map((review) => (
               <div key={review.name} className="bg-card rounded-2xl p-8 shadow-sm">
                 <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
+                  {[...Array(5)].map((_, i) => (<Star key={i} className="w-4 h-4 fill-accent text-accent" />))}
                 </div>
-                <p className="font-body text-base text-foreground italic mb-6 leading-relaxed">
-                  "{review.text}"
-                </p>
+                <p className="font-body text-base text-foreground italic mb-6 leading-relaxed">"{review.text}"</p>
                 <div>
                   <p className="font-body text-sm font-semibold text-foreground">{review.name}</p>
                   <p className="font-body text-xs text-muted-foreground">{review.source}</p>
@@ -341,22 +211,15 @@ const HomePage = () => {
 
       {/* Sustainability Section */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        <img
-          src={natureImg}
-          alt="Nature sustainability"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src={natureImg} alt="Nature sustainability" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-ocean-deep/60" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 py-24 text-center">
           <h2 className="font-display text-4xl md:text-5xl text-primary-foreground mb-4">
-            Sustainability{" "}
-            <span className="italic text-accent">Commitment</span>
+            {h.sustainability}{" "}<span className="italic text-accent">Commitment</span>
           </h2>
-          <p className="font-body text-lg text-primary-foreground/70 max-w-lg mx-auto mb-8">
-            We love the nature we live in and act with responsibility.
-          </p>
+          <p className="font-body text-lg text-primary-foreground/70 max-w-lg mx-auto mb-8">{h.sustainabilitySub}</p>
           <button className="font-body text-sm font-semibold tracking-wider uppercase border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground px-8 py-3 rounded-full transition-colors">
-            How We Do It
+            {h.howWeDoIt}
           </button>
         </div>
       </section>
@@ -364,27 +227,14 @@ const HomePage = () => {
       {/* Location Section */}
       <section className="py-24 md:py-32 bg-background">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 text-center">
-          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">
-            Location
-          </p>
-          <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4">
-            Blue Dreams Resort
-          </h3>
-          <p className="font-body text-base text-muted-foreground mb-2">
-            We await you in Torba, right on the seafront.
-          </p>
+          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{h.locationLabel}</p>
+          <h3 className="font-display text-2xl md:text-3xl text-foreground mb-4">Blue Dreams Resort</h3>
+          <p className="font-body text-base text-muted-foreground mb-2">{h.locationSub}</p>
           <p className="font-body text-sm text-muted-foreground mb-8">
-            Torba Mahallesi, Herodot Bulvarı No:11<br />
-            Bodrum / MUĞLA
+            Torba Mahallesi, Herodot Bulvarı No:11<br />Bodrum / MUĞLA
           </p>
-          <a
-            href="https://www.google.com/maps/dir//37.091832,27.4824998/@37.091832,27.4824998,16z"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-body text-sm font-semibold tracking-wider uppercase text-accent hover:text-accent/80 transition-colors"
-          >
-            <MapPin className="w-4 h-4" />
-            Get Directions
+          <a href="https://www.google.com/maps/dir//37.091832,27.4824998/@37.091832,27.4824998,16z" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-body text-sm font-semibold tracking-wider uppercase text-accent hover:text-accent/80 transition-colors">
+            <MapPin className="w-4 h-4" />{h.getDirections}
           </a>
         </div>
       </section>
