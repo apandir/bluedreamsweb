@@ -6,6 +6,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import WebsiteLayout from "@/components/website/WebsiteLayout";
 import HomePage from "./pages/HomePage";
+import RoomsPage from "./pages/RoomsPage";
+import DiningPage from "./pages/DiningPage";
+import SpaPage from "./pages/SpaPage";
+import ContactPage from "./pages/ContactPage";
 import FactsheetPage from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -21,10 +25,10 @@ const App = () => (
           <Routes>
             <Route element={<WebsiteLayout />}>
               <Route path="/" element={<HomePage />} />
-              <Route path="/rooms" element={<div className="pt-24 min-h-screen flex items-center justify-center"><p className="font-body text-lg text-muted-foreground">Rooms page coming soon...</p></div>} />
-              <Route path="/dining" element={<div className="pt-24 min-h-screen flex items-center justify-center"><p className="font-body text-lg text-muted-foreground">Dining page coming soon...</p></div>} />
-              <Route path="/spa" element={<div className="pt-24 min-h-screen flex items-center justify-center"><p className="font-body text-lg text-muted-foreground">Spa page coming soon...</p></div>} />
-              <Route path="/contact" element={<div className="pt-24 min-h-screen flex items-center justify-center"><p className="font-body text-lg text-muted-foreground">Contact page coming soon...</p></div>} />
+              <Route path="/rooms" element={<RoomsPage />} />
+              <Route path="/dining" element={<DiningPage />} />
+              <Route path="/spa" element={<SpaPage />} />
+              <Route path="/contact" element={<ContactPage />} />
             </Route>
             <Route path="/factsheet" element={<FactsheetPage />} />
             <Route path="*" element={<NotFound />} />
