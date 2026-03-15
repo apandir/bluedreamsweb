@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import StickyNav from "@/components/factsheet/StickyNav";
 import HeroSection from "@/components/factsheet/HeroSection";
 import IndexSection from "@/components/factsheet/IndexSection";
