@@ -6,61 +6,61 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 215 25% 15%;
+    --background: 0 0% 100%;
+    --foreground: 220 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 220 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 220 15% 20%;
 
-    --primary: 200 10% 22%;
+    --primary: 220 12% 18%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 200 10% 93%;
-    --secondary-foreground: 200 10% 20%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 12% 25%;
 
-    --muted: 210 12% 93%;
-    --muted-foreground: 215 10% 45%;
+    --muted: 210 15% 96%;
+    --muted-foreground: 220 8% 55%;
 
-    --accent: 190 55% 55%;
+    --accent: 185 65% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 15% 90%;
-    --input: 210 15% 90%;
-    --ring: 190 55% 55%;
+    --border: 220 15% 92%;
+    --input: 220 15% 92%;
+    --ring: 185 65% 48%;
 
     --radius: 0.5rem;
 
     /* Custom tokens */
-    --ocean-deep: 200 10% 22%;
-    --ocean-medium: 195 40% 35%;
-    --ocean-light: 190 55% 55%;
-    --sand: 200 10% 90%;
-    --sand-dark: 200 8% 45%;
-    --cream: 200 15% 97%;
-    --gold: 190 55% 55%;
-    --gold-light: 190 40% 65%;
+    --ocean-deep: 220 12% 18%;
+    --ocean-medium: 185 45% 40%;
+    --ocean-light: 185 65% 48%;
+    --sand: 210 15% 95%;
+    --sand-dark: 220 8% 55%;
+    --cream: 0 0% 99%;
+    --gold: 185 65% 48%;
+    --gold-light: 185 50% 58%;
 
     --font-display: 'DM Serif Display', Georgia, serif;
     --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
 
-    --shadow-luxury: 0 30px 90px -20px hsl(210 55% 12% / 0.15);
-    --shadow-card: 0 1px 3px 0 hsl(210 55% 12% / 0.04), 0 4px 24px -4px hsl(210 55% 12% / 0.06);
-    --shadow-card-hover: 0 8px 40px -8px hsl(210 55% 12% / 0.12);
+    --shadow-luxury: 0 30px 90px -20px hsl(220 20% 20% / 0.08);
+    --shadow-card: 0 1px 3px 0 hsl(220 20% 20% / 0.03), 0 4px 24px -4px hsl(220 20% 20% / 0.04);
+    --shadow-card-hover: 0 8px 40px -8px hsl(220 20% 20% / 0.08);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 99%;
+    --sidebar-foreground: 220 10% 30%;
+    --sidebar-primary: 220 12% 18%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 15% 96%;
+    --sidebar-accent-foreground: 220 12% 18%;
+    --sidebar-border: 220 15% 92%;
+    --sidebar-ring: 185 65% 48%;
   }
 }
 
