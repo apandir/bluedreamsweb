@@ -138,7 +138,7 @@ const WebsiteNavbar = () => {
                 href="https://blue-dreams.rezervasyonal.com/en/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-body text-[10px] md:text-[11px] font-semibold tracking-[0.12em] uppercase border border-primary-foreground/50 hover:bg-primary-foreground hover:text-primary text-primary-foreground px-4 md:px-6 py-2 rounded-sm transition-colors"
+                className="hidden sm:inline font-body text-[10px] md:text-[11px] font-semibold tracking-[0.12em] uppercase border border-primary-foreground/50 hover:bg-primary-foreground hover:text-primary text-primary-foreground px-4 md:px-6 py-2 rounded-sm transition-colors"
               >
                 {w.onlineReservation.length > 12 ? w.onlineReservation.split(" ").slice(0, 2).join(" ") : w.onlineReservation}
               </a>
