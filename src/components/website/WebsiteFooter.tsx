@@ -163,6 +163,42 @@ const WebsiteFooter = () => {
             </h4>
             <div className="flex flex-col gap-2.5">
               <a
+                href="https://www.facebook.com/BlueDreamsResort"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+              >
+                <Facebook className="w-4 h-4 text-accent" />
+                Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/bluedreamsresort/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+              >
+                <Instagram className="w-4 h-4 text-accent" />
+                Instagram
+              </a>
+              <a
+                href="https://www.youtube.com/@bluedreamsresort"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+              >
+                <Youtube className="w-4 h-4 text-accent" />
+                YouTube
+              </a>
+              <a
+                href="https://www.linkedin.com/company/bluedreamsresortbodrum"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+              >
+                <Linkedin className="w-4 h-4 text-accent" />
+                LinkedIn
+              </a>
+              <a
                 href="https://wa.me/905495167803"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -170,14 +206,6 @@ const WebsiteFooter = () => {
               >
                 <MessageCircle className="w-4 h-4 text-accent" />
                 WhatsApp
-              </a>
-              <a
-                href="https://www.instagram.com/bluedreamsresort/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
-              >
-                @bluedreamsresort
               </a>
             </div>
           </div>
