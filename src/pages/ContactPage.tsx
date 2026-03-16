@@ -21,10 +21,10 @@ const ContactPage = () => {
     <main>
       <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <img src={heroImg} alt={c.title} className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-ocean-deep/50" />
+        <div className="absolute inset-0 bg-ocean-deep/60" />
         <div className="relative z-10 text-center px-6">
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-4">{c.title}</h1>
-          <p className="font-body text-lg text-primary-foreground/70">{c.subtitle}</p>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-4 text-shadow-hero">{c.title}</h1>
+          <p className="font-body text-lg text-primary-foreground/70 text-shadow-sm">{c.subtitle}</p>
           <div className="flex items-center justify-center gap-2 mt-6 font-body text-sm text-primary-foreground/50">
             <Link to="/" className="hover:text-primary-foreground transition-colors">{c.home}</Link>
             <ChevronRight className="w-3 h-3" />

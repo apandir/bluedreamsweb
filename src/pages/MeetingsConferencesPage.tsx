@@ -47,10 +47,10 @@ const MeetingsConferencesPage = () => {
             <span>/</span>
             <span className="text-primary-foreground">{w.meetingCard}</span>
           </nav>
-          <h1 className="font-display text-4xl md:text-5xl text-primary-foreground text-center mb-4">
+          <h1 className="font-display text-4xl md:text-5xl text-primary-foreground text-center mb-4 text-shadow-hero">
             {w.meetingCard}
           </h1>
-          <p className="font-body text-sm text-primary-foreground/70 text-center max-w-2xl">
+          <p className="font-body text-sm text-primary-foreground/70 text-center max-w-2xl text-shadow-sm">
             {w.meetingCardDesc}
           </p>
         </div>

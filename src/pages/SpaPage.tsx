@@ -19,11 +19,11 @@ const SpaPage = () => {
     <main>
       <section className="relative h-[80vh] min-h-[500px] flex items-center overflow-hidden">
         <img src={heroImg} alt="The Naya Spa" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-ocean-deep/40" />
+        <div className="absolute inset-0 bg-ocean-deep/55" />
         <div className="relative z-10 px-6 lg:px-10 max-w-[1400px] mx-auto w-full">
-          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-primary-foreground/60 mb-4">{s.blueDreamsResort}</p>
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground leading-[0.9] mb-2">THE</h1>
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground leading-[0.9] mb-6">NAYA</h1>
+          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-primary-foreground/60 mb-4 text-shadow-sm">{s.blueDreamsResort}</p>
+          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground leading-[0.9] mb-2 text-shadow-hero">THE</h1>
+          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground leading-[0.9] mb-6 text-shadow-hero">NAYA</h1>
           <div className="w-16 h-[2px] bg-accent mb-4" />
           <p className="font-body text-sm font-semibold tracking-[0.3em] uppercase text-primary-foreground/60">{s.wellnessSpa}</p>
         </div>

@@ -74,10 +74,10 @@ const MeetingsPage = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/95 via-ocean-deep/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent mb-3">
+                  <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent mb-3 text-shadow-sm">
                     {card.title}
                   </p>
-                  <p className="font-body text-sm text-primary-foreground/70 leading-relaxed mb-4">
+                  <p className="font-body text-sm text-primary-foreground/70 leading-relaxed mb-4 text-shadow-sm">
                     {card.desc}
                   </p>
                   <span className="inline-flex items-center gap-2 font-body text-[11px] font-semibold tracking-[0.15em] uppercase text-primary-foreground group-hover:text-accent transition-colors">

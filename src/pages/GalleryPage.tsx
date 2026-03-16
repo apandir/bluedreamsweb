@@ -85,10 +85,10 @@ const GalleryPage = () => {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center overflow-hidden">
         <img src={heroImg} alt="Gallery" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-ocean-deep/50" />
+        <div className="absolute inset-0 bg-ocean-deep/60" />
         <div className="relative z-10 text-center px-6">
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-4">Gallery</h1>
-          <p className="font-body text-lg text-primary-foreground/70">Explore our resort through images</p>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-4 text-shadow-hero">Gallery</h1>
+          <p className="font-body text-lg text-primary-foreground/70 text-shadow-sm">Explore our resort through images</p>
           <div className="flex items-center justify-center gap-2 mt-6 font-body text-sm text-primary-foreground/50">
             <Link to="/" className="hover:text-primary-foreground transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
