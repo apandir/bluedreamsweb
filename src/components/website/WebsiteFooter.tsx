@@ -51,7 +51,7 @@ const WebsiteFooter = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <a
-              href="https://www.google.com/maps/place/Blue+Dreams+Resort/@37.0847,27.4342,15z"
+              href="https://maps.app.goo.gl/zLB4sg9mmVdWnVSP7"
               target="_blank"
               rel="noopener noreferrer"
               className="block overflow-hidden rounded-lg group"
