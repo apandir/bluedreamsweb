@@ -4,6 +4,31 @@ import { ChevronRight, X } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import heroImg from "@/assets/hero-resort.jpg";
 
+// Room images from factsheet
+import roomClub from "@/assets/room-club.jpg";
+import roomClubSeaview from "@/assets/room-club-seaview.jpg";
+import roomFamily from "@/assets/room-family.jpg";
+import roomDeluxe from "@/assets/room-deluxe-new.jpg";
+import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
+import roomTypeClub from "@/assets/room-type-club.jpg";
+import roomTypeClubFamily from "@/assets/room-type-club-family.jpg";
+import roomTypeClubSeaview from "@/assets/room-type-club-seaview.jpg";
+import roomTypeDeluxe from "@/assets/room-type-deluxe.jpg";
+
+// Restaurant & Bar images from dining section
+import diningMain from "@/assets/dining-main.jpg";
+import diningSnack from "@/assets/dining-snack.jpg";
+import diningLaLocanda from "@/assets/dining-lalocanda.jpg";
+import diningHalikarnas from "@/assets/dining-halikarnas.jpg";
+import diningLeKebab from "@/assets/dining-lekebab.jpg";
+import diningPoolSnacks from "@/assets/dining-poolsnacks.webp";
+import diningSunsetBar from "@/assets/dining-sunsetbar.jpg";
+import barLobby from "@/assets/bar-lobby.jpg";
+import barPool from "@/assets/bar-pool.jpg";
+import barBeach from "@/assets/bar-beach.jpg";
+import barVitamin from "@/assets/bar-vitamin.jpg";
+import barTeaGarden from "@/assets/bar-teagarden.png";
+
 type GalleryImage = {
   url: string;
   title: string;
@@ -38,25 +63,32 @@ const galleryImages: GalleryImage[] = [
   { url: "https://bluedreamsresort.com/wp-content/uploads/2023/08/DSC03129.jpg", title: "Beach Scene", category: "general" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/MINI-DISCO-2.jpg", title: "Mini Disco", category: "general" },
 
-  // Rooms (Odalar)
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MER01588.jpg", title: "Resort Exterior", category: "rooms" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/MER00957.jpg", title: "Resort Entrance", category: "rooms" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/MUR2236.jpg", title: "Room Interior", category: "rooms" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MUR5629.jpg", title: "Room View", category: "rooms" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MER02015.jpg", title: "Terrace View", category: "rooms" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/MUR5106.jpg", title: "Lobby Area", category: "rooms" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/DSC00408-kopya-1.jpg", title: "Club Room", category: "rooms" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/MER01245.jpg", title: "Club Room Detail", category: "rooms" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/Club-Room-Sea-View-3.jpg", title: "Club Room Sea View", category: "rooms" },
+  // Rooms — from factsheet room types
+  { url: roomClub, title: "Club Room", category: "rooms" },
+  { url: roomClubSeaview, title: "Club Room Sea View", category: "rooms" },
+  { url: roomFamily, title: "Family Room", category: "rooms" },
+  { url: roomDeluxe, title: "Deluxe Room", category: "rooms" },
+  { url: roomDeluxeFamily, title: "Deluxe Family Room", category: "rooms" },
+  { url: roomTypeClub, title: "Club Room Type", category: "rooms" },
+  { url: roomTypeClubFamily, title: "Club Family Room Type", category: "rooms" },
+  { url: roomTypeClubSeaview, title: "Club Sea View Type", category: "rooms" },
+  { url: roomTypeDeluxe, title: "Deluxe Room Type", category: "rooms" },
 
-  // Restaurants & Bars (Restoranlar ve Barlar)
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MUR2661.jpg", title: "Restaurant Setting", category: "dining" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/MER02403.jpg", title: "Lounge Area", category: "dining" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MER02426.jpg", title: "Evening Ambiance", category: "dining" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MER00210.jpg", title: "Outdoor Dining", category: "dining" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/INFINITY-POOL-3.jpg", title: "Pool Bar", category: "dining" },
+  // Restaurants & Bars — from dining section
+  { url: diningMain, title: "Main Restaurant", category: "dining" },
+  { url: diningSnack, title: "Snack Restaurant", category: "dining" },
+  { url: diningPoolSnacks, title: "Pool Snacks", category: "dining" },
+  { url: diningLaLocanda, title: "La Locanda", category: "dining" },
+  { url: diningHalikarnas, title: "Halikarnas Restaurant", category: "dining" },
+  { url: diningLeKebab, title: "Le Kebab", category: "dining" },
+  { url: diningSunsetBar, title: "Sunset Bar", category: "dining" },
+  { url: barLobby, title: "Lobby Bar", category: "dining" },
+  { url: barPool, title: "Pool Bar", category: "dining" },
+  { url: barBeach, title: "Beach Bar", category: "dining" },
+  { url: barTeaGarden, title: "Tea Garden", category: "dining" },
+  { url: barVitamin, title: "Vitamin Bar", category: "dining" },
 
-  // Meeting (Toplantı)
+  // Meeting
   { url: "https://bluedreamsresort.com/wp-content/uploads/2026/01/Bluedreamstanitimkiti_page-0019-1024x725.jpg", title: "İstanbul Hall", category: "meeting" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2026/01/Ekran-goruntusu-2026-01-14-171200-768x448.png", title: "Turunç Meeting Room", category: "meeting" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2026/01/Ekran-goruntusu-2026-01-14-171426-768x453.png", title: "Salamis Meeting Room", category: "meeting" },
