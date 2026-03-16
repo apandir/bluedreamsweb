@@ -14,6 +14,7 @@ const WebsiteFooter = () => {
     { label: n.restaurantBar, href: "/dining" },
     { label: n.spa, href: "/spa" },
     { label: t.website.meetingsPage.title, href: "/meetings" },
+    { label: "Gallery", href: "/gallery" },
     { label: n.contact, href: "/contact" },
     { label: n.factsheet, href: "/factsheet" },
   ];
