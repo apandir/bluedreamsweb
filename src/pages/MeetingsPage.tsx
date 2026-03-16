@@ -39,7 +39,7 @@ const MeetingsPage = () => {
           alt="Meetings & Events"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/80 via-ocean-deep/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/90 via-ocean-deep/40 to-ocean-deep/20" />
         <div className="relative z-10 flex flex-col items-center justify-end h-full pb-20 px-6">
           <nav className="absolute top-28 left-6 lg:left-10 flex items-center gap-2 font-body text-xs text-primary-foreground/60">
             <Link to="/" className="hover:text-primary-foreground transition-colors">
