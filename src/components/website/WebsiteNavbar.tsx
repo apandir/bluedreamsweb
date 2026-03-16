@@ -91,7 +91,9 @@ const WebsiteNavbar = () => {
 
             {/* Right: Phone + Lang + Book Now */}
             <div className="flex items-center gap-3 md:gap-4">
-              <WeatherWidget />
+              <span className="hidden sm:flex">
+                <WeatherWidget />
+              </span>
               <a
                 href="tel:+902523371111"
                 className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
