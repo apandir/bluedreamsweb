@@ -4,6 +4,7 @@ import aromatherapyImg from "@/assets/spa-aromatherapy.jpg";
 import skincareImg from "@/assets/spa-skincare.jpg";
 import saunaImg from "@/assets/spa-sauna.jpg";
 import steamroomImg from "@/assets/spa-steamroom.jpg";
+import saltroomImg from "@/assets/spa-saltroom.jpg";
 import hotstoneImg from "@/assets/spa-hotstone.jpg";
 import { ChevronRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -18,6 +19,7 @@ const SpaPage = () => {
     { title: "Skin Care", desc: "Deep skin care cures applied with natural products.", image: skincareImg },
     { title: "Sauna", desc: "Cleanse toxins and relax in our Finnish sauna.", image: saunaImg },
     { title: "Steam Room", desc: "Rejuvenate with aromatic steam therapy.", image: steamroomImg },
+    { title: "Salt Therapy Room", desc: "Breathe in healing Himalayan salt minerals for respiratory wellness.", image: saltroomImg },
     { title: "Hot Stone Massage", desc: "Deep tissue massage with volcanic stones.", image: hotstoneImg },
   ];
 
