@@ -187,7 +187,7 @@ export const tr: Translations = {
       { label: "Toplam Alan", value: "52.000 m²" },
       { label: "Plaj", value: "300 m (Kumlu & Çakıllı)" },
       { label: "Sezon", value: "Nisan — Ekim" },
-      { label: "Konsept", value: "Her Şey Dahil" },
+      { label: "Konsept", value: "Ultra Her Şey Dahil" },
       { label: "Havalimanı Mesafesi", value: "25 km (Milas-Bodrum)" },
       { label: "Şehir Merkezi", value: "10 km (Bodrum)" },
       { label: "WiFi", value: "Ücretsiz Yüksek Hızlı" },

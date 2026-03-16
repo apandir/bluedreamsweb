@@ -187,7 +187,7 @@ export const de: Translations = {
       { label: "Gesamtfläche", value: "52.000 m²" },
       { label: "Strand", value: "300 m (Sand & Kies)" },
       { label: "Saison", value: "April — Oktober" },
-      { label: "Konzept", value: "All Inclusive" },
+      { label: "Konzept", value: "Ultra All Inclusive" },
       { label: "Flughafenentfernung", value: "25 km (Milas-Bodrum)" },
       { label: "Stadtzentrum", value: "10 km (Bodrum)" },
       { label: "WLAN", value: "Kostenloses Highspeed" },

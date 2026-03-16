@@ -187,7 +187,7 @@ export const sv: Translations = {
       { label: "Total Yta", value: "52 000 m²" },
       { label: "Strand", value: "300 m (Sand & Sten)" },
       { label: "Säsong", value: "April — Oktober" },
-      { label: "Koncept", value: "All Inclusive" },
+      { label: "Koncept", value: "Ultra All Inclusive" },
       { label: "Flygplatsavstånd", value: "25 km (Milas-Bodrum)" },
       { label: "Centrum", value: "10 km (Bodrum)" },
       { label: "WiFi", value: "Kostnadsfritt Höghastighets" },
