@@ -73,7 +73,7 @@ const WebsiteFooter = () => {
                 Torba Mahallesi, Herodot Bulvarı No:11, Bodrum / Muğla / Türkiye
               </p>
               <a
-                href="https://www.google.com/maps/dir//Blue+Dreams+Resort,+Torba+Mahallesi,+Herodot+Bulvarı+No:11,+Bodrum"
+                href="https://maps.app.goo.gl/zLB4sg9mmVdWnVSP7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 font-body text-[11px] font-semibold tracking-[0.15em] uppercase text-accent hover:text-accent/80 transition-colors mt-2 w-fit"
