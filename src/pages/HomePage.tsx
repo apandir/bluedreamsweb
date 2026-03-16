@@ -43,7 +43,7 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <img src={heroImg} alt="Blue Dreams Resort aerial view" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-ocean-deep/40" />
+<div className="absolute inset-0 bg-ocean-deep/55" />
         <div className="relative z-10 text-center px-6 max-w-3xl">
           <p className="font-body text-xs font-semibold tracking-[0.4em] uppercase text-primary-foreground/70 mb-6">{h.pearlOfBodrum}</p>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-2">{h.aegeanBlue}</h1>
