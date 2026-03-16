@@ -182,7 +182,7 @@ const WebsiteFooter = () => {
                 Instagram
               </a>
               <a
-                href="https://www.youtube.com/@bluedreamsresort"
+                href="https://youtube.com/@bluedreamsresort8738?si=1BoOqTBZ-y-ujVih"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"

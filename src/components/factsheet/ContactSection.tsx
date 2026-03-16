@@ -7,7 +7,7 @@ const ContactSection = () => {
   const socials = [
     { name: "Facebook", url: "https://www.facebook.com/bluedreamshotel" },
     { name: "Instagram", url: "https://www.instagram.com/bluedreamsresort/" },
-    { name: "YouTube", url: "https://www.youtube.com/@bluedreamsresort8738/videos" },
+    { name: "YouTube", url: "https://youtube.com/@bluedreamsresort8738?si=1BoOqTBZ-y-ujVih" },
     { name: "WhatsApp", url: "https://wa.me/+905495167803" },
   ];
 
