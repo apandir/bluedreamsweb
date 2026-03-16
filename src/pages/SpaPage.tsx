@@ -4,6 +4,7 @@ import aromatherapyImg from "@/assets/spa-aromatherapy.jpg";
 import skincareImg from "@/assets/spa-skincare.jpg";
 import saunaImg from "@/assets/spa-sauna.jpg";
 import steamroomImg from "@/assets/spa-steamroom.jpg";
+import saltroomImg from "@/assets/spa-saltroom.jpg";
 import hotstoneImg from "@/assets/spa-hotstone.jpg";
 import { ChevronRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
