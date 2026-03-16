@@ -17,6 +17,7 @@ import MeetingsEventsPage from "./pages/MeetingsEventsPage";
 import FactsheetPage from "./pages/Index";
 import GalleryPage from "./pages/GalleryPage";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route element={<WebsiteLayout />}>
               <Route path="/" element={<HomePage />} />
