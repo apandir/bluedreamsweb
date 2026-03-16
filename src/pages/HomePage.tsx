@@ -214,10 +214,10 @@ const HomePage = () => {
         <img src={natureImg} alt="Nature sustainability" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-ocean-deep/60" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 py-24 text-center">
-          <h2 className="font-display text-4xl md:text-5xl text-primary-foreground mb-4">
+          <h2 className="font-display text-4xl md:text-5xl text-primary-foreground mb-4 text-shadow-hero">
             {h.sustainability}{" "}<span className="italic text-accent">Commitment</span>
           </h2>
-          <p className="font-body text-lg text-primary-foreground/70 max-w-lg mx-auto mb-8">{h.sustainabilitySub}</p>
+          <p className="font-body text-lg text-primary-foreground/70 max-w-lg mx-auto mb-8 text-shadow-sm">{h.sustainabilitySub}</p>
           <button className="font-body text-sm font-semibold tracking-wider uppercase border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground px-8 py-3 rounded-full transition-colors">
             {h.howWeDoIt}
           </button>
