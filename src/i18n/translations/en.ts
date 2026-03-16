@@ -187,7 +187,7 @@ export const en: Translations = {
       { label: "Total Area", value: "52,000 m²" },
       { label: "Beach", value: "300 m (Sandy & Pebbles)" },
       { label: "Season", value: "April — October" },
-      { label: "Concept", value: "All Inclusive" },
+      { label: "Concept", value: "Ultra All Inclusive" },
       { label: "Airport Distance", value: "25 km (Milas-Bodrum)" },
       { label: "City Centre", value: "10 km (Bodrum)" },
       { label: "WiFi", value: "Complimentary High-Speed" },
