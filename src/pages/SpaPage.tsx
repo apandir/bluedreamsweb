@@ -6,6 +6,7 @@ import saunaImg from "@/assets/spa-sauna.jpg";
 import steamroomImg from "@/assets/spa-steamroom.jpg";
 import saltroomImg from "@/assets/spa-saltroom.jpg";
 import hotstoneImg from "@/assets/spa-hotstone.jpg";
+import iceroomImg from "@/assets/spa-iceroom.jpg";
 import { ChevronRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
