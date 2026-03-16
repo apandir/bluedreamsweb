@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/blue-dreams-logo.png";
 import { Phone, Menu, X, Home, ChevronDown } from "lucide-react";
+import WeatherWidget from "./WeatherWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Language } from "@/i18n/types";
 
@@ -90,6 +91,7 @@ const WebsiteNavbar = () => {
 
             {/* Right: Phone + Lang + Book Now */}
             <div className="flex items-center gap-3 md:gap-4">
+              <WeatherWidget />
               <a
                 href="tel:+902523371111"
                 className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
