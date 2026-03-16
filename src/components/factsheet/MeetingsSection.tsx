@@ -41,11 +41,11 @@ const MeetingsSection = () => {
   ];
 
   const meetingRooms = [
-    { name: "Bodrum Hall", area: "50 m²", theater: 40, height: "2.80 mt", tags: ["Workshop", "Interview"] },
-    { name: "Ankara Hall", area: "120 m²", theater: 100, height: "3.00 mt", tags: ["Seminar", "Training"] },
-    { name: "İzmir Hall", area: "90 m²", theater: 80, height: "2.90 mt", tags: ["Conference", "Panel"] },
-    { name: "Antalya Hall", area: "75 m²", theater: 60, height: "2.80 mt", tags: ["Meeting", "Presentation"] },
-    { name: "Board Room", area: "40 m²", theater: 16, height: "2.80 mt", tags: ["Executive", "VIP"] },
+    { name: "Stockholm", area: "20 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
+    { name: "Belek", area: "20 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
+    { name: "Marmaris", area: "22 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
+    { name: "Turunç", area: "30 m²", theater: 20, classroom: 10, banquet: 10, height: "3.20 m" },
+    { name: "Salamis", area: "35 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
   ];
 
   const statValues = ["770", "700", "4.0", "2"];
