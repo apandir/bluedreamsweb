@@ -144,22 +144,33 @@ const MeetingsConferencesPage = () => {
             <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto">{m.meetingRoomsDesc}</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 mb-16">
-            {meetingRooms.map((room) => (
-              <div key={room.name} className="border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h4 className="font-display text-lg text-foreground mb-4">{room.name}</h4>
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2"><Maximize className="w-3.5 h-3.5 text-accent" /><span className="font-body text-xs text-muted-foreground">{room.area}</span></div>
-                  <div className="flex items-center gap-2"><Users className="w-3.5 h-3.5 text-accent" /><span className="font-body text-xs text-muted-foreground">Theater: {room.theater}</span></div>
-                  <div className="flex items-center gap-2"><ArrowUpFromDot className="w-3.5 h-3.5 text-accent" /><span className="font-body text-xs text-muted-foreground">Height: {room.height}</span></div>
-                </div>
-                <div className="pt-3 border-t border-border flex flex-wrap gap-1.5">
-                  {room.tags.map((tag) => (
-                    <span key={tag} className="font-body text-[10px] font-semibold tracking-[0.1em] uppercase text-muted-foreground bg-secondary px-3 py-1.5 rounded-full">{tag}</span>
+          <div className="border border-border rounded-lg overflow-hidden mb-16">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-secondary">
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-left p-4">Room</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Area</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Theater</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Classroom</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Banquet</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {meetingRooms.map((room) => (
+                    <tr key={room.name} className="border-t border-border hover:bg-secondary/50 transition-colors">
+                      <td className="font-display text-sm text-foreground p-4">{room.name}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.area}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.theater}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.classroom}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.banquet}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.height}</td>
+                    </tr>
                   ))}
-                </div>
-              </div>
-            ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {/* Amenities */}

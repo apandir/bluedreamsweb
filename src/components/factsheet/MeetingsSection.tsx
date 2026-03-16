@@ -150,20 +150,33 @@ const MeetingsSection = () => {
             <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto">{t.meetings.meetingRoomsDesc}</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 mb-16">
-            {meetingRooms.map((room) => (
-              <div key={room.name} className="factsheet-card p-6">
-                <h4 className="font-display text-lg text-ocean-deep mb-4">{room.name}</h4>
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2"><Maximize className="w-3.5 h-3.5 text-gold flex-shrink-0" /><span className="font-body text-xs text-muted-foreground">{room.area}</span></div>
-                  <div className="flex items-center gap-2"><Users className="w-3.5 h-3.5 text-gold flex-shrink-0" /><span className="font-body text-xs text-muted-foreground">Theater: {room.theater}</span></div>
-                  <div className="flex items-center gap-2"><ArrowUpFromDot className="w-3.5 h-3.5 text-gold flex-shrink-0" /><span className="font-body text-xs text-muted-foreground">Height: {room.height}</span></div>
-                </div>
-                <div className="pt-3 border-t flex flex-wrap gap-1.5" style={{ borderColor: 'hsl(var(--sand))' }}>
-                  {room.tags.map((tag) => <Tag key={tag} label={tag} />)}
-                </div>
-              </div>
-            ))}
+          <div className="factsheet-card overflow-hidden mb-16">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b" style={{ borderColor: 'hsl(var(--sand))' }}>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-left p-3.5">Room</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Area</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Theater</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Classroom</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Banquet</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {meetingRooms.map((room) => (
+                    <tr key={room.name} className="border-b last:border-b-0 hover:bg-cream/50 transition-colors" style={{ borderColor: 'hsl(var(--sand))' }}>
+                      <td className="font-display text-sm text-ocean-deep p-3.5">{room.name}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.area}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.theater}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.classroom}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.banquet}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.height}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {/* Amenities */}
