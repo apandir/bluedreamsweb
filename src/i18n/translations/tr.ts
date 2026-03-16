@@ -229,7 +229,7 @@ export const tr: Translations = {
       factsheet: "Bilgi Broşürü",
     },
     footer: {
-      ctaLabel: "%40'a varan özel fırsatlar",
+      ctaLabel: "",
       ctaHeading: "Müşteri temsilcilerimiz sizi bekliyor.",
       ctaButton: "Müsaitlik Kontrolü",
       quickLinks: "Hızlı Bağlantılar",

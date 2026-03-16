@@ -229,7 +229,7 @@ export const de: Translations = {
       factsheet: "Factsheet",
     },
     footer: {
-      ctaLabel: "Bis zu 40% Rabatt auf Sonderangebote",
+      ctaLabel: "",
       ctaHeading: "Unsere Kundenberater warten auf Sie.",
       ctaButton: "Verfügbarkeit prüfen",
       quickLinks: "Schnelllinks",

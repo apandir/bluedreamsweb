@@ -229,7 +229,7 @@ export const ru: Translations = {
       factsheet: "Информация",
     },
     footer: {
-      ctaLabel: "Скидки до 40% на специальные предложения",
+      ctaLabel: "",
       ctaHeading: "Наши представители ждут вас.",
       ctaButton: "Проверить наличие",
       quickLinks: "Быстрые ссылки",
