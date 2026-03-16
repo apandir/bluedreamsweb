@@ -11,7 +11,7 @@ type GalleryImage = {
 };
 
 const galleryImages: GalleryImage[] = [
-  // Aerial / General
+  // General (Genel Alanlar) — Aerial views, resort grounds, beach, pools, landscapes
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/DJI_0302.jpg", title: "Resort Aerial View", category: "general" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/DJI_0233.jpg", title: "Resort Coastline", category: "general" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/DJI_0261.jpg", title: "Bay Panorama", category: "general" },
@@ -24,40 +24,53 @@ const galleryImages: GalleryImage[] = [
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/DJI_0255-1.jpg", title: "Coastline View", category: "general" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/DJI_0241.jpg", title: "Aerial Panorama", category: "general" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2023/08/21.jpg", title: "Night View", category: "general" },
-  // Pools & Beach
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/INFINITY-POOL-1.jpg", title: "Infinity Pool", category: "pools" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/INFINITY-POOL-2.jpg", title: "Infinity Pool Sunset", category: "pools" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/INFINITY-POOL-3.jpg", title: "Infinity Pool Terrace", category: "pools" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/INFINITY-POOL.jpg", title: "Infinity Pool Panorama", category: "pools" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/SANDY-BEACH-1.jpg", title: "Sandy Beach", category: "pools" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/PLATFORMS-BEACH-.jpg", title: "Beach Platforms", category: "pools" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/WATER-SPORTS-.jpg", title: "Water Sports", category: "pools" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/LIGHTHOUSE.jpg", title: "Lighthouse", category: "pools" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/LIGHT-HOUSE-2.jpg", title: "Lighthouse View", category: "pools" },
-  // Rooms & Interiors
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MER01588.jpg", title: "Resort Exterior", category: "rooms" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MUR2661.jpg", title: "Restaurant Setting", category: "dining" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/INFINITY-POOL-1.jpg", title: "Infinity Pool", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/INFINITY-POOL-2.jpg", title: "Infinity Pool Sunset", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/INFINITY-POOL.jpg", title: "Infinity Pool Panorama", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/SANDY-BEACH-1.jpg", title: "Sandy Beach", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/PLATFORMS-BEACH-.jpg", title: "Beach Platforms", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/WATER-SPORTS-.jpg", title: "Water Sports", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/LIGHTHOUSE.jpg", title: "Lighthouse", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/LIGHT-HOUSE-2.jpg", title: "Lighthouse View", category: "general" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/MER00991.jpg", title: "Garden Area", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MUR5159-2.jpg", title: "Property Grounds", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MUR4115.jpg", title: "Resort Details", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/08/DSC03129.jpg", title: "Beach Scene", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/MINI-DISCO-2.jpg", title: "Mini Disco", category: "general" },
+
+  // Rooms (Odalar)
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MER01588.jpg", title: "Resort Exterior", category: "rooms" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/MER00957.jpg", title: "Resort Entrance", category: "rooms" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/MUR2236.jpg", title: "Interior Detail", category: "rooms" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/MUR2236.jpg", title: "Room Interior", category: "rooms" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MUR5629.jpg", title: "Room View", category: "rooms" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MER02015.jpg", title: "Terrace View", category: "rooms" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/MUR5106.jpg", title: "Lobby Area", category: "rooms" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/DSC00408-kopya-1.jpg", title: "Club Room", category: "rooms" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/MER01245.jpg", title: "Club Room Detail", category: "rooms" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/Club-Room-Sea-View-3.jpg", title: "Club Room Sea View", category: "rooms" },
+
+  // Restaurants & Bars (Restoranlar ve Barlar)
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MUR2661.jpg", title: "Restaurant Setting", category: "dining" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/08/MER02403.jpg", title: "Lounge Area", category: "dining" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MUR5159-2.jpg", title: "Property Grounds", category: "general" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MER02426.jpg", title: "Evening Ambiance", category: "dining" },
   { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MER00210.jpg", title: "Outdoor Dining", category: "dining" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2025/07/MUR4115.jpg", title: "Resort Details", category: "general" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/08/DSC03129.jpg", title: "Beach Scene", category: "pools" },
-  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/MINI-DISCO-2.jpg", title: "Mini Disco", category: "general" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2023/03/INFINITY-POOL-3.jpg", title: "Pool Bar", category: "dining" },
+
+  // Meeting (Toplantı)
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2026/01/Bluedreamstanitimkiti_page-0019-1024x725.jpg", title: "İstanbul Hall", category: "meeting" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2026/01/Ekran-goruntusu-2026-01-14-171200-768x448.png", title: "Turunç Meeting Room", category: "meeting" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2026/01/Ekran-goruntusu-2026-01-14-171426-768x453.png", title: "Salamis Meeting Room", category: "meeting" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2026/01/Ekran-goruntusu-2026-01-14-171524-768x450.png", title: "Belek Meeting Room", category: "meeting" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2026/01/Ekran-goruntusu-2026-01-14-171826-768x451.png", title: "Marmaris Meeting Room", category: "meeting" },
+  { url: "https://bluedreamsresort.com/wp-content/uploads/2026/01/Ekran-goruntusu-2026-01-14-171917-768x451.png", title: "Stockholm Meeting Room", category: "meeting" },
 ];
 
 const categories = [
   { key: "all", label: "All" },
   { key: "general", label: "General" },
-  { key: "pools", label: "Beach & Pools" },
   { key: "rooms", label: "Rooms" },
   { key: "dining", label: "Restaurants & Bars" },
+  { key: "meeting", label: "Meeting" },
 ];
 
 const GalleryPage = () => {
