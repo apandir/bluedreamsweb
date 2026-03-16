@@ -23,11 +23,11 @@ const MeetingsConferencesPage = () => {
   ];
 
   const meetingRooms = [
-    { name: "Bodrum Hall", area: "50 m²", theater: 40, height: "2.80 mt", tags: ["Workshop", "Interview"] },
-    { name: "Ankara Hall", area: "120 m²", theater: 100, height: "3.00 mt", tags: ["Seminar", "Training"] },
-    { name: "İzmir Hall", area: "90 m²", theater: 80, height: "2.90 mt", tags: ["Conference", "Panel"] },
-    { name: "Antalya Hall", area: "75 m²", theater: 60, height: "2.80 mt", tags: ["Meeting", "Presentation"] },
-    { name: "Board Room", area: "40 m²", theater: 16, height: "2.80 mt", tags: ["Executive", "VIP"] },
+    { name: "Stockholm", area: "20 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
+    { name: "Belek", area: "20 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
+    { name: "Marmaris", area: "22 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
+    { name: "Turunç", area: "30 m²", theater: 20, classroom: 10, banquet: 10, height: "3.20 m" },
+    { name: "Salamis", area: "35 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
   ];
 
   const statValues = ["770", "700", "4.0", "2"];
@@ -144,22 +144,33 @@ const MeetingsConferencesPage = () => {
             <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto">{m.meetingRoomsDesc}</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 mb-16">
-            {meetingRooms.map((room) => (
-              <div key={room.name} className="border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <h4 className="font-display text-lg text-foreground mb-4">{room.name}</h4>
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2"><Maximize className="w-3.5 h-3.5 text-accent" /><span className="font-body text-xs text-muted-foreground">{room.area}</span></div>
-                  <div className="flex items-center gap-2"><Users className="w-3.5 h-3.5 text-accent" /><span className="font-body text-xs text-muted-foreground">Theater: {room.theater}</span></div>
-                  <div className="flex items-center gap-2"><ArrowUpFromDot className="w-3.5 h-3.5 text-accent" /><span className="font-body text-xs text-muted-foreground">Height: {room.height}</span></div>
-                </div>
-                <div className="pt-3 border-t border-border flex flex-wrap gap-1.5">
-                  {room.tags.map((tag) => (
-                    <span key={tag} className="font-body text-[10px] font-semibold tracking-[0.1em] uppercase text-muted-foreground bg-secondary px-3 py-1.5 rounded-full">{tag}</span>
+          <div className="border border-border rounded-lg overflow-hidden mb-16">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-secondary">
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-left p-4">Room</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Area</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Theater</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Classroom</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Banquet</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Height</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {meetingRooms.map((room) => (
+                    <tr key={room.name} className="border-t border-border hover:bg-secondary/50 transition-colors">
+                      <td className="font-display text-sm text-foreground p-4">{room.name}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.area}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.theater}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.classroom}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.banquet}</td>
+                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.height}</td>
+                    </tr>
                   ))}
-                </div>
-              </div>
-            ))}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {/* Amenities */}
