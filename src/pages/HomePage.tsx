@@ -79,7 +79,7 @@ const HomePage = () => {
       {/* Nature & Comfort Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <img src={natureImg} alt="Room with sea view" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-ocean-deep/50" />
+        <div className="absolute inset-0 bg-ocean-deep/60" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 py-24">
           <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{h.natureLabel}</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-lg mb-6">
