@@ -11,32 +11,32 @@ import { ChevronDown, Star, MapPin } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const reviews = [
-  { name: "Ayşe Yılmaz", text: "We chose it for our honeymoon and enjoyed every moment.", source: "Google Review" },
-  { name: "Caner Erkin", text: "Best location in Torba.", source: "Google Review" },
-  { name: "Selin Demir", text: "Wonderful week with our family.", source: "Google Review" },
-];
+{ name: "Ayşe Yılmaz", text: "We chose it for our honeymoon and enjoyed every moment.", source: "Google Review" },
+{ name: "Caner Erkin", text: "Best location in Torba.", source: "Google Review" },
+{ name: "Selin Demir", text: "Wonderful week with our family.", source: "Google Review" }];
+
 
 const nearbyPlaces = [
-  { name: "Bodrum Castle & Underwater Museum", category: "History & Culture", distance: "10 km", desc: "Historic castle built by Knights of St. John." },
-  { name: "Yalıkavak Marina", category: "Luxury", distance: "18 km", desc: "World brands, gourmet restaurants and luxury yachts." },
-  { name: "Ancient Theatre", category: "Scenic", distance: "9 km", desc: "Dating back to 4th century BC." },
-];
+{ name: "Bodrum Castle & Underwater Museum", category: "History & Culture", distance: "10 km", desc: "Historic castle built by Knights of St. John." },
+{ name: "Yalıkavak Marina", category: "Luxury", distance: "18 km", desc: "World brands, gourmet restaurants and luxury yachts." },
+{ name: "Ancient Theatre", category: "Scenic", distance: "9 km", desc: "Dating back to 4th century BC." }];
+
 
 const events = [
-  { date: "15", month: "JUL", title: "Sunset Jazz Sessions", time: "19:30 - 22:00", place: "Pier Bar", desc: "Enchanting harmony of saxophone." },
-  { date: "16", month: "JUL", title: "Aegean Herbs Workshop", time: "14:00 - 16:00", place: "La Gondola Garden", desc: "Discover local herbs." },
-  { date: "Every", month: "DAY", title: "Morning Flow Yoga", time: "08:00 - 09:00", place: "Infinity Pool Terrace", desc: "Yoga session to start the day refreshed." },
-];
+{ date: "15", month: "JUL", title: "Sunset Jazz Sessions", time: "19:30 - 22:00", place: "Pier Bar", desc: "Enchanting harmony of saxophone." },
+{ date: "16", month: "JUL", title: "Aegean Herbs Workshop", time: "14:00 - 16:00", place: "La Gondola Garden", desc: "Discover local herbs." },
+{ date: "Every", month: "DAY", title: "Morning Flow Yoga", time: "08:00 - 09:00", place: "Infinity Pool Terrace", desc: "Yoga session to start the day refreshed." }];
+
 
 const HomePage = () => {
   const { t } = useLanguage();
   const h = t.website.home;
 
   const experienceCards = [
-    { title: h.roomsCard, subtitle: h.roomsCardSub, image: roomsImg, link: "/rooms" },
-    { title: h.restaurantCard, subtitle: h.restaurantCardSub, image: restaurantImg, link: "/dining" },
-    { title: h.activitiesCard, subtitle: h.activitiesCardSub, image: activitiesImg, link: "/spa" },
-  ];
+  { title: h.roomsCard, subtitle: h.roomsCardSub, image: roomsImg, link: "/rooms" },
+  { title: h.restaurantCard, subtitle: h.restaurantCardSub, image: restaurantImg, link: "/dining" },
+  { title: h.activitiesCard, subtitle: h.activitiesCardSub, image: activitiesImg, link: "/spa" }];
+
 
   return (
     <main>
@@ -61,8 +61,8 @@ const HomePage = () => {
           <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent text-center mb-4">{h.experienceLabel}</p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center max-w-3xl mx-auto mb-16">{h.experienceHeading}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {experienceCards.map((card) => (
-              <Link key={card.title} to={card.link} className="group relative aspect-[3/4] rounded-2xl overflow-hidden">
+            {experienceCards.map((card) =>
+            <Link key={card.title} to={card.link} className="group relative aspect-[3/4] rounded-2xl overflow-hidden">
                 <img src={card.image} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -70,7 +70,7 @@ const HomePage = () => {
                   <p className="font-body text-sm text-primary-foreground/70 text-shadow-sm">{card.subtitle}</p>
                 </div>
               </Link>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -97,7 +97,7 @@ const HomePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="grid grid-cols-2 gap-4">
               <img src={gastro1Img} alt="Italian à la carte" className="rounded-2xl w-full aspect-[3/4] object-cover" />
-              <img src={gastro2Img} alt="Open buffet" className="rounded-2xl w-full aspect-[3/4] object-cover mt-12" />
+              <img alt="Open buffet" className="rounded-2xl w-full aspect-[3/4] object-cover mt-12" src="/lovable-uploads/7c23beb7-eecb-4669-a3b4-ce1df62f0db9.jpg" />
             </div>
             <div>
               <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{h.gastronomy}</p>
@@ -140,8 +140,8 @@ const HomePage = () => {
             <div>
               <h3 className="font-body text-sm font-semibold tracking-[0.15em] uppercase text-foreground mb-8">{h.thingsToDo}</h3>
               <div className="flex flex-col gap-6">
-                {nearbyPlaces.map((place) => (
-                  <div key={place.name} className="flex gap-5 p-5 rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow">
+                {nearbyPlaces.map((place) =>
+                <div key={place.name} className="flex gap-5 p-5 rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow">
                     <div className="flex-1">
                       <span className="font-body text-[10px] font-semibold tracking-[0.2em] uppercase text-accent">{place.category}</span>
                       <h4 className="font-display text-lg text-foreground mt-1 mb-1">{place.name}</h4>
@@ -151,14 +151,14 @@ const HomePage = () => {
                       <span className="font-body text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">{place.distance}</span>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             </div>
             <div>
               <h3 className="font-body text-sm font-semibold tracking-[0.15em] uppercase text-foreground mb-8">{h.upcomingEvents}</h3>
               <div className="flex flex-col gap-6">
-                {events.map((event) => (
-                  <div key={event.title} className="flex gap-5 p-5 rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow">
+                {events.map((event) =>
+                <div key={event.title} className="flex gap-5 p-5 rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow">
                     <div className="flex flex-col items-center justify-center bg-accent/10 rounded-lg px-4 py-3 min-w-[60px]">
                       <span className="font-body text-xl font-bold text-accent leading-none">{event.date}</span>
                       <span className="font-body text-[10px] font-semibold tracking-wider uppercase text-accent/70">{event.month}</span>
@@ -169,7 +169,7 @@ const HomePage = () => {
                       <p className="font-body text-sm text-muted-foreground">{event.desc}</p>
                     </div>
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </div>
@@ -192,10 +192,10 @@ const HomePage = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {reviews.map((review) => (
-              <div key={review.name} className="bg-card rounded-2xl p-8 shadow-sm">
+            {reviews.map((review) =>
+            <div key={review.name} className="bg-card rounded-2xl p-8 shadow-sm">
                 <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (<Star key={i} className="w-4 h-4 fill-accent text-accent" />))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
                 </div>
                 <p className="font-body text-base text-foreground italic mb-6 leading-relaxed">"{review.text}"</p>
                 <div>
@@ -203,7 +203,7 @@ const HomePage = () => {
                   <p className="font-body text-xs text-muted-foreground">{review.source}</p>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -237,8 +237,8 @@ const HomePage = () => {
           </a>
         </div>
       </section>
-    </main>
-  );
+    </main>);
+
 };
 
 export default HomePage;
