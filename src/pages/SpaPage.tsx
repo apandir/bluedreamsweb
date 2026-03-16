@@ -6,6 +6,7 @@ import saunaImg from "@/assets/spa-sauna.jpg";
 import steamroomImg from "@/assets/spa-steamroom.jpg";
 import saltroomImg from "@/assets/spa-saltroom.jpg";
 import hotstoneImg from "@/assets/spa-hotstone.jpg";
+import iceroomImg from "@/assets/spa-iceroom.jpg";
 import { ChevronRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -20,6 +21,7 @@ const SpaPage = () => {
     { title: "Sauna", desc: "Cleanse toxins and relax in our Finnish sauna.", image: saunaImg },
     { title: "Steam Room", desc: "Rejuvenate with aromatic steam therapy.", image: steamroomImg },
     { title: "Salt Therapy Room", desc: "Breathe in healing Himalayan salt minerals for respiratory wellness.", image: saltroomImg },
+    { title: "Ice Room", desc: "Invigorate your senses with a refreshing cold therapy experience.", image: iceroomImg },
     { title: "Hot Stone Massage", desc: "Deep tissue massage with volcanic stones.", image: hotstoneImg },
   ];
 
