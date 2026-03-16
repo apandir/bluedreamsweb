@@ -62,10 +62,7 @@ const SpaPage = () => {
                 </div>
                 <div className="p-6">
                   <h4 className="font-display text-xl text-foreground mb-2">{sv.title}</h4>
-                  <p className="font-body text-sm text-muted-foreground mb-4">{sv.desc}</p>
-                  <a href="https://wa.me/905495167803" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-body text-sm font-semibold text-accent hover:text-accent/80 transition-colors">
-                    {s.bookNow} <ChevronRight className="w-4 h-4" />
-                  </a>
+                  <p className="font-body text-sm text-muted-foreground">{sv.desc}</p>
                 </div>
               </div>
             ))}
