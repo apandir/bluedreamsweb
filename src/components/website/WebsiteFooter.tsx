@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/blue-dreams-logo.png";
 import mapScreenshot from "@/assets/map-screenshot.jpg";
-import { Phone, Mail, MapPin, MessageCircle, ExternalLink } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, ExternalLink, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const WebsiteFooter = () => {
