@@ -117,10 +117,10 @@ const HomePage = () => {
       {/* Spa Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <img src={spaImg} alt="Infinity pool" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-ocean-deep/40" />
+<div className="absolute inset-0 bg-ocean-deep/55" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 py-24">
-          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{h.feelGood}</p>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-lg mb-6">
+          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4 text-shadow-sm">{h.feelGood}</p>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-lg mb-6 text-shadow-hero">
             {h.spaHeading}{" "}<span className="italic text-accent">Enjoy.</span>
           </h2>
           <p className="font-body text-lg text-primary-foreground/70 max-w-md mb-8">{h.spaSub}</p>
