@@ -29,9 +29,11 @@ const WebsiteFooter = () => {
       {/* Booking CTA Strip */}
       <div className="border-b border-primary-foreground/10">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 text-center">
-          <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent mb-3">
-            {w.ctaLabel}
-          </p>
+          {w.ctaLabel && (
+            <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent mb-3">
+              {w.ctaLabel}
+            </p>
+          )}
           <h2 className="font-display text-2xl md:text-3xl text-primary-foreground mb-6">
             {w.ctaHeading}
           </h2>
@@ -63,9 +65,11 @@ const WebsiteFooter = () => {
               />
             </a>
             <div className="flex flex-col gap-4">
-              <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent">
-                {w.ctaLabel || "FIND US"}
-              </p>
+              {w.ctaLabel && (
+                <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent">
+                  {w.ctaLabel}
+                </p>
+              )}
               <h3 className="font-display text-2xl text-primary-foreground">
                 Torba, Bodrum
               </h3>
