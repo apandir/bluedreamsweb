@@ -21,6 +21,7 @@ const SpaPage = () => {
     { title: "Sauna", desc: "Cleanse toxins and relax in our Finnish sauna.", image: saunaImg },
     { title: "Steam Room", desc: "Rejuvenate with aromatic steam therapy.", image: steamroomImg },
     { title: "Salt Therapy Room", desc: "Breathe in healing Himalayan salt minerals for respiratory wellness.", image: saltroomImg },
+    { title: "Ice Room", desc: "Invigorate your senses with a refreshing cold therapy experience.", image: iceroomImg },
     { title: "Hot Stone Massage", desc: "Deep tissue massage with volcanic stones.", image: hotstoneImg },
   ];
 
