@@ -212,7 +212,7 @@ const WebsiteNavbar = () => {
         </div>
 
         <a
-          href="https://new.bluedreamsresort.com/en/rezervasyon"
+          href="https://blue-dreams.rezervasyonal.com/en/"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 font-body text-sm font-semibold tracking-wider uppercase border border-accent text-accent px-8 py-3 rounded-sm transition-colors hover:bg-accent hover:text-accent-foreground"
