@@ -3,6 +3,7 @@ import hamamImg from "@/assets/spa-hamam.jpg";
 import aromatherapyImg from "@/assets/spa-aromatherapy.jpg";
 import skincareImg from "@/assets/spa-skincare.jpg";
 import saunaImg from "@/assets/spa-sauna.jpg";
+import steamroomImg from "@/assets/spa-steamroom.jpg";
 import hotstoneImg from "@/assets/spa-hotstone.jpg";
 import { ChevronRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -15,7 +16,8 @@ const SpaPage = () => {
     { title: "Traditional Turkish Hamam", desc: "Renew yourself with traditional kese and foam massage.", image: hamamImg },
     { title: "Aromatherapy Massage", desc: "Relaxing massage applied with special herbal oils.", image: aromatherapyImg },
     { title: "Skin Care", desc: "Deep skin care cures applied with natural products.", image: skincareImg },
-    { title: "Sauna & Steam Room", desc: "Cleanse toxins with Finnish sauna and steam room.", image: saunaImg },
+    { title: "Sauna", desc: "Cleanse toxins and relax in our Finnish sauna.", image: saunaImg },
+    { title: "Steam Room", desc: "Rejuvenate with aromatic steam therapy.", image: steamroomImg },
     { title: "Hot Stone Massage", desc: "Deep tissue massage with volcanic stones.", image: hotstoneImg },
   ];
 
