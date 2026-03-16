@@ -123,7 +123,7 @@ const HomePage = () => {
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-lg mb-6 text-shadow-hero">
             {h.spaHeading}{" "}<span className="italic text-accent">Enjoy.</span>
           </h2>
-          <p className="font-body text-lg text-primary-foreground/70 max-w-md mb-8">{h.spaSub}</p>
+          <p className="font-body text-lg text-primary-foreground/70 max-w-md mb-8 text-shadow-sm">{h.spaSub}</p>
           <Link to="/spa" className="inline-block font-body text-sm font-semibold tracking-wider uppercase border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground px-8 py-3 rounded-full transition-colors">
             {h.spaWellness}
           </Link>
