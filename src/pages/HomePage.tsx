@@ -45,9 +45,8 @@ const HomePage = () => {
         <img src={heroImg} alt="Blue Dreams Resort aerial view" className="absolute inset-0 w-full h-full object-cover" />
 <div className="absolute inset-0 bg-ocean-deep/55" />
         <div className="relative z-10 text-center px-6 max-w-3xl">
-          <p className="font-body text-xs font-semibold tracking-[0.4em] uppercase text-primary-foreground/70 mb-6 text-shadow-sm">{h.pearlOfBodrum}</p>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-primary-foreground mb-2 text-shadow-hero">{h.aegeanBlue}</h1>
-          <p className="font-display text-5xl md:text-7xl lg:text-8xl italic text-accent text-shadow-hero">{h.dream}</p>
+          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground mb-4 text-shadow-hero">Blue Dreams</h1>
+          <p className="font-display text-3xl md:text-5xl lg:text-6xl italic text-accent text-shadow-hero">{h.pearlOfBodrum}</p>
           <p className="font-body text-base md:text-lg text-primary-foreground/70 mt-8 max-w-xl mx-auto leading-relaxed text-shadow-sm">{h.heroDesc}</p>
         </div>
         <a href="#experience" className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/50 hover:text-primary-foreground transition-colors">
