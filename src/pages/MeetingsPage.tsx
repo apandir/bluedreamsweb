@@ -39,7 +39,7 @@ const MeetingsPage = () => {
           alt="Meetings & Events"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/80 via-ocean-deep/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/90 via-ocean-deep/40 to-ocean-deep/20" />
         <div className="relative z-10 flex flex-col items-center justify-end h-full pb-20 px-6">
           <nav className="absolute top-28 left-6 lg:left-10 flex items-center gap-2 font-body text-xs text-primary-foreground/60">
             <Link to="/" className="hover:text-primary-foreground transition-colors">
@@ -48,10 +48,10 @@ const MeetingsPage = () => {
             <span>/</span>
             <span className="text-primary-foreground">{w.title}</span>
           </nav>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground text-center mb-6">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground text-center mb-6 text-shadow-hero">
             {w.title}
           </h1>
-          <p className="font-body text-sm md:text-base text-primary-foreground/70 text-center max-w-2xl leading-relaxed">
+          <p className="font-body text-sm md:text-base text-primary-foreground/70 text-center max-w-2xl leading-relaxed text-shadow-sm">
             {w.heroDesc}
           </p>
         </div>
@@ -72,12 +72,12 @@ const MeetingsPage = () => {
                   alt={card.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/90 via-ocean-deep/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/95 via-ocean-deep/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent mb-3">
+                  <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent mb-3 text-shadow-sm">
                     {card.title}
                   </p>
-                  <p className="font-body text-sm text-primary-foreground/70 leading-relaxed mb-4">
+                  <p className="font-body text-sm text-primary-foreground/70 leading-relaxed mb-4 text-shadow-sm">
                     {card.desc}
                   </p>
                   <span className="inline-flex items-center gap-2 font-body text-[11px] font-semibold tracking-[0.15em] uppercase text-primary-foreground group-hover:text-accent transition-colors">

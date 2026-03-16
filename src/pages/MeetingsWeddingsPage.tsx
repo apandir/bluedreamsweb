@@ -36,7 +36,7 @@ const MeetingsWeddingsPage = () => {
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[450px]">
         <img src={eventCeremony} alt="Weddings" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/80 via-ocean-deep/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/90 via-ocean-deep/40 to-ocean-deep/20" />
         <div className="relative z-10 flex flex-col items-center justify-end h-full pb-16 px-6">
           <nav className="absolute top-28 left-6 lg:left-10 flex items-center gap-2 font-body text-xs text-primary-foreground/60">
             <Link to="/" className="hover:text-primary-foreground transition-colors">{w.home}</Link>
@@ -45,10 +45,10 @@ const MeetingsWeddingsPage = () => {
             <span>/</span>
             <span className="text-primary-foreground">{w.weddingCard}</span>
           </nav>
-          <h1 className="font-display text-4xl md:text-5xl text-primary-foreground text-center mb-4">
+          <h1 className="font-display text-4xl md:text-5xl text-primary-foreground text-center mb-4 text-shadow-hero">
             {m.weddingsTitle}
           </h1>
-          <p className="font-body text-sm text-primary-foreground/70 text-center max-w-2xl">
+          <p className="font-body text-sm text-primary-foreground/70 text-center max-w-2xl text-shadow-sm">
             {m.weddingsDesc}
           </p>
         </div>
