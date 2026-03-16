@@ -36,7 +36,7 @@ const WebsiteFooter = () => {
             {w.ctaHeading}
           </h2>
           <a
-            href="https://new.bluedreamsresort.com/en/rezervasyon"
+            href="https://blue-dreams.rezervasyonal.com/en/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block font-body text-[11px] font-semibold tracking-[0.15em] uppercase border border-primary-foreground/40 hover:bg-primary-foreground hover:text-primary text-primary-foreground px-8 py-3 rounded-sm transition-colors"

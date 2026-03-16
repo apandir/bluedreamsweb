@@ -76,7 +76,7 @@ const RoomsPage = () => {
           <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">{r.findDreamRoom}</h2>
           <p className="font-body text-base text-muted-foreground mb-8">{r.bestPrice}</p>
           <a
-            href="https://new.bluedreamsresort.com/en/rezervasyon"
+            href="https://blue-dreams.rezervasyonal.com/en/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block font-body text-sm font-semibold tracking-wider uppercase bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-4 rounded-full transition-colors"
