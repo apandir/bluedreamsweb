@@ -63,9 +63,11 @@ const WebsiteFooter = () => {
               />
             </a>
             <div className="flex flex-col gap-4">
-              <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent">
-                {w.ctaLabel || "FIND US"}
-              </p>
+              {w.ctaLabel && (
+                <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent">
+                  {w.ctaLabel}
+                </p>
+              )}
               <h3 className="font-display text-2xl text-primary-foreground">
                 Torba, Bodrum
               </h3>
