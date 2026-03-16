@@ -25,6 +25,7 @@ const WebsiteNavbar = () => {
     { label: w.restaurantBar, href: "/dining" },
     { label: w.spa, href: "/spa" },
     { label: t.website.meetingsPage.title, href: "/meetings" },
+    { label: "Gallery", href: "/gallery" },
     { label: w.contact, href: "/contact" },
     { label: w.factsheet, href: "/factsheet" },
   ];

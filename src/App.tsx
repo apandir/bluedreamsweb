@@ -15,6 +15,7 @@ import MeetingsConferencesPage from "./pages/MeetingsConferencesPage";
 import MeetingsWeddingsPage from "./pages/MeetingsWeddingsPage";
 import MeetingsEventsPage from "./pages/MeetingsEventsPage";
 import FactsheetPage from "./pages/Index";
+import GalleryPage from "./pages/GalleryPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
               <Route path="/meetings/weddings" element={<MeetingsWeddingsPage />} />
               <Route path="/meetings/events" element={<MeetingsEventsPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/gallery" element={<GalleryPage />} />
             </Route>
             <Route path="/factsheet" element={<FactsheetPage />} />
             <Route path="*" element={<NotFound />} />
