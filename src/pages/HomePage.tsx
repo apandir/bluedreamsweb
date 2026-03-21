@@ -53,7 +53,7 @@ const HomePage = () => {
         </div>
         <div className="absolute inset-0 bg-ocean-deep/40" />
         <div className="relative z-10 text-center px-6 max-w-2xl mb-8">
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-3 text-shadow-hero">Blue Dreams</h1>
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-3 text-shadow-hero">Blue Dreams Resort</h1>
           <p className="font-display text-2xl md:text-3xl lg:text-4xl italic text-accent text-shadow-hero">{h.pearlOfBodrum}</p>
           <p className="font-body text-sm md:text-base text-primary-foreground/70 mt-5 max-w-md mx-auto leading-relaxed text-shadow-sm">{h.heroDesc}</p>
         </div>
