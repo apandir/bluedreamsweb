@@ -41,7 +41,7 @@ const HomePage = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-24">
         <img src={heroImg} alt="Blue Dreams Resort aerial view" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <iframe
@@ -51,13 +51,13 @@ const HomePage = () => {
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full border-0"
           />
         </div>
-        <div className="absolute inset-0 bg-ocean-deep/55" />
-        <div className="relative z-10 text-center px-6 max-w-3xl">
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-primary-foreground mb-4 text-shadow-hero">Blue Dreams</h1>
-          <p className="font-display text-3xl md:text-5xl lg:text-6xl italic text-accent text-shadow-hero">{h.pearlOfBodrum}</p>
-          <p className="font-body text-base md:text-lg text-primary-foreground/70 mt-8 max-w-xl mx-auto leading-relaxed text-shadow-sm">{h.heroDesc}</p>
+        <div className="absolute inset-0 bg-ocean-deep/40" />
+        <div className="relative z-10 text-center px-6 max-w-2xl mb-8">
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-3 text-shadow-hero">Blue Dreams</h1>
+          <p className="font-display text-2xl md:text-3xl lg:text-4xl italic text-accent text-shadow-hero">{h.pearlOfBodrum}</p>
+          <p className="font-body text-sm md:text-base text-primary-foreground/70 mt-5 max-w-md mx-auto leading-relaxed text-shadow-sm">{h.heroDesc}</p>
         </div>
-        <a href="#experience" className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/50 hover:text-primary-foreground transition-colors">
+        <a href="#experience" className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/50 hover:text-primary-foreground transition-colors z-10">
           <span className="font-body text-[10px] tracking-[0.3em] uppercase">{h.discover}</span>
           <ChevronDown className="w-5 h-5 animate-bounce" />
         </a>
