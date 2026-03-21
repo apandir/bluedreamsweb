@@ -44,12 +44,14 @@ const HomePage = () => {
       <section className="relative h-screen flex items-end justify-center overflow-hidden pb-24">
         <img src={heroImg} alt="Blue Dreams Resort aerial view" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/Et5yM-tW7_0?autoplay=1&mute=1&loop=1&playlist=Et5yM-tW7_0&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3&enablejsapi=0"
-            title="Blue Dreams Resort Video"
-            allow="autoplay; encrypted-media"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full border-0"
-          />
+          <div className="absolute -inset-[80px]">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/Et5yM-tW7_0?autoplay=1&mute=1&loop=1&playlist=Et5yM-tW7_0&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3&enablejsapi=0&cc_load_policy=0&fs=0&color=white&origin=https://bluedreamsweb.lovable.app"
+              title="Blue Dreams Resort Video"
+              allow="autoplay; encrypted-media"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full h-[56.25vw] min-h-full border-0"
+            />
+          </div>
         </div>
         <div className="absolute inset-0 bg-ocean-deep/40" />
         <div className="relative z-10 text-center px-6 max-w-2xl mb-8">
