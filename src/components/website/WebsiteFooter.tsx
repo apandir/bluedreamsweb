@@ -178,7 +178,7 @@ const WebsiteFooter = () => {
                 href="https://www.instagram.com/bluedreamsresort/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+                className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Instagram className="w-4 h-4 text-accent" />
                 Instagram
