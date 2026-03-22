@@ -154,16 +154,20 @@ const HomePage = () => {
               <h3 className="font-body text-sm font-semibold tracking-[0.15em] uppercase text-foreground mb-8">{h.thingsToDo}</h3>
               <div className="flex flex-col gap-6">
                 {nearbyPlaces.map((place) =>
-                <div key={place.name} className="flex gap-5 p-5 rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex-1">
+                <a key={place.name} href={place.url} target="_blank" rel="noopener noreferrer" className="flex gap-4 p-4 rounded-xl bg-card shadow-sm hover:shadow-md transition-shadow group">
+                    <img src={place.image} alt={place.name} className="w-20 h-20 rounded-lg object-cover flex-shrink-0" />
+                    <div className="flex-1 min-w-0">
                       <span className="font-body text-[10px] font-semibold tracking-[0.2em] uppercase text-accent">{place.category}</span>
-                      <h4 className="font-display text-lg text-foreground mt-1 mb-1">{place.name}</h4>
+                      <h4 className="font-display text-base text-foreground mt-0.5 mb-0.5 flex items-center gap-1.5">
+                        {place.name}
+                        <ExternalLink className="w-3 h-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                      </h4>
                       <p className="font-body text-sm text-muted-foreground">{place.desc}</p>
                     </div>
-                    <div className="flex items-start">
+                    <div className="flex items-start flex-shrink-0">
                       <span className="font-body text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">{place.distance}</span>
                     </div>
-                  </div>
+                  </a>
                 )}
               </div>
             </div>
