@@ -49,7 +49,7 @@ const WebsiteFooter = () => {
       </div>
 
       {/* Map Section */}
-      <div className="border-b border-primary-foreground/10">
+      <div className="border-b border-foreground/10">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <a
