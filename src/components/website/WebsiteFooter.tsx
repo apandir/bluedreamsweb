@@ -169,7 +169,7 @@ const WebsiteFooter = () => {
                 href="https://www.facebook.com/BlueDreamsResort"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+                className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Facebook className="w-4 h-4 text-accent" />
                 Facebook
