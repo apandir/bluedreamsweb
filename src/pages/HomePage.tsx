@@ -216,11 +216,11 @@ const HomePage = () => {
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center justify-between gap-5 bg-card border border-border/50 rounded-2xl px-8 py-8 shadow-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300"
               >
-                <img src={item.logo} alt={item.alt} className="h-12 md:h-14 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
                 <div className="text-center">
                   <span className="font-display text-4xl md:text-5xl text-foreground">{item.score}</span>
                   <p className="font-body text-xs text-muted-foreground mt-2 tracking-wider uppercase">{item.sub}</p>
                 </div>
+                <img src={item.logo} alt={item.alt} className="h-10 md:h-16 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
               </a>
             ))}
           </div>
