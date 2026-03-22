@@ -216,7 +216,7 @@ const WebsiteFooter = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-primary-foreground/10 py-5">
+      <div className="border-t border-foreground/10 py-5">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="font-body text-[11px] text-primary-foreground/25">
             © {new Date().getFullYear()} Blue Dreams Resort. All rights reserved.
