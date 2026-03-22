@@ -70,7 +70,7 @@ const WebsiteFooter = () => {
                   {w.ctaLabel}
                 </p>
               )}
-              <h3 className="font-display text-2xl text-primary-foreground">
+              <h3 className="font-display text-2xl text-foreground">
                 Torba, Bodrum
               </h3>
               <p className="font-body text-sm text-primary-foreground/50 leading-relaxed">
