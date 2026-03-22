@@ -34,7 +34,7 @@ const WebsiteFooter = () => {
               {w.ctaLabel}
             </p>
           )}
-          <h2 className="font-display text-2xl md:text-3xl text-primary-foreground mb-6">
+          <h2 className="font-display text-2xl md:text-3xl text-foreground mb-6">
             {w.ctaHeading}
           </h2>
           <a
