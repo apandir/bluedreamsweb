@@ -10,7 +10,6 @@ import nearbyTheatreImg from "@/assets/nearby-ancient-theatre.jpg";
 import logoBooking from "@/assets/logo-booking.png";
 import logoTripadvisor from "@/assets/logo-tripadvisor.png";
 import logoHolidaycheck from "@/assets/logo-holidaycheck.png";
-import nearbyTheatreImg from "@/assets/nearby-ancient-theatre.jpg";
 import gastro2Img from "@/assets/home-gastronomy-2.jpg";
 import spaImg from "@/assets/home-spa.jpg";
 import { Link } from "react-router-dom";
