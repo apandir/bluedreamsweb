@@ -221,7 +221,7 @@ const WebsiteFooter = () => {
           <p className="font-body text-[11px] text-foreground/25">
             © {new Date().getFullYear()} Blue Dreams Resort. All rights reserved.
           </p>
-          <p className="font-body text-[11px] text-primary-foreground/25">
+          <p className="font-body text-[11px] text-foreground/25">
             {w.brandDesc}
           </p>
         </div>
