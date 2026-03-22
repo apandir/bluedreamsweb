@@ -20,9 +20,9 @@ const reviews = [
 
 
 const nearbyPlaces = [
-{ name: "Bodrum Castle & Underwater Museum", category: "History & Culture", distance: "10 km", desc: "Historic castle built by Knights of St. John." },
-{ name: "Yalıkavak Marina", category: "Luxury", distance: "18 km", desc: "World brands, gourmet restaurants and luxury yachts." },
-{ name: "Ancient Theatre", category: "Scenic", distance: "9 km", desc: "Dating back to 4th century BC." }];
+{ name: "Bodrum Castle & Underwater Museum", category: "History & Culture", distance: "10 km", desc: "Historic castle built by Knights of St. John.", image: nearbyCastleImg, url: "https://muze.gov.tr/" },
+{ name: "Yalıkavak Marina", category: "Luxury", distance: "18 km", desc: "World brands, gourmet restaurants and luxury yachts.", image: nearbyMarinaImg, url: "https://yalikavakmarina.com.tr/" },
+{ name: "Ancient Theatre", category: "Scenic", distance: "9 km", desc: "Dating back to 4th century BC.", image: nearbyTheatreImg, url: "https://muze.gov.tr/muze-detay?SectionId=MBA01&DistId=MRK" }];
 
 
 const events = [
