@@ -93,10 +93,8 @@ const WebsiteFooter = () => {
       {/* Main Footer */}
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16">
         {/* Centered Logo */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white rounded-md px-4 py-2">
-            <img src={logo} alt="Blue Dreams Resort" className="h-10" />
-          </div>
+        <div className="flex justify-end mb-12">
+          <img src={logo} alt="Blue Dreams Resort" className="h-16" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
