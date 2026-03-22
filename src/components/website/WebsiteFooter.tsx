@@ -102,7 +102,7 @@ const WebsiteFooter = () => {
           <div>
             <div className="flex items-start gap-3 mb-4">
               <MapPin className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-              <p className="font-body text-sm text-primary-foreground/50 leading-relaxed">
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 Torba Mahallesi, Herodot Bulvarı No:11<br />
                 Bodrum / MUĞLA / TÜRKİYE
               </p>
