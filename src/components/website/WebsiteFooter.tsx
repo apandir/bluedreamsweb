@@ -41,7 +41,7 @@ const WebsiteFooter = () => {
             href="https://blue-dreams.rezervasyonal.com/en/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block font-body text-[11px] font-semibold tracking-[0.15em] uppercase border border-primary-foreground/40 hover:bg-primary-foreground hover:text-primary text-primary-foreground px-8 py-3 rounded-sm transition-colors"
+            className="inline-block font-body text-[11px] font-semibold tracking-[0.15em] uppercase border border-foreground/40 hover:bg-foreground hover:text-background text-foreground px-8 py-3 rounded-sm transition-colors"
           >
             {w.ctaButton}
           </a>
