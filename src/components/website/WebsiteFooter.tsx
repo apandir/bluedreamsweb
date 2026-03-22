@@ -27,7 +27,7 @@ const WebsiteFooter = () => {
   return (
     <footer className="bg-white text-foreground">
       {/* Booking CTA Strip */}
-      <div className="border-b border-primary-foreground/10">
+      <div className="border-b border-foreground/10">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 text-center">
           {w.ctaLabel && (
             <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent mb-3">
