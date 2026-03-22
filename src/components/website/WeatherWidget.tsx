@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Cloud, Sun, CloudRain, CloudSnow, CloudLightning, CloudDrizzle, Cloudy } from "lucide-react";
+import { Cloud, Sun, CloudRain, CloudSnow, CloudLightning, CloudDrizzle, Cloudy, Waves } from "lucide-react";
 
 const BODRUM_LAT = 37.0344;
 const BODRUM_LON = 27.4305;
@@ -17,32 +17,46 @@ const getWeatherIcon = (code: number) => {
 
 const WeatherWidget = () => {
   const [temp, setTemp] = useState<number | null>(null);
+  const [waterTemp, setWaterTemp] = useState<number | null>(null);
   const [weatherCode, setWeatherCode] = useState<number>(0);
 
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const res = await fetch(
-          `https://api.open-meteo.com/v1/forecast?latitude=${BODRUM_LAT}&longitude=${BODRUM_LON}&current_weather=true`
-        );
-        const data = await res.json();
-        setTemp(Math.round(data.current_weather.temperature));
-        setWeatherCode(data.current_weather.weathercode);
+        const [weatherRes, marineRes] = await Promise.all([
+          fetch(`https://api.open-meteo.com/v1/forecast?latitude=${BODRUM_LAT}&longitude=${BODRUM_LON}&current_weather=true`),
+          fetch(`https://marine-api.open-meteo.com/v1/marine?latitude=${BODRUM_LAT}&longitude=${BODRUM_LON}&current=sea_surface_temperature`)
+        ]);
+        const weatherData = await weatherRes.json();
+        setTemp(Math.round(weatherData.current_weather.temperature));
+        setWeatherCode(weatherData.current_weather.weathercode);
+
+        const marineData = await marineRes.json();
+        if (marineData.current?.sea_surface_temperature != null) {
+          setWaterTemp(Math.round(marineData.current.sea_surface_temperature));
+        }
       } catch {
         // silently fail
       }
     };
     fetchWeather();
-    const interval = setInterval(fetchWeather, 600000); // refresh every 10min
+    const interval = setInterval(fetchWeather, 600000);
     return () => clearInterval(interval);
   }, []);
 
   if (temp === null) return null;
 
   return (
-    <div className="flex items-center gap-1 text-primary-foreground/60" title="Bodrum, Türkiye">
+    <div className="flex items-center gap-2 text-primary-foreground/60" title="Bodrum, Türkiye">
       {getWeatherIcon(weatherCode)}
       <span className="font-body text-[11px] font-medium tracking-wider">{temp}°C</span>
+      {waterTemp !== null && (
+        <>
+          <span className="text-primary-foreground/30">|</span>
+          <Waves className="w-3.5 h-3.5 text-blue-300" />
+          <span className="font-body text-[11px] font-medium tracking-wider">{waterTemp}°C</span>
+        </>
+      )}
     </div>
   );
 };
