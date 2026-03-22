@@ -116,7 +116,7 @@ const WebsiteFooter = () => {
             </a>
             <a
               href="mailto:sales@bluedreamsresort.com"
-              className="flex items-center gap-3 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+              className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <Mail className="w-4 h-4 text-accent flex-shrink-0" />
               sales@bluedreamsresort.com
