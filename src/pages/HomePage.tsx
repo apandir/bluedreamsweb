@@ -203,28 +203,26 @@ const HomePage = () => {
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-4">
             {h.kindWords}{" "}<span className="italic text-accent">{h.fromYou}</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16 max-w-3xl mx-auto">
-            <a href="https://www.booking.com/hotel/tr/blue-dreams-resort.html" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 bg-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <img src={logoBooking} alt="Booking.com" className="h-8 object-contain" />
-              <div className="text-center">
-                <span className="font-display text-3xl text-foreground">9.4</span>
-                <p className="font-body text-xs text-muted-foreground mt-1">/ 10</p>
-              </div>
-            </a>
-            <a href="https://www.holidaycheck.com/hi/blue-dreams-resort-spa/bdf5c7e6-2f45-3b6c-8e1a-1c1e4a3c5f8a" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 bg-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <img src={logoHolidaycheck} alt="HolidayCheck" className="h-8 object-contain" />
-              <div className="text-center">
-                <span className="font-display text-3xl text-foreground">91%</span>
-                <p className="font-body text-xs text-muted-foreground mt-1">Recommendation</p>
-              </div>
-            </a>
-            <a href="https://www.tripadvisor.com/Hotel_Review-Blue_Dreams_Resort.html" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 bg-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <img src={logoTripadvisor} alt="Tripadvisor" className="h-8 object-contain" />
-              <div className="text-center">
-                <span className="font-display text-3xl text-foreground">4.4</span>
-                <p className="font-body text-xs text-muted-foreground mt-1">/ 5</p>
-              </div>
-            </a>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
+            {[
+              { logo: logoBooking, alt: "Booking.com", score: "9.4", sub: "/ 10", url: "https://www.booking.com/hotel/tr/blue-dreams-resort.html" },
+              { logo: logoHolidaycheck, alt: "HolidayCheck", score: "91%", sub: "Recommendation", url: "https://www.holidaycheck.com/hi/blue-dreams-resort-spa/bdf5c7e6-2f45-3b6c-8e1a-1c1e4a3c5f8a" },
+              { logo: logoTripadvisor, alt: "Tripadvisor", score: "4.4", sub: "/ 5", url: "https://www.tripadvisor.com/Hotel_Review-Blue_Dreams_Resort.html" },
+            ].map((item) => (
+              <a
+                key={item.alt}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center justify-between gap-5 bg-card border border-border/50 rounded-2xl px-8 py-8 shadow-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300"
+              >
+                <img src={item.logo} alt={item.alt} className="h-12 md:h-14 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
+                <div className="text-center">
+                  <span className="font-display text-4xl md:text-5xl text-foreground">{item.score}</span>
+                  <p className="font-body text-xs text-muted-foreground mt-2 tracking-wider uppercase">{item.sub}</p>
+                </div>
+              </a>
+            ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {reviews.map((review) =>
