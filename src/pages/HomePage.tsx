@@ -205,9 +205,9 @@ const HomePage = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
             {[
-              { logo: logoBooking, alt: "Booking.com", score: "9.4", sub: "/ 10", url: "https://www.booking.com/hotel/tr/blue-dreams-resort.html", logoClass: "h-14 md:h-20" },
+              { logo: logoBooking, alt: "Booking.com", score: "9.4 / 10", sub: "", url: "https://www.booking.com/hotel/tr/blue-dreams-resort.html", logoClass: "h-14 md:h-20" },
               { logo: logoHolidaycheck, alt: "HolidayCheck", score: "91%", sub: "Recommendation", url: "https://www.holidaycheck.com/hi/blue-dreams-resort-spa/bdf5c7e6-2f45-3b6c-8e1a-1c1e4a3c5f8a", logoClass: "h-10 md:h-16" },
-              { logo: logoTripadvisor, alt: "Tripadvisor", score: "4.4", sub: "/ 5", url: "https://www.tripadvisor.com/Hotel_Review-Blue_Dreams_Resort.html", logoClass: "h-14 md:h-20" },
+              { logo: logoTripadvisor, alt: "Tripadvisor", score: "4.4 / 5", sub: "", url: "https://www.tripadvisor.com/Hotel_Review-Blue_Dreams_Resort.html", logoClass: "h-14 md:h-20" },
             ].map((item) => (
               <a
                 key={item.alt}
