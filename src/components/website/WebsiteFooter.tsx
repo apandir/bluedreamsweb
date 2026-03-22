@@ -151,7 +151,7 @@ const WebsiteFooter = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
+                  className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {link.label}
                 </a>
