@@ -203,13 +203,28 @@ const HomePage = () => {
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-4">
             {h.kindWords}{" "}<span className="italic text-accent">{h.fromYou}</span>
           </h2>
-          <p className="font-body text-base text-muted-foreground text-center mb-6">{h.reviewsSub}</p>
-          <div className="flex items-center justify-center gap-3 mb-16">
-            <span className="font-display text-5xl text-foreground">9.4</span>
-            <div>
-              <p className="font-body text-xs text-muted-foreground">Booking.com Score</p>
-              <p className="font-body text-xs text-muted-foreground">/ 10</p>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16 max-w-3xl mx-auto">
+            <a href="https://www.booking.com/hotel/tr/blue-dreams-resort.html" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 bg-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <img src={logoBooking} alt="Booking.com" className="h-8 object-contain" />
+              <div className="text-center">
+                <span className="font-display text-3xl text-foreground">9.4</span>
+                <p className="font-body text-xs text-muted-foreground mt-1">/ 10</p>
+              </div>
+            </a>
+            <a href="https://www.holidaycheck.com/hi/blue-dreams-resort-spa/bdf5c7e6-2f45-3b6c-8e1a-1c1e4a3c5f8a" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 bg-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <img src={logoHolidaycheck} alt="HolidayCheck" className="h-8 object-contain" />
+              <div className="text-center">
+                <span className="font-display text-3xl text-foreground">91%</span>
+                <p className="font-body text-xs text-muted-foreground mt-1">Recommendation</p>
+              </div>
+            </a>
+            <a href="https://www.tripadvisor.com/Hotel_Review-Blue_Dreams_Resort.html" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 bg-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <img src={logoTripadvisor} alt="Tripadvisor" className="h-8 object-contain" />
+              <div className="text-center">
+                <span className="font-display text-3xl text-foreground">4.4</span>
+                <p className="font-body text-xs text-muted-foreground mt-1">/ 5</p>
+              </div>
+            </a>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {reviews.map((review) =>
