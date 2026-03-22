@@ -10,7 +10,7 @@ import nearbyTheatreImg from "@/assets/nearby-ancient-theatre.jpg";
 import gastro2Img from "@/assets/home-gastronomy-2.jpg";
 import spaImg from "@/assets/home-spa.jpg";
 import { Link } from "react-router-dom";
-import { ChevronDown, Star, MapPin } from "lucide-react";
+import { ChevronDown, Star, MapPin, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const reviews = [
