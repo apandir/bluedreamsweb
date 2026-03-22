@@ -73,7 +73,7 @@ const WebsiteFooter = () => {
               <h3 className="font-display text-2xl text-foreground">
                 Torba, Bodrum
               </h3>
-              <p className="font-body text-sm text-primary-foreground/50 leading-relaxed">
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 Torba Mahallesi, Herodot Bulvarı No:11, Bodrum / Muğla / Türkiye
               </p>
               <a
