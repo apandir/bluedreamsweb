@@ -125,7 +125,7 @@ const WebsiteFooter = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-body text-[10px] font-semibold tracking-[0.2em] uppercase text-primary-foreground/30 mb-5">
+            <h4 className="font-body text-[10px] font-semibold tracking-[0.2em] uppercase text-foreground/30 mb-5">
               {w.quickLinks}
             </h4>
             <div className="flex flex-col gap-2.5">
