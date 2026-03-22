@@ -205,9 +205,9 @@ const HomePage = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
             {[
-              { logo: logoBooking, alt: "Booking.com", score: "9.4", sub: "/ 10", url: "https://www.booking.com/hotel/tr/blue-dreams-resort.html" },
-              { logo: logoHolidaycheck, alt: "HolidayCheck", score: "91%", sub: "Recommendation", url: "https://www.holidaycheck.com/hi/blue-dreams-resort-spa/bdf5c7e6-2f45-3b6c-8e1a-1c1e4a3c5f8a" },
-              { logo: logoTripadvisor, alt: "Tripadvisor", score: "4.4", sub: "/ 5", url: "https://www.tripadvisor.com/Hotel_Review-Blue_Dreams_Resort.html" },
+              { logo: logoBooking, alt: "Booking.com", score: "9.4", sub: "/ 10", url: "https://www.booking.com/hotel/tr/blue-dreams-resort.html", logoClass: "h-14 md:h-20" },
+              { logo: logoHolidaycheck, alt: "HolidayCheck", score: "91%", sub: "Recommendation", url: "https://www.holidaycheck.com/hi/blue-dreams-resort-spa/bdf5c7e6-2f45-3b6c-8e1a-1c1e4a3c5f8a", logoClass: "h-10 md:h-16" },
+              { logo: logoTripadvisor, alt: "Tripadvisor", score: "4.4", sub: "/ 5", url: "https://www.tripadvisor.com/Hotel_Review-Blue_Dreams_Resort.html", logoClass: "h-14 md:h-20" },
             ].map((item) => (
               <a
                 key={item.alt}
@@ -217,10 +217,10 @@ const HomePage = () => {
                 className="group flex flex-col items-center justify-between gap-5 bg-card border border-border/50 rounded-2xl px-8 py-8 shadow-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300"
               >
                 <div className="text-center">
-                  <span className="font-display text-4xl md:text-5xl text-foreground">{item.score}</span>
-                  <p className="font-body text-xs text-muted-foreground mt-2 tracking-wider uppercase">{item.sub}</p>
+                  <span className="font-display text-5xl text-foreground">{item.score}</span>
+                  <p className="font-body text-sm text-muted-foreground mt-2 tracking-wider uppercase">{item.sub}</p>
                 </div>
-                <img src={item.logo} alt={item.alt} className="h-10 md:h-16 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
+                <img src={item.logo} alt={item.alt} className={`${item.logoClass} object-contain opacity-80 group-hover:opacity-100 transition-opacity`} />
               </a>
             ))}
           </div>
