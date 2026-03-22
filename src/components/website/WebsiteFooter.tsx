@@ -109,7 +109,7 @@ const WebsiteFooter = () => {
             </div>
             <a
               href="tel:+902523371111"
-              className="flex items-center gap-3 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors mb-2"
+              className="flex items-center gap-3 font-body text-sm text-muted-foreground hover:text-foreground transition-colors mb-2"
             >
               <Phone className="w-4 h-4 text-accent flex-shrink-0" />
               +90 252 337 11 11
