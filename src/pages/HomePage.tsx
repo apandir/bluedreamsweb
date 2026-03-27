@@ -205,22 +205,24 @@ const HomePage = () => {
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-4">
             {h.kindWords}{" "}<span className="italic text-accent">{h.fromYou}</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 mb-16 max-w-6xl mx-auto">
             {[
-              { logo: logoBooking, alt: "Booking.com", score: "9.5 / 10", sub: "", url: "https://www.booking.com/hotel/tr/blue-dreams-resort.html", logoClass: "h-14 md:h-20" },
-              { logo: logoHolidaycheck, alt: "HolidayCheck", score: "91%", sub: "Recommendation", url: "https://www.holidaycheck.com/hi/blue-dreams-resort-spa/bdf5c7e6-2f45-3b6c-8e1a-1c1e4a3c5f8a", logoClass: "h-10 md:h-16" },
-              { logo: logoTripadvisor, alt: "Tripadvisor", score: "4.4 / 5", sub: "", url: "https://www.tripadvisor.com/Hotel_Review-Blue_Dreams_Resort.html", logoClass: "h-14 md:h-20" },
+              { logo: logoBooking, alt: "Booking.com", score: "9.5 / 10", sub: "", url: "https://www.booking.com/hotel/tr/blue-dreams-resort.html", logoClass: "h-12 md:h-16" },
+              { logo: logoHolidaycheck, alt: "HolidayCheck", score: "91%", sub: "Recommendation", url: "https://www.holidaycheck.com/hi/blue-dreams-resort-spa/bdf5c7e6-2f45-3b6c-8e1a-1c1e4a3c5f8a", logoClass: "h-8 md:h-12" },
+              { logo: logoTripadvisor, alt: "Tripadvisor", score: "4.4 / 5", sub: "", url: "https://www.tripadvisor.com/Hotel_Review-Blue_Dreams_Resort.html", logoClass: "h-12 md:h-16" },
+              { logo: logoExpedia, alt: "Expedia", score: "9.2 / 10", sub: "", url: "https://www.expedia.com/", logoClass: "h-12 md:h-16" },
+              { logo: logoHotelscom, alt: "Hotels.com", score: "9.2 / 10", sub: "", url: "https://www.hotels.com/", logoClass: "h-12 md:h-16" },
             ].map((item) => (
               <a
                 key={item.alt}
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center justify-between gap-5 bg-card border border-border/50 rounded-2xl px-8 py-8 shadow-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300"
+                className="group flex flex-col items-center justify-between gap-4 bg-card border border-border/50 rounded-2xl px-6 py-6 shadow-sm hover:shadow-lg hover:border-accent/30 transition-all duration-300"
               >
                 <div className="text-center">
-                  <span className="font-display text-5xl text-foreground">{item.score}</span>
-                  <p className="font-body text-sm text-muted-foreground mt-2 tracking-wider uppercase">{item.sub}</p>
+                  <span className="font-display text-4xl text-foreground">{item.score}</span>
+                  <p className="font-body text-xs text-muted-foreground mt-1 tracking-wider uppercase">{item.sub}</p>
                 </div>
                 <img src={item.logo} alt={item.alt} className={`${item.logoClass} object-contain opacity-80 group-hover:opacity-100 transition-opacity`} />
               </a>
