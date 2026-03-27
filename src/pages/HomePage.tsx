@@ -210,8 +210,8 @@ const HomePage = () => {
               { logo: logoBooking, alt: "Booking.com", score: "9.5 / 10", sub: "", url: "https://www.booking.com/hotel/tr/blue-dreams-resort.html", logoClass: "h-12 md:h-16" },
               { logo: logoHolidaycheck, alt: "HolidayCheck", score: "91%", sub: "Recommendation", url: "https://www.holidaycheck.com/hi/blue-dreams-resort-spa/bdf5c7e6-2f45-3b6c-8e1a-1c1e4a3c5f8a", logoClass: "h-8 md:h-12" },
               { logo: logoTripadvisor, alt: "Tripadvisor", score: "4.4 / 5", sub: "", url: "https://www.tripadvisor.com/Hotel_Review-Blue_Dreams_Resort.html", logoClass: "h-12 md:h-16" },
-              { logo: logoExpedia, alt: "Expedia", score: "9.2 / 10", sub: "", url: "https://www.expedia.com/", logoClass: "h-12 md:h-16" },
-              { logo: logoHotelscom, alt: "Hotels.com", score: "9.2 / 10", sub: "", url: "https://www.hotels.com/", logoClass: "h-12 md:h-16" },
+              { logo: logoExpedia, alt: "Expedia", score: "10 / 10", sub: "", url: "https://www.expedia.com/", logoClass: "h-12 md:h-16" },
+              { logo: logoHotelscom, alt: "Hotels.com", score: "10/ 10", sub: "", url: "https://www.hotels.com/", logoClass: "h-12 md:h-16" },
             ].map((item) => (
               <a
                 key={item.alt}
