@@ -9,6 +9,8 @@ import nearbyMarinaImg from "@/assets/nearby-yalikavak-marina.jpg";
 import nearbyTheatreImg from "@/assets/nearby-ancient-theatre.jpg";
 import logoBooking from "@/assets/logo-booking.png";
 import logoTripadvisor from "@/assets/logo-tripadvisor.png";
+import logoExpedia from "@/assets/logo-expedia.png";
+import logoHotelscom from "@/assets/logo-hotelscom.png";
 import logoHolidaycheck from "@/assets/logo-holidaycheck.png";
 import gastro2Img from "@/assets/home-gastronomy-2.jpg";
 import spaImg from "@/assets/home-spa.jpg";
