@@ -153,7 +153,6 @@ const MeetingsConferencesPage = () => {
                     <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Area</th>
                     <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Theater</th>
                     <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Classroom</th>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Banquet</th>
                     <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Height</th>
                   </tr>
                 </thead>
