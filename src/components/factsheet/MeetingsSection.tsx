@@ -41,11 +41,11 @@ const MeetingsSection = () => {
   ];
 
   const meetingRooms = [
-    { name: "Stockholm", area: "20 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
-    { name: "Belek", area: "20 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
-    { name: "Marmaris", area: "22 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
-    { name: "Turunç", area: "30 m²", theater: 20, classroom: 10, banquet: 10, height: "3.20 m" },
-    { name: "Salamis", area: "35 m²", theater: 20, classroom: 10, banquet: 10, height: "2.70 m" },
+    { name: "Stockholm", area: "20 m²", theater: 20, classroom: 10, height: "2.70 m" },
+    { name: "Belek", area: "20 m²", theater: 20, classroom: 10, height: "2.70 m" },
+    { name: "Marmaris", area: "22 m²", theater: 30, classroom: 15, height: "2.70 m" },
+    { name: "Turunç", area: "30 m²", theater: 35, classroom: 20, height: "3.20 m" },
+    { name: "Salamis", area: "35 m²", theater: 45, classroom: 30, height: "2.70 m" },
   ];
 
   const statValues = ["770", "700", "4.0", "2"];
@@ -159,7 +159,6 @@ const MeetingsSection = () => {
                     <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Area</th>
                     <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Theater</th>
                     <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Classroom</th>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Banquet</th>
                     <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Height</th>
                   </tr>
                 </thead>
@@ -170,7 +169,6 @@ const MeetingsSection = () => {
                       <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.area}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.theater}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.classroom}</td>
-                      <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.banquet}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.height}</td>
                     </tr>
                   ))}
