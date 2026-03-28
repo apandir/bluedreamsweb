@@ -111,7 +111,7 @@ export const de: Translations = {
     barsHeading: "Genießen & Entspannen",
     bars: [
       { name: "Sunset Bar**", type: "Cocktailbar", desc: "Cocktails und Live-Musik mit Panoramablick auf den Sonnenuntergang", hours: "10:00 – 00:00", location: "Aktivitäten-Pool" },
-      { name: "Lobby-Bar**", type: "Lounge-Bar", desc: "Premium-Spirituosen und Signature-Cocktails im eleganten Lobby-Ambiente", hours: "10:00 – 00:00", location: "Hauptlobby" },
+      { name: "Lobby-Bar**", type: "Lounge-Bar", desc: "Premium-Spirituosen und Signature-Cocktails im eleganten Lobby-Ambiente", hours: "24 hours", location: "Hauptlobby" },
       { name: "Circle Bar**", type: "Pool-Bar", desc: "Erfrischende Getränke und leichte Snacks am Pool den ganzen Tag", hours: "10:00 – 18:00", location: "Infinity-Pool" },
       { name: "Pier-Bar**", type: "Strandbar", desc: "Gekühlte Getränke und tropische Cocktails am Steg", hours: "10:00 – 18:00", location: "Steg" },
       { name: "Teegarten**", type: "Tee & Kaffee", desc: "Entspannende Terrasse mit Tee, Kaffee, Gebäck und leichten Erfrischungen", hours: "10:00 – 22:00", location: "Terrasse" },

@@ -111,7 +111,7 @@ export const sv: Translations = {
     barsHeading: "Njut & Koppla Av",
     bars: [
       { name: "Sunset Bar**", type: "Cocktailbar", desc: "Cocktails och livemusik med panoramautsikt över solnedgången över bukten", hours: "10:00 – 00:00", location: "Aktivitetspoolen" },
-      { name: "Lobby Bar**", type: "Loungebar", desc: "Premiumsprit och signaturcocktails i en elegant lobbymiljö", hours: "10:00 – 00:00", location: "Huvudlobbyn" },
+      { name: "Lobby Bar**", type: "Loungebar", desc: "Premiumsprit och signaturcocktails i en elegant lobbymiljö", hours: "24 hours", location: "Huvudlobbyn" },
       { name: "Circle Bar**", type: "Poolbar", desc: "Uppfriskande drinkar och lättare snacks serveras poolside hela dagen", hours: "10:00 – 18:00", location: "Infinity Pool" },
       { name: "Pier Bar**", type: "Strandbar", desc: "Kylda drycker och tropiska cocktails serveras på bryggan", hours: "10:00 – 18:00", location: "Bryggan" },
       { name: "Tea Garden**", type: "Te & Kaffé-lounge", desc: "En avkopplande terrass med ett urval av teer, kaffen, bakverk och lättare förfriskningar", hours: "10:00 – 22:00", location: "Terrassen" },
