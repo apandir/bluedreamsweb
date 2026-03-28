@@ -61,7 +61,7 @@ const WebsiteFooter = () => {
               <img
                 src={mapScreenshot}
                 alt="Blue Dreams Resort Location on Map"
-                className="w-full h-[280px] object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-[280px] object-cover scale-150 transition-transform duration-500 group-hover:scale-[1.55]"
               />
             </a>
             <div className="flex flex-col gap-4">
