@@ -99,7 +99,7 @@ export const tr: Translations = {
     restaurantsLabel: "Restoranlar",
     heading: "Her Duyuya Bir Şölen",
     restaurants: [
-      { name: "Ana Restoran", type: "Tüm Gün Yemek", desc: "Canlı pişirme istasyonları ve tema geceleriyle uluslararası açık büfe", hours: "07:00 – 10:00 · 12:30 – 14:00 · 19:00 – 21:30", location: "Ana Bina, Zemin Kat" },
+      { name: "Ana Restoran", type: "Tüm Gün Yemek", desc: "Canlı pişirme istasyonları ve tema geceleriyle uluslararası açık büfe", hours: "07:00 – 10:00 · 12:30 – 14:00 · 19:00 – 21:30", location: "Ana aktivite katı" },
       { name: "Snack Restoran", type: "Gündelik Yemek", desc: "Plajda gün boyu servis edilen hafif atıştırmalıklar, burgerler, sandviçler", hours: "12:00 – 17:00", location: "Plaj" },
       { name: "Havuz Snack", type: "Gündelik Yemek", desc: "Infinity havuz başında gün boyu taze hazırlanan hafif atıştırmalıklar", hours: "10:00 – 18:00", location: "Infinity Havuz Bar" },
       { name: "La Locanda", type: "A la Carte Restoran", desc: "Zarif Akdeniz ortamında odun ateşinde pizza ve el yapımı makarna", hours: "19:00 – 22:00", location: "Bahçe Teras" },
