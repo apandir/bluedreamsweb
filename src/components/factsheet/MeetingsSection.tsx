@@ -169,7 +169,6 @@ const MeetingsSection = () => {
                       <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.area}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.theater}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.classroom}</td>
-                      <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.banquet}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-3.5">{room.height}</td>
                     </tr>
                   ))}
