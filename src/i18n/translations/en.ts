@@ -111,7 +111,7 @@ export const en: Translations = {
     barsHeading: "Sip & Unwind",
     bars: [
       { name: "Sunset Bar**", type: "Cocktail Bar", desc: "Cocktails and live music with panoramic sunset views over the bay", hours: "10:00 – 00:00", location: "Activity Pool" },
-      { name: "Lobby Bar**", type: "Lounge Bar", desc: "Premium spirits and signature cocktails in an elegant lobby setting", hours: "10:00 – 00:00", location: "Main Lobby" },
+      { name: "Lobby Bar**", type: "Lounge Bar", desc: "Premium spirits and signature cocktails in an elegant lobby setting", hours: "24 hours", location: "Main Lobby" },
       { name: "Circle Bar**", type: "Pool Bar", desc: "Refreshing drinks and light snacks served poolside all day", hours: "10:00 – 18:00", location: "Infinity Pool" },
       { name: "Pier Bar**", type: "Beach Bar", desc: "Chilled beverages and tropical cocktails served on the pier", hours: "10:00 – 18:00", location: "Pier" },
       { name: "Tea Garden**", type: "Tea & Coffee Lounge", desc: "A relaxing terrace serving a selection of teas, coffees, pastries and light refreshments", hours: "10:00 – 22:00", location: "The Terrace" },

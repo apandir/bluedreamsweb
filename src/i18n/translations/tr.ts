@@ -111,7 +111,7 @@ export const tr: Translations = {
     barsHeading: "Yudumla & Rahatlat",
     bars: [
       { name: "Sunset Bar**", type: "Kokteyl Bar", desc: "Koy üzerinde panoramik gün batımı manzarasıyla kokteyller ve canlı müzik", hours: "10:00 – 00:00", location: "Aktivite Havuzu" },
-      { name: "Lobi Bar**", type: "Lounge Bar", desc: "Zarif lobi ortamında premium içkiler ve imza kokteyller", hours: "10:00 – 00:00", location: "Ana Lobi" },
+      { name: "Lobi Bar**", type: "Lounge Bar", desc: "Zarif lobi ortamında premium içkiler ve imza kokteyller", hours: "24 hours", location: "Ana Lobi" },
       { name: "Circle Bar**", type: "Havuz Bar", desc: "Gün boyu havuz başında serinletici içecekler ve hafif atıştırmalıklar", hours: "10:00 – 18:00", location: "Infinity Havuz" },
       { name: "İskele Bar**", type: "Plaj Bar", desc: "İskelede servis edilen soğuk içecekler ve tropikal kokteyller", hours: "10:00 – 18:00", location: "İskele" },
       { name: "Çay Bahçesi**", type: "Çay & Kahve Salonu", desc: "Çeşitli çaylar, kahveler, hamur işleri ve hafif ikramlar sunan rahatlatıcı teras", hours: "10:00 – 22:00", location: "Teras" },
