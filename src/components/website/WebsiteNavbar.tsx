@@ -149,33 +149,29 @@ const WebsiteNavbar = () => {
         {/* Bottom Bar: Category Nav (desktop) */}
         <div className="hidden lg:block">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-center h-11">
-            {navLinks.map((link, i) => (
-              <>
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className={`font-body text-[11px] font-medium tracking-[0.15em] uppercase px-5 py-2 transition-colors duration-300 ${
-                    location.pathname === link.href
-                      ? "text-primary-foreground"
-                      : "text-primary-foreground/60 hover:text-primary-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-                {i === 0 && (
-                  <Link
-                    to="/"
-                    className={`px-3 py-2 transition-colors duration-300 ${
-                      location.pathname === "/"
-                        ? "text-primary-foreground"
-                        : "text-primary-foreground/60 hover:text-primary-foreground"
-                    }`}
-                    aria-label="Home"
-                  >
-                    <Home className="w-4 h-4" />
-                  </Link>
-                )}
-              </>
+            <Link
+              to="/"
+              className={`px-3 py-2 transition-colors duration-300 ${
+                location.pathname === "/"
+                  ? "text-primary-foreground"
+                  : "text-primary-foreground/60 hover:text-primary-foreground"
+              }`}
+              aria-label="Home"
+            >
+              <Home className="w-4 h-4" />
+            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`font-body text-[11px] font-medium tracking-[0.15em] uppercase px-5 py-2 transition-colors duration-300 ${
+                  location.pathname === link.href
+                    ? "text-primary-foreground"
+                    : "text-primary-foreground/60 hover:text-primary-foreground"
+                }`}
+              >
+                {link.label}
+              </Link>
             ))}
           </div>
         </div>
