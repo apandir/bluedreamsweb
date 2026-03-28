@@ -52,18 +52,19 @@ const WebsiteFooter = () => {
       <div className="border-b border-foreground/10">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <a
-              href="https://maps.app.goo.gl/zLB4sg9mmVdWnVSP7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden rounded-lg group"
-            >
-              <img
-                src={mapScreenshot}
-                alt="Blue Dreams Resort Location on Map"
-                className="w-full h-[280px] object-cover scale-150 transition-transform duration-500 group-hover:scale-[1.55]"
+            <div className="overflow-hidden rounded-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500!2d27.4824998!3d37.091832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be6c51a58e tried!2sBlue+Dreams+Resort+%26+Spa!5e0!3m2!1sen!2str!4v1700000000000!5m2!1sen!2str"
+                width="100%"
+                height="280"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Blue Dreams Resort Location"
+                className="w-full h-[280px]"
               />
-            </a>
+            </div>
             <div className="flex flex-col gap-4">
               {w.ctaLabel && (
                 <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent">
