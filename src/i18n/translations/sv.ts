@@ -114,7 +114,7 @@ export const sv: Translations = {
       { name: "Lobby Bar**", type: "Loungebar", desc: "Premiumsprit och signaturcocktails i en elegant lobbymiljö", hours: "24 hours", location: "Huvudlobbyn" },
       { name: "Circle Bar**", type: "Poolbar", desc: "Uppfriskande drinkar och lättare snacks serveras poolside hela dagen", hours: "10:00 – 18:00", location: "Infinity Pool" },
       { name: "Pier Bar**", type: "Strandbar", desc: "Kylda drycker och tropiska cocktails serveras på bryggan", hours: "10:00 – 18:00", location: "Bryggan" },
-      { name: "Tea Garden**", type: "Te & Kaffé-lounge", desc: "En avkopplande terrass med ett urval av teer, kaffen, bakverk och lättare förfriskningar", hours: "10:00 – 22:00", location: "Terrassen" },
+      { name: "Tea Garden**", type: "Te & Kaffé-lounge", desc: "En avkopplande terrass med ett urval av teer, kaffen, bakverk och lättare förfriskningar", hours: "09:00 – 00:00", location: "Terrassen" },
       { name: "Vitamin Bar*", type: "Hälsobar", desc: "Färskpressade juicer, smoothies och hälsosamma snacks vid poolen", hours: "09:00 – 17:00", location: "Spa & Poolområdet" },
     ],
     barsNote: "** Urval av importerade och lokala alkoholhaltiga och alkoholfria varma och kalla drycker serveras. Premiumdrycker mot extra kostnad.",

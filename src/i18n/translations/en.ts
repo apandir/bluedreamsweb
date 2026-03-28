@@ -114,7 +114,7 @@ export const en: Translations = {
       { name: "Lobby Bar**", type: "Lounge Bar", desc: "Premium spirits and signature cocktails in an elegant lobby setting", hours: "24 hours", location: "Main Lobby" },
       { name: "Circle Bar**", type: "Pool Bar", desc: "Refreshing drinks and light snacks served poolside all day", hours: "10:00 – 18:00", location: "Infinity Pool" },
       { name: "Pier Bar**", type: "Beach Bar", desc: "Chilled beverages and tropical cocktails served on the pier", hours: "10:00 – 18:00", location: "Pier" },
-      { name: "Tea Garden**", type: "Tea & Coffee Lounge", desc: "A relaxing terrace serving a selection of teas, coffees, pastries and light refreshments", hours: "10:00 – 22:00", location: "The Terrace" },
+      { name: "Tea Garden**", type: "Tea & Coffee Lounge", desc: "A relaxing terrace serving a selection of teas, coffees, pastries and light refreshments", hours: "09:00 – 00:00", location: "The Terrace" },
       { name: "Vitamin Bar*", type: "Healthy Bar", desc: "Fresh juices, smoothies and healthy snacks by the pool", hours: "09:00 – 17:00", location: "Spa & Pool Area" },
     ],
     barsNote: "** Selection of imported and local alcoholic and non-alcoholic hot and cold beverages served. Premium beverages at extra cost.",
