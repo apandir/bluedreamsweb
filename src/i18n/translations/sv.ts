@@ -100,7 +100,7 @@ export const sv: Translations = {
     heading: "En Fest för Alla Sinnen",
     restaurants: [
       { name: "Huvudrestaurangen", type: "Heldagsrestaurang", desc: "Internationell buffé med live-matlagningsstationer och temakvällar", hours: "07:00 – 10:00 · 12:30 – 14:00 · 19:00 – 21:30", location: "Huvudbyggnaden, Bottenvåningen" },
-      { name: "Snackrestaurangen", type: "Avslappnad Restaurang", desc: "Lättare rätter, burgare, smörgåsar och förfriskningar serveras vid stranden hela dagen", hours: "10:00 – 17:00", location: "Strandkanten" },
+      { name: "Snackrestaurangen", type: "Avslappnad Restaurang", desc: "Lättare rätter, burgare, smörgåsar och förfriskningar serveras vid stranden hela dagen", hours: "12:00 – 17:00", location: "Strandkanten" },
       { name: "Pool Snacks", type: "Avslappnad Restaurang", desc: "Färskt tillagade poolside-snacks och lättare rätter serveras hela dagen vid infinity-poolen", hours: "10:00 – 18:00", location: "Infinity Pool Bar" },
       { name: "La Locanda", type: "À la Carte-restaurang", desc: "Vedeldad pizza och handgjord pasta i en raffinerad medelhavsmiljö", hours: "19:00 – 22:00", location: "Trädgårdsterrassen" },
       { name: "Halikarnas", type: "À la Carte-restaurang", desc: "Färska egeiska skaldjur med dagens bästa fångster i en elegant strandmiljö", hours: "19:00 – 22:00", location: "Strandkanten" },

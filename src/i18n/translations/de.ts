@@ -100,7 +100,7 @@ export const de: Translations = {
     heading: "Ein Fest für alle Sinne",
     restaurants: [
       { name: "Hauptrestaurant", type: "Ganztägig", desc: "Internationales Buffet mit Live-Cooking-Stationen und Themenabenden", hours: "07:00 – 10:00 · 12:30 – 14:00 · 19:00 – 21:30", location: "Hauptgebäude, Erdgeschoss" },
-      { name: "Snack-Restaurant", type: "Zwanglos", desc: "Leichte Snacks, Burger, Sandwiches den ganzen Tag am Strand", hours: "10:00 – 17:00", location: "Strand" },
+      { name: "Snack-Restaurant", type: "Zwanglos", desc: "Leichte Snacks, Burger, Sandwiches den ganzen Tag am Strand", hours: "12:00 – 17:00", location: "Strand" },
       { name: "Pool-Snacks", type: "Zwanglos", desc: "Frisch zubereitete Snacks am Infinity-Pool den ganzen Tag", hours: "10:00 – 18:00", location: "Infinity-Pool-Bar" },
       { name: "La Locanda", type: "À-la-carte-Restaurant", desc: "Holzofenpizza und handgemachte Pasta in feinem mediterranen Ambiente", hours: "19:00 – 22:00", location: "Gartenterrasse" },
       { name: "Halikarnas", type: "À-la-carte-Restaurant", desc: "Frische ägäische Meeresfrüchte in elegantem Ambiente am Wasser", hours: "19:00 – 22:00", location: "Strand" },
