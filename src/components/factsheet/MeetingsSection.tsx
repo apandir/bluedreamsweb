@@ -155,11 +155,21 @@ const MeetingsSection = () => {
               <table className="w-full">
                 <thead>
                   <tr className="border-b" style={{ borderColor: 'hsl(var(--sand))' }}>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-left p-3.5">Room</th>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Area</th>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Theater</th>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Classroom</th>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">Height</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-left p-3.5">
+                      <span className="inline-flex items-center gap-1"><Presentation className="w-3 h-3" /> Room</span>
+                    </th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">
+                      <span className="inline-flex items-center gap-1"><Maximize className="w-3 h-3" /> Area</span>
+                    </th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">
+                      <span className="inline-flex items-center gap-1"><Theater className="w-3 h-3" /> Theater</span>
+                    </th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">
+                      <span className="inline-flex items-center gap-1"><GraduationCap className="w-3 h-3" /> Classroom</span>
+                    </th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-3.5">
+                      <span className="inline-flex items-center gap-1"><ArrowUpFromDot className="w-3 h-3" /> Height</span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>

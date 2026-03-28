@@ -149,11 +149,21 @@ const MeetingsConferencesPage = () => {
               <table className="w-full">
                 <thead>
                   <tr className="bg-secondary">
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-left p-4">Room</th>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Area</th>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Theater</th>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Classroom</th>
-                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">Height</th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-left p-4">
+                      <span className="inline-flex items-center gap-1"><Presentation className="w-3 h-3" /> Room</span>
+                    </th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">
+                      <span className="inline-flex items-center gap-1"><Maximize className="w-3 h-3" /> Area</span>
+                    </th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">
+                      <span className="inline-flex items-center gap-1"><Theater className="w-3 h-3" /> Theater</span>
+                    </th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">
+                      <span className="inline-flex items-center gap-1"><GraduationCap className="w-3 h-3" /> Classroom</span>
+                    </th>
+                    <th className="font-body text-[10px] tracking-[0.1em] uppercase text-muted-foreground font-semibold text-center p-4">
+                      <span className="inline-flex items-center gap-1"><ArrowUpFromDot className="w-3 h-3" /> Height</span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
