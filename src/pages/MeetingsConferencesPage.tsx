@@ -163,7 +163,6 @@ const MeetingsConferencesPage = () => {
                       <td className="font-body text-sm text-muted-foreground text-center p-4">{room.area}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-4">{room.theater}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-4">{room.classroom}</td>
-                      <td className="font-body text-sm text-muted-foreground text-center p-4">{room.banquet}</td>
                       <td className="font-body text-sm text-muted-foreground text-center p-4">{room.height}</td>
                     </tr>
                   ))}
