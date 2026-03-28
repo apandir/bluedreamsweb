@@ -114,7 +114,7 @@ export const tr: Translations = {
       { name: "Lobi Bar**", type: "Lounge Bar", desc: "Zarif lobi ortamında premium içkiler ve imza kokteyller", hours: "24 hours", location: "Ana Lobi" },
       { name: "Circle Bar**", type: "Havuz Bar", desc: "Gün boyu havuz başında serinletici içecekler ve hafif atıştırmalıklar", hours: "10:00 – 18:00", location: "Infinity Havuz" },
       { name: "İskele Bar**", type: "Plaj Bar", desc: "İskelede servis edilen soğuk içecekler ve tropikal kokteyller", hours: "10:00 – 18:00", location: "İskele" },
-      { name: "Çay Bahçesi**", type: "Çay & Kahve Salonu", desc: "Çeşitli çaylar, kahveler, hamur işleri ve hafif ikramlar sunan rahatlatıcı teras", hours: "10:00 – 22:00", location: "Teras" },
+      { name: "Çay Bahçesi**", type: "Çay & Kahve Salonu", desc: "Çeşitli çaylar, kahveler, hamur işleri ve hafif ikramlar sunan rahatlatıcı teras", hours: "09:00 – 00:00", location: "Teras" },
       { name: "Vitamin Bar*", type: "Sağlıklı Bar", desc: "Havuz başında taze sıkılmış meyve suları, smoothie'ler ve sağlıklı atıştırmalıklar", hours: "09:00 – 17:00", location: "Spa & Havuz Alanı" },
     ],
     barsNote: "** İthal ve yerli alkollü ve alkolsüz sıcak ve soğuk içecekler servis edilir. Premium içecekler ekstra ücretlidir.",
