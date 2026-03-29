@@ -373,7 +373,7 @@ export const de: Translations = {
         { name: "Snacks", paid: false },
         { name: "Rettungsschwimmer", paid: false },
         { name: "Animationsteam", paid: false },
-        { name: "Schönheitssalon", paid: true },
+        
         { name: "Frühstücksbuffet", paid: false },
         { name: "Geschäfte im Hotel", paid: false },
         { name: "Familienzimmer", paid: false },

@@ -373,7 +373,7 @@ export const ru: Translations = {
         { name: "Закуски", paid: false },
         { name: "Спасатель", paid: false },
         { name: "Анимационная команда", paid: false },
-        { name: "Салон красоты", paid: true },
+        
         { name: "Шведский стол на завтрак", paid: false },
         { name: "Магазины в отеле", paid: false },
         { name: "Семейные номера", paid: false },

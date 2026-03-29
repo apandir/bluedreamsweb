@@ -373,7 +373,7 @@ export const tr: Translations = {
         { name: "Atıştırmalıklar", paid: false },
         { name: "Cankurtaran", paid: false },
         { name: "Animasyon Ekibi", paid: false },
-        { name: "Güzellik Salonu", paid: true },
+        
         { name: "Açık Büfe Kahvaltı", paid: false },
         { name: "Otel İçi Mağazalar", paid: false },
         { name: "Aile Odaları", paid: false },
