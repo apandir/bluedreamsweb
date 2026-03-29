@@ -247,7 +247,7 @@ export interface Translations {
       facilitiesLabel: string;
       servicesLabel: string;
       facilities: { name: string; paid: boolean }[];
-      services: string[];
+      services: { name: string; paid: boolean }[];
     };
     diningPage: {
       title: string;
