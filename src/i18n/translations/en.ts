@@ -351,8 +351,6 @@ export const en: Translations = {
         { name: "Coiffeur", paid: true },
         { name: "Blue Flag", paid: false },
         { name: "Hostel Services", paid: false },
-        { name: "Beach Lounger", paid: false },
-        { name: "Cocktail Lounge", paid: false },
         { name: "Doctor", paid: false },
         { name: "Mini Club", paid: false },
         { name: "Capless Drinks All Day Long", paid: false },
