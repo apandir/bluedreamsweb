@@ -9,7 +9,8 @@ import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity } 
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
-const seaViewIndices = [1, 3]; // Club Sea View, Deluxe Sea View
+const seaViewIndices = [1, 3, 4]; // Club Sea View, Deluxe Sea View, Deluxe Family
+const infinityPoolIndices = [3, 4]; // Deluxe rooms
 
 const RoomsPage = () => {
   const { t } = useLanguage();
