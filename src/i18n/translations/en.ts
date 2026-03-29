@@ -246,7 +246,7 @@ export const en: Translations = {
       heroDesc: "Where luxury and tranquility meet in the heart of nature. Welcome to your home, Blue Dreams.",
       discover: "Discover",
       experienceLabel: "Blue Dreams Experience",
-      experienceHeading: "Your place on the Aegean coast, unique flavors prepared with the rhythm of seasons and where our story meets yours.",
+      experienceHeading: "A five star resort in the sun-soaked Aegean, a true magic for all senses.",
       roomsCard: "ROOMS",
       roomsCardSub: "Designer rooms in the heart of Bodrum",
       restaurantCard: "RESTAURANT & BAR",
