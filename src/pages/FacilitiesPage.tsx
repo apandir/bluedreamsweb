@@ -124,20 +124,20 @@ const FacilitiesPage = () => {
           <div className="w-20 h-[1px] mx-auto" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold)), transparent)' }} />
           
           {/* Stats Row */}
-          <div className="flex items-center justify-center gap-8 md:gap-12 mt-8">
+          <div className="flex items-center justify-center gap-10 md:gap-16 mt-8">
             <div className="text-center">
-              <p className="font-display text-3xl text-primary-foreground">{totalServices}+</p>
-              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/50 mt-1">Services</p>
+              <p className="font-display text-6xl text-primary-foreground">{totalServices}+</p>
+              <p className="font-body text-xl tracking-[0.2em] uppercase text-primary-foreground/50 mt-2">Services</p>
             </div>
-            <div className="w-px h-8 bg-primary-foreground/20" />
+            <div className="w-px h-12 bg-primary-foreground/20" />
             <div className="text-center">
-              <p className="font-display text-3xl text-primary-foreground">{groups.length}</p>
-              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/50 mt-1">Categories</p>
+              <p className="font-display text-6xl text-primary-foreground">{groups.length}</p>
+              <p className="font-body text-xl tracking-[0.2em] uppercase text-primary-foreground/50 mt-2">Categories</p>
             </div>
-            <div className="w-px h-8 bg-primary-foreground/20" />
+            <div className="w-px h-12 bg-primary-foreground/20" />
             <div className="text-center">
-              <p className="font-display text-3xl text-primary-foreground">24/7</p>
-              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/50 mt-1">Available</p>
+              <p className="font-display text-6xl text-primary-foreground">24/7</p>
+              <p className="font-body text-xl tracking-[0.2em] uppercase text-primary-foreground/50 mt-2">Available</p>
             </div>
           </div>
 
