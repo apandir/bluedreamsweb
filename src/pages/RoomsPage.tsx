@@ -46,8 +46,6 @@ const serviceIcons: LucideIcon[] = [
   Scissors,       // Coiffeur
   Flag,           // Blue Flag
   Hotel,          // Hostel Services
-  Armchair,       // Beach Lounger
-  GlassWater,     // Cocktail Lounge
   Heart,          // Doctor
   Gamepad2,       // Mini Club
   Coffee,         // Capless Drinks All Day Long
