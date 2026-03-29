@@ -88,6 +88,14 @@ const serviceIcons: LucideIcon[] = [
   Baby,           // Baby Chair
   BedDouble,      // Baby Bed
   Soup,           // Night Soup
+  Wifi,           // Wi-Fi Internet Connection
+  DoorOpen,       // Express Check-In/Check-Out
+  Ban,            // Non Smoking Rooms
+  Building2,      // Lift / Elevator
+  BellRing,       // Smoke Alarm
+  Music,          // Disco (Summer)
+  Waves,          // Beachfront
+  Tv,             // Satellite Channels
 ];
 
 const RoomsPage = () => {
