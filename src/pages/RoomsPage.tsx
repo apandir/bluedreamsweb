@@ -5,7 +5,7 @@ import roomClubSeaview from "@/assets/room-club-seaview.jpg";
 import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
 import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
-import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints, CloudRain, Sparkles, Thermometer, Landmark, Gem, Hand, TreePalm, Volleyball, Target, Ship, Users, Music, Car, UtensilsCrossed, Bike, ConciergeBell, Shirt, Utensils, DoorOpen, Armchair, Flower2, Camera, ShoppingBag, Scissors, Flag, Hotel, CreditCard, Plane, Anchor, Clock, Umbrella, Sun, Heart, Gamepad2, GlassWater, Shield, Store, Home, Baby, Zap, MonitorPlay, AlarmClock, BedDouble, Soup, Ban, Building2, BellRing, type LucideIcon } from "lucide-react";
+import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints, CloudRain, Sparkles, Thermometer, Landmark, Gem, Hand, TreePalm, Volleyball, Target, Ship, Users, Music, Car, UtensilsCrossed, Bike, ConciergeBell, Shirt, Utensils, DoorOpen, Armchair, Flower2, Camera, ShoppingBag, Scissors, Flag, Hotel, CreditCard, Plane, Anchor, Clock, Umbrella, Sun, Heart, Gamepad2, GlassWater, Shield, Store, Home, Baby, Zap, MonitorPlay, AlarmClock, BedDouble, Soup, Ban, Building2, BellRing, Sailboat, Mic2, ParkingCircle, Grape, CircleDot, Stethoscope, Briefcase, SquareParking, Luggage, Timer, SunMedium, Palmtree, Dumbbell, Gift, CookingPot, Martini, Cherry, Siren, PartyPopper, Glasses, Egg, ShoppingCart, CupSoda, ShieldCheck, PersonStanding, type LucideIcon } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
@@ -13,84 +13,84 @@ const seaViewIndices = [1, 3, 4]; // Club Sea View, Deluxe Sea View, Deluxe Fami
 const infinityPoolIndices = [3, 4]; // Deluxe rooms
 
 const facilityIcons: LucideIcon[] = [
-  CloudRain,    // Steam Room
-  Sparkles,     // Spa & Wellness Center
-  Thermometer,  // Sauna
-  Landmark,     // Türk Hamamı
-  Gem,          // Salt Room
-  Hand,         // Massage
-  TreePalm,     // Outdoor Pool
-  Waves,        // Swimming Pool
-  Volleyball,   // Table Tennis
-  Target,       // Dart
-  Ship,         // Water Sports
-  Ship,         // Boat Tour
-  Users,        // Entertainment Staff
-  Music,        // Live Music
-  Car,          // Parking Lot
-  UtensilsCrossed, // Beach Bar
-  Waves,        // Waterslide
+  CloudRain,        // Steam Room
+  Sparkles,         // Spa & Wellness Center
+  Thermometer,      // Sauna
+  Landmark,         // Türk Hamamı
+  Gem,              // Salt Room
+  Hand,             // Massage
+  TreePalm,         // Outdoor Pool
+  Waves,            // Swimming Pool
+  Volleyball,       // Table Tennis
+  Target,           // Dart
+  Ship,             // Water Sports
+  Sailboat,         // Boat Tour
+  Users,            // Entertainment Staff
+  Mic2,             // Live Music
+  ParkingCircle,    // Parking Lot
+  Grape,            // Beach Bar
+  CircleDot,        // Waterslide
 ];
 
 const serviceIcons: LucideIcon[] = [
-  Shirt,          // 0  Laundry
-  Bike,           // 1  Bicycle Rental
-  ConciergeBell,  // 2  Concierge Service
-  Shirt,          // 3  Ironing Service
-  Utensils,       // 4  Restaurant (à la carte)
-  DoorOpen,       // 5  Changing Room
-  Flower2,        // 6  Beach Towel
-  Camera,         // 7  Photographer
-  ShoppingBag,    // 8  Grocery
-  Scissors,       // 9  Coiffeur
-  Flag,           // 10 Blue Flag
-  Hotel,          // 11 Hostel Services
-  Heart,          // 12 Doctor
-  Gamepad2,       // 13 Mini Club
-  Coffee,         // 14 Capless Drinks All Day Long
-  CreditCard,     // 15 Credit Card Facilities
-  Sparkles,       // 16 Dry Cleaning
-  Car,            // 17 Rental Car
-  Umbrella,       // 18 Private Beach Area
-  Store,          // 19 Souvenirs / Gift Shop
-  Wine,           // 20 Bar
-  ShoppingBag,    // 21 Luggage Storage
-  Plane,          // 22 Airport Shuttle
-  Anchor,         // 23 Seaport
-  Clock,          // 24 24-Hour Reception
-  Umbrella,       // 25 Beach and Pool Umbrellas
-  Sun,            // 26 Sunbed
-  Heart,          // 27 Skin and Body Care
-  Car,            // 28 Car Park
-  Waves,          // 29 Aquapark
-  GlassWater,     // 30 Lobby Bar
-  Coffee,         // 31 Snacks
-  Shield,         // 32 Lifeguard
-  Users,          // 33 Animation Team
-  Utensils,       // 34 Buffet Breakfast
-  Store,          // 35 Shops in Hotel
-  Home,           // 36 Family Rooms
-  Utensils,       // 37 Restaurant
-  Lock,           // 38 Safety Deposit Box
-  Waves,          // 39 Seashore
-  Wine,           // 40 Mini Bar
-  Baby,           // 41 Suitable for Children
-  Waves,          // 42 Children's Swimming Pool
-  Wind,           // 43 Hairdryer
-  Zap,            // 44 Jet Ski
-  MonitorPlay,    // 45 Shared Lounge / TV Area
-  AlarmClock,     // 46 Wake-up Service
-  Baby,           // 47 Baby Chair
-  BedDouble,      // 48 Baby Bed
-  Soup,           // 49 Night Soup
-  Wifi,           // 50 Wi-Fi Internet Connection
-  DoorOpen,       // 51 Express Check-In/Check-Out
-  Ban,            // 52 Non Smoking Rooms
-  Building2,      // 53 Lift / Elevator
-  BellRing,       // 54 Smoke Alarm
-  Music,          // 55 Disco (Summer)
-  Waves,          // 56 Beachfront
-  Tv,             // 57 Satellite Channels
+  Shirt,            // 0  Laundry
+  Bike,             // 1  Bicycle Rental
+  ConciergeBell,    // 2  Concierge Service
+  Armchair,         // 3  Ironing Service
+  UtensilsCrossed,  // 4  Restaurant (à la carte)
+  DoorOpen,         // 5  Changing Room
+  Flower2,          // 6  Beach Towel
+  Camera,           // 7  Photographer
+  ShoppingBag,      // 8  Grocery
+  Scissors,         // 9  Coiffeur
+  Flag,             // 10 Blue Flag
+  Hotel,            // 11 Hostel Services
+  Stethoscope,      // 12 Doctor
+  Gamepad2,         // 13 Mini Club
+  Coffee,           // 14 Capless Drinks All Day Long
+  CreditCard,       // 15 Credit Card Facilities
+  Briefcase,        // 16 Dry Cleaning
+  Car,              // 17 Rental Car
+  Umbrella,         // 18 Private Beach Area
+  Gift,             // 19 Souvenirs / Gift Shop
+  Wine,             // 20 Bar
+  Luggage,          // 21 Luggage Storage
+  Plane,            // 22 Airport Shuttle
+  Anchor,           // 23 Seaport
+  Clock,            // 24 24-Hour Reception
+  SunMedium,        // 25 Beach and Pool Umbrellas
+  Sun,              // 26 Sunbed
+  Heart,            // 27 Skin and Body Care
+  SquareParking,    // 28 Car Park
+  Palmtree,         // 29 Aquapark
+  GlassWater,       // 30 Lobby Bar
+  CupSoda,          // 31 Snacks
+  ShieldCheck,      // 32 Lifeguard
+  PartyPopper,      // 33 Animation Team
+  Egg,              // 34 Buffet Breakfast
+  ShoppingCart,     // 35 Shops in Hotel
+  Home,             // 36 Family Rooms
+  Utensils,         // 37 Restaurant
+  Lock,             // 38 Safety Deposit Box
+  Glasses,          // 39 Seashore
+  Martini,          // 40 Mini Bar
+  PersonStanding,   // 41 Suitable for Children
+  Droplets,         // 42 Children's Swimming Pool
+  Wind,             // 43 Hairdryer
+  Zap,              // 44 Jet Ski
+  MonitorPlay,      // 45 Shared Lounge / TV Area
+  AlarmClock,       // 46 Wake-up Service
+  Baby,             // 47 Baby Chair
+  BedDouble,        // 48 Baby Bed
+  Soup,             // 49 Night Soup
+  Wifi,             // 50 Wi-Fi Internet Connection
+  Timer,            // 51 Express Check-In/Check-Out
+  Ban,              // 52 Non Smoking Rooms
+  Building2,        // 53 Lift / Elevator
+  BellRing,         // 54 Smoke Alarm
+  Music,            // 55 Disco (Summer)
+  Siren,            // 56 Beachfront — using Waves alternative
+  Tv,               // 57 Satellite Channels
 ];
 
 const RoomsPage = () => {
@@ -251,10 +251,10 @@ const RoomsPage = () => {
                         <span className="font-body text-[10px] text-muted-foreground tracking-wider bg-muted px-2.5 py-1 rounded-full">{group.items.length}</span>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-1">
-                        {group.items.map((item) => {
+                        {group.items.map((item, idx) => {
                           const Icon = item.icon;
                           return (
-                            <div key={item.name} className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-muted/50 transition-colors">
+                            <div key={`${group.id}-${idx}`} className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-muted/50 transition-colors">
                               <div className="w-7 h-7 rounded-md bg-accent/8 flex items-center justify-center flex-shrink-0">
                                 <Icon className="w-3.5 h-3.5 text-accent" />
                               </div>
