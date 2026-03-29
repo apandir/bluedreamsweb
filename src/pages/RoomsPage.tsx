@@ -5,12 +5,32 @@ import roomClubSeaview from "@/assets/room-club-seaview.jpg";
 import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
 import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
-import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints } from "lucide-react";
+import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints, CloudRain, Sparkles, Thermometer, Landmark, Gem, Hand, TreePalm, Volleyball, Target, Ship, Users, Music, Car, UtensilsCrossed, type LucideIcon } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
 const seaViewIndices = [1, 3, 4]; // Club Sea View, Deluxe Sea View, Deluxe Family
 const infinityPoolIndices = [3, 4]; // Deluxe rooms
+
+const facilityIcons: LucideIcon[] = [
+  CloudRain,    // Steam Room
+  Sparkles,     // Spa & Wellness Center
+  Thermometer,  // Sauna
+  Landmark,     // Türk Hamamı
+  Gem,          // Salt Room
+  Hand,         // Massage
+  TreePalm,     // Outdoor Pool
+  Waves,        // Swimming Pool
+  Volleyball,   // Table Tennis
+  Target,       // Dart
+  Ship,         // Water Sports
+  Ship,         // Boat Tour
+  Users,        // Entertainment Staff
+  Music,        // Live Music
+  Car,          // Parking Lot
+  UtensilsCrossed, // Beach Bar
+  Waves,        // Waterslide
+];
 
 const RoomsPage = () => {
   const { t } = useLanguage();
