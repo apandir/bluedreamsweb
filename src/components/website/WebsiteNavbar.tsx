@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/blue-dreams-logo.png";
-import { Phone, Menu, X, Home, ChevronDown } from "lucide-react";
+import { Phone, Menu, X, Home, ChevronDown, Search } from "lucide-react";
+import SearchOverlay from "./SearchOverlay";
 import WeatherWidget from "./WeatherWidget";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Language } from "@/i18n/types";
@@ -17,6 +18,7 @@ const WebsiteNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
   const w = t.website.navbar;
@@ -124,7 +126,15 @@ const WebsiteNavbar = () => {
                 )}
               </div>
 
-              {/* Book Now */}
+              {/* Search */}
+              <button
+                onClick={() => setSearchOpen(true)}
+                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                aria-label="Search"
+              >
+                <Search className="w-4 h-4" />
+              </button>
+
               <a
                 href="https://blue-dreams.rezervasyonal.com/en/"
                 target="_blank"
@@ -226,6 +236,7 @@ const WebsiteNavbar = () => {
           {w.onlineReservation}
         </a>
       </div>
+      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 };
