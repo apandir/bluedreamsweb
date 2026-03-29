@@ -329,13 +329,6 @@ const CategorySection = ({
                 </div>
               </div>
 
-              {/* Count badge */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="flex items-baseline gap-2">
-                  <span className="font-display text-5xl text-white text-shadow-hero">{group.items.length}</span>
-                  <span className="font-body text-xs text-white/60 tracking-wider">services available</span>
-                </div>
-              </div>
             </div>
           </div>
 
