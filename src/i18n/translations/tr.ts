@@ -76,6 +76,18 @@ export const tr: Translations = {
       { name: "Deluxe Oda Deniz & Infinity Havuz Manzaralı", size: "40m²", description: "Ana binada, kesintisiz deniz ve infinity havuz manzaralı, zarif döşemeli ve özel olanaklı premium odalar." },
       { name: "Deluxe Aile Odası Deniz & Infinity Havuz Manzaralı", size: "50–55m²", description: "Muhteşem deniz ve infinity havuz manzaralı, ayrı oturma alanı ve tüm aile için premium olanaklı geniş deluxe aile konaklama." },
     ],
+    amenities: {
+      safebox: "Kasa",
+      hairDryer: "Saç Kurutma Makinesi",
+      ledTv: "LED Uydu TV",
+      privateBathroom: "Özel Banyo",
+      wifi: "WiFi",
+      ac: "Klima",
+      coffeeTea: "Çay & Kahve Seti",
+      minibar: "Minibar",
+      seaView: "Deniz Manzarası",
+      infinityPoolView: "Infinity Havuz Manzarası",
+    },
   },
   beach: {
     sectionTitle: "Plaj & Havuzlar",

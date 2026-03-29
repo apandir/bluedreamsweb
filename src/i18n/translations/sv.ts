@@ -76,6 +76,18 @@ export const sv: Translations = {
       { name: "Deluxe Rum Havs- & Infinity Pool-utsikt", size: "40m²", description: "Premiumrum i huvudbyggnaden med fri havs- och infinity pool-utsikt, eleganta möbler och exklusiva bekvämligheter." },
       { name: "Deluxe Familjerum Havs- & Infinity Pool-utsikt", size: "50–55m²", description: "Rymligt deluxe familjeboende med fantastisk havs- och infinity pool-utsikt, separat vardagsrum och premiumbekvämligheter för hela familjen." },
     ],
+    amenities: {
+      safebox: "Kassaskåp",
+      hairDryer: "Hårtork",
+      ledTv: "LED Satellit-TV",
+      privateBathroom: "Eget badrum",
+      wifi: "WiFi",
+      ac: "Luftkonditionering",
+      coffeeTea: "Kaffe & Te",
+      minibar: "Minibar",
+      seaView: "Havsutsikt",
+      infinityPoolView: "Infinity Pool-utsikt",
+    },
   },
   beach: {
     sectionTitle: "Strand & Pooler",

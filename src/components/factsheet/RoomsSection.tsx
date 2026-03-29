@@ -4,9 +4,12 @@ import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
 import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
 import roomHero from "@/assets/room-deluxe.jpg";
+import { Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
+const seaViewIndices = [1, 3, 4];
+const infinityPoolIndices = [3, 4];
 
 const RoomsSection = () => {
   const { t } = useLanguage();
@@ -45,7 +48,26 @@ const RoomsSection = () => {
                     <span className="font-body text-[10px] tracking-[0.12em] uppercase text-gold font-semibold bg-cream px-3 py-1.5 rounded-full">{room.size}</span>
                   </div>
                   <div className="w-10 h-[1.5px] mb-3" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
-                  <p className="font-body text-sm leading-relaxed text-muted-foreground">{room.description}</p>
+                  <p className="font-body text-sm leading-relaxed text-muted-foreground mb-4">{room.description}</p>
+                  <div className="grid grid-cols-3 gap-2 pt-3 border-t" style={{ borderColor: 'hsl(var(--sand))' }}>
+                    {[
+                      { icon: Lock, label: t.rooms.amenities.safebox },
+                      { icon: Wind, label: t.rooms.amenities.hairDryer },
+                      { icon: Tv, label: t.rooms.amenities.ledTv },
+                      { icon: Bath, label: t.rooms.amenities.privateBathroom },
+                      { icon: Wifi, label: t.rooms.amenities.wifi },
+                      { icon: Snowflake, label: t.rooms.amenities.ac },
+                      { icon: Coffee, label: t.rooms.amenities.coffeeTea },
+                      { icon: Wine, label: t.rooms.amenities.minibar },
+                      ...(seaViewIndices.includes(i) ? [{ icon: Waves, label: t.rooms.amenities.seaView }] : []),
+                      ...(infinityPoolIndices.includes(i) ? [{ icon: Infinity, label: t.rooms.amenities.infinityPoolView }] : []),
+                    ].map(({ icon: Icon, label }) => (
+                      <div key={label} className="flex items-center gap-1.5">
+                        <Icon className="w-3.5 h-3.5 text-gold flex-shrink-0" />
+                        <span className="font-body text-[10px] text-muted-foreground tracking-wide">{label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}

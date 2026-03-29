@@ -67,16 +67,16 @@ const RoomsPage = () => {
                   <p className="font-body text-sm leading-relaxed text-muted-foreground mb-4">{room.description}</p>
                   <div className="grid grid-cols-3 gap-2 pt-3 border-t border-border">
                     {[
-                      { icon: Lock, label: "Safebox" },
-                      { icon: Wind, label: "Hair Dryer" },
-                      { icon: Tv, label: "LED Satellite TV" },
-                      { icon: Bath, label: "Private Bathroom" },
-                      { icon: Wifi, label: "WiFi" },
-                      { icon: Snowflake, label: "A/C" },
-                      { icon: Coffee, label: "Coffee & Tea Setup" },
-                      { icon: Wine, label: "Minibar" },
-                      ...(seaViewIndices.includes(i) ? [{ icon: Waves, label: "Sea View" }] : []),
-                      ...(infinityPoolIndices.includes(i) ? [{ icon: Infinity, label: "Infinity Pool View" }] : []),
+                      { icon: Lock, label: t.rooms.amenities.safebox },
+                      { icon: Wind, label: t.rooms.amenities.hairDryer },
+                      { icon: Tv, label: t.rooms.amenities.ledTv },
+                      { icon: Bath, label: t.rooms.amenities.privateBathroom },
+                      { icon: Wifi, label: t.rooms.amenities.wifi },
+                      { icon: Snowflake, label: t.rooms.amenities.ac },
+                      { icon: Coffee, label: t.rooms.amenities.coffeeTea },
+                      { icon: Wine, label: t.rooms.amenities.minibar },
+                      ...(seaViewIndices.includes(i) ? [{ icon: Waves, label: t.rooms.amenities.seaView }] : []),
+                      ...(infinityPoolIndices.includes(i) ? [{ icon: Infinity, label: t.rooms.amenities.infinityPoolView }] : []),
                     ].map(({ icon: Icon, label }) => (
                       <div key={label} className="flex items-center gap-1.5">
                         <Icon className="w-3.5 h-3.5 text-accent flex-shrink-0" />
