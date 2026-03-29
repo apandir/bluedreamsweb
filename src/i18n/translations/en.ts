@@ -344,7 +344,7 @@ export const en: Translations = {
         { name: "Ironing Service", paid: true },
         { name: "Restaurant (à la carte)", paid: true },
         { name: "Changing Room", paid: false },
-        { name: "Pool Sun Loungers", paid: false },
+        
         { name: "Beach Towel", paid: false },
         { name: "Photographer", paid: true },
         { name: "Grocery", paid: true },
