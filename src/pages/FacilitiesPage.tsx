@@ -141,11 +141,6 @@ const FacilitiesPage = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-2 mt-8 font-body text-sm text-primary-foreground/40">
-            <Link to="/" className="hover:text-primary-foreground transition-colors">{r.home}</Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-primary-foreground/70">{r.facilitiesLabel}</span>
-          </div>
         </div>
 
         {/* Scroll indicator */}
