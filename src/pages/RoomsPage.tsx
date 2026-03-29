@@ -5,7 +5,7 @@ import roomClubSeaview from "@/assets/room-club-seaview.jpg";
 import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
 import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
-import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints, CloudRain, Sparkles, Thermometer, Landmark, Gem, Hand, TreePalm, Volleyball, Target, Ship, Users, Music, Car, UtensilsCrossed, Bike, ConciergeBell, Shirt, Utensils, DoorOpen, Armchair, Flower2, Camera, ShoppingBag, Scissors, Flag, Hotel, CreditCard, Plane, Anchor, Clock, Umbrella, Sun, Heart, Gamepad2, GlassWater, Shield, Store, Home, Baby, Zap, MonitorPlay, AlarmClock, BedDouble, Soup, Ban, Building2, BellRing, type LucideIcon } from "lucide-react";
+import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints, CloudRain, Sparkles, Thermometer, Landmark, Gem, Hand, TreePalm, Volleyball, Target, Ship, Users, Music, Car, UtensilsCrossed, Bike, ConciergeBell, Shirt, Utensils, DoorOpen, Armchair, Flower2, Camera, ShoppingBag, Scissors, Flag, Hotel, CreditCard, Plane, Anchor, Clock, Umbrella, Sun, Heart, Gamepad2, GlassWater, Shield, Store, Home, Baby, Zap, MonitorPlay, AlarmClock, BedDouble, Soup, Ban, Building2, BellRing, Sailboat, Mic2, ParkingCircle, Grape, CircleDot, Stethoscope, Briefcase, SquareParking, Luggage, Timer, SunMedium, Palmtree, Dumbbell, Gift, CookingPot, Martini, Cherry, Siren, PartyPopper, Glasses, Egg, Storefront, CupSoda, ShieldCheck, PersonStanding, type LucideIcon } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
