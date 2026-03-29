@@ -58,6 +58,18 @@ export interface Translations {
     heading: string;
     desc: string;
     roomList: { name: string; size: string; description: string }[];
+    amenities: {
+      safebox: string;
+      hairDryer: string;
+      ledTv: string;
+      privateBathroom: string;
+      wifi: string;
+      ac: string;
+      coffeeTea: string;
+      minibar: string;
+      seaView: string;
+      infinityPoolView: string;
+    };
   };
   // Beach & Pools
   beach: {
