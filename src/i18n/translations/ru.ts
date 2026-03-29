@@ -351,8 +351,6 @@ export const ru: Translations = {
         { name: "Парикмахерская", paid: true },
         { name: "Голубой флаг", paid: false },
         { name: "Гостиничные услуги", paid: false },
-        { name: "Пляжный шезлонг", paid: false },
-        { name: "Коктейль-лаундж", paid: false },
         { name: "Врач", paid: false },
         { name: "Мини-клуб", paid: false },
         { name: "Напитки весь день", paid: false },
