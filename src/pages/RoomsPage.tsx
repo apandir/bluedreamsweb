@@ -25,11 +25,6 @@ const RoomsPage = () => {
         <div className="relative z-10 text-center px-6">
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-4 text-shadow-hero">{r.title}</h1>
           <p className="font-body text-lg text-primary-foreground/70 text-shadow-sm">{r.subtitle}</p>
-          <div className="flex items-center justify-center gap-2 mt-6 font-body text-sm text-primary-foreground/50">
-            <Link to="/" className="hover:text-primary-foreground transition-colors">{r.home}</Link>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-primary-foreground">{r.rooms}</span>
-          </div>
         </div>
       </section>
 
