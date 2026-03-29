@@ -344,7 +344,7 @@ export const ru: Translations = {
         { name: "Услуга глажки", paid: true },
         { name: "Ресторан (à la carte)", paid: true },
         { name: "Раздевалка", paid: false },
-        { name: "Шезлонги у бассейна", paid: false },
+        
         { name: "Пляжное полотенце", paid: false },
         { name: "Фотограф", paid: true },
         { name: "Продуктовый магазин", paid: true },
