@@ -365,7 +365,6 @@ export const tr: Translations = {
         { name: "Liman", paid: false },
         { name: "24 Saat Resepsiyon", paid: false },
         { name: "Plaj ve Havuz Şemsiyeleri", paid: false },
-        { name: "Su Kaydırağı", paid: false },
         { name: "Şezlong", paid: false },
         { name: "Cilt ve Vücut Bakımı", paid: true },
         { name: "Otopark", paid: false },
