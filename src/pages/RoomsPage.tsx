@@ -193,6 +193,27 @@ const RoomsPage = () => {
         </div>
       </section>
 
+      {/* Services */}
+      <section className="py-20 md:py-28 bg-card border-t border-border">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{r.servicesLabel}</p>
+            <div className="w-16 h-[2px] mx-auto" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+            {r.services.map((service, i) => {
+              const Icon = serviceIcons[i] ?? Sparkles;
+              return (
+                <div key={service} className="flex items-center gap-3 py-2">
+                  <Icon className="w-4 h-4 text-accent flex-shrink-0" />
+                  <span className="font-body text-sm text-foreground">{service}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 section-cream text-center">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
