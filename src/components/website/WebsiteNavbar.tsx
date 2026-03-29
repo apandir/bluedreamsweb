@@ -125,7 +125,15 @@ const WebsiteNavbar = () => {
                 )}
               </div>
 
-              {/* Book Now */}
+              {/* Search */}
+              <button
+                onClick={() => setSearchOpen(true)}
+                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                aria-label="Search"
+              >
+                <Search className="w-4 h-4" />
+              </button>
+
               <a
                 href="https://blue-dreams.rezervasyonal.com/en/"
                 target="_blank"
