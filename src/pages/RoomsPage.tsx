@@ -9,6 +9,7 @@ import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves } from "luci
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
+const seaViewIndices = [1, 3]; // Club Sea View, Deluxe Sea View
 
 const RoomsPage = () => {
   const { t } = useLanguage();
