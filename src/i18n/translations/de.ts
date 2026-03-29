@@ -344,7 +344,7 @@ export const de: Translations = {
         { name: "Bügeldienst", paid: true },
         { name: "Restaurant (à la carte)", paid: true },
         { name: "Umkleideraum", paid: false },
-        { name: "Pool-Sonnenliegen", paid: false },
+        
         { name: "Strandtuch", paid: false },
         { name: "Fotograf", paid: true },
         { name: "Lebensmittelgeschäft", paid: true },
