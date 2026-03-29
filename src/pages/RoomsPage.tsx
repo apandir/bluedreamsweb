@@ -60,7 +60,7 @@ const serviceIcons: LucideIcon[] = [
   Anchor,         // Seaport
   Clock,          // 24-Hour Reception
   Umbrella,       // Beach and Pool Umbrellas
-  Waves,          // Water Slide
+  
   Sun,            // Sunbed
   Heart,          // Skin and Body Care
   Car,            // Car Park
