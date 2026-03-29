@@ -68,7 +68,7 @@ const serviceIcons: LucideIcon[] = [
   ShieldCheck,      // 32 Lifeguard
   PartyPopper,      // 33 Animation Team
   Egg,              // 34 Buffet Breakfast
-  Storefront,       // 35 Shops in Hotel
+  ShoppingCart,     // 35 Shops in Hotel
   Home,             // 36 Family Rooms
   Utensils,         // 37 Restaurant
   Lock,             // 38 Safety Deposit Box
