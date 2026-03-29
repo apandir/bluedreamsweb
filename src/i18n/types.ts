@@ -69,6 +69,8 @@ export interface Translations {
       minibar: string;
       seaView: string;
       infinityPoolView: string;
+      bathroomKit: string;
+      slippers: string;
     };
   };
   // Beach & Pools

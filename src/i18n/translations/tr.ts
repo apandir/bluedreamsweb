@@ -87,6 +87,8 @@ export const tr: Translations = {
       minibar: "Minibar",
       seaView: "Deniz Manzarası",
       infinityPoolView: "Infinity Havuz Manzarası",
+      bathroomKit: "Banyo Seti",
+      slippers: "Terlik",
     },
   },
   beach: {

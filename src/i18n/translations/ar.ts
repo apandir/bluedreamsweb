@@ -87,6 +87,8 @@ export const ar: Translations = {
       minibar: "ميني بار",
       seaView: "إطلالة بحرية",
       infinityPoolView: "إطلالة على مسبح إنفنتي",
+      bathroomKit: "طقم حمام",
+      slippers: "شبشب",
     },
   },
   beach: {

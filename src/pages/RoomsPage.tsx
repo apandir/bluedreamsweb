@@ -5,7 +5,7 @@ import roomClubSeaview from "@/assets/room-club-seaview.jpg";
 import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
 import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
-import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine } from "lucide-react";
+import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
@@ -75,6 +75,8 @@ const RoomsPage = () => {
                       { icon: Snowflake, label: t.rooms.amenities.ac },
                       { icon: Coffee, label: t.rooms.amenities.coffeeTea },
                       { icon: Wine, label: t.rooms.amenities.minibar },
+                      { icon: Droplets, label: t.rooms.amenities.bathroomKit },
+                      { icon: Footprints, label: t.rooms.amenities.slippers },
                       ...(seaViewIndices.includes(i) ? [{ icon: Waves, label: t.rooms.amenities.seaView }] : []),
                       ...(infinityPoolIndices.includes(i) ? [{ icon: Infinity, label: t.rooms.amenities.infinityPoolView }] : []),
                     ].map(({ icon: Icon, label }) => (

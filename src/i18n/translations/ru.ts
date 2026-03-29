@@ -87,6 +87,8 @@ export const ru: Translations = {
       minibar: "Минибар",
       seaView: "Вид на море",
       infinityPoolView: "Вид на инфинити-бассейн",
+      bathroomKit: "Набор для ванной",
+      slippers: "Тапочки",
     },
   },
   beach: {
