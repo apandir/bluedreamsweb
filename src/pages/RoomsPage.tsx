@@ -204,9 +204,9 @@ const RoomsPage = () => {
             {r.services.map((service, i) => {
               const Icon = serviceIcons[i] ?? Sparkles;
               return (
-                <div key={service} className="flex items-center gap-3 py-2">
+                <div key={service.name} className="flex items-center gap-3 py-2">
                   <Icon className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span className="font-body text-sm text-foreground">{service}</span>
+                  <span className="font-body text-sm text-foreground">{service.name}{service.paid ? " *" : ""}</span>
                 </div>
               );
             })}
