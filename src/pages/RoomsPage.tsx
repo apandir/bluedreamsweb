@@ -196,10 +196,10 @@ const RoomsPage = () => {
 
             // Group by category using item names (EN keys used as identifiers)
             const spaKeys = new Set([0, 1, 2, 3, 4, 5, 17 + 31, 17 + 38]); // Steam Room, Spa, Sauna, Hammam, Salt Room, Massage, Skin&Body(s31), Beauty(s38)
-            const waterKeys = new Set([6, 7, 16, 17 + 6, 17 + 7, 17 + 10, 17 + 11, 17 + 13, 17 + 21, 17 + 28, 17 + 29, 17 + 30, 17 + 33, 17 + 36, 17 + 44, 17 + 47, 17 + 49]); // Outdoor Pool, Swimming Pool, Waterslide, Pool Loungers, Beach Towel, Coiffeur->no, Blue Flag, Beach Lounger, Private Beach, Beach Umbrellas, Water Slide, Sunbed, Aquapark, Lifeguard, Seashore, Children's Pool, Jet Ski
-            const diningKeys = new Set([17 + 4, 17 + 17, 17 + 35, 17 + 39, 17 + 42, 17 + 54]); // Restaurant à la carte, Capless Drinks, Snacks, Buffet Breakfast, Restaurant, Night Soup
-            const barKeys = new Set([15, 17 + 14, 17 + 23, 17 + 34, 17 + 45]); // Beach Bar(f15), Cocktail Lounge, Bar, Lobby Bar, Mini Bar
-            const entertainmentKeys = new Set([8, 9, 10, 11, 12, 13, 17 + 1, 17 + 16, 17 + 37]); // Table Tennis, Dart, Water Sports, Boat Tour, Entertainment Staff, Live Music, Bicycle Rental, Mini Club, Animation Team
+            const waterKeys = new Set([6, 7, 16, 17 + 6, 17 + 7, 17 + 10, 17 + 11, 17 + 13, 17 + 21, 17 + 28, 17 + 29, 17 + 30, 17 + 33, 17 + 36, 17 + 44, 17 + 47, 17 + 49, 17 + 62]); // + Beachfront
+            const diningKeys = new Set([17 + 4, 17 + 17, 17 + 35, 17 + 39, 17 + 42, 17 + 54]);
+            const barKeys = new Set([15, 17 + 14, 17 + 23, 17 + 34, 17 + 45]);
+            const entertainmentKeys = new Set([8, 9, 10, 11, 12, 13, 17 + 1, 17 + 16, 17 + 37, 17 + 61]); // + Disco (Summer)
 
             type GroupedItem = { name: string; paid: boolean; icon: LucideIcon };
             const groups: { label: string; items: GroupedItem[] }[] = [
