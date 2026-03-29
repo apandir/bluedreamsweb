@@ -316,7 +316,7 @@ export const ru: Translations = {
       clubFamilyDesc: "Клубные номера для больших семей с двумя спальнями и комфортной гостиной.",
       deluxeSeaView: "Делюкс номер с видом на море",
       deluxeSeaViewDesc: "Просторные и светлые люксовые номера, где современный дизайн встречает уникальный вид на Бодрум.",
-      facilitiesLabel: "Услуги отеля и развлечения",
+      facilitiesLabel: "Услуги и удобства отеля",
       servicesLabel: "Услуги",
       facilities: [
         { name: "Паровая комната", paid: false },
