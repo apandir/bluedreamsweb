@@ -8,6 +8,10 @@ import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
 import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
+const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
+const seaViewIndices = [1, 3, 4];
+const infinityPoolIndices = [3, 4];
+
 const RoomsPage = () => {
   const { t } = useLanguage();
   const r = t.website.roomsPage;
