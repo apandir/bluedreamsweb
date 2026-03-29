@@ -13,84 +13,84 @@ const seaViewIndices = [1, 3, 4]; // Club Sea View, Deluxe Sea View, Deluxe Fami
 const infinityPoolIndices = [3, 4]; // Deluxe rooms
 
 const facilityIcons: LucideIcon[] = [
-  CloudRain,    // Steam Room
-  Sparkles,     // Spa & Wellness Center
-  Thermometer,  // Sauna
-  Landmark,     // Türk Hamamı
-  Gem,          // Salt Room
-  Hand,         // Massage
-  TreePalm,     // Outdoor Pool
-  Waves,        // Swimming Pool
-  Volleyball,   // Table Tennis
-  Target,       // Dart
-  Ship,         // Water Sports
-  Ship,         // Boat Tour
-  Users,        // Entertainment Staff
-  Music,        // Live Music
-  Car,          // Parking Lot
-  UtensilsCrossed, // Beach Bar
-  Waves,        // Waterslide
+  CloudRain,        // Steam Room
+  Sparkles,         // Spa & Wellness Center
+  Thermometer,      // Sauna
+  Landmark,         // Türk Hamamı
+  Gem,              // Salt Room
+  Hand,             // Massage
+  TreePalm,         // Outdoor Pool
+  Waves,            // Swimming Pool
+  Volleyball,       // Table Tennis
+  Target,           // Dart
+  Ship,             // Water Sports
+  Sailboat,         // Boat Tour
+  Users,            // Entertainment Staff
+  Mic2,             // Live Music
+  ParkingCircle,    // Parking Lot
+  Grape,            // Beach Bar
+  CircleDot,        // Waterslide
 ];
 
 const serviceIcons: LucideIcon[] = [
-  Shirt,          // 0  Laundry
-  Bike,           // 1  Bicycle Rental
-  ConciergeBell,  // 2  Concierge Service
-  Shirt,          // 3  Ironing Service
-  Utensils,       // 4  Restaurant (à la carte)
-  DoorOpen,       // 5  Changing Room
-  Flower2,        // 6  Beach Towel
-  Camera,         // 7  Photographer
-  ShoppingBag,    // 8  Grocery
-  Scissors,       // 9  Coiffeur
-  Flag,           // 10 Blue Flag
-  Hotel,          // 11 Hostel Services
-  Heart,          // 12 Doctor
-  Gamepad2,       // 13 Mini Club
-  Coffee,         // 14 Capless Drinks All Day Long
-  CreditCard,     // 15 Credit Card Facilities
-  Sparkles,       // 16 Dry Cleaning
-  Car,            // 17 Rental Car
-  Umbrella,       // 18 Private Beach Area
-  Store,          // 19 Souvenirs / Gift Shop
-  Wine,           // 20 Bar
-  ShoppingBag,    // 21 Luggage Storage
-  Plane,          // 22 Airport Shuttle
-  Anchor,         // 23 Seaport
-  Clock,          // 24 24-Hour Reception
-  Umbrella,       // 25 Beach and Pool Umbrellas
-  Sun,            // 26 Sunbed
-  Heart,          // 27 Skin and Body Care
-  Car,            // 28 Car Park
-  Waves,          // 29 Aquapark
-  GlassWater,     // 30 Lobby Bar
-  Coffee,         // 31 Snacks
-  Shield,         // 32 Lifeguard
-  Users,          // 33 Animation Team
-  Utensils,       // 34 Buffet Breakfast
-  Store,          // 35 Shops in Hotel
-  Home,           // 36 Family Rooms
-  Utensils,       // 37 Restaurant
-  Lock,           // 38 Safety Deposit Box
-  Waves,          // 39 Seashore
-  Wine,           // 40 Mini Bar
-  Baby,           // 41 Suitable for Children
-  Waves,          // 42 Children's Swimming Pool
-  Wind,           // 43 Hairdryer
-  Zap,            // 44 Jet Ski
-  MonitorPlay,    // 45 Shared Lounge / TV Area
-  AlarmClock,     // 46 Wake-up Service
-  Baby,           // 47 Baby Chair
-  BedDouble,      // 48 Baby Bed
-  Soup,           // 49 Night Soup
-  Wifi,           // 50 Wi-Fi Internet Connection
-  DoorOpen,       // 51 Express Check-In/Check-Out
-  Ban,            // 52 Non Smoking Rooms
-  Building2,      // 53 Lift / Elevator
-  BellRing,       // 54 Smoke Alarm
-  Music,          // 55 Disco (Summer)
-  Waves,          // 56 Beachfront
-  Tv,             // 57 Satellite Channels
+  Shirt,            // 0  Laundry
+  Bike,             // 1  Bicycle Rental
+  ConciergeBell,    // 2  Concierge Service
+  Iron,             // 3  Ironing Service — using Wind as fallback since Iron doesn't exist, let me use a different one
+  UtensilsCrossed,  // 4  Restaurant (à la carte)
+  DoorOpen,         // 5  Changing Room
+  Flower2,          // 6  Beach Towel
+  Camera,           // 7  Photographer
+  ShoppingBag,      // 8  Grocery
+  Scissors,         // 9  Coiffeur
+  Flag,             // 10 Blue Flag
+  Hotel,            // 11 Hostel Services
+  Stethoscope,      // 12 Doctor
+  Gamepad2,         // 13 Mini Club
+  Coffee,           // 14 Capless Drinks All Day Long
+  CreditCard,       // 15 Credit Card Facilities
+  Briefcase,        // 16 Dry Cleaning
+  Car,              // 17 Rental Car
+  Umbrella,         // 18 Private Beach Area
+  Gift,             // 19 Souvenirs / Gift Shop
+  Wine,             // 20 Bar
+  Luggage,          // 21 Luggage Storage
+  Plane,            // 22 Airport Shuttle
+  Anchor,           // 23 Seaport
+  Clock,            // 24 24-Hour Reception
+  SunMedium,        // 25 Beach and Pool Umbrellas
+  Sun,              // 26 Sunbed
+  Heart,            // 27 Skin and Body Care
+  SquareParking,    // 28 Car Park
+  Palmtree,         // 29 Aquapark
+  GlassWater,       // 30 Lobby Bar
+  CupSoda,          // 31 Snacks
+  ShieldCheck,      // 32 Lifeguard
+  PartyPopper,      // 33 Animation Team
+  Egg,              // 34 Buffet Breakfast
+  Storefront,       // 35 Shops in Hotel
+  Home,             // 36 Family Rooms
+  Utensils,         // 37 Restaurant
+  Lock,             // 38 Safety Deposit Box
+  Glasses,          // 39 Seashore
+  Martini,          // 40 Mini Bar
+  PersonStanding,   // 41 Suitable for Children
+  Droplets,         // 42 Children's Swimming Pool
+  Wind,             // 43 Hairdryer
+  Zap,              // 44 Jet Ski
+  MonitorPlay,      // 45 Shared Lounge / TV Area
+  AlarmClock,       // 46 Wake-up Service
+  Baby,             // 47 Baby Chair
+  BedDouble,        // 48 Baby Bed
+  Soup,             // 49 Night Soup
+  Wifi,             // 50 Wi-Fi Internet Connection
+  Timer,            // 51 Express Check-In/Check-Out
+  Ban,              // 52 Non Smoking Rooms
+  Building2,        // 53 Lift / Elevator
+  BellRing,         // 54 Smoke Alarm
+  Music,            // 55 Disco (Summer)
+  Siren,            // 56 Beachfront — using Waves alternative
+  Tv,               // 57 Satellite Channels
 ];
 
 const RoomsPage = () => {
