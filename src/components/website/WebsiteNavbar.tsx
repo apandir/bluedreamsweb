@@ -17,6 +17,7 @@ const languages: { code: Language; label: string }[] = [
 const WebsiteNavbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
