@@ -68,7 +68,7 @@ export const tr: Translations = {
     sectionTitle: "Odalar & Süitler",
     accommodation: "Konaklama",
     heading: "Deniz Kenarında Huzurlu Bir Kaçış",
-    desc: "Otel odalarımız yamaç bungalovları ve ana binaya yerleştirilmiş olup denizle iç içedir. Her oda Ege kıyı şeridinin eşsiz bir perspektifini sunar.",
+    desc: "Bodrum'un eşsiz mimari ruhuna kök salan odalarımız, doğayla nazikçe iç içe geçmiştir. Her mekan kendi manzarasına açılır—Ege Denizi'nin huzur veren mavisi ya da doğanın dingin güzelliği.",
     roomList: [
       { name: "Club Oda", size: "24m²", description: "Bahçe veya kısmi deniz manzaralı, denizle iç içe yamaç bungalovlarına yerleştirilmiş konforlu odalar." },
       { name: "Club Deniz Manzaralı Oda", size: "24m²", description: "Özel balkonlu, turkuaz Ege'nin panoramik manzarasını sunan yüksek konumlu club odalar." },

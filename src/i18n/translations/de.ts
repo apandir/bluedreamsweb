@@ -68,7 +68,7 @@ export const de: Translations = {
     sectionTitle: "Zimmer & Suiten",
     accommodation: "Unterkunft",
     heading: "Eine ruhige Flucht ans Meer",
-    desc: "Unsere Hotelzimmer befinden sich in Hangbungalows und im Hauptgebäude, umgeben vom Meer. Jedes Zimmer bietet eine einzigartige Perspektive auf die Ägäis-Küste.",
+    desc: "Verwurzelt in Bodrums einzigartigem architektonischen Geist, fügen sich unsere Zimmer sanft in die Landschaft ein. Jeder Raum öffnet sich zu seiner eigenen Aussicht—das beruhigende Blau der Ägäis oder die stille Schönheit der Natur.",
     roomList: [
       { name: "Club Zimmer", size: "24m²", description: "Komfortable Zimmer mit Garten- oder teilweisem Meerblick, in die Hangbungalows integriert." },
       { name: "Club Zimmer mit Meerblick", size: "24m²", description: "Erhöhte Club-Zimmer mit Panoramablick auf die türkisfarbene Ägäis und privatem Balkon." },
