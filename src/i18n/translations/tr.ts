@@ -351,8 +351,6 @@ export const tr: Translations = {
         { name: "Kuaför", paid: true },
         { name: "Mavi Bayrak", paid: false },
         { name: "Otel Hizmetleri", paid: false },
-        { name: "Plaj Şezlongu", paid: false },
-        { name: "Kokteyl Salonu", paid: false },
         { name: "Doktor", paid: false },
         { name: "Mini Kulüp", paid: false },
         { name: "Gün Boyu Kapaksız İçecekler", paid: false },
