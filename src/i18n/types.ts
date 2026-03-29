@@ -248,6 +248,14 @@ export interface Translations {
       servicesLabel: string;
       facilities: { name: string; paid: boolean }[];
       services: { name: string; paid: boolean }[];
+      categoryLabels: {
+        spaWellness: string;
+        waterActivities: string;
+        dining: string;
+        bars: string;
+        entertainment: string;
+        generalServices: string;
+      };
     };
     diningPage: {
       title: string;

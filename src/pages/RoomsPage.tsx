@@ -171,33 +171,65 @@ const RoomsPage = () => {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Hotel Facilities & Services */}
       <section className="py-20 md:py-28 bg-card border-t border-border">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{r.servicesLabel}</p>
+            <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{r.facilitiesLabel}</p>
             <div className="w-16 h-[2px] mx-auto" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
-            {r.facilities.map((f, i) => {
-              const Icon = facilityIcons[i] ?? Waves;
-              return (
-                <div key={f.name} className="flex items-center gap-3 py-2">
-                  <Icon className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span className="font-body text-sm text-foreground">{f.name}{f.paid ? " *" : ""}</span>
+
+          {(() => {
+            // Build combined items with icons
+            const allItems = [
+              ...r.facilities.map((f, i) => ({ ...f, icon: facilityIcons[i] ?? Waves })),
+              ...r.services.map((s, i) => ({ ...s, icon: serviceIcons[i] ?? Sparkles })),
+            ];
+
+            // Group by category using item names (EN keys used as identifiers)
+            const spaKeys = new Set([0, 1, 2, 3, 4, 5, 17 + 31, 17 + 38]); // Steam Room, Spa, Sauna, Hammam, Salt Room, Massage, Skin&Body(s31), Beauty(s38)
+            const waterKeys = new Set([6, 7, 16, 17 + 6, 17 + 7, 17 + 10, 17 + 11, 17 + 13, 17 + 21, 17 + 28, 17 + 29, 17 + 30, 17 + 33, 17 + 36, 17 + 44, 17 + 47, 17 + 49]); // Outdoor Pool, Swimming Pool, Waterslide, Pool Loungers, Beach Towel, Coiffeur->no, Blue Flag, Beach Lounger, Private Beach, Beach Umbrellas, Water Slide, Sunbed, Aquapark, Lifeguard, Seashore, Children's Pool, Jet Ski
+            const diningKeys = new Set([17 + 4, 17 + 17, 17 + 35, 17 + 39, 17 + 42, 17 + 54]); // Restaurant à la carte, Capless Drinks, Snacks, Buffet Breakfast, Restaurant, Night Soup
+            const barKeys = new Set([15, 17 + 14, 17 + 23, 17 + 34, 17 + 45]); // Beach Bar(f15), Cocktail Lounge, Bar, Lobby Bar, Mini Bar
+            const entertainmentKeys = new Set([8, 9, 10, 11, 12, 13, 17 + 1, 17 + 16, 17 + 37]); // Table Tennis, Dart, Water Sports, Boat Tour, Entertainment Staff, Live Music, Bicycle Rental, Mini Club, Animation Team
+
+            type GroupedItem = { name: string; paid: boolean; icon: LucideIcon };
+            const groups: { label: string; items: GroupedItem[] }[] = [
+              { label: r.categoryLabels.spaWellness, items: [] },
+              { label: r.categoryLabels.waterActivities, items: [] },
+              { label: r.categoryLabels.dining, items: [] },
+              { label: r.categoryLabels.bars, items: [] },
+              { label: r.categoryLabels.entertainment, items: [] },
+              { label: r.categoryLabels.generalServices, items: [] },
+            ];
+
+            allItems.forEach((item, i) => {
+              if (spaKeys.has(i)) groups[0].items.push(item);
+              else if (waterKeys.has(i)) groups[1].items.push(item);
+              else if (diningKeys.has(i)) groups[2].items.push(item);
+              else if (barKeys.has(i)) groups[3].items.push(item);
+              else if (entertainmentKeys.has(i)) groups[4].items.push(item);
+              else groups[5].items.push(item);
+            });
+
+            return groups.map((group) => (
+              <div key={group.label} className="mb-10 last:mb-0">
+                <h3 className="font-display text-lg text-foreground mb-4 pb-2 border-b border-border">{group.label}</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+                  {group.items.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <div key={item.name} className="flex items-center gap-3 py-2">
+                        <Icon className="w-4 h-4 text-accent flex-shrink-0" />
+                        <span className="font-body text-sm text-foreground">{item.name}{item.paid ? " *" : ""}</span>
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-            {r.services.map((service, i) => {
-              const Icon = serviceIcons[i] ?? Sparkles;
-              return (
-                <div key={service.name} className="flex items-center gap-3 py-2">
-                  <Icon className="w-4 h-4 text-accent flex-shrink-0" />
-                  <span className="font-body text-sm text-foreground">{service.name}{service.paid ? " *" : ""}</span>
-                </div>
-              );
-            })}
-          </div>
+              </div>
+            ));
+          })()}
+
           <p className="font-body text-[10px] text-muted-foreground text-center mt-6 tracking-wider">* Extra charge</p>
         </div>
       </section>

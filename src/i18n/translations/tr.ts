@@ -316,7 +316,7 @@ export const tr: Translations = {
       clubFamilyDesc: "Geniş aileler için tasarlanmış, iki yatak odalı ve konforlu yaşam alanlı club odalar.",
       deluxeSeaView: "Deluxe Deniz Manzaralı Oda",
       deluxeSeaViewDesc: "Modern tasarımın eşsiz Bodrum manzarasıyla buluştuğu geniş ve ferah lüks yaşam alanları.",
-      facilitiesLabel: "Otel Tesis & Aktiviteleri",
+      facilitiesLabel: "Otel Tesisleri & Hizmetler",
       servicesLabel: "Hizmetler",
       facilities: [
         { name: "Buhar Odası", paid: false },
@@ -394,6 +394,14 @@ export const tr: Translations = {
         { name: "Bebek Yatağı", paid: false },
         { name: "Gece Çorbası", paid: false },
       ],
+      categoryLabels: {
+        spaWellness: "Spa & Wellness",
+        waterActivities: "Su Aktiviteleri & Havuzlar",
+        dining: "Yeme & İçme",
+        bars: "Barlar & Lounge'lar",
+        entertainment: "Eğlence & Spor",
+        generalServices: "Genel Hizmetler",
+      },
     },
     diningPage: {
       title: "Yeme & İçme",

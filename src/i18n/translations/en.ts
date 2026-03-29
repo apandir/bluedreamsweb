@@ -316,7 +316,7 @@ export const en: Translations = {
       clubFamilyDesc: "Club rooms designed for large families, with two bedrooms and a comfortable living area.",
       deluxeSeaView: "Deluxe Sea View Room",
       deluxeSeaViewDesc: "Spacious and airy luxury living spaces where modern design meets the unique Bodrum view.",
-      facilitiesLabel: "Hotel Facilities & Activities",
+      facilitiesLabel: "Hotel Facilities & Services",
       servicesLabel: "Services",
       facilities: [
         { name: "Steam Room", paid: false },
@@ -394,6 +394,14 @@ export const en: Translations = {
         { name: "Baby Bed", paid: false },
         { name: "Night Soup", paid: false },
       ],
+      categoryLabels: {
+        spaWellness: "Spa & Wellness",
+        waterActivities: "Water Activities & Pools",
+        dining: "Dining & Food",
+        bars: "Bars & Lounges",
+        entertainment: "Entertainment & Sports",
+        generalServices: "General Services",
+      },
     },
     diningPage: {
       title: "Dining",
