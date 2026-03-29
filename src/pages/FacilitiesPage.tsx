@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import heroImg from "@/assets/hero-resort.jpg";
 import spaImg from "@/assets/spa-resort.jpg";
@@ -7,7 +7,7 @@ import diningImg from "@/assets/dining-main.jpg";
 import barImg from "@/assets/bar-beach.jpg";
 import activitiesImg from "@/assets/activities-hero.jpg";
 import beachImg from "@/assets/beach-overview.jpg";
-import { ChevronRight, Waves, Sparkles, Home, Wine, Music, UtensilsCrossed, CloudRain, Thermometer, Landmark, Gem, Hand, TreePalm, Volleyball, Target, Ship, Sailboat, Users, Mic2, ParkingCircle, Grape, CircleDot, Shirt, Bike, ConciergeBell, Armchair, DoorOpen, Flower2, Camera, ShoppingBag, Scissors, Flag, Hotel, Stethoscope, Gamepad2, Coffee, CreditCard, Briefcase, Car, Umbrella, Gift, Luggage, Plane, Anchor, Clock, SunMedium, Sun, Heart, SquareParking, Palmtree, GlassWater, CupSoda, ShieldCheck, PartyPopper, Egg, ShoppingCart, Utensils, Lock, Glasses, Martini, PersonStanding, Droplets, Wind, Zap, MonitorPlay, AlarmClock, Baby, BedDouble, Soup, Wifi, Timer, Ban, Building2, BellRing, Siren, Tv, type LucideIcon } from "lucide-react";
+import { ChevronRight, ChevronDown, Waves, Sparkles, Home, Wine, Music, UtensilsCrossed, CloudRain, Thermometer, Landmark, Gem, Hand, TreePalm, Volleyball, Target, Ship, Sailboat, Users, Mic2, ParkingCircle, Grape, CircleDot, Shirt, Bike, ConciergeBell, Armchair, DoorOpen, Flower2, Camera, ShoppingBag, Scissors, Flag, Hotel, Stethoscope, Gamepad2, Coffee, CreditCard, Briefcase, Car, Umbrella, Gift, Luggage, Plane, Anchor, Clock, SunMedium, Sun, Heart, SquareParking, Palmtree, GlassWater, CupSoda, ShieldCheck, PartyPopper, Egg, ShoppingCart, Utensils, Lock, Glasses, Martini, PersonStanding, Droplets, Wind, Zap, MonitorPlay, AlarmClock, Baby, BedDouble, Soup, Wifi, Timer, Ban, Building2, BellRing, Siren, Tv, Check, type LucideIcon } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const facilityIcons: LucideIcon[] = [
@@ -27,10 +27,27 @@ const categoryImages: Record<string, string> = {
   entertainment: activitiesImg,
 };
 
+// Intersection Observer hook for scroll animations
+const useInView = (threshold = 0.15) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setInView(true); obs.disconnect(); } }, { threshold });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, inView };
+};
+
 const FacilitiesPage = () => {
   const { t } = useLanguage();
   const r = t.website.roomsPage;
-  const [activeGroup, setActiveGroup] = useState<string | null>(null);
+  const [activeGroup, setActiveGroup] = useState<string>('general');
+  const [expandedGroup, setExpandedGroup] = useState<string | null>(null);
+  const heroRef = useInView(0.3);
+  const overviewRef = useInView(0.1);
 
   const allItems = [
     ...r.facilities.map((f, i) => ({ ...f, icon: facilityIcons[i] ?? Waves })),
@@ -65,121 +82,311 @@ const FacilitiesPage = () => {
 
   groups.forEach(g => g.items.sort((a, b) => Number(a.paid) - Number(b.paid)));
 
+  const totalServices = groups.reduce((sum, g) => sum + g.items.length, 0);
+
   const scrollToGroup = (id: string) => {
     setActiveGroup(id);
+    setExpandedGroup(id);
     document.getElementById(`facility-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  // Track active section on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      for (const group of groups) {
+        const el = document.getElementById(`facility-${group.id}`);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 200 && rect.bottom > 200) {
+            setActiveGroup(group.id);
+            break;
+          }
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <main>
-      {/* Hero */}
-      <section className="relative h-[55vh] min-h-[380px] flex items-center justify-center overflow-hidden">
-        <img src={heroImg} alt={r.facilitiesLabel} className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ocean-deep/70 via-ocean-deep/50 to-ocean-deep/80" />
-        <div className="relative z-10 text-center px-6">
-          <p className="font-body text-xs font-semibold tracking-[0.35em] uppercase text-primary-foreground/60 mb-4 text-shadow-sm">Blue Dreams Resort & Spa</p>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-4 text-shadow-hero">{r.facilitiesLabel}</h1>
-          <div className="w-16 h-[2px] mx-auto mt-6" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold)), transparent)' }} />
-          <div className="flex items-center justify-center gap-2 mt-6 font-body text-sm text-primary-foreground/50">
+    <main className="overflow-hidden">
+      {/* Hero — Parallax-style */}
+      <section className="relative h-[65vh] min-h-[450px] flex items-center justify-center overflow-hidden">
+        <img src={heroImg} alt={r.facilitiesLabel} className="absolute inset-0 w-full h-full object-cover scale-105" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ocean-deep/50 via-ocean-deep/40 to-ocean-deep/90" />
+        
+        <div
+          ref={heroRef.ref}
+          className={`relative z-10 text-center px-6 transition-all duration-1000 ${heroRef.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          <p className="font-body text-[11px] font-semibold tracking-[0.4em] uppercase text-primary-foreground/50 mb-5">Blue Dreams Resort & Spa</p>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-6 text-shadow-hero">{r.facilitiesLabel}</h1>
+          <div className="w-20 h-[1px] mx-auto" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold)), transparent)' }} />
+          
+          {/* Stats Row */}
+          <div className="flex items-center justify-center gap-8 md:gap-12 mt-8">
+            <div className="text-center">
+              <p className="font-display text-3xl text-primary-foreground">{totalServices}+</p>
+              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/50 mt-1">Services</p>
+            </div>
+            <div className="w-px h-8 bg-primary-foreground/20" />
+            <div className="text-center">
+              <p className="font-display text-3xl text-primary-foreground">{groups.length}</p>
+              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/50 mt-1">Categories</p>
+            </div>
+            <div className="w-px h-8 bg-primary-foreground/20" />
+            <div className="text-center">
+              <p className="font-display text-3xl text-primary-foreground">24/7</p>
+              <p className="font-body text-[10px] tracking-[0.2em] uppercase text-primary-foreground/50 mt-1">Available</p>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center gap-2 mt-8 font-body text-sm text-primary-foreground/40">
             <Link to="/" className="hover:text-primary-foreground transition-colors">{r.home}</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-primary-foreground">{r.facilitiesLabel}</span>
+            <span className="text-primary-foreground/70">{r.facilitiesLabel}</span>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-5 h-5 text-primary-foreground/40" />
+        </div>
+      </section>
+
+      {/* Category Overview Cards */}
+      <section className="py-16 md:py-20 bg-background">
+        <div
+          ref={overviewRef.ref}
+          className={`max-w-6xl mx-auto px-6 transition-all duration-700 ${overviewRef.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+        >
+          <div className="text-center mb-12">
+            <p className="font-body text-[10px] font-semibold tracking-[0.3em] uppercase text-accent mb-3">Explore</p>
+            <h2 className="font-display text-2xl md:text-3xl text-foreground">Choose a Category</h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            {groups.map((group, i) => {
+              const GroupIcon = group.icon;
+              const image = categoryImages[group.id];
+              return (
+                <button
+                  key={group.id}
+                  onClick={() => scrollToGroup(group.id)}
+                  className={`group relative rounded-2xl overflow-hidden aspect-[3/4] transition-all duration-500 ${
+                    activeGroup === group.id ? 'ring-2 ring-accent ring-offset-2 ring-offset-background shadow-lg scale-[1.02]' : 'hover:shadow-lg hover:scale-[1.02]'
+                  }`}
+                  style={{ animationDelay: `${i * 100}ms` }}
+                >
+                  <img src={image} alt={group.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className={`absolute inset-0 transition-all duration-500 ${
+                    activeGroup === group.id
+                      ? 'bg-gradient-to-t from-accent/80 via-accent/30 to-transparent'
+                      : 'bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-accent/60'
+                  }`} />
+                  <div className="absolute inset-0 flex flex-col items-center justify-end p-4 pb-5">
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-2 transition-all duration-300 ${
+                      activeGroup === group.id ? 'bg-white/30 backdrop-blur-sm' : 'bg-white/15 backdrop-blur-sm group-hover:bg-white/25'
+                    }`}>
+                      <GroupIcon className="w-5 h-5 text-white" />
+                    </div>
+                    <p className="font-body text-[10px] font-bold tracking-[0.12em] uppercase text-white text-center leading-tight">{group.label}</p>
+                    <p className="font-body text-[9px] text-white/60 mt-1">{group.items.length} items</p>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Sticky Quick Nav */}
-      <div className="sticky top-[88px] z-30 bg-background/95 backdrop-blur-md border-b border-border">
-        <div className="max-w-6xl mx-auto px-6 py-3 flex flex-wrap items-center justify-center gap-2">
-          {groups.map((group) => {
-            const NavIcon = group.icon;
-            return (
-              <button
-                key={group.id}
-                onClick={() => scrollToGroup(group.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-body font-semibold tracking-wide uppercase transition-all duration-300 ${
-                  activeGroup === group.id
-                    ? "bg-accent text-accent-foreground shadow-md"
-                    : "bg-muted/60 text-muted-foreground hover:bg-accent/10 hover:text-accent"
-                }`}
-              >
-                <NavIcon className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">{group.label}</span>
-                <span className="sm:hidden">{group.label.split(' ')[0]}</span>
-              </button>
-            );
-          })}
+      {/* Sticky Nav Bar */}
+      <div className="sticky top-[88px] z-30 bg-background/80 backdrop-blur-xl border-y border-border/50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex items-center gap-1 py-2 overflow-x-auto scrollbar-hide">
+            {groups.map((group) => {
+              const NavIcon = group.icon;
+              const isActive = activeGroup === group.id;
+              return (
+                <button
+                  key={group.id}
+                  onClick={() => scrollToGroup(group.id)}
+                  className={`relative flex items-center gap-1.5 px-3 py-2 rounded-lg text-[10px] font-body font-bold tracking-[0.1em] uppercase whitespace-nowrap transition-all duration-300 ${
+                    isActive
+                      ? "text-accent"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  <NavIcon className={`w-3.5 h-3.5 transition-colors ${isActive ? 'text-accent' : ''}`} />
+                  <span className="hidden sm:inline">{group.label}</span>
+                  {isActive && (
+                    <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-accent rounded-full" />
+                  )}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
 
-      {/* Category Sections */}
+      {/* Detail Sections */}
       <div className="bg-background">
-        {groups.map((group, groupIdx) => {
-          const GroupIcon = group.icon;
-          const image = categoryImages[group.id];
-          const isEven = groupIdx % 2 === 0;
+        {groups.map((group, groupIdx) => (
+          <CategorySection
+            key={group.id}
+            group={group}
+            groupIdx={groupIdx}
+            image={categoryImages[group.id]}
+            expandedGroup={expandedGroup}
+            setExpandedGroup={setExpandedGroup}
+          />
+        ))}
+      </div>
 
-          return (
-            <section
-              key={group.id}
-              id={`facility-${group.id}`}
-              className={`scroll-mt-36 ${groupIdx % 2 === 0 ? 'bg-background' : 'bg-muted/30'}`}
-            >
-              <div className="max-w-[1400px] mx-auto">
-                <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} min-h-[400px]`}>
-                  {/* Image Side */}
-                  <div className="lg:w-[45%] relative overflow-hidden">
-                    <img
-                      src={image}
-                      alt={group.label}
-                      className="w-full h-64 lg:h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-black/10" />
-                    <div className="absolute bottom-6 left-6 lg:bottom-8 lg:left-8">
-                      <div className="flex items-center gap-3">
-                        <div className="w-11 h-11 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                          <GroupIcon className="w-5 h-5 text-white" />
-                        </div>
-                        <div>
-                          <h2 className="font-display text-2xl lg:text-3xl text-white text-shadow-hero">{group.label}</h2>
-                          <p className="font-body text-xs text-white/70 tracking-wider mt-0.5">{group.items.length} services</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+      {/* Bottom CTA */}
+      <section className="relative py-20 overflow-hidden">
+        <img src={heroImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-ocean-deep/85" />
+        <div className="relative z-10 text-center px-6">
+          <h2 className="font-display text-3xl md:text-4xl text-primary-foreground mb-4">Experience It All</h2>
+          <p className="font-body text-sm text-primary-foreground/60 max-w-lg mx-auto mb-8">
+            With {totalServices}+ facilities and services, your perfect getaway awaits.
+          </p>
+          <a
+            href="https://blue-dreams.rezervasyonal.com/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block font-body text-xs font-bold tracking-[0.15em] uppercase bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-4 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-accent/25"
+          >
+            Book Your Stay
+          </a>
+        </div>
+      </section>
+    </main>
+  );
+};
 
-                  {/* Services Side */}
-                  <div className="lg:w-[55%] px-6 lg:px-12 py-10 lg:py-14 flex flex-col justify-center">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-0.5">
-                      {group.items.map((item, idx) => {
-                        const Icon = item.icon;
-                        return (
-                          <div
-                            key={`${group.id}-${idx}`}
-                            className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-accent/5 transition-colors group/item"
-                          >
-                            <div className="w-8 h-8 rounded-lg bg-accent/10 group-hover/item:bg-accent/20 flex items-center justify-center flex-shrink-0 transition-colors">
-                              <Icon className="w-4 h-4 text-accent" />
-                            </div>
-                            <span className={`font-body text-sm leading-tight ${item.paid ? 'text-muted-foreground italic' : 'text-foreground'}`}>
-                              {item.name}{item.paid ? " *" : ""}
-                            </span>
-                          </div>
-                        );
-                      })}
-                    </div>
-                    {group.items.some(i => i.paid) && (
-                      <p className="font-body text-[10px] text-muted-foreground mt-6 tracking-wider pl-3">* Extra charge</p>
-                    )}
-                  </div>
+// Separated component for each category section with its own IntersectionObserver
+const CategorySection = ({
+  group,
+  groupIdx,
+  image,
+  expandedGroup,
+  setExpandedGroup,
+}: {
+  group: { id: string; label: string; icon: LucideIcon; items: { name: string; paid: boolean; icon: LucideIcon }[] };
+  groupIdx: number;
+  image: string;
+  expandedGroup: string | null;
+  setExpandedGroup: (id: string | null) => void;
+}) => {
+  const { ref, inView } = useInView(0.08);
+  const isEven = groupIdx % 2 === 0;
+  const GroupIcon = group.icon;
+  const isExpanded = expandedGroup === group.id;
+
+  // Show first 6 items when collapsed, all when expanded
+  const visibleItems = isExpanded ? group.items : group.items.slice(0, 6);
+  const hasMore = group.items.length > 6;
+
+  return (
+    <section
+      id={`facility-${group.id}`}
+      className={`scroll-mt-36 border-b border-border/50 last:border-b-0 ${groupIdx % 2 === 0 ? 'bg-background' : 'bg-muted/20'}`}
+    >
+      <div ref={ref} className="max-w-[1400px] mx-auto">
+        <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+          {/* Image Side */}
+          <div className={`lg:w-[42%] relative overflow-hidden transition-all duration-1000 ${inView ? 'opacity-100' : 'opacity-0'}`}>
+            <div className="sticky top-36 h-72 lg:h-[500px]">
+              <img
+                src={image}
+                alt={group.label}
+                className="absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className={`absolute inset-0 ${
+                isEven
+                  ? 'bg-gradient-to-r from-transparent via-transparent to-background/20 lg:to-background/40'
+                  : 'bg-gradient-to-l from-transparent via-transparent to-background/20 lg:to-background/40'
+              }`} />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10" />
+              
+              {/* Category badge on image */}
+              <div className="absolute top-6 left-6">
+                <div className="flex items-center gap-2 bg-white/15 backdrop-blur-md rounded-full px-4 py-2">
+                  <GroupIcon className="w-4 h-4 text-white" />
+                  <span className="font-body text-[10px] font-bold tracking-[0.15em] uppercase text-white">{group.label}</span>
                 </div>
               </div>
-            </section>
-          );
-        })}
+
+              {/* Count badge */}
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="flex items-baseline gap-2">
+                  <span className="font-display text-5xl text-white text-shadow-hero">{group.items.length}</span>
+                  <span className="font-body text-xs text-white/60 tracking-wider">services available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Services Side */}
+          <div className={`lg:w-[58%] px-6 lg:px-14 py-10 lg:py-16 transition-all duration-700 delay-200 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            {/* Section Header */}
+            <div className="mb-8">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                  <GroupIcon className="w-5 h-5 text-accent" />
+                </div>
+                <div>
+                  <h2 className="font-display text-2xl lg:text-3xl text-foreground">{group.label}</h2>
+                </div>
+              </div>
+              <div className="w-12 h-[2px] ml-[52px]" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
+            </div>
+
+            {/* Service Items */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-0">
+              {visibleItems.map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={`${group.id}-${idx}`}
+                    className="flex items-center gap-3 py-3 px-3 rounded-xl hover:bg-accent/5 transition-all duration-300 group/item"
+                    style={{ animationDelay: `${idx * 30}ms` }}
+                  >
+                    <div className="w-9 h-9 rounded-xl bg-accent/8 group-hover/item:bg-accent/15 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover/item:scale-110">
+                      <Icon className="w-4 h-4 text-accent" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <span className={`font-body text-sm leading-tight block ${item.paid ? 'text-muted-foreground' : 'text-foreground'}`}>
+                        {item.name}
+                      </span>
+                    </div>
+                    {item.paid ? (
+                      <span className="font-body text-[9px] tracking-wider uppercase text-muted-foreground bg-muted px-2 py-0.5 rounded-full flex-shrink-0">paid</span>
+                    ) : (
+                      <Check className="w-3.5 h-3.5 text-accent/40 flex-shrink-0" />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Show More / Less */}
+            {hasMore && (
+              <button
+                onClick={() => setExpandedGroup(isExpanded ? null : group.id)}
+                className="mt-6 flex items-center gap-2 font-body text-xs font-bold tracking-[0.1em] uppercase text-accent hover:text-accent/80 transition-colors ml-3"
+              >
+                <span>{isExpanded ? 'Show less' : `Show all ${group.items.length} services`}</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+              </button>
+            )}
+          </div>
+        </div>
       </div>
-    </main>
+    </section>
   );
 };
 
