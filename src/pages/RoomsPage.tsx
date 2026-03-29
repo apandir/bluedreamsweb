@@ -62,7 +62,22 @@ const RoomsPage = () => {
                     </span>
                   </div>
                   <div className="w-10 h-[1.5px] mb-3" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
-                  <p className="font-body text-sm leading-relaxed text-muted-foreground">{room.description}</p>
+                  <p className="font-body text-sm leading-relaxed text-muted-foreground mb-4">{room.description}</p>
+                  <div className="grid grid-cols-3 gap-2 pt-3 border-t border-border">
+                    {[
+                      { icon: Lock, label: "Safebox" },
+                      { icon: Wind, label: "Hair Dryer" },
+                      { icon: Tv, label: "LED Satellite TV" },
+                      { icon: Bath, label: "Private Bathroom" },
+                      { icon: Wifi, label: "WiFi" },
+                      { icon: Snowflake, label: "A/C" },
+                    ].map(({ icon: Icon, label }) => (
+                      <div key={label} className="flex items-center gap-1.5">
+                        <Icon className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                        <span className="font-body text-[10px] text-muted-foreground tracking-wide">{label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
