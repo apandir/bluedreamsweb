@@ -160,34 +160,48 @@ const FacilitiesPage = () => {
             <h2 className="font-display text-2xl md:text-3xl text-foreground">Choose a Category</h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {groups.map((group, i) => {
               const GroupIcon = group.icon;
               const image = categoryImages[group.id];
+              const isActive = activeGroup === group.id;
               return (
                 <button
                   key={group.id}
                   onClick={() => scrollToGroup(group.id)}
-                  className={`group relative rounded-2xl overflow-hidden aspect-[3/4] transition-all duration-500 ${
-                    activeGroup === group.id ? 'ring-2 ring-accent ring-offset-2 ring-offset-background shadow-lg scale-[1.02]' : 'hover:shadow-lg hover:scale-[1.02]'
+                  className={`group relative overflow-hidden transition-all duration-500 ${
+                    isActive ? 'shadow-xl scale-[1.03]' : 'hover:shadow-xl hover:scale-[1.03]'
                   }`}
-                  style={{ animationDelay: `${i * 100}ms` }}
+                  style={{
+                    animationDelay: `${i * 100}ms`,
+                    clipPath: i % 3 === 0
+                      ? 'polygon(0 0, 100% 0, 100% 85%, 0 100%)'
+                      : i % 3 === 1
+                      ? 'polygon(0 8%, 100% 0, 100% 100%, 0 92%)'
+                      : 'polygon(0 0, 100% 15%, 100% 100%, 0 100%)',
+                  }}
                 >
-                  <img src={image} alt={group.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className={`absolute inset-0 transition-all duration-500 ${
-                    activeGroup === group.id
-                      ? 'bg-gradient-to-t from-accent/80 via-accent/30 to-transparent'
-                      : 'bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-accent/60'
-                  }`} />
-                  <div className="absolute inset-0 flex flex-col items-center justify-end p-4 pb-5">
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-2 transition-all duration-300 ${
-                      activeGroup === group.id ? 'bg-white/30 backdrop-blur-sm' : 'bg-white/15 backdrop-blur-sm group-hover:bg-white/25'
-                    }`}>
-                      <GroupIcon className="w-5 h-5 text-white" />
+                  <div className="aspect-[3/4]">
+                    <img src={image} alt={group.label} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className={`absolute inset-0 transition-all duration-500 ${
+                      isActive
+                        ? 'bg-gradient-to-t from-accent/90 via-accent/40 to-accent/10'
+                        : 'bg-gradient-to-t from-black/80 via-black/30 to-black/5 group-hover:from-accent/70'
+                    }`} />
+                    <div className="absolute inset-0 flex flex-col items-center justify-end p-4 pb-8">
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-3 transition-all duration-500 border ${
+                        isActive
+                          ? 'bg-white/25 backdrop-blur-md border-white/40 scale-110'
+                          : 'bg-white/10 backdrop-blur-sm border-white/20 group-hover:bg-white/20 group-hover:border-white/30 group-hover:scale-110'
+                      }`}>
+                        <GroupIcon className="w-5 h-5 text-white" />
+                      </div>
+                      <p className="font-body text-[11px] font-bold tracking-[0.15em] uppercase text-white text-center leading-tight drop-shadow-lg">{group.label}</p>
                     </div>
-                    <p className="font-body text-[10px] font-bold tracking-[0.12em] uppercase text-white text-center leading-tight">{group.label}</p>
-                    <p className="font-body text-[9px] text-white/60 mt-1">{group.items.length} items</p>
                   </div>
+                  {isActive && (
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent" />
+                  )}
                 </button>
               );
             })}
@@ -315,13 +329,6 @@ const CategorySection = ({
                 </div>
               </div>
 
-              {/* Count badge */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="flex items-baseline gap-2">
-                  <span className="font-display text-5xl text-white text-shadow-hero">{group.items.length}</span>
-                  <span className="font-body text-xs text-white/60 tracking-wider">services available</span>
-                </div>
-              </div>
             </div>
           </div>
 
