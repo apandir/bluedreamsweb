@@ -39,7 +39,7 @@ const serviceIcons: LucideIcon[] = [
   Shirt,          // Ironing Service
   Utensils,       // Restaurant (à la carte)
   DoorOpen,       // Changing Room
-  Armchair,       // Pool Sun Loungers
+  
   Flower2,        // Beach Towel
   Camera,         // Photographer
   ShoppingBag,    // Grocery
