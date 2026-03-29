@@ -59,6 +59,8 @@ const RoomsSection = () => {
                       { icon: Snowflake, label: t.rooms.amenities.ac },
                       { icon: Coffee, label: t.rooms.amenities.coffeeTea },
                       { icon: Wine, label: t.rooms.amenities.minibar },
+                      { icon: Droplets, label: t.rooms.amenities.bathroomKit },
+                      { icon: Footprints, label: t.rooms.amenities.slippers },
                       ...(seaViewIndices.includes(i) ? [{ icon: Waves, label: t.rooms.amenities.seaView }] : []),
                       ...(infinityPoolIndices.includes(i) ? [{ icon: Infinity, label: t.rooms.amenities.infinityPoolView }] : []),
                     ].map(({ icon: Icon, label }) => (

@@ -87,6 +87,8 @@ export const en: Translations = {
       minibar: "Minibar",
       seaView: "Sea View",
       infinityPoolView: "Infinity Pool View",
+      bathroomKit: "Bathroom Kit",
+      slippers: "Slippers",
     },
   },
   beach: {
