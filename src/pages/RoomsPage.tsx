@@ -33,67 +33,64 @@ const facilityIcons: LucideIcon[] = [
 ];
 
 const serviceIcons: LucideIcon[] = [
-  Shirt,          // Laundry
-  Bike,           // Bicycle Rental
-  ConciergeBell,  // Concierge Service
-  Shirt,          // Ironing Service
-  Utensils,       // Restaurant (à la carte)
-  DoorOpen,       // Changing Room
-  
-  Flower2,        // Beach Towel
-  Camera,         // Photographer
-  ShoppingBag,    // Grocery
-  Scissors,       // Coiffeur
-  Flag,           // Blue Flag
-  Hotel,          // Hostel Services
-  Heart,          // Doctor
-  Gamepad2,       // Mini Club
-  Coffee,         // Capless Drinks All Day Long
-  CreditCard,     // Credit Card Facilities
-  Sparkles,       // Dry Cleaning
-  Car,            // Rental Car
-  Umbrella,       // Private Beach Area
-  Store,          // Souvenirs / Gift Shop
-  Wine,           // Bar
-  ShoppingBag,    // Luggage Storage
-  Plane,          // Airport Shuttle
-  Anchor,         // Seaport
-  Clock,          // 24-Hour Reception
-  Umbrella,       // Beach and Pool Umbrellas
-  
-  Sun,            // Sunbed
-  Heart,          // Skin and Body Care
-  Car,            // Car Park
-  Waves,          // Aquapark
-  GlassWater,     // Lobby Bar
-  Coffee,         // Snacks
-  Shield,         // Lifeguard
-  Users,          // Animation Team
-  
-  Utensils,       // Buffet Breakfast
-  Store,          // Shops in Hotel
-  Home,           // Family Rooms
-  Utensils,       // Restaurant
-  Lock,           // Safety Deposit Box
-  Waves,          // Seashore
-  Wine,           // Mini Bar
-  Baby,           // Suitable for Children
-  Waves,          // Children's Swimming Pool
-  Wind,           // Hairdryer
-  Zap,            // Jet Ski
-  MonitorPlay,    // Shared Lounge / TV Area
-  AlarmClock,     // Wake-up Service
-  Baby,           // Baby Chair
-  BedDouble,      // Baby Bed
-  Soup,           // Night Soup
-  Wifi,           // Wi-Fi Internet Connection
-  DoorOpen,       // Express Check-In/Check-Out
-  Ban,            // Non Smoking Rooms
-  Building2,      // Lift / Elevator
-  BellRing,       // Smoke Alarm
-  Music,          // Disco (Summer)
-  Waves,          // Beachfront
-  Tv,             // Satellite Channels
+  Shirt,          // 0  Laundry
+  Bike,           // 1  Bicycle Rental
+  ConciergeBell,  // 2  Concierge Service
+  Shirt,          // 3  Ironing Service
+  Utensils,       // 4  Restaurant (à la carte)
+  DoorOpen,       // 5  Changing Room
+  Flower2,        // 6  Beach Towel
+  Camera,         // 7  Photographer
+  ShoppingBag,    // 8  Grocery
+  Scissors,       // 9  Coiffeur
+  Flag,           // 10 Blue Flag
+  Hotel,          // 11 Hostel Services
+  Heart,          // 12 Doctor
+  Gamepad2,       // 13 Mini Club
+  Coffee,         // 14 Capless Drinks All Day Long
+  CreditCard,     // 15 Credit Card Facilities
+  Sparkles,       // 16 Dry Cleaning
+  Car,            // 17 Rental Car
+  Umbrella,       // 18 Private Beach Area
+  Store,          // 19 Souvenirs / Gift Shop
+  Wine,           // 20 Bar
+  ShoppingBag,    // 21 Luggage Storage
+  Plane,          // 22 Airport Shuttle
+  Anchor,         // 23 Seaport
+  Clock,          // 24 24-Hour Reception
+  Umbrella,       // 25 Beach and Pool Umbrellas
+  Sun,            // 26 Sunbed
+  Heart,          // 27 Skin and Body Care
+  Car,            // 28 Car Park
+  Waves,          // 29 Aquapark
+  GlassWater,     // 30 Lobby Bar
+  Coffee,         // 31 Snacks
+  Shield,         // 32 Lifeguard
+  Users,          // 33 Animation Team
+  Utensils,       // 34 Buffet Breakfast
+  Store,          // 35 Shops in Hotel
+  Home,           // 36 Family Rooms
+  Utensils,       // 37 Restaurant
+  Lock,           // 38 Safety Deposit Box
+  Waves,          // 39 Seashore
+  Wine,           // 40 Mini Bar
+  Baby,           // 41 Suitable for Children
+  Waves,          // 42 Children's Swimming Pool
+  Wind,           // 43 Hairdryer
+  Zap,            // 44 Jet Ski
+  MonitorPlay,    // 45 Shared Lounge / TV Area
+  AlarmClock,     // 46 Wake-up Service
+  Baby,           // 47 Baby Chair
+  BedDouble,      // 48 Baby Bed
+  Soup,           // 49 Night Soup
+  Wifi,           // 50 Wi-Fi Internet Connection
+  DoorOpen,       // 51 Express Check-In/Check-Out
+  Ban,            // 52 Non Smoking Rooms
+  Building2,      // 53 Lift / Elevator
+  BellRing,       // 54 Smoke Alarm
+  Music,          // 55 Disco (Summer)
+  Waves,          // 56 Beachfront
+  Tv,             // 57 Satellite Channels
 ];
 
 const RoomsPage = () => {
