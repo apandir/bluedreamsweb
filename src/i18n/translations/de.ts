@@ -394,6 +394,14 @@ export const de: Translations = {
         { name: "Babybett", paid: false },
         { name: "Nachtsuppe", paid: false },
       ],
+      categoryLabels: {
+        spaWellness: "Spa & Wellness",
+        waterActivities: "Wasseraktivitäten & Pools",
+        dining: "Gastronomie",
+        bars: "Bars & Lounges",
+        entertainment: "Unterhaltung & Sport",
+        generalServices: "Allgemeine Dienstleistungen",
+      },
     },
     diningPage: {
       title: "Gastronomie",

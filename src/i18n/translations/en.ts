@@ -394,6 +394,14 @@ export const en: Translations = {
         { name: "Baby Bed", paid: false },
         { name: "Night Soup", paid: false },
       ],
+      categoryLabels: {
+        spaWellness: "Spa & Wellness",
+        waterActivities: "Water Activities & Pools",
+        dining: "Dining & Food",
+        bars: "Bars & Lounges",
+        entertainment: "Entertainment & Sports",
+        generalServices: "General Services",
+      },
     },
     diningPage: {
       title: "Dining",

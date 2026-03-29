@@ -394,6 +394,14 @@ export const ru: Translations = {
         { name: "Детская кроватка", paid: false },
         { name: "Ночной суп", paid: false },
       ],
+      categoryLabels: {
+        spaWellness: "Спа и велнес",
+        waterActivities: "Водные развлечения и бассейны",
+        dining: "Рестораны и питание",
+        bars: "Бары и лаунджи",
+        entertainment: "Развлечения и спорт",
+        generalServices: "Общие услуги",
+      },
     },
     diningPage: {
       title: "Рестораны",

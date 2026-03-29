@@ -394,6 +394,14 @@ export const tr: Translations = {
         { name: "Bebek Yatağı", paid: false },
         { name: "Gece Çorbası", paid: false },
       ],
+      categoryLabels: {
+        spaWellness: "Spa & Wellness",
+        waterActivities: "Su Aktiviteleri & Havuzlar",
+        dining: "Yeme & İçme",
+        bars: "Barlar & Lounge'lar",
+        entertainment: "Eğlence & Spor",
+        generalServices: "Genel Hizmetler",
+      },
     },
     diningPage: {
       title: "Yeme & İçme",
