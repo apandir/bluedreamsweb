@@ -5,7 +5,7 @@ import roomClubSeaview from "@/assets/room-club-seaview.jpg";
 import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
 import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
-import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints, CloudRain, Sparkles, Thermometer, Landmark, Gem, Hand, TreePalm, Volleyball, Target, Ship, Users, Music, Car, UtensilsCrossed, type LucideIcon } from "lucide-react";
+import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints, CloudRain, Sparkles, Thermometer, Landmark, Gem, Hand, TreePalm, Volleyball, Target, Ship, Users, Music, Car, UtensilsCrossed, Bike, ConciergeBell, Shirt, Utensils, DoorOpen, Armchair, Flower2, Camera, ShoppingBag, Scissors, Flag, Hotel, CreditCard, Plane, Anchor, Clock, Umbrella, Sun, Heart, Gamepad2, GlassWater, Shield, Store, Home, Baby, Zap, MonitorPlay, AlarmClock, BedDouble, Soup, type LucideIcon } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
@@ -30,6 +30,64 @@ const facilityIcons: LucideIcon[] = [
   Car,          // Parking Lot
   UtensilsCrossed, // Beach Bar
   Waves,        // Waterslide
+];
+
+const serviceIcons: LucideIcon[] = [
+  Shirt,          // Laundry
+  Bike,           // Bicycle Rental
+  ConciergeBell,  // Concierge Service
+  Shirt,          // Ironing Service
+  Utensils,       // Restaurant (à la carte)
+  DoorOpen,       // Changing Room
+  Armchair,       // Pool Sun Loungers
+  Flower2,        // Beach Towel
+  Camera,         // Photographer
+  ShoppingBag,    // Grocery
+  Scissors,       // Coiffeur
+  Flag,           // Blue Flag
+  Hotel,          // Hostel Services
+  Armchair,       // Beach Lounger
+  GlassWater,     // Cocktail Lounge
+  Heart,          // Doctor
+  Gamepad2,       // Mini Club
+  Coffee,         // Capless Drinks All Day Long
+  CreditCard,     // Credit Card Facilities
+  Sparkles,       // Dry Cleaning
+  Car,            // Rental Car
+  Umbrella,       // Private Beach Area
+  Store,          // Souvenirs / Gift Shop
+  Wine,           // Bar
+  ShoppingBag,    // Luggage Storage
+  Plane,          // Airport Shuttle
+  Anchor,         // Seaport
+  Clock,          // 24-Hour Reception
+  Umbrella,       // Beach and Pool Umbrellas
+  Waves,          // Water Slide
+  Sun,            // Sunbed
+  Heart,          // Skin and Body Care
+  Car,            // Car Park
+  Waves,          // Aquapark
+  GlassWater,     // Lobby Bar
+  Coffee,         // Snacks
+  Shield,         // Lifeguard
+  Users,          // Animation Team
+  Sparkles,       // Beauty Shop
+  Utensils,       // Buffet Breakfast
+  Store,          // Shops in Hotel
+  Home,           // Family Rooms
+  Utensils,       // Restaurant
+  Lock,           // Safety Deposit Box
+  Waves,          // Seashore
+  Wine,           // Mini Bar
+  Baby,           // Suitable for Children
+  Waves,          // Children's Swimming Pool
+  Wind,           // Hairdryer
+  Zap,            // Jet Ski
+  MonitorPlay,    // Shared Lounge / TV Area
+  AlarmClock,     // Wake-up Service
+  Baby,           // Baby Chair
+  BedDouble,      // Baby Bed
+  Soup,           // Night Soup
 ];
 
 const RoomsPage = () => {
@@ -132,6 +190,27 @@ const RoomsPage = () => {
             })}
           </div>
           <p className="font-body text-[10px] text-muted-foreground text-center mt-6 tracking-wider">* Extra charge</p>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-20 md:py-28 bg-card border-t border-border">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{r.servicesLabel}</p>
+            <div className="w-16 h-[2px] mx-auto" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+            {r.services.map((service, i) => {
+              const Icon = serviceIcons[i] ?? Sparkles;
+              return (
+                <div key={service} className="flex items-center gap-3 py-2">
+                  <Icon className="w-4 h-4 text-accent flex-shrink-0" />
+                  <span className="font-body text-sm text-foreground">{service}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
