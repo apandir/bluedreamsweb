@@ -344,7 +344,7 @@ export const tr: Translations = {
         { name: "Ütü Hizmeti", paid: true },
         { name: "Restoran (à la carte)", paid: true },
         { name: "Soyunma Odası", paid: false },
-        { name: "Havuz Şezlongu", paid: false },
+        
         { name: "Plaj Havlusu", paid: false },
         { name: "Fotoğrafçı", paid: true },
         { name: "Market", paid: true },
