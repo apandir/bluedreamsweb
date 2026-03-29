@@ -69,7 +69,7 @@ const serviceIcons: LucideIcon[] = [
   Coffee,         // Snacks
   Shield,         // Lifeguard
   Users,          // Animation Team
-  Sparkles,       // Beauty Shop
+  
   Utensils,       // Buffet Breakfast
   Store,          // Shops in Hotel
   Home,           // Family Rooms
