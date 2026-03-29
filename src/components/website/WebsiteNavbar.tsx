@@ -236,6 +236,7 @@ const WebsiteNavbar = () => {
           {w.onlineReservation}
         </a>
       </div>
+      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 };
