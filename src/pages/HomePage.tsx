@@ -43,7 +43,7 @@ const HomePage = () => {
   const experienceCards = [
   { title: h.roomsCard, subtitle: h.roomsCardSub, image: roomsImg, link: "/rooms" },
   { title: h.restaurantCard, subtitle: h.restaurantCardSub, image: restaurantImg, link: "/dining" },
-  { title: h.activitiesCard, subtitle: h.activitiesCardSub, image: activitiesImg, link: "/spa" }];
+  { title: h.activitiesCard, subtitle: h.activitiesCardSub, image: activitiesImg, link: "/facilities" }];
 
 
   return (
