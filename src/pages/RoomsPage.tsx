@@ -33,69 +33,64 @@ const facilityIcons: LucideIcon[] = [
 ];
 
 const serviceIcons: LucideIcon[] = [
-  Shirt,          // Laundry
-  Bike,           // Bicycle Rental
-  ConciergeBell,  // Concierge Service
-  Shirt,          // Ironing Service
-  Utensils,       // Restaurant (à la carte)
-  DoorOpen,       // Changing Room
-  Armchair,       // Pool Sun Loungers
-  Flower2,        // Beach Towel
-  Camera,         // Photographer
-  ShoppingBag,    // Grocery
-  Scissors,       // Coiffeur
-  Flag,           // Blue Flag
-  Hotel,          // Hostel Services
-  Armchair,       // Beach Lounger
-  GlassWater,     // Cocktail Lounge
-  Heart,          // Doctor
-  Gamepad2,       // Mini Club
-  Coffee,         // Capless Drinks All Day Long
-  CreditCard,     // Credit Card Facilities
-  Sparkles,       // Dry Cleaning
-  Car,            // Rental Car
-  Umbrella,       // Private Beach Area
-  Store,          // Souvenirs / Gift Shop
-  Wine,           // Bar
-  ShoppingBag,    // Luggage Storage
-  Plane,          // Airport Shuttle
-  Anchor,         // Seaport
-  Clock,          // 24-Hour Reception
-  Umbrella,       // Beach and Pool Umbrellas
-  Waves,          // Water Slide
-  Sun,            // Sunbed
-  Heart,          // Skin and Body Care
-  Car,            // Car Park
-  Waves,          // Aquapark
-  GlassWater,     // Lobby Bar
-  Coffee,         // Snacks
-  Shield,         // Lifeguard
-  Users,          // Animation Team
-  Sparkles,       // Beauty Shop
-  Utensils,       // Buffet Breakfast
-  Store,          // Shops in Hotel
-  Home,           // Family Rooms
-  Utensils,       // Restaurant
-  Lock,           // Safety Deposit Box
-  Waves,          // Seashore
-  Wine,           // Mini Bar
-  Baby,           // Suitable for Children
-  Waves,          // Children's Swimming Pool
-  Wind,           // Hairdryer
-  Zap,            // Jet Ski
-  MonitorPlay,    // Shared Lounge / TV Area
-  AlarmClock,     // Wake-up Service
-  Baby,           // Baby Chair
-  BedDouble,      // Baby Bed
-  Soup,           // Night Soup
-  Wifi,           // Wi-Fi Internet Connection
-  DoorOpen,       // Express Check-In/Check-Out
-  Ban,            // Non Smoking Rooms
-  Building2,      // Lift / Elevator
-  BellRing,       // Smoke Alarm
-  Music,          // Disco (Summer)
-  Waves,          // Beachfront
-  Tv,             // Satellite Channels
+  Shirt,          // 0  Laundry
+  Bike,           // 1  Bicycle Rental
+  ConciergeBell,  // 2  Concierge Service
+  Shirt,          // 3  Ironing Service
+  Utensils,       // 4  Restaurant (à la carte)
+  DoorOpen,       // 5  Changing Room
+  Flower2,        // 6  Beach Towel
+  Camera,         // 7  Photographer
+  ShoppingBag,    // 8  Grocery
+  Scissors,       // 9  Coiffeur
+  Flag,           // 10 Blue Flag
+  Hotel,          // 11 Hostel Services
+  Heart,          // 12 Doctor
+  Gamepad2,       // 13 Mini Club
+  Coffee,         // 14 Capless Drinks All Day Long
+  CreditCard,     // 15 Credit Card Facilities
+  Sparkles,       // 16 Dry Cleaning
+  Car,            // 17 Rental Car
+  Umbrella,       // 18 Private Beach Area
+  Store,          // 19 Souvenirs / Gift Shop
+  Wine,           // 20 Bar
+  ShoppingBag,    // 21 Luggage Storage
+  Plane,          // 22 Airport Shuttle
+  Anchor,         // 23 Seaport
+  Clock,          // 24 24-Hour Reception
+  Umbrella,       // 25 Beach and Pool Umbrellas
+  Sun,            // 26 Sunbed
+  Heart,          // 27 Skin and Body Care
+  Car,            // 28 Car Park
+  Waves,          // 29 Aquapark
+  GlassWater,     // 30 Lobby Bar
+  Coffee,         // 31 Snacks
+  Shield,         // 32 Lifeguard
+  Users,          // 33 Animation Team
+  Utensils,       // 34 Buffet Breakfast
+  Store,          // 35 Shops in Hotel
+  Home,           // 36 Family Rooms
+  Utensils,       // 37 Restaurant
+  Lock,           // 38 Safety Deposit Box
+  Waves,          // 39 Seashore
+  Wine,           // 40 Mini Bar
+  Baby,           // 41 Suitable for Children
+  Waves,          // 42 Children's Swimming Pool
+  Wind,           // 43 Hairdryer
+  Zap,            // 44 Jet Ski
+  MonitorPlay,    // 45 Shared Lounge / TV Area
+  AlarmClock,     // 46 Wake-up Service
+  Baby,           // 47 Baby Chair
+  BedDouble,      // 48 Baby Bed
+  Soup,           // 49 Night Soup
+  Wifi,           // 50 Wi-Fi Internet Connection
+  DoorOpen,       // 51 Express Check-In/Check-Out
+  Ban,            // 52 Non Smoking Rooms
+  Building2,      // 53 Lift / Elevator
+  BellRing,       // 54 Smoke Alarm
+  Music,          // 55 Disco (Summer)
+  Waves,          // 56 Beachfront
+  Tv,             // 57 Satellite Channels
 ];
 
 const RoomsPage = () => {
@@ -195,11 +190,11 @@ const RoomsPage = () => {
             ];
 
             // Group by category using item names (EN keys used as identifiers)
-            const spaKeys = new Set([0, 1, 2, 3, 4, 5, 17 + 31, 17 + 38]); // Steam Room, Spa, Sauna, Hammam, Salt Room, Massage, Skin&Body(s31), Beauty(s38)
-            const waterKeys = new Set([6, 7, 16, 17 + 6, 17 + 7, 17 + 10, 17 + 11, 17 + 13, 17 + 21, 17 + 28, 17 + 29, 17 + 30, 17 + 33, 17 + 36, 17 + 44, 17 + 47, 17 + 49, 17 + 62]); // + Beachfront
-            const diningKeys = new Set([17 + 4, 17 + 17, 17 + 35, 17 + 39, 17 + 42, 17 + 54]);
-            const barKeys = new Set([15, 17 + 14, 17 + 23, 17 + 34, 17 + 45]);
-            const entertainmentKeys = new Set([8, 9, 10, 11, 12, 13, 17 + 1, 17 + 16, 17 + 37, 17 + 61]); // + Disco (Summer)
+            const spaKeys = new Set([0, 1, 2, 3, 4, 5, 17 + 27]); // Steam Room, Spa, Sauna, Hammam, Salt Room, Massage, Skin&Body
+            const waterKeys = new Set([6, 7, 16, 17 + 6, 17 + 10, 17 + 18, 17 + 25, 17 + 26, 17 + 29, 17 + 32, 17 + 39, 17 + 42, 17 + 44, 17 + 56]); // Outdoor Pool, Swimming Pool, Waterslide, Beach Towel, Blue Flag, Private Beach, Umbrellas, Sunbed, Aquapark, Lifeguard, Seashore, Children's Pool, Jet Ski, Beachfront
+            const diningKeys = new Set([17 + 4, 17 + 14, 17 + 31, 17 + 34, 17 + 37, 17 + 49]); // Restaurant à la carte, Capless Drinks, Snacks, Buffet Breakfast, Restaurant, Night Soup
+            const barKeys = new Set([15, 17 + 20, 17 + 30, 17 + 40]); // Beach Bar, Bar, Lobby Bar, Mini Bar
+            const entertainmentKeys = new Set([8, 9, 10, 11, 12, 13, 17 + 1, 17 + 13, 17 + 33, 17 + 55]); // Table Tennis, Dart, Water Sports, Boat Tour, Entertainment Staff, Live Music, Bicycle Rental, Mini Club, Animation Team, Disco
 
             type GroupedItem = { name: string; paid: boolean; icon: LucideIcon };
             const groups: { label: string; items: GroupedItem[] }[] = [
