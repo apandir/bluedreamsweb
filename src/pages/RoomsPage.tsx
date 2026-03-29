@@ -74,6 +74,7 @@ const RoomsPage = () => {
                       { icon: Wifi, label: "WiFi" },
                       { icon: Snowflake, label: "A/C" },
                       { icon: Coffee, label: "Coffee & Tea Setup" },
+                      { icon: Wine, label: "Minibar" },
                       ...(seaViewIndices.includes(i) ? [{ icon: Waves, label: "Sea View" }] : []),
                       ...(infinityPoolIndices.includes(i) ? [{ icon: Infinity, label: "Infinity Pool View" }] : []),
                     ].map(({ icon: Icon, label }) => (
