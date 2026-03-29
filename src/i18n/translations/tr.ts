@@ -67,7 +67,7 @@ export const tr: Translations = {
   rooms: {
     sectionTitle: "Odalar & Süitler",
     accommodation: "Konaklama",
-    heading: "Deniz Kenarında Sığınağınız",
+    heading: "Deniz Kenarında Huzurlu Bir Kaçış",
     desc: "Otel odalarımız yamaç bungalovları ve ana binaya yerleştirilmiş olup denizle iç içedir. Her oda Ege kıyı şeridinin eşsiz bir perspektifini sunar.",
     roomList: [
       { name: "Club Oda", size: "24m²", description: "Bahçe veya kısmi deniz manzaralı, denizle iç içe yamaç bungalovlarına yerleştirilmiş konforlu odalar." },

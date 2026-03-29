@@ -67,7 +67,7 @@ export const sv: Translations = {
   rooms: {
     sectionTitle: "Rum & Sviter",
     accommodation: "Boende",
-    heading: "Din Tillflykt vid Havet",
+    heading: "En Fridfull Flykt vid Havet",
     desc: "Våra hotellrum är inbyggda i sluttningens bungalower och huvudbyggnaden, sammanflätade med havet. Varje rum erbjuder ett unikt perspektiv av den egeiska kustlinjen.",
     roomList: [
       { name: "Club Rum", size: "24m²", description: "Bekväma rum med trädgårds- eller delvis havsutsikt, inbyggda i sluttningens bungalower sammanflätade med havet." },
