@@ -177,34 +177,35 @@ const RoomsPage = () => {
       {/* Hotel Facilities & Services */}
       <section className="py-20 md:py-28 bg-card border-t border-border">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{r.facilitiesLabel}</p>
-            <div className="w-16 h-[2px] mx-auto" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
+          {/* Header */}
+          <div className="text-center mb-10">
+            <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-3">{r.facilitiesLabel}</p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">{r.facilitiesLabel}</h2>
+            <div className="w-20 h-[2px] mx-auto" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
           </div>
 
           {(() => {
-            // Build combined items with icons
             const allItems = [
               ...r.facilities.map((f, i) => ({ ...f, icon: facilityIcons[i] ?? Waves })),
               ...r.services.map((s, i) => ({ ...s, icon: serviceIcons[i] ?? Sparkles })),
             ];
 
-            // Group by category using item names (EN keys used as identifiers)
-            const spaKeys = new Set([0, 1, 2, 3, 4, 5, 17 + 27]); // Steam Room, Spa, Sauna, Hammam, Salt Room, Massage, Skin&Body
-            const waterKeys = new Set([6, 7, 16, 17 + 6, 17 + 10, 17 + 18, 17 + 25, 17 + 26, 17 + 29, 17 + 32, 17 + 39, 17 + 42, 17 + 44, 17 + 56]); // Outdoor Pool, Swimming Pool, Waterslide, Beach Towel, Blue Flag, Private Beach, Umbrellas, Sunbed, Aquapark, Lifeguard, Seashore, Children's Pool, Jet Ski, Beachfront
-            const diningKeys = new Set([17 + 4, 17 + 14, 17 + 31, 17 + 34, 17 + 37, 17 + 49]); // Restaurant à la carte, Capless Drinks, Snacks, Buffet Breakfast, Restaurant, Night Soup
-            const barKeys = new Set([15, 17 + 20, 17 + 30, 17 + 40]); // Beach Bar, Bar, Lobby Bar, Mini Bar
-            const entertainmentKeys = new Set([8, 9, 10, 11, 12, 13, 17 + 1, 17 + 13, 17 + 33, 17 + 55]); // Table Tennis, Dart, Water Sports, Boat Tour, Entertainment Staff, Live Music, Bicycle Rental, Mini Club, Animation Team, Disco
+            const spaKeys = new Set([0, 1, 2, 3, 4, 5, 17 + 27]);
+            const waterKeys = new Set([6, 7, 16, 17 + 6, 17 + 10, 17 + 18, 17 + 25, 17 + 26, 17 + 29, 17 + 32, 17 + 39, 17 + 42, 17 + 44, 17 + 56]);
+            const diningKeys = new Set([17 + 4, 17 + 14, 17 + 31, 17 + 34, 17 + 37, 17 + 49]);
+            const barKeys = new Set([15, 17 + 20, 17 + 30, 17 + 40]);
+            const entertainmentKeys = new Set([8, 9, 10, 11, 12, 13, 17 + 1, 17 + 13, 17 + 33, 17 + 55]);
 
             type GroupedItem = { name: string; paid: boolean; icon: LucideIcon };
-            const groups: { label: string; items: GroupedItem[] }[] = [
-              { label: r.categoryLabels.generalServices, items: [] },
-              { label: r.categoryLabels.spaWellness, items: [] },
-              { label: r.categoryLabels.waterActivities, items: [] },
-              { label: r.categoryLabels.dining, items: [] },
-              { label: r.categoryLabels.bars, items: [] },
-              { label: r.categoryLabels.entertainment, items: [] },
+            const groupDefs = [
+              { id: 'general', label: r.categoryLabels.generalServices, icon: Home },
+              { id: 'spa', label: r.categoryLabels.spaWellness, icon: Sparkles },
+              { id: 'water', label: r.categoryLabels.waterActivities, icon: Waves },
+              { id: 'dining', label: r.categoryLabels.dining, icon: UtensilsCrossed },
+              { id: 'bars', label: r.categoryLabels.bars, icon: Wine },
+              { id: 'entertainment', label: r.categoryLabels.entertainment, icon: Music },
             ];
+            const groups: { id: string; label: string; icon: LucideIcon; items: GroupedItem[] }[] = groupDefs.map(g => ({ ...g, items: [] }));
 
             allItems.forEach((item, i) => {
               if (spaKeys.has(i)) groups[1].items.push(item);
@@ -215,28 +216,63 @@ const RoomsPage = () => {
               else groups[0].items.push(item);
             });
 
-            // Sort each group: free items first, paid (*) items last
             groups.forEach(g => g.items.sort((a, b) => Number(a.paid) - Number(b.paid)));
 
-            return groups.map((group) => (
-              <div key={group.label} className="mb-10 last:mb-0">
-                <h3 className="font-display text-lg text-foreground mb-4 pb-2 border-b border-border">{group.label}</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
-                  {group.items.map((item) => {
-                    const Icon = item.icon;
+            return (
+              <>
+                {/* Quick Nav Pills */}
+                <div className="flex flex-wrap justify-center gap-2 mb-12">
+                  {groups.map((group) => {
+                    const NavIcon = group.icon;
                     return (
-                      <div key={item.name} className="flex items-center gap-3 py-2">
-                        <Icon className="w-4 h-4 text-accent flex-shrink-0" />
-                        <span className="font-body text-sm text-foreground">{item.name}{item.paid ? " *" : ""}</span>
-                      </div>
+                      <button
+                        key={group.id}
+                        onClick={() => document.getElementById(`facility-${group.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                        className="group/pill flex items-center gap-2 px-4 py-2.5 rounded-full border border-border bg-background hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300 shadow-sm hover:shadow-md"
+                      >
+                        <NavIcon className="w-4 h-4 text-accent group-hover/pill:text-accent-foreground transition-colors" />
+                        <span className="font-body text-xs font-semibold tracking-wide uppercase">{group.label}</span>
+                        <span className="font-body text-[10px] text-muted-foreground group-hover/pill:text-accent-foreground/70 transition-colors">({group.items.length})</span>
+                      </button>
                     );
                   })}
                 </div>
-              </div>
-            ));
+
+                {/* Groups */}
+                {groups.map((group) => {
+                  const GroupIcon = group.icon;
+                  return (
+                    <div key={group.id} id={`facility-${group.id}`} className="mb-12 last:mb-0 scroll-mt-24">
+                      <div className="flex items-center gap-3 mb-5 pb-3 border-b border-border">
+                        <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                          <GroupIcon className="w-4.5 h-4.5 text-accent" />
+                        </div>
+                        <h3 className="font-display text-xl text-foreground">{group.label}</h3>
+                        <span className="font-body text-[10px] text-muted-foreground tracking-wider bg-muted px-2.5 py-1 rounded-full">{group.items.length}</span>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-1">
+                        {group.items.map((item) => {
+                          const Icon = item.icon;
+                          return (
+                            <div key={item.name} className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-muted/50 transition-colors">
+                              <div className="w-7 h-7 rounded-md bg-accent/8 flex items-center justify-center flex-shrink-0">
+                                <Icon className="w-3.5 h-3.5 text-accent" />
+                              </div>
+                              <span className={`font-body text-sm ${item.paid ? 'text-muted-foreground' : 'text-foreground'}`}>
+                                {item.name}{item.paid ? " *" : ""}
+                              </span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </>
+            );
           })()}
 
-          <p className="font-body text-[10px] text-muted-foreground text-center mt-6 tracking-wider">* Extra charge</p>
+          <p className="font-body text-[10px] text-muted-foreground text-center mt-8 tracking-wider">* Extra charge</p>
         </div>
       </section>
 
