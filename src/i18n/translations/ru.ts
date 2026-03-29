@@ -365,7 +365,6 @@ export const ru: Translations = {
         { name: "Морской порт", paid: false },
         { name: "Круглосуточная стойка регистрации", paid: false },
         { name: "Зонтики для пляжа и бассейна", paid: false },
-        { name: "Водная горка", paid: false },
         { name: "Шезлонг", paid: false },
         { name: "Уход за кожей и телом", paid: true },
         { name: "Парковка", paid: false },
