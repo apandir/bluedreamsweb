@@ -70,7 +70,7 @@ export const de: Translations = {
     heading: "Eine ruhige Flucht ans Meer",
     desc: "Verwurzelt in Bodrums einzigartigem architektonischen Geist, fügen sich unsere Zimmer sanft in die Landschaft ein. Jeder Raum öffnet sich zu seiner eigenen Aussicht—das beruhigende Blau der Ägäis oder die stille Schönheit der Natur.",
     roomList: [
-      { name: "Club Zimmer", size: "24m²", description: "Komfortable Zimmer mit Garten- oder teilweisem Meerblick, in die Hangbungalows integriert." },
+      { name: "Club Zimmer", size: "24m²", description: "Komfortable Zimmer mit Garten- oder teilweisem Meerblick, gestaltet in Bodrums charakteristischer Hangarchitektur, nahtlos mit der umgebenden Landschaft verbunden." },
       { name: "Club Zimmer mit Meerblick", size: "24m²", description: "Erhöhte Club-Zimmer mit Panoramablick auf die türkisfarbene Ägäis und privatem Balkon." },
       { name: "Club Familienzimmer", size: "35–40m²", description: "Geräumige familienfreundliche Zimmer mit zwei separaten Schlafzimmern für Gäste mit Kindern." },
       { name: "Deluxe Zimmer Meer- & Infinity-Pool-Blick", size: "40m²", description: "Premium-Zimmer im Hauptgebäude mit ungehindertem Meer- und Infinity-Pool-Blick, eleganter Einrichtung und exklusiven Annehmlichkeiten." },
