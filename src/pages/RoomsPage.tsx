@@ -251,10 +251,10 @@ const RoomsPage = () => {
                         <span className="font-body text-[10px] text-muted-foreground tracking-wider bg-muted px-2.5 py-1 rounded-full">{group.items.length}</span>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-1">
-                        {group.items.map((item) => {
+                        {group.items.map((item, idx) => {
                           const Icon = item.icon;
                           return (
-                            <div key={item.name} className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-muted/50 transition-colors">
+                            <div key={`${group.id}-${idx}`} className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-muted/50 transition-colors">
                               <div className="w-7 h-7 rounded-md bg-accent/8 flex items-center justify-center flex-shrink-0">
                                 <Icon className="w-3.5 h-3.5 text-accent" />
                               </div>
