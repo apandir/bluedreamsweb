@@ -316,7 +316,7 @@ export const tr: Translations = {
       clubFamilyDesc: "Geniş aileler için tasarlanmış, iki yatak odalı ve konforlu yaşam alanlı club odalar.",
       deluxeSeaView: "Deluxe Deniz Manzaralı Oda",
       deluxeSeaViewDesc: "Modern tasarımın eşsiz Bodrum manzarasıyla buluştuğu geniş ve ferah lüks yaşam alanları.",
-      facilitiesLabel: "Otel Tesisleri & Hizmetler",
+      facilitiesLabel: "Tesisler & Hizmetler",
       servicesLabel: "Hizmetler",
       facilities: [
         { name: "Buhar Odası", paid: false },

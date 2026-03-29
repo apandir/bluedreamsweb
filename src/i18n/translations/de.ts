@@ -316,7 +316,7 @@ export const de: Translations = {
       clubFamilyDesc: "Für große Familien konzipierte Club-Zimmer mit zwei Schlafzimmern und komfortablem Wohnbereich.",
       deluxeSeaView: "Deluxe Zimmer mit Meerblick",
       deluxeSeaViewDesc: "Geräumige und luftige Luxus-Wohnräume, in denen modernes Design auf den einzigartigen Bodrum-Blick trifft.",
-      facilitiesLabel: "Hoteleinrichtungen & Dienstleistungen",
+      facilitiesLabel: "Einrichtungen & Dienstleistungen",
       servicesLabel: "Dienstleistungen",
       facilities: [
         { name: "Dampfbad", paid: false },
