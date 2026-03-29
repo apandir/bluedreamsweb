@@ -70,7 +70,7 @@ export const tr: Translations = {
     heading: "Deniz Kenarında Huzurlu Bir Kaçış",
     desc: "Bodrum'un eşsiz mimari ruhuna kök salan odalarımız, doğayla nazikçe iç içe geçmiştir. Her mekan kendi manzarasına açılır—Ege Denizi'nin huzur veren mavisi ya da doğanın dingin güzelliği.",
     roomList: [
-      { name: "Club Oda", size: "24m²", description: "Bahçe veya kısmi deniz manzaralı, denizle iç içe yamaç bungalovlarına yerleştirilmiş konforlu odalar." },
+      { name: "Club Oda", size: "24m²", description: "Bahçe veya kısmi deniz manzaralı, Bodrum'un kendine özgü yamaç mimarisi içinde tasarlanmış, çevredeki doğayla kusursuzca bütünleşen konforlu odalar." },
       { name: "Club Deniz Manzaralı Oda", size: "24m²", description: "Özel balkonlu, turkuaz Ege'nin panoramik manzarasını sunan yüksek konumlu club odalar." },
       { name: "Club Aile Odası", size: "35–40m²", description: "Çocuklu aileler için tasarlanmış, iki ayrı yatak odalı geniş aile odaları." },
       { name: "Deluxe Oda Deniz & Infinity Havuz Manzaralı", size: "40m²", description: "Ana binada, kesintisiz deniz ve infinity havuz manzaralı, zarif döşemeli ve özel olanaklı premium odalar." },

@@ -70,7 +70,7 @@ export const en: Translations = {
     heading: "A Serene Escape by the Sea",
     desc: "Rooted in Bodrum's unique architectural spirit, our rooms are gently woven into the landscape. Each space opens to its own view—either the calming blue of the Aegean Sea or the tranquil beauty of nature.",
     roomList: [
-      { name: "Club Room", size: "24m²", description: "Comfortable rooms with garden or partial sea views, built into the hillside bungalows intertwined with the sea." },
+      { name: "Club Room", size: "24m²", description: "Comfortable rooms with garden or partial sea views, designed within Bodrum's distinctive hillside architecture, seamlessly connected to the surrounding landscape." },
       { name: "Club Sea View Room", size: "24m²", description: "Elevated club rooms offering panoramic views of the turquoise Aegean, with private balconies." },
       { name: "Club Family Room", size: "35–40m²", description: "Spacious family-friendly rooms with two separate bedrooms, designed for guests traveling with children." },
       { name: "Deluxe Room Sea & Infinity Pool View", size: "40m²", description: "Premium rooms in the main building with unobstructed sea and infinity pool views, elegant furnishings, and exclusive amenities." },

@@ -70,7 +70,7 @@ export const sv: Translations = {
     heading: "En Fridfull Flykt vid Havet",
     desc: "Rotade i Bodrums unika arkitektoniska anda, är våra rum varsamt invävda i landskapet. Varje utrymme öppnar sig mot sin egen utsikt—det lugnande blå Egeiska havet eller naturens fridfulla skönhet.",
     roomList: [
-      { name: "Club Rum", size: "24m²", description: "Bekväma rum med trädgårds- eller delvis havsutsikt, inbyggda i sluttningens bungalower sammanflätade med havet." },
+      { name: "Club Rum", size: "24m²", description: "Bekväma rum med trädgårds- eller delvis havsutsikt, utformade inom Bodrums distinkta sluttningsarkitektur, sömlöst förbundna med det omgivande landskapet." },
       { name: "Club Havsutsikt Rum", size: "24m²", description: "Upphöjda club-rum med panoramautsikt över det turkosa Egeiska havet, med privata balkonger." },
       { name: "Club Familjerum", size: "35–40m²", description: "Rymliga familjevänliga rum med två separata sovrum, designade för gäster som reser med barn." },
       { name: "Deluxe Rum Havs- & Infinity Pool-utsikt", size: "40m²", description: "Premiumrum i huvudbyggnaden med fri havs- och infinity pool-utsikt, eleganta möbler och exklusiva bekvämligheter." },
