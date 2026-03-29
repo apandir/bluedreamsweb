@@ -365,7 +365,7 @@ export const en: Translations = {
         { name: "Seaport", paid: false },
         { name: "24-Hour Reception", paid: false },
         { name: "Beach and Pool Umbrellas", paid: false },
-        { name: "Water Slide", paid: false },
+        
         { name: "Sunbed", paid: false },
         { name: "Skin and Body Care", paid: true },
         { name: "Car Park", paid: false },
