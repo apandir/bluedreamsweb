@@ -36,7 +36,7 @@ const serviceIcons: LucideIcon[] = [
   Shirt,            // 0  Laundry
   Bike,             // 1  Bicycle Rental
   ConciergeBell,    // 2  Concierge Service
-  Iron,             // 3  Ironing Service — using Wind as fallback since Iron doesn't exist, let me use a different one
+  Armchair,         // 3  Ironing Service
   UtensilsCrossed,  // 4  Restaurant (à la carte)
   DoorOpen,         // 5  Changing Room
   Flower2,          // 6  Beach Towel
