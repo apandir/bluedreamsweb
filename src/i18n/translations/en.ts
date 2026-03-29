@@ -100,8 +100,8 @@ export const en: Translations = {
     heading: "A Feast for Every Sense",
     restaurants: [
       { name: "Main Restaurant", type: "All Day Dining", desc: "International buffet with live cooking stations and theme nights", hours: "07:00 – 10:00 · 12:30 – 14:00 · 19:00 – 21:30", location: "Main activity level" },
-      { name: "Snack Restaurant", type: "Casual Dining", desc: "Light bites, burgers, sandwiches and refreshments served beachside throughout the day", hours: "12:00 – 17:00", location: "Beachfront" },
-      { name: "Pool Snacks", type: "Casual Dining", desc: "Freshly prepared poolside snacks and light treats served throughout the day at the infinity pool", hours: "10:00 – 18:00", location: "Infinity Pool Bar" },
+      { name: "Snack Restaurant", type: "Casual Dining", desc: "Light bites, burgers, sandwiches and refreshments served beachside throughout the day", hours: "12:00 – 16:00", location: "Beachfront" },
+      { name: "Pool Snacks", type: "Casual Dining", desc: "Freshly prepared poolside snacks and light treats served throughout the day at the infinity pool", hours: "12:00 – 16:00", location: "Infinity Pool Bar" },
       { name: "La Locanda", type: "À la Carte Restaurant", desc: "Wood-fired pizza and handmade pasta in a refined Mediterranean setting", hours: "19:30 – 22:00", location: "Garden Terrace" },
       { name: "Halikarnas", type: "À la Carte Restaurant", desc: "Fresh Aegean seafood with the finest catches of the day in an elegant waterfront setting", hours: "19:30 – 22:00", location: "Beachfront" },
       { name: "Le Kebab", type: "À la Carte Restaurant", desc: "Authentic Turkish cuisine featuring premium kebabs and traditional Anatolian flavours", hours: "19:30 – 22:00", location: "Beachfront" },
