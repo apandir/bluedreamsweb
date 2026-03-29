@@ -93,6 +93,28 @@ const RoomsPage = () => {
         </div>
       </section>
 
+      {/* Facilities & Activities */}
+      <section className="py-20 md:py-28 bg-background border-t border-border">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{r.facilitiesLabel}</p>
+            <div className="w-16 h-[2px] mx-auto" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), transparent)' }} />
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {r.facilities.map((f) => {
+              const Icon = facilityIcons[r.facilities.indexOf(f)] ?? Waves;
+              return (
+                <div key={f.name} className="flex flex-col items-center gap-2 p-4 rounded-xl border border-border bg-card hover:shadow-sm transition-shadow text-center">
+                  <Icon className="w-5 h-5 text-accent" />
+                  <span className="font-body text-xs text-foreground leading-tight">{f.name}{f.paid ? " *" : ""}</span>
+                </div>
+              );
+            })}
+          </div>
+          <p className="font-body text-[10px] text-muted-foreground text-center mt-6 tracking-wider">* Extra charge</p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 section-cream text-center">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">

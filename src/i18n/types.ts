@@ -244,6 +244,8 @@ export interface Translations {
       clubFamilyDesc: string;
       deluxeSeaView: string;
       deluxeSeaViewDesc: string;
+      facilitiesLabel: string;
+      facilities: { name: string; paid: boolean }[];
     };
     diningPage: {
       title: string;
