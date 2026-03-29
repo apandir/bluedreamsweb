@@ -365,7 +365,6 @@ export const de: Translations = {
         { name: "Seehafen", paid: false },
         { name: "24-Stunden-Rezeption", paid: false },
         { name: "Strand- und Poolschirme", paid: false },
-        { name: "Wasserrutsche", paid: false },
         { name: "Sonnenliege", paid: false },
         { name: "Haut- und Körperpflege", paid: true },
         { name: "Parkplatz", paid: false },
