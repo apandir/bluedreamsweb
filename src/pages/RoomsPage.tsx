@@ -203,22 +203,25 @@ const RoomsPage = () => {
 
             type GroupedItem = { name: string; paid: boolean; icon: LucideIcon };
             const groups: { label: string; items: GroupedItem[] }[] = [
+              { label: r.categoryLabels.generalServices, items: [] },
               { label: r.categoryLabels.spaWellness, items: [] },
               { label: r.categoryLabels.waterActivities, items: [] },
               { label: r.categoryLabels.dining, items: [] },
               { label: r.categoryLabels.bars, items: [] },
               { label: r.categoryLabels.entertainment, items: [] },
-              { label: r.categoryLabels.generalServices, items: [] },
             ];
 
             allItems.forEach((item, i) => {
-              if (spaKeys.has(i)) groups[0].items.push(item);
-              else if (waterKeys.has(i)) groups[1].items.push(item);
-              else if (diningKeys.has(i)) groups[2].items.push(item);
-              else if (barKeys.has(i)) groups[3].items.push(item);
-              else if (entertainmentKeys.has(i)) groups[4].items.push(item);
-              else groups[5].items.push(item);
+              if (spaKeys.has(i)) groups[1].items.push(item);
+              else if (waterKeys.has(i)) groups[2].items.push(item);
+              else if (diningKeys.has(i)) groups[3].items.push(item);
+              else if (barKeys.has(i)) groups[4].items.push(item);
+              else if (entertainmentKeys.has(i)) groups[5].items.push(item);
+              else groups[0].items.push(item);
             });
+
+            // Sort each group: free items first, paid (*) items last
+            groups.forEach(g => g.items.sort((a, b) => Number(a.paid) - Number(b.paid)));
 
             return groups.map((group) => (
               <div key={group.label} className="mb-10 last:mb-0">
