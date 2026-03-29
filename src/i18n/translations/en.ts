@@ -67,7 +67,7 @@ export const en: Translations = {
   rooms: {
     sectionTitle: "Rooms & Suites",
     accommodation: "Accommodation",
-    heading: "Your Sanctuary by the Sea",
+    heading: "A Serene Escape by the Sea",
     desc: "Our hotel rooms are built into the hillside bungalows and the main building, intertwined with the sea. Each room offers a unique perspective of the Aegean coastline.",
     roomList: [
       { name: "Club Room", size: "24m²", description: "Comfortable rooms with garden or partial sea views, built into the hillside bungalows intertwined with the sea." },

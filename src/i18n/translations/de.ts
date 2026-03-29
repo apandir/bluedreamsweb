@@ -67,7 +67,7 @@ export const de: Translations = {
   rooms: {
     sectionTitle: "Zimmer & Suiten",
     accommodation: "Unterkunft",
-    heading: "Ihr Refugium am Meer",
+    heading: "Eine ruhige Flucht ans Meer",
     desc: "Unsere Hotelzimmer befinden sich in Hangbungalows und im Hauptgebäude, umgeben vom Meer. Jedes Zimmer bietet eine einzigartige Perspektive auf die Ägäis-Küste.",
     roomList: [
       { name: "Club Zimmer", size: "24m²", description: "Komfortable Zimmer mit Garten- oder teilweisem Meerblick, in die Hangbungalows integriert." },
