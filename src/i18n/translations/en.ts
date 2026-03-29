@@ -76,6 +76,18 @@ export const en: Translations = {
       { name: "Deluxe Room Sea & Infinity Pool View", size: "40m²", description: "Premium rooms in the main building with unobstructed sea and infinity pool views, elegant furnishings, and exclusive amenities." },
       { name: "Deluxe Family Room Sea & Infinity Pool View", size: "50–55m²", description: "Spacious deluxe family accommodation with stunning sea and infinity pool views, separate living area, and premium amenities for the whole family." },
     ],
+    amenities: {
+      safebox: "Safebox",
+      hairDryer: "Hair Dryer",
+      ledTv: "LED Satellite TV",
+      privateBathroom: "Private Bathroom",
+      wifi: "WiFi",
+      ac: "A/C",
+      coffeeTea: "Coffee & Tea Setup",
+      minibar: "Minibar",
+      seaView: "Sea View",
+      infinityPoolView: "Infinity Pool View",
+    },
   },
   beach: {
     sectionTitle: "Beach & Pools",

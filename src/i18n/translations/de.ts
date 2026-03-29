@@ -76,6 +76,18 @@ export const de: Translations = {
       { name: "Deluxe Zimmer Meer- & Infinity-Pool-Blick", size: "40m²", description: "Premium-Zimmer im Hauptgebäude mit ungehindertem Meer- und Infinity-Pool-Blick, eleganter Einrichtung und exklusiven Annehmlichkeiten." },
       { name: "Deluxe Familienzimmer Meer- & Infinity-Pool-Blick", size: "50–55m²", description: "Geräumige Deluxe-Familienunterkunft mit atemberaubendem Meer- und Infinity-Pool-Blick, separatem Wohnbereich und Premium-Ausstattung." },
     ],
+    amenities: {
+      safebox: "Safe",
+      hairDryer: "Haartrockner",
+      ledTv: "LED-Satelliten-TV",
+      privateBathroom: "Eigenes Bad",
+      wifi: "WLAN",
+      ac: "Klimaanlage",
+      coffeeTea: "Kaffee- & Tee-Set",
+      minibar: "Minibar",
+      seaView: "Meerblick",
+      infinityPoolView: "Infinity-Pool-Blick",
+    },
   },
   beach: {
     sectionTitle: "Strand & Pools",
