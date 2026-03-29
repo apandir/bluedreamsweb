@@ -4,7 +4,7 @@ import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
 import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
 import roomHero from "@/assets/room-deluxe.jpg";
-import { Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine } from "lucide-react";
+import { Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity, Coffee, Wine, Droplets, Footprints } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
