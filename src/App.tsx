@@ -16,6 +16,7 @@ import MeetingsWeddingsPage from "./pages/MeetingsWeddingsPage";
 import MeetingsEventsPage from "./pages/MeetingsEventsPage";
 import FactsheetPage from "./pages/Index";
 import GalleryPage from "./pages/GalleryPage";
+import FacilitiesPage from "./pages/FacilitiesPage";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -41,6 +42,7 @@ const App = () => (
               <Route path="/meetings/events" element={<MeetingsEventsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/facilities" element={<FacilitiesPage />} />
             </Route>
             <Route path="/factsheet" element={<FactsheetPage />} />
             <Route path="*" element={<NotFound />} />
