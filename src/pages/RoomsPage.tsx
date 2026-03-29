@@ -72,6 +72,7 @@ const RoomsPage = () => {
                       { icon: Bath, label: "Private Bathroom" },
                       { icon: Wifi, label: "WiFi" },
                       { icon: Snowflake, label: "A/C" },
+                      ...(seaViewIndices.includes(i) ? [{ icon: Waves, label: "Sea View" }] : []),
                     ].map(({ icon: Icon, label }) => (
                       <div key={label} className="flex items-center gap-1.5">
                         <Icon className="w-3.5 h-3.5 text-accent flex-shrink-0" />
