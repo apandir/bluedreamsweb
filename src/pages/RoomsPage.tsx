@@ -5,11 +5,12 @@ import roomClubSeaview from "@/assets/room-club-seaview.jpg";
 import roomFamily from "@/assets/room-family.jpg";
 import roomDeluxe from "@/assets/room-deluxe-new.jpg";
 import roomDeluxeFamily from "@/assets/room-deluxe-family.jpg";
-import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves } from "lucide-react";
+import { ChevronRight, Lock, Wind, Tv, Bath, Wifi, Snowflake, Waves, Infinity } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const images = [roomClub, roomClubSeaview, roomFamily, roomDeluxe, roomDeluxeFamily];
-const seaViewIndices = [1, 3]; // Club Sea View, Deluxe Sea View
+const seaViewIndices = [1, 3, 4]; // Club Sea View, Deluxe Sea View, Deluxe Family
+const infinityPoolIndices = [3, 4]; // Deluxe rooms
 
 const RoomsPage = () => {
   const { t } = useLanguage();
@@ -73,6 +74,7 @@ const RoomsPage = () => {
                       { icon: Wifi, label: "WiFi" },
                       { icon: Snowflake, label: "A/C" },
                       ...(seaViewIndices.includes(i) ? [{ icon: Waves, label: "Sea View" }] : []),
+                      ...(infinityPoolIndices.includes(i) ? [{ icon: Infinity, label: "Infinity Pool View" }] : []),
                     ].map(({ icon: Icon, label }) => (
                       <div key={label} className="flex items-center gap-1.5">
                         <Icon className="w-3.5 h-3.5 text-accent flex-shrink-0" />
