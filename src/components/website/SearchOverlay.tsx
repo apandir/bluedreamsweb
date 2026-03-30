@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { Search, X, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface SearchEntry {
   title: string;
@@ -9,36 +10,32 @@ interface SearchEntry {
   category: string;
 }
 
-const searchData: SearchEntry[] = [
-  { title: "Rooms & Suites", description: "Luxury rooms, suites, family rooms, sea view accommodation", href: "/rooms", category: "Accommodation" },
-  { title: "Standard Room", description: "Comfortable standard rooms with modern amenities", href: "/rooms", category: "Accommodation" },
-  { title: "Suite", description: "Spacious suites with separate living areas", href: "/rooms", category: "Accommodation" },
-  { title: "Family Room", description: "Family-friendly rooms with extra space for children", href: "/rooms", category: "Accommodation" },
-  { title: "Restaurant & Bar", description: "Main restaurant, a la carte dining, bars, snack bar, all inclusive", href: "/dining", category: "Dining" },
-  { title: "Breakfast", description: "Open buffet breakfast with fresh pastries and local specialties", href: "/dining", category: "Dining" },
-  { title: "A La Carte", description: "Fine dining a la carte restaurant experience", href: "/dining", category: "Dining" },
-  { title: "All Inclusive", description: "All inclusive food and beverage concept", href: "/dining", category: "Dining" },
-  { title: "Spa & Wellness", description: "Turkish bath, sauna, massage, beauty treatments, hammam", href: "/spa", category: "Wellness" },
-  { title: "Turkish Bath", description: "Traditional hammam and Turkish bath experience", href: "/spa", category: "Wellness" },
-  { title: "Massage", description: "Relaxing massage treatments and body therapies", href: "/spa", category: "Wellness" },
-  { title: "Sauna", description: "Finnish sauna and steam room facilities", href: "/spa", category: "Wellness" },
-  { title: "Meetings & Events", description: "Conference rooms, weddings, corporate events, banquet", href: "/meetings", category: "Events" },
-  { title: "Conferences", description: "Meeting rooms and conference facilities with AV equipment", href: "/meetings/conferences", category: "Events" },
-  { title: "Weddings", description: "Wedding venues, beach weddings, celebration packages", href: "/meetings/weddings", category: "Events" },
-  { title: "Private Events", description: "Birthday parties, anniversaries, special celebrations", href: "/meetings/events", category: "Events" },
-  { title: "Gallery", description: "Photo gallery of the resort, rooms, beach, pool and facilities", href: "/gallery", category: "Media" },
-  { title: "Facilities & Services", description: "Swimming pool, fitness, kids club, entertainment, Wi-Fi, parking", href: "/facilities", category: "Services" },
-  { title: "Swimming Pool", description: "Outdoor swimming pools with sun loungers", href: "/facilities", category: "Services" },
-  { title: "Fitness Center", description: "Gym and fitness center with modern equipment", href: "/facilities", category: "Services" },
-  { title: "Kids Club", description: "Children's club with activities and playground", href: "/facilities", category: "Services" },
-  { title: "Beach", description: "Private beach with sun loungers and water sports", href: "/facilities", category: "Services" },
-  { title: "Water Sports", description: "Jet ski, banana boat, parasailing and water activities", href: "/facilities", category: "Services" },
-  { title: "Contact", description: "Phone, email, address, reservation, directions to hotel", href: "/contact", category: "Info" },
-  { title: "Location", description: "Bodrum Torba, directions, airport transfer, map", href: "/contact", category: "Info" },
-  { title: "Factsheet", description: "Complete hotel factsheet with all details and specifications", href: "/factsheet", category: "Info" },
-  { title: "Home", description: "Blue Dreams Resort & Spa homepage, overview", href: "/", category: "General" },
-  { title: "Online Reservation", description: "Book your stay, check availability, rates and packages", href: "https://blue-dreams.rezervasyonal.com/en/", category: "Booking" },
-];
+function buildSearchData(t: ReturnType<typeof useLanguage>["t"]): SearchEntry[] {
+  const w = t.website;
+  return [
+    { title: w.navbar.rooms, description: w.roomsPage.comfortElegance, href: "/rooms", category: t.nav.rooms },
+    { title: w.roomsPage.clubRoom, description: w.roomsPage.clubRoomDesc, href: "/rooms", category: t.nav.rooms },
+    { title: w.roomsPage.clubSeaView, description: w.roomsPage.clubSeaViewDesc, href: "/rooms", category: t.nav.rooms },
+    { title: w.roomsPage.clubFamily, description: w.roomsPage.clubFamilyDesc, href: "/rooms", category: t.nav.rooms },
+    { title: w.roomsPage.deluxeSeaView, description: w.roomsPage.deluxeSeaViewDesc, href: "/rooms", category: t.nav.rooms },
+    { title: w.navbar.restaurantBar, description: w.diningPage.heroDesc, href: "/dining", category: t.nav.dining },
+    { title: w.diningPage.ourRestaurants, description: w.diningPage.cuisine, href: "/dining", category: t.nav.dining },
+    { title: w.diningPage.barsLounges, description: w.diningPage.barsHeading, href: "/dining", category: t.nav.dining },
+    { title: w.navbar.spa, description: w.spaPage.introP1, href: "/spa", category: t.nav.spa },
+    { title: w.spaPage.wellnessSpa, description: w.spaPage.ourServices, href: "/spa", category: t.nav.spa },
+    { title: w.meetingsPage.title, description: w.meetingsPage.heroDesc, href: "/meetings", category: t.nav.meetings },
+    { title: w.meetingsPage.meetingCard, description: w.meetingsPage.meetingCardDesc, href: "/meetings/conferences", category: t.nav.meetings },
+    { title: w.meetingsPage.weddingCard, description: w.meetingsPage.weddingCardDesc, href: "/meetings/weddings", category: t.nav.meetings },
+    { title: w.meetingsPage.eventsCard, description: w.meetingsPage.eventsCardDesc, href: "/meetings/events", category: t.nav.meetings },
+    { title: w.navbar.contact, description: w.contactPage.subtitle, href: "/contact", category: t.nav.contact },
+    { title: w.navbar.factsheet, description: t.hero.tagline, href: "/factsheet", category: t.nav.info },
+    { title: w.home.discover, description: w.home.heroDesc, href: "/", category: w.home.pearlOfBodrum },
+    { title: w.navbar.onlineReservation, description: w.footer.ctaButton, href: "https://blue-dreams.rezervasyonal.com/en/", category: w.navbar.onlineReservation },
+    ...t.spa.services.map(s => ({ title: s.title, description: s.desc, href: "/spa", category: t.nav.spa })),
+    ...t.dining.restaurants.map(r => ({ title: r.name, description: r.desc, href: "/dining", category: t.nav.dining })),
+    ...t.dining.bars.map(b => ({ title: b.name, description: b.desc, href: "/dining", category: t.nav.dining })),
+  ];
+}
 
 interface Props {
   open: boolean;
@@ -49,6 +46,9 @@ const SearchOverlay = ({ open, onClose }: Props) => {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
+  const { t } = useLanguage();
+
+  const searchData = useMemo(() => buildSearchData(t), [t]);
 
   useEffect(() => {
     if (open) {
@@ -75,7 +75,7 @@ const SearchOverlay = ({ open, onClose }: Props) => {
         e.description.toLowerCase().includes(q) ||
         e.category.toLowerCase().includes(q)
     );
-  }, [query]);
+  }, [query, searchData]);
 
   const handleSelect = (entry: SearchEntry) => {
     onClose();
