@@ -46,6 +46,9 @@ const SearchOverlay = ({ open, onClose }: Props) => {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
+  const { t } = useLanguage();
+
+  const searchData = useMemo(() => buildSearchData(t), [t]);
 
   useEffect(() => {
     if (open) {
@@ -72,7 +75,7 @@ const SearchOverlay = ({ open, onClose }: Props) => {
         e.description.toLowerCase().includes(q) ||
         e.category.toLowerCase().includes(q)
     );
-  }, [query]);
+  }, [query, searchData]);
 
   const handleSelect = (entry: SearchEntry) => {
     onClose();
