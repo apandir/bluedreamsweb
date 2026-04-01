@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import heroImg from "@/assets/home-beach.jpg";
+import mapImg from "@/assets/blue-dreams-map.jpg";
 import { ChevronRight, MapPin, Phone, Mail, Clock, MessageCircle, Send } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
