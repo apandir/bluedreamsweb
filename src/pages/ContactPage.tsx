@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import heroImg from "@/assets/home-beach.jpg";
+import mapImg from "@/assets/blue-dreams-map.jpg";
 import { ChevronRight, MapPin, Phone, Mail, Clock, MessageCircle, Send } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -118,18 +119,15 @@ const ContactPage = () => {
           <h2 className="font-display text-3xl md:text-4xl text-foreground mb-10">
             {c.getDirections.split(' ')[0]} <span className="italic text-accent">{c.getDirections.split(' ').slice(1).join(' ')}</span>
           </h2>
-          <div className="rounded-2xl overflow-hidden shadow-sm border border-border">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.8!2d27.480499!3d37.091832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be6da442015145%3A0xd997fa1519fca498!2sBlue%20Dreams%20Resort!5e0!3m2!1sen!2str!4v1700000000000!5m2!1sen!2str"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Blue Dreams Resort & Spa Location"
-            />
-          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Blue+Dreams+Resort+Bodrum+Turkey" target="_blank" rel="noopener noreferrer" className="group relative block overflow-hidden rounded-2xl border border-border">
+            <img src={mapImg} alt="Blue Dreams Resort Location Map" loading="lazy" width={1400} height={512} className="w-full h-[450px] object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ocean-deep/60 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 text-primary-foreground">
+              <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase opacity-80 mb-2">{c.address}</p>
+              <h3 className="font-display text-3xl">Blue Dreams Resort</h3>
+              <p className="mt-2 font-body text-sm text-primary-foreground/80 flex items-center gap-2"><MapPin className="w-4 h-4" /> {c.getDirections}</p>
+            </div>
+          </a>
         </div>
       </section>
     </main>
