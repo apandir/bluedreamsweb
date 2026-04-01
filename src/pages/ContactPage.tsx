@@ -112,6 +112,26 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
+      <section className="py-24 md:py-32 bg-muted/30">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+          <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{c.address}</p>
+          <h2 className="font-display text-3xl md:text-4xl text-foreground mb-10">
+            {c.getDirections.split(' ')[0]} <span className="italic text-accent">{c.getDirections.split(' ').slice(1).join(' ')}</span>
+          </h2>
+          <div className="rounded-2xl overflow-hidden shadow-sm border border-border">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.5!2d27.4805!3d37.0918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be6da442015145%3A0xd997fa1519fca498!2sBlue%20Dreams%20Resort%20%26%20SPA!5e0!3m2!1sen!2str!4v1700000000000!5m2!1sen!2str"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Blue Dreams Resort & Spa Location"
+            />
+          </div>
+        </div>
+      </section>
     </main>
   );
 };
