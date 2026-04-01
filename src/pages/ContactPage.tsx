@@ -120,7 +120,7 @@ const ContactPage = () => {
           </h2>
           <div className="rounded-2xl overflow-hidden shadow-sm border border-border">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.5!2d27.4805!3d37.0918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be6c3a3a3a3a3a%3A0x0!2sBlue+Dreams+Resort+%26+Spa!5e0!3m2!1sen!2str!4v1700000000000!5m2!1sen!2str"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.5!2d27.4805!3d37.0918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14be6da442015145%3A0xd997fa1519fca498!2sBlue%20Dreams%20Resort%20%26%20SPA!5e0!3m2!1sen!2str!4v1700000000000!5m2!1sen!2str"
               width="100%"
               height="450"
               style={{ border: 0 }}
