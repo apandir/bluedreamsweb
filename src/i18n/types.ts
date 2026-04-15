@@ -221,6 +221,18 @@ export interface Translations {
       locationLabel: string;
       locationSub: string;
       getDirections: string;
+      natureAccent: string;
+      sustainableAccent: string;
+      enjoyAccent: string;
+      experienceAccent: string;
+      commitmentAccent: string;
+      galleryTitle: string;
+      gallerySub: string;
+      galleryAll: string;
+      galleryGeneral: string;
+      galleryRooms: string;
+      galleryDining: string;
+      galleryMeeting: string;
     };
     roomsPage: {
       title: string;
@@ -319,6 +331,7 @@ export interface Translations {
       home: string;
       contactInfo: string;
       getInTouch: string;
+      touchAccent: string;
       address: string;
       phone: string;
       emailLabel: string;
@@ -338,6 +351,17 @@ export interface Translations {
       otherSubject: string;
       yourMessage: string;
       send: string;
+    };
+    spaPage: {
+      blueDreamsResort: string;
+      wellnessSpa: string;
+      introP1: string;
+      introP2: string;
+      introP3: string;
+      bookNow: string;
+      treatYourself: string;
+      ourServices: string;
+      services: { title: string; desc: string }[];
     };
   };
 }
