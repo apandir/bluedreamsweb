@@ -97,18 +97,19 @@ const galleryImages: GalleryImage[] = [
   { url: "https://bluedreamsresort.com/wp-content/uploads/2026/01/Ekran-goruntusu-2026-01-14-171917-768x451.png", title: "Stockholm Meeting Room", category: "meeting" },
 ];
 
-const categories = [
-  { key: "all", label: "All" },
-  { key: "general", label: "General" },
-  { key: "rooms", label: "Rooms" },
-  { key: "dining", label: "Restaurants & Bars" },
-  { key: "meeting", label: "Meeting" },
-];
-
 const GalleryPage = () => {
   const { t } = useLanguage();
+  const h = t.website.home;
   const [activeCategory, setActiveCategory] = useState("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const categories = [
+    { key: "all", label: h.galleryAll },
+    { key: "general", label: h.galleryGeneral },
+    { key: "rooms", label: h.galleryRooms },
+    { key: "dining", label: h.galleryDining },
+    { key: "meeting", label: h.galleryMeeting },
+  ];
 
   const filtered = activeCategory === "all"
     ? galleryImages
@@ -132,8 +133,8 @@ const GalleryPage = () => {
         <img src={heroImg} alt="Gallery" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-ocean-deep/60" />
         <div className="relative z-10 text-center px-6">
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-4 text-shadow-hero">Gallery</h1>
-          <p className="font-body text-lg text-primary-foreground/70 text-shadow-sm">Explore our resort through images</p>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-primary-foreground mb-4 text-shadow-hero">{h.galleryTitle}</h1>
+          <p className="font-body text-lg text-primary-foreground/70 text-shadow-sm">{h.gallerySub}</p>
         </div>
       </section>
 
