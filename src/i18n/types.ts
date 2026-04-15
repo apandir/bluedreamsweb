@@ -291,6 +291,7 @@ export interface Translations {
       bookNow: string;
       treatYourself: string;
       ourServices: string;
+      services: { title: string; desc: string }[];
     };
     meetingsPage: {
       title: string;
