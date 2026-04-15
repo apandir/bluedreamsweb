@@ -292,9 +292,7 @@ export const ru: Translations = {
       howWeDoIt: "Как мы это делаем",
       locationLabel: "Расположение",
       locationSub: "Мы ждём вас в Торбе, прямо на берегу моря.",
-      getDirections: "Проложить маршрут",
-    },
-    roomsPage: {
+      getDirections: "undefined: {
       title: "Номера и люксы",
       subtitle: "Комфорт для любого бюджета",
       home: "Главная",

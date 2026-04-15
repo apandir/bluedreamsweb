@@ -292,9 +292,7 @@ export const de: Translations = {
       howWeDoIt: "So machen wir es",
       locationLabel: "Lage",
       locationSub: "Wir erwarten Sie in Torba, direkt am Meer.",
-      getDirections: "Wegbeschreibung",
-    },
-    roomsPage: {
+      getDirections: "undefined: {
       title: "Zimmer & Suiten",
       subtitle: "Komfort für jedes Budget",
       home: "Startseite",

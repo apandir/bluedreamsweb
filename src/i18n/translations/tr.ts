@@ -292,9 +292,7 @@ export const tr: Translations = {
       howWeDoIt: "Nasıl Yapıyoruz",
       locationLabel: "Konum",
       locationSub: "Torba'da, deniz kıyısında sizi bekliyoruz.",
-      getDirections: "Yol Tarifi Al",
-    },
-    roomsPage: {
+      getDirections: "undefined: {
       title: "Odalar & Süitler",
       subtitle: "Her bütçeye uygun konfor",
       home: "Ana Sayfa",
