@@ -12,6 +12,7 @@ const languages: { code: Language; label: string }[] = [
   { code: "tr", label: "TR" },
   { code: "de", label: "DE" },
   { code: "ru", label: "RU" },
+  { code: "sv", label: "SV" },
 ];
 
 const WebsiteNavbar = () => {
