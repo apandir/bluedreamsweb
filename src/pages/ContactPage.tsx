@@ -33,7 +33,7 @@ const ContactPage = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{c.contactInfo}</p>
           <h2 className="font-display text-3xl md:text-4xl text-foreground mb-16">
-            {c.getInTouch} <span className="italic text-accent">Touch</span>
+            {c.getInTouch} <span className="italic text-accent">{c.touchAccent}</span>
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">

@@ -14,16 +14,7 @@ const SpaPage = () => {
   const { t } = useLanguage();
   const s = t.website.spaPage;
 
-  const services = [
-    { title: "Traditional Turkish Hamam", desc: "Renew yourself with traditional kese and foam massage.", image: hamamImg },
-    { title: "Aromatherapy Massage", desc: "Relaxing massage applied with special herbal oils.", image: aromatherapyImg },
-    { title: "Skin Care", desc: "Deep skin care cures applied with natural products.", image: skincareImg },
-    { title: "Sauna", desc: "Cleanse toxins and relax in our Finnish sauna.", image: saunaImg },
-    { title: "Steam Room", desc: "Rejuvenate with aromatic steam therapy.", image: steamroomImg },
-    { title: "Salt Therapy Room", desc: "Breathe in healing Himalayan salt minerals for respiratory wellness.", image: saltroomImg },
-    { title: "Ice Room", desc: "Invigorate your senses with a refreshing cold therapy experience.", image: iceroomImg },
-    { title: "Hot Stone Massage", desc: "Deep tissue massage with volcanic stones.", image: hotstoneImg },
-  ];
+  const services = s.services;
 
   return (
     <main>

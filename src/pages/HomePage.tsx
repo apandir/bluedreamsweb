@@ -99,7 +99,7 @@ const HomePage = () => {
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 py-24">
           <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4 text-shadow-sm">{h.natureLabel}</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-lg mb-6 text-shadow-hero">
-            {h.natureHeading}{" "}<span className="italic text-accent">{h.dream.toLowerCase() === "dream" ? "nature" : h.dream}</span>
+            {h.natureHeading}{" "}<span className="italic text-accent">{h.natureAccent}</span>
           </h2>
           <p className="font-body text-lg text-primary-foreground/70 max-w-md mb-8 text-shadow-sm">{h.natureSub}</p>
           <Link to="/rooms" className="inline-block font-body text-sm font-semibold tracking-wider uppercase border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground px-8 py-3 rounded-full transition-colors">
@@ -119,7 +119,7 @@ const HomePage = () => {
             <div>
               <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4">{h.gastronomy}</p>
               <h2 className="font-display text-4xl md:text-5xl text-foreground mb-6">
-                {h.gastroHeading}{" "}<span className="italic text-accent">Sustainable.</span>
+                {h.gastroHeading}{" "}<span className="italic text-accent">{h.sustainableAccent}</span>
               </h2>
               <p className="font-body text-lg text-muted-foreground mb-8">{h.gastroSub}</p>
               <Link to="/dining" className="inline-block font-body text-sm font-semibold tracking-wider uppercase border border-foreground/30 hover:border-foreground text-foreground px-8 py-3 rounded-full transition-colors">
@@ -137,7 +137,7 @@ const HomePage = () => {
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 py-24">
           <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent mb-4 text-shadow-sm">{h.feelGood}</p>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground max-w-lg mb-6 text-shadow-hero">
-            {h.spaHeading}{" "}<span className="italic text-accent">Enjoy.</span>
+            {h.spaHeading}{" "}<span className="italic text-accent">{h.enjoyAccent}</span>
           </h2>
           <p className="font-body text-lg text-primary-foreground/70 max-w-md mb-8 text-shadow-sm">{h.spaSub}</p>
           <Link to="/spa" className="inline-block font-body text-sm font-semibold tracking-wider uppercase border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground px-8 py-3 rounded-full transition-colors">
@@ -151,7 +151,7 @@ const HomePage = () => {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <p className="font-body text-xs font-semibold tracking-[0.3em] uppercase text-accent text-center mb-4">{h.conciergeLabel}</p>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground text-center mb-16">
-            {h.discoverExperience}{" "}<span className="italic text-accent">Experience</span>
+            {h.discoverExperience}{" "}<span className="italic text-accent">{h.experienceAccent}</span>
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
@@ -250,7 +250,7 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-ocean-deep/60" />
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 py-24 text-center">
           <h2 className="font-display text-4xl md:text-5xl text-primary-foreground mb-4 text-shadow-hero">
-            {h.sustainability}{" "}<span className="italic text-accent">Commitment</span>
+            {h.sustainability}{" "}<span className="italic text-accent">{h.commitmentAccent}</span>
           </h2>
           <p className="font-body text-lg text-primary-foreground/70 max-w-lg mx-auto mb-8 text-shadow-sm">{h.sustainabilitySub}</p>
           <button className="font-body text-sm font-semibold tracking-wider uppercase border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground px-8 py-3 rounded-full transition-colors">
