@@ -10,11 +10,13 @@ import iceroomImg from "@/assets/spa-iceroom.jpg";
 import { ChevronRight, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
+const spaImages = [hamamImg, aromatherapyImg, skincareImg, saunaImg, steamroomImg, saltroomImg, iceroomImg, hotstoneImg];
+
 const SpaPage = () => {
   const { t } = useLanguage();
   const s = t.website.spaPage;
 
-  const services = s.services;
+  const services = s.services.map((svc, i) => ({ ...svc, image: spaImages[i] || hamamImg }));
 
   return (
     <main>
