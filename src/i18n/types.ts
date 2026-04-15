@@ -353,16 +353,5 @@ export interface Translations {
       yourMessage: string;
       send: string;
     };
-    spaPage: {
-      blueDreamsResort: string;
-      wellnessSpa: string;
-      introP1: string;
-      introP2: string;
-      introP3: string;
-      bookNow: string;
-      treatYourself: string;
-      ourServices: string;
-      services: { title: string; desc: string }[];
-    };
   };
 }
